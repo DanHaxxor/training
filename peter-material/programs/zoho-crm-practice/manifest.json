@@ -1,0 +1,32 @@
+{
+  "title": "Zoho CRM Hands-On Practice",
+  "description": "Self-paced activities to apply your CRM knowledge - import data, build workflows, and refine processes",
+  "version": "1.0.0",
+  "prerequisites": ["zoho-crm-advanced"],
+  "modules": [
+    {
+      "id": "import-your-data",
+      "title": "Self Activity: Import Your Own Data",
+      "file": "content/import-your-data.json",
+      "category": "Data Management",
+      "description": "Practice importing your real business data into Zoho CRM with proper field mapping",
+      "order": 1
+    },
+    {
+      "id": "refine-blueprint",
+      "title": "Self Activity: Refine Your Existing Blueprint",
+      "file": "content/refine-blueprint.json",
+      "category": "Process Design",
+      "description": "Optimize and enhance your sales process blueprint based on team feedback",
+      "order": 2
+    },
+    {
+      "id": "approval-review-process",
+      "title": "Self Activity: Build Approval and Review Process",
+      "file": "content/approval-review-process.json",
+      "category": "Process Design",
+      "description": "Create multi-stage approval workflows for deals, quotes, or custom processes",
+      "order": 3
+    }
+  ]
+}

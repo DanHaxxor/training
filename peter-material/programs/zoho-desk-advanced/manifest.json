@@ -1,0 +1,72 @@
+{
+  "title": "Zoho Desk Advanced",
+  "description": "Advanced support automation - customization, AI features, analytics, and enterprise security",
+  "version": "1.0.0",
+  "prerequisites": ["zoho-desk-fundamentals"],
+  "modules": [
+    {
+      "id": "customization",
+      "title": "Desk Customization",
+      "file": "content/customization.json",
+      "category": "Configuration",
+      "description": "Custom fields, layouts, modules, and ticket templates tailored to your business",
+      "order": 1
+    },
+    {
+      "id": "integrations",
+      "title": "Desk Integrations",
+      "file": "content/integrations.json",
+      "category": "Integrations",
+      "description": "Connect CRM, telephony, chat, social media, and third-party apps",
+      "order": 2
+    },
+    {
+      "id": "automation",
+      "title": "Desk Automation",
+      "file": "content/automation.json",
+      "category": "Automation",
+      "description": "Workflow rules, macros, auto-assignment, and time-based actions",
+      "order": 3
+    },
+    {
+      "id": "zia-features",
+      "title": "Zia AI Features",
+      "file": "content/zia-features.json",
+      "category": "AI & Automation",
+      "description": "AI-powered ticket tagging, sentiment analysis, and response suggestions",
+      "order": 4
+    },
+    {
+      "id": "guided-conversations-asap",
+      "title": "Guided Conversations and ASAP",
+      "file": "content/guided-conversations-asap.json",
+      "category": "AI & Automation",
+      "description": "Chatbots, guided flows, and AI-assisted self-service for customers",
+      "order": 5
+    },
+    {
+      "id": "analytics",
+      "title": "Desk Analytics",
+      "file": "content/analytics.json",
+      "category": "Reporting",
+      "description": "Performance metrics, agent reports, customer satisfaction, and custom dashboards",
+      "order": 6
+    },
+    {
+      "id": "data-administration",
+      "title": "Data Administration",
+      "file": "content/data-administration.json",
+      "category": "Administration",
+      "description": "Data backup, archiving, mass operations, and data hygiene",
+      "order": 7
+    },
+    {
+      "id": "privacy-security",
+      "title": "Privacy and Security",
+      "file": "content/privacy-security.json",
+      "category": "Administration",
+      "description": "GDPR compliance, data encryption, audit logs, and security best practices",
+      "order": 8
+    }
+  ]
+}

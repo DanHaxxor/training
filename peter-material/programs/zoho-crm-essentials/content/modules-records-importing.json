@@ -1,0 +1,443 @@
+{
+  "title": "Modules, Records, and Importing",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Understanding the Module Page"
+    },
+    {
+      "type": "paragraph",
+      "content": "This lesson introduces you to CRM Modules and the list view. We'll start by viewing the 'module view' page in Leads or Contacts to understand how records are organized and accessed."
+    },
+    {
+      "type": "subheading",
+      "content": "Module Navigation Basics"
+    },
+    {
+      "type": "paragraph",
+      "content": "When you open a module (like Leads or Contacts), you'll see the **module view page** - your headquarters for that type of record. From this page, you can perform many different actions."
+    },
+    {
+      "type": "paragraph",
+      "content": "Key elements to notice:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Fields are displayed** in columns, showing information about each record immediately",
+        "**Different views** are available - distinguish between list and chart views",
+        "**Custom views** act as filters to show only records matching specific criteria",
+        "**Clicking on a record** takes you to the record detail page",
+        "**Clicking on a related record** (like Account Name in the Contacts module) takes you to that related record"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Views and Filters"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Views** and **Filters** help you narrow down all visible records to only the ones you want to see based on criteria."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Views** - Pre-configured sets of criteria to show specific groups of records",
+        "**Filters** - Are specific to the custom view you're currently looking at, allowing you to further sub-divide the records in that view",
+        "Whether using only views or views in combination with filters, the goal is to **narrow down records based on criteria**"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Actions Button"
+    },
+    {
+      "type": "paragraph",
+      "content": "The **Actions button** provides various operations you can perform on records:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Available actions change based on the module you're in",
+        "When records are **selected** in the view, the Actions button shows bulk operations",
+        "Common actions include: Mass Update, Mass Delete, Mass Email, Export, etc."
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Discussion and Demo Activity"
+    },
+    {
+      "type": "paragraph",
+      "content": "The module view page is your headquarters for that type of record. You can perform a lot of different actions here."
+    },
+    {
+      "type": "quote",
+      "content": "Exercise: How would you find specific records in your CRM? Can you determine how to find records in the demo account?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Example Challenge:** Find only records that are tagged '2025 Summer Conference' and are from 'State: Texas'"
+    },
+    {
+      "type": "paragraph",
+      "content": "Practice using custom views and filters to locate these specific records. This demonstrates how you can segment your data for targeted campaigns, reporting, or sales focus."
+    },
+    {
+      "type": "heading",
+      "content": "Understanding the Record Page"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now let's explore individual record pages. We'll open record pages for a Lead, a Contact, an Account, and a Deal to see the differences in information and fields."
+    },
+    {
+      "type": "subheading",
+      "content": "Module-Specific Fields"
+    },
+    {
+      "type": "paragraph",
+      "content": "Different modules have fields that are specific to their purpose or perform default CRM actions:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Leads** - Company field, Lead Status, Lead Source",
+        "**Contacts** - Account Name (relationship field), Mailing Address, Reporting To",
+        "**Accounts** - Account Type, Industry, Annual Revenue",
+        "**Deals** - Stage, Amount, Expected Revenue, Closing Date"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Record Page Features"
+    },
+    {
+      "type": "paragraph",
+      "content": "Familiarize yourself with the different pieces of information shown on the record page:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Edit fields directly** - Most fields can be edited inline without opening the full edit page",
+        "**Full Edit page** - Access the complete edit interface for comprehensive changes",
+        "**Action buttons** - Send email, call, create tasks, and more",
+        "**Three-dot (...) menu** - Additional actions like Clone, Delete, Print, etc.",
+        "**Custom buttons** - Organization-specific actions configured by your admin"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Discussion: Using Record Information"
+    },
+    {
+      "type": "paragraph",
+      "content": "**What types of actions might you perform with this information?**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Consider how you might use the data visible on a record page to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Follow up with prospects based on their stage or status",
+        "Send personalized emails using contact information",
+        "Update deal amounts and close dates as negotiations progress",
+        "Create tasks and schedule meetings",
+        "Track communication history"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Related Lists and Record Association"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Related lists** appear at the bottom of record pages and show associated records. They allow you to track and create new associated records, demonstrating the power of record association."
+    },
+    {
+      "type": "subheading",
+      "content": "What is Record Association?"
+    },
+    {
+      "type": "paragraph",
+      "content": "CRM is intended to be used as a **string of connected records** to show ownership or relation. This creates a complete picture of your customer relationships."
+    },
+    {
+      "type": "subheading",
+      "content": "Examples of Record Association"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Contact Record:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "A Contact is a single entity, connected to multiple Deals",
+        "All Deals can be tracked in the Contact's 'Deals' related list",
+        "Any tasks, meetings, or calls for the Contact are listed in 'Open Activities' or 'Closed Activities' related lists to keep track of interactions"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Account Record:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "An Account may have many Contacts listed in its 'Contacts' related list",
+        "Each of those Contact's Deals can be viewed from the Account",
+        "Any Deals or Activities associated with individual Contacts show up under the 'Deals' or 'Open/Closed Activities' related lists",
+        "Everything is cataloged under the Account for a complete relationship view"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Question: What is the benefit of record association using related lists? Answer: It creates a complete, interconnected view of all customer relationships and interactions in one place."
+    },
+    {
+      "type": "subheading",
+      "content": "Additional Record Page Elements"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Discussion Questions:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What if you need fields available to you that are not here by default?",
+        "What is the Timeline, and how does it help track record history?",
+        "What is the 'business card' view, and why would it be helpful to customize this?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Adding Records to CRM"
+    },
+    {
+      "type": "paragraph",
+      "content": "There are multiple ways to get records into your CRM: manual entry, imports, webforms, and APIs. Let's explore each method."
+    },
+    {
+      "type": "subheading",
+      "content": "Pre-Discussion: Where Do CRM Records Come From?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before we dive into the methods, consider these questions:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "How do records, like Leads, make it into a CRM?",
+        "Where do those records come from? (webforms, lead generation platforms/sellers, other databases, spreadsheets)",
+        "What would be the best method to get someone who has found my website into my CRM without me having to manually put them there?",
+        "Why would I use an API for importing records?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Method 1: Importing"
+    },
+    {
+      "type": "paragraph",
+      "content": "CRM importing refers to importing a spreadsheet (xlsx, csv, or similar document) to the CRM."
+    },
+    {
+      "type": "subheading",
+      "content": "How Importing Works"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Rows** correspond to separate, unique record entries in the CRM",
+        "**Columns** are field data for each respective entry",
+        "CRM's importing tool allows you to **map any source field to any CRM field** (as long as the field can accept source data formatting)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Import Features"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Record Association** - Import Contacts and automatically associate them with Accounts",
+        "**Reversible** - Imports can be reversed if a mistake is made",
+        "**Duplicate Detection** - CRM can identify and handle potential duplicates during import"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Important Warning: Imports which UPDATE EXISTING RECORDS cannot be reversed. Always use caution when updating existing data."
+    },
+    {
+      "type": "subheading",
+      "content": "When to Use Importing"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Migrating data from another CRM or database",
+        "Adding bulk records from spreadsheets or CSV exports",
+        "Updating multiple records at once with new information",
+        "Initial CRM setup with existing customer data"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Method 2: Webforms"
+    },
+    {
+      "type": "subheading",
+      "content": "Pre-Discussion"
+    },
+    {
+      "type": "paragraph",
+      "content": "Consider these questions about webforms:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What is a webform?",
+        "Where would you use a webform? (website, emails, QR codes, links)",
+        "Do you think it's possible to tell in CRM when a record has come from a webform?",
+        "Why would you want to be able to differentiate webform entries from imports or manual entries?"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "CRM Native Webforms"
+    },
+    {
+      "type": "paragraph",
+      "content": "CRM has its own native webforms that can be embedded, distributed through links, and shared via QR codes."
+    },
+    {
+      "type": "subheading",
+      "content": "Webform Features"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Advanced fields** - Include captcha and re-captcha for spam prevention",
+        "**Customizable design** - Font, color, and alignment of fields/labels can be customized",
+        "**Required fields** - Mandatory fields in a given module are required to be on the form",
+        "**Flexible field selection** - The rest of the form can be customized with most any fields from the layout you'd like to include"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Distribution Methods"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Embed** on your website",
+        "**Share as a link** in emails or social media",
+        "**Generate QR codes** for printed materials or events",
+        "**Popup forms** on your website for lead capture"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "When to Use Webforms"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Capturing leads directly from your website",
+        "Event registrations",
+        "Contact us forms",
+        "Newsletter signups",
+        "Demo requests or consultation bookings"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Method 3: APIs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Another way to populate records into the CRM is to **push them from another source over an API connection**. This might be from another database, application, a 3rd party webform, or other source."
+    },
+    {
+      "type": "subheading",
+      "content": "Zoho's Open API"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho has an **open API**, meaning most platforms can interact with it by hitting certain API endpoints with the right type of request. The Zoho Developer Console allows you to create connections to your Zoho Account from other entities. These other entities can use that connection to send info to your CRM."
+    },
+    {
+      "type": "paragraph",
+      "content": "Access the Zoho API Console at: `https://api-console.zoho.com/`"
+    },
+    {
+      "type": "subheading",
+      "content": "API Use Cases"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Third-party integrations** - Connect marketing platforms, e-commerce stores, or other business tools",
+        "**Custom applications** - Build your own apps that interact with CRM data",
+        "**Real-time data sync** - Automatically push data from other systems as it's created",
+        "**Automated workflows** - Create complex integrations between multiple systems"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "When to Use APIs"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Connecting CRM with other business software (accounting, marketing, support)",
+        "Building custom integrations not available through native connectors",
+        "Automating data flow between systems in real-time",
+        "Creating custom applications that need to access or update CRM data"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Summary: Choosing the Right Method"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Manual Entry** - For individual records or when data needs careful attention",
+        "**Import** - For bulk data migration, initial setup, or periodic updates from spreadsheets",
+        "**Webforms** - For ongoing lead capture directly from customers and prospects",
+        "**APIs** - For automated, real-time integration with other business systems"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Each method has its place in a well-functioning CRM strategy. Most organizations use a combination of all four methods depending on their specific needs and data sources."
+    }
+  ]
+}

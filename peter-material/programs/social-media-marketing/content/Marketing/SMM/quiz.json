@@ -1,0 +1,73 @@
+{
+  "title": "Final Knowledge Check",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "Test your understanding of Social Media Marketing concepts covered in this training program. This quiz covers key topics from all previous modules."
+    },
+    {
+      "type": "heading",
+      "content": "Quiz Questions"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "What is the primary advantage of using social media for brand communication?",
+          "options": [
+            "It's a free advertising platform",
+            "It enables two-way engagement with customers in real time",
+            "It replaces the need for a website",
+            "It guarantees viral content"
+          ],
+          "correct": 1,
+          "explanation": "Social media is a two-way engagement platform that allows brands to interact with their audience and shape public perception in real time, not just broadcast messages."
+        },
+        {
+          "question": "What made Wendy's social media strategy revolutionary?",
+          "options": [
+            "They posted more frequently than competitors",
+            "They used expensive celebrity endorsements",
+            "They treated their account like a real person with personality and humor",
+            "They only posted promotional content"
+          ],
+          "correct": 2,
+          "explanation": "Wendy's changed the social media game by treating their account like a real person posting instead of a PR department, using humor, roasting competitors, and responding to followers with personality."
+        },
+        {
+          "question": "What tool helps brands centralize social media management across multiple platforms?",
+          "options": [
+            "Email marketing software",
+            "Social media management tools like Zoho Social",
+            "Customer relationship management (CRM) systems only",
+            "Traditional advertising agencies"
+          ],
+          "correct": 1,
+          "explanation": "Social media management tools like Zoho Social centralize posting, scheduling, monitoring comments, tracking analytics, and team collaboration across multiple platforms."
+        },
+        {
+          "question": "How does Nike use social media differently from traditional marketing?",
+          "options": [
+            "Only for advertisements",
+            "As a hybrid of customer support and brand engagement",
+            "Exclusively for influencer partnerships",
+            "To replace their website entirely"
+          ],
+          "correct": 1,
+          "explanation": "Nike uses social media as a hybrid of customer support and brand engagement, answering questions about orders and products while building trust and loyalty through quick, public responses."
+        },
+        {
+          "question": "What does Duolingo's approach to social media demonstrate?",
+          "options": [
+            "Brands must always remain professional and serious",
+            "Only language apps can succeed on TikTok",
+            "Brands can fully embrace platform culture and use self-deprecating humor",
+            "Social media should only be used for push notifications"
+          ],
+          "correct": 2,
+          "explanation": "Duolingo demonstrates that brands can fully embrace platform culture (like TikTok), use self-deprecating humor, and build an internet personality that people feel connected to, rather than maintaining a purely professional tone."
+        }
+      ]
+    }
+  ]
+}

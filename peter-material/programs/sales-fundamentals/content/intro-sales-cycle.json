@@ -1,0 +1,93 @@
+{
+  "title": "Introduction to Sales and the Sales Cycle",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Understanding Sales Process and Sales Cycle"
+    },
+    {
+      "type": "paragraph",
+      "content": "No matter what business you're in or where you're located, a company's goal is the same: **offer something someone wants to buy, and make the sale**. To reach that goal, many businesses use marketing to get people interested in what they're offering. Depending on the business, the secondary goal is often return sales which can be driven by additional marketing post-sale."
+    },
+    {
+      "type": "paragraph",
+      "content": "But getting someone interested is only part of the story. After you've sparked interest, the next step is helping them see why they should buy, or why they should continue buying. Sometimes a potential customer already understands the value before they find you. Other times they see other choices and need to be convinced why your product or service is the better pick."
+    },
+    {
+      "type": "subheading",
+      "content": "B2C vs. B2B Sales"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once you've made that case and secured their commitment, a purchase happens. In simpler **business-to-consumer (B2C)** cases this may happen quickly and usually without a conversation with a sales representative. Online stores usually function on this model."
+    },
+    {
+      "type": "paragraph",
+      "content": "In **business-to-business (B2B)** scenarios though, there may be more steps: conversations, negotiations, quotes, approvals and so on. This series of steps is called a **sales cycle**. Having a defined sales cycle helps your team move deals forward reliably and recognize where deals are stalling."
+    },
+    {
+      "type": "subheading",
+      "content": "How CRM Tools Support Your Sales"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tools like Zoho Bigin and Zoho CRM are built around a business's sales process and sales cycle. For a sales cycle, they let you map out those stages we just discussed, track prospects as they move from interest to decision, assign tasks, and keep everything organized. Knowing your sales cycle clearly makes the tool much more useful and the tool makes your sales cycle much more manageable."
+    },
+    {
+      "type": "paragraph",
+      "content": "For a sales process, Bigin and CRM can help you in your prospecting efforts, track, identify and qualify prospects, manage existing customers, nurture those relationships, and (hopefully) eventually upsell your existing customers to create return buyers."
+    },
+    {
+      "type": "subheading",
+      "content": "Key Distinction: Sales Process vs. Sales Cycle"
+    },
+    {
+      "type": "paragraph",
+      "content": "While sales cycle and sales process are used interchangeably, we'll use them to refer to two distinct concepts:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Sales Process** - The entire prospecting, discovery, sales cycle, nurturing, and return process",
+        "**Sales Cycle** - The stepped process which an interested prospect goes through to make an initial (or returning) sale"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Developing a Sales Process"
+    },
+    {
+      "type": "paragraph",
+      "content": "A business's sales process is shaped by its **product and business model**. Some offerings require little to no sales representative intervention (common in small B2C purchases), while others require active guidance from a sales representative, especially for contract-based or high-value B2B sales."
+    },
+    {
+      "type": "paragraph",
+      "content": "How prospects reach a business also matters. Prospects may arrive through their own initiative, sales outreach, marketing, social media, referrals, or other channels. The starting point of the customer lifecycle can vary widely."
+    },
+    {
+      "type": "subheading",
+      "content": "Sales Process Examples"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Simple B2C Example - Online Storefront:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "An online storefront may simply have regular email marketing, online advertising (like Google Ads) and need minimal intervention from a company representative."
+    },
+    {
+      "type": "paragraph",
+      "content": "**B2B SaaS Example - Zoho:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho attracts prospects through marketing, word-of-mouth, and free product editions. When someone starts a trial or reaches out with interest, the sales process becomes more hands-on. During the discovery phase, sales representatives learn about the customer's business needs and offer tailored demos to illustrate how Zoho products can meet those needs."
+    },
+    {
+      "type": "quote",
+      "content": "The key takeaway: Your sales process should align with how your customers prefer to buy and what level of guidance they need to make confident purchasing decisions."
+    }
+  ]
+}

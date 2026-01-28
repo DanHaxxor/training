@@ -1,0 +1,32 @@
+{
+  "title": "Bigin CRM",
+  "description": "Get started with Bigin - simple, pipeline-focused CRM for small businesses and sales teams",
+  "version": "1.0.0",
+  "prerequisites": ["sales-fundamentals"],
+  "modules": [
+    {
+      "id": "bigin-part1",
+      "title": "Bigin Introduction",
+      "file": "content/bigin-part1.json",
+      "category": "Getting Started",
+      "description": "Overview of Bigin CRM, setup, and core features for pipeline management",
+      "order": 1
+    },
+    {
+      "id": "bigin-part2",
+      "title": "Bigin Configuration",
+      "file": "content/bigin-part2.json",
+      "category": "Configuration",
+      "description": "Customizing Bigin for your sales process - fields, pipelines, and workflows",
+      "order": 2
+    },
+    {
+      "id": "bigin-activities",
+      "title": "Bigin Activities & Tasks",
+      "file": "content/bigin-activities.json",
+      "category": "Daily Usage",
+      "description": "Managing daily sales activities, tasks, and follow-ups in Bigin",
+      "order": 3
+    }
+  ]
+}

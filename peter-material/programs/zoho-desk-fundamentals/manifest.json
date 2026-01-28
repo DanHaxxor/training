@@ -1,0 +1,56 @@
+{
+  "title": "Zoho Desk Fundamentals",
+  "description": "Build effective customer support systems - departments, channels, knowledge base, and ticket management",
+  "version": "1.0.0",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "departments",
+      "title": "Desk Departments",
+      "file": "content/departments.json",
+      "category": "Setup",
+      "description": "Organizing support teams into departments with specialized focus areas",
+      "order": 1
+    },
+    {
+      "id": "channels",
+      "title": "Support Channels",
+      "file": "content/channels.json",
+      "category": "Setup",
+      "description": "Email, web forms, social media, chat, and phone integration for omnichannel support",
+      "order": 2
+    },
+    {
+      "id": "knowledge-base-help-center",
+      "title": "Knowledge Base and Help Center",
+      "file": "content/knowledge-base-help-center.json",
+      "category": "Self-Service",
+      "description": "Build self-service portals, articles, FAQs, and community forums",
+      "order": 3
+    },
+    {
+      "id": "organization-settings",
+      "title": "Organization Settings",
+      "file": "content/organization-settings.json",
+      "category": "Configuration",
+      "description": "Business hours, holidays, SLAs, and global configurations",
+      "order": 4
+    },
+    {
+      "id": "user-agent-management",
+      "title": "User and Agent Management",
+      "file": "content/user-agent-management.json",
+      "category": "Team Management",
+      "description": "Adding agents, assigning roles, and managing team permissions",
+      "order": 5
+    },
+    {
+      "id": "tickets",
+      "title": "Tickets - Modules and Records",
+      "file": "content/tickets.json",
+      "category": "Core Features",
+      "description": "Creating, assigning, updating, and resolving customer support tickets",
+      "order": 6
+    }
+  ]
+}

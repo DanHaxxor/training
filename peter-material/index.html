@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Library</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="header-title-row">
+                    <img src="zoho-logo-512.png" alt="Zoho" class="sidebar-logo">
+                    <h1 id="library-title">Training Library</h1>
+                </div>
+                <div class="program-selector">
+                    <label for="program-select">Program:</label>
+                    <select id="program-select" class="program-dropdown">
+                        <option value="">Loading programs...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sidebar-nav" id="nav-menu">
+                <!-- Navigation items will be dynamically loaded -->
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <div class="content-header">
+                <div class="progress-indicator">
+                    <span id="current-page">1</span> / <span id="total-pages">1</span>
+                </div>
+            </div>
+
+            <article class="content-body" id="content-area">
+                <!-- Content will be dynamically loaded here -->
+                <div class="loading">Loading content...</div>
+            </article>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

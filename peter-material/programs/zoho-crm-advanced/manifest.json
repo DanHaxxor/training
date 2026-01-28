@@ -1,0 +1,56 @@
+{
+  "title": "Zoho CRM Advanced",
+  "description": "Advanced CRM configuration - users, permissions, automation, process management, and customization",
+  "version": "1.0.0",
+  "prerequisites": ["zoho-crm-essentials"],
+  "modules": [
+    {
+      "id": "users-profiles-roles",
+      "title": "Users, Profiles, Roles, and Permissions",
+      "file": "content/users-profiles-roles.json",
+      "category": "User Management",
+      "description": "Setting up team access, defining roles, and managing security permissions",
+      "order": 1
+    },
+    {
+      "id": "add-users-activity",
+      "title": "Activity: Add Users to Your CRM",
+      "file": "content/add-users-activity.json",
+      "category": "User Management",
+      "description": "Hands-on practice adding team members and configuring their access levels",
+      "order": 2
+    },
+    {
+      "id": "automation",
+      "title": "Automation in Zoho CRM",
+      "file": "content/automation.json",
+      "category": "Automation",
+      "description": "Workflow rules, field updates, email alerts, and automated task assignments",
+      "order": 3
+    },
+    {
+      "id": "process-management",
+      "title": "Process Management",
+      "file": "content/process-management.json",
+      "category": "Automation",
+      "description": "Blueprints, approval processes, and validation rules to enforce business logic",
+      "order": 4
+    },
+    {
+      "id": "customization",
+      "title": "CRM Customization",
+      "file": "content/customization.json",
+      "category": "Customization",
+      "description": "Custom fields, modules, layouts, and page designs to match your business",
+      "order": 5
+    },
+    {
+      "id": "data-organization",
+      "title": "Data Organization",
+      "file": "content/data-organization.json",
+      "category": "Data Management",
+      "description": "Tags, groups, territories, and data segmentation strategies",
+      "order": 6
+    }
+  ]
+}

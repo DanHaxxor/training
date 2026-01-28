@@ -1,0 +1,16 @@
+{
+  "title": "Zoho Campaigns Platform",
+  "description": "Master email marketing automation with Zoho Campaigns - templates, workflows, and analytics",
+  "version": "1.0.0",
+  "prerequisites": ["email-sms-marketing"],
+  "modules": [
+    {
+      "id": "zoho-campaigns-overview",
+      "title": "Zoho Campaigns Platform Overview",
+      "file": "content/zoho-campaigns.json",
+      "category": "Platform Training",
+      "description": "Complete guide to email automation, templates, workflows, and campaign analytics with Zoho Campaigns",
+      "order": 1
+    }
+  ]
+}

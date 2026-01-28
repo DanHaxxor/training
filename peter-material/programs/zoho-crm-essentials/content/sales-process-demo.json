@@ -1,0 +1,443 @@
+{
+  "title": "Sales Process Demo",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Pre-Discussion: Sales Process in CRM"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before we begin the demo, let's recall the lesson on Sales Cycle and Sales Process."
+    },
+    {
+      "type": "quote",
+      "content": "Discussion Question: Given how Bigin and its pipeline-focused interface handles navigating a SALES CYCLE instead of a full sales process, what do you think CRM can do?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Think about the additional capabilities you've seen in CRM that go beyond Bigin's simple pipeline management."
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now, taking what we learned about sales processes and CRM record flow, let's take a look at how CRM aids in guiding a record through a sales process."
+    },
+    {
+      "type": "quote",
+      "content": "Important Note: This is the most basic version of this process. Most organizations have some sort of processes or automation to fill in or aid with these steps. Additionally, not every organization uses the CRM exactly like this — this is just an example to show the record flow as designed by our developers."
+    },
+    {
+      "type": "paragraph",
+      "content": "This lesson demonstrates how a potential customer (a **Lead**) progresses through the CRM to become a **Deal**, and how that Deal then continues through the stages of the sales process toward closing a sale."
+    },
+    {
+      "type": "subheading",
+      "content": "Live Demo Overview"
+    },
+    {
+      "type": "paragraph",
+      "content": "During this demo, we'll walk through how CRM supports the standard sales flow:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create a Lead",
+        "Convert the Lead into a Contact, Account, and Deal",
+        "Navigate through Deal stages",
+        "Generate and send a Quote and Invoice"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Each step connects to stages of the sales cycle discussed in the previous lesson."
+    },
+    {
+      "type": "heading",
+      "content": "Step 1: Creating a Lead"
+    },
+    {
+      "type": "paragraph",
+      "content": "A **Lead** represents a potential customer or opportunity that has not yet been qualified. This is where your sales process begins."
+    },
+    {
+      "type": "subheading",
+      "content": "When Leads Are Created"
+    },
+    {
+      "type": "paragraph",
+      "content": "Lead creation may occur when:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Speaking directly to a new prospect",
+        "Entering information from a form, document, or spreadsheet",
+        "An organization chooses to manually input data instead of bulk importing leads",
+        "Webforms capture interest from your website",
+        "Marketing campaigns generate new interest"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Connection to Sales Process:** This represents the **'Find'** and **'Contact'** phases of your sales process — you've identified a potential customer and made initial contact or captured their interest."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Create a Lead Record"
+    },
+    {
+      "type": "paragraph",
+      "content": "During this demonstration, we'll create a new Lead record and fill in key information like:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Lead Name",
+        "Company",
+        "Email and Phone",
+        "Lead Source",
+        "Lead Status",
+        "Industry and other qualifying information"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Step 2: Converting a Lead"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once a Lead has been qualified (meaning you've determined they're a legitimate opportunity worth pursuing), the next step is **Lead Conversion**."
+    },
+    {
+      "type": "subheading",
+      "content": "What Happens During Conversion"
+    },
+    {
+      "type": "paragraph",
+      "content": "When you convert a Lead, it transforms into three different types of records:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Contact** - Represents the individual person",
+        "**Account** - Represents the company or organization",
+        "**Deal** (optional) - Represents the potential sale opportunity you're pursuing"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Critical Understanding: Leads DO NOT become Accounts or Deals. Leads become Contacts only. From there, Contacts are added to Accounts during the conversion, or a new Account is created for the Contact to belong to. Deals can be CREATED for the Contact at the time of conversion, but a Lead DOES NOT become a Deal. The flow does not work this way in CRM."
+    },
+    {
+      "type": "subheading",
+      "content": "Conversion Flexibility by Organization"
+    },
+    {
+      "type": "paragraph",
+      "content": "The conversion process can vary by organization:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Some businesses may only create a **Contact and Account** during conversion",
+        "Others may create a **Deal right away** as part of their standard workflow",
+        "Some may choose to associate the Contact with an **existing Account** rather than creating a new one"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "There's not necessarily a 'right' or 'wrong' approach; it depends on how the business operates and when they consider an opportunity to be deal-worthy."
+    },
+    {
+      "type": "subheading",
+      "content": "Automatic Associations"
+    },
+    {
+      "type": "paragraph",
+      "content": "When a Deal is created for a Contact who belongs to an Account, the **Account is automatically listed on the Deal**. This maintains the relationship hierarchy:"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Account → Contact → Deal**"
+    },
+    {
+      "type": "paragraph",
+      "content": "During the demo, we'll:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "View the Related Lists under both the Contact and Account",
+        "Note how the newly created Deal appears under both records",
+        "Demonstrate the interconnected nature of CRM records"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Step 3: Exploring the Deal Record"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once the Lead has been converted, you now work primarily from the **Deal record** — this represents the qualified opportunity you're actively pursuing."
+    },
+    {
+      "type": "subheading",
+      "content": "Key Deal Components"
+    },
+    {
+      "type": "paragraph",
+      "content": "Walk through the key fields on a Deal:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Stage** - Indicates where the opportunity currently stands in the sales cycle (e.g., Qualification, Needs Analysis, Proposal, Negotiation, Closed Won)",
+        "**Amount** - The total value of the potential sale",
+        "**Expected Revenue** - Calculated based on the Deal's Amount and Stage probability",
+        "**Closing Date** - Target date for completing the sale",
+        "**Contact Name** - The primary contact for this deal",
+        "**Account Name** - The company or organization this deal is with"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "UI Elements to Highlight"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Stage Picklist Bar:** Point out the Stage picklist bar at the top of the record. This visual element is specific to the Deals module and allows quick movement through pipeline stages with a single click."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Kanban View:** Switch to Kanban View in the Deals module. This view allows users to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "View Deals grouped by picklist stages (columns)",
+        "Drag and drop Deals between stages",
+        "Get a visual overview of your entire pipeline at once",
+        "Quickly identify bottlenecks or stages with too many deals"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Note: Kanban view is available in other modules as well — it's not unique to Deals. Any module with stage or status fields can use this visualization."
+    },
+    {
+      "type": "subheading",
+      "content": "Moving Through Deal Stages"
+    },
+    {
+      "type": "paragraph",
+      "content": "As you work with a prospect, you'll move the Deal through various stages to reflect progress:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Update the Stage as conversations progress",
+        "Add notes and activities to track interactions",
+        "Update the Amount if the deal size changes",
+        "Adjust the Closing Date based on prospect feedback"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Step 4: Creating a Quote from a Deal"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once a Deal reaches the proposal stage, you'll typically need to provide a formal quote to the prospect. CRM makes this seamless by allowing you to create a Quote directly from the Deal record."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Generate a Quote"
+    },
+    {
+      "type": "paragraph",
+      "content": "During the demonstration, we'll:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create a Quote directly from the Deal record",
+        "Add a few **Products** to the Quote to show how CRM ties the potential sale to specific items or services",
+        "Configure pricing, quantities, and any discounts",
+        "Review the Quote before sending"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This provides a high-level preview of the **Deal → Quote → Invoice → Sale** progression."
+    },
+    {
+      "type": "quote",
+      "content": "Note: Quoting and invoicing will be covered more in-depth in the next lesson on Inventory and Finance Modules."
+    },
+    {
+      "type": "subheading",
+      "content": "Connecting Related Records"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Quote automatically links back to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The originating **Deal**",
+        "The associated **Contact**",
+        "The related **Account**"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Why This Matters:** Maintaining this record linkage is critical for:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Reporting on the complete customer journey",
+        "Tracking which deals result in quotes and sales",
+        "Understanding the full history of customer interactions",
+        "Calculating accurate sales metrics and forecasting"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Step 5: Converting a Quote to an Invoice"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once the prospect accepts your quote, it's time to convert it into an **Invoice** — the formal request for payment."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Create and Send an Invoice"
+    },
+    {
+      "type": "paragraph",
+      "content": "During this demonstration, we'll:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Convert the Quote into an Invoice with a single action",
+        "Review the Invoice details (all information carries over from the Quote)",
+        "Send the Invoice by email to the customer or prospect",
+        "Preview the email template to see how CRM formats record data"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Email Template Preview"
+    },
+    {
+      "type": "paragraph",
+      "content": "Open the template preview so you can see how CRM formats record data within the outgoing email:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Customer name and contact information",
+        "Product list with descriptions",
+        "Pricing and totals",
+        "Payment terms and due date",
+        "Company branding and footer"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This demonstrates how CRM automates professional communication while maintaining consistency and accuracy."
+    },
+    {
+      "type": "heading",
+      "content": "Wrap-Up: Connecting to the Sales Process"
+    },
+    {
+      "type": "paragraph",
+      "content": "Let's revisit the earlier Sales Process lesson and tie it back to what was just demonstrated:"
+    },
+    {
+      "type": "subheading",
+      "content": "Sales Process Stages Mapped to CRM Records"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Lead** - Represents the early engagement and qualification stages (Find, Contact, Qualify)",
+        "**Deal** - Represents the opportunity once it's been validated as worth pursuing (Present, Handle Objections, Negotiate)",
+        "**Quote** - Represents the formal offer stage (Proposal)",
+        "**Invoice** - Represents the sale completion stage (Close)",
+        "**Account/Contact** - Continues the relationship for future opportunities (Nurture, Upsell)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Key Takeaways"
+    },
+    {
+      "type": "paragraph",
+      "content": "**CRM provides a structured way** to move each record through the stages of a sale. While each organization may tailor these steps, the underlying flow remains the foundation for how CRM supports a sales process:"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Lead → Contact/Account → Deal → Quote → Invoice → Close**"
+    },
+    {
+      "type": "paragraph",
+      "content": "This structure ensures:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Consistency** - Every opportunity follows the same process",
+        "**Visibility** - Managers can see where deals are in the pipeline",
+        "**Accountability** - Each stage has clear next steps and ownership",
+        "**Reporting** - You can measure conversion rates at each stage",
+        "**Relationship continuity** - All interactions are documented and connected"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Remember: This is the foundational flow. In upcoming lessons, we'll explore how to automate these transitions, add approval processes, customize stages, and integrate inventory management to make this process even more powerful."
+    },
+    {
+      "type": "subheading",
+      "content": "Discussion Questions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before moving on, consider:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "How does your organization's sales process differ from this standard flow?",
+        "What stages might you add or remove to match your business?",
+        "Where do you see opportunities for automation in this process?",
+        "How could this structured approach improve your current sales tracking?"
+      ]
+    }
+  ]
+}

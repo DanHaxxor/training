@@ -1,0 +1,171 @@
+{
+  "title": "Email and SMS Campaigning",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Pre-Discussion Questions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before we dive in, consider these questions:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Look through your personal email. What brand or business has emailed you in the last 24 hours?",
+        "What kind of email is it? A reminder to buy something in your cart? A flyer for a sale or new product?",
+        "Do you have any promotional text messages from a 5 digit number? What kind, and who from?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Email Marketing"
+    },
+    {
+      "type": "paragraph",
+      "content": "If you scroll through your inbox, you will probably find a mix of emails from companies you buy from regularly and emails from companies you have not purchased from in many years. This is a normal part of how brands stay visible. Email marketing is one of the easiest ways for a business to keep itself on your mind."
+    },
+    {
+      "type": "paragraph",
+      "content": "Emails often feel personal. They might greet you by name or reference things you have bought in the past. These details help the message feel like it was written with you in mind. In reality, most of this personalization comes from **stored customer data** and **automated rules** that fill in details for each person on a mailing list."
+    },
+    {
+      "type": "paragraph",
+      "content": "A good example is a birthday email. It may feel special, but the brand is not manually checking every customer's birthday. Your information sits in a database or CRM system and an automation sends that message every year at the same time. It is consistent and efficient, which is exactly what a marketing team wants."
+    },
+    {
+      "type": "paragraph",
+      "content": "Email continues to be one of the fastest ways for businesses to reach thousands of people at once with very little work. Most platforms allow you to design one email template, choose a mailing list, and send everything at the press of a button. Tools like **Zoho Campaigns** and **Zoho CRM** make this process simple and give businesses a reliable way to stay connected with their audience."
+    },
+    {
+      "type": "heading",
+      "content": "Email Analytics"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sending email is only part of the strategy. Marketers also pay close attention to what happens after an email goes out. Most email platforms track information such as:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Open rate** - Shows how many people opened the email",
+        "**Click rate** - Shows how many people clicked a link inside the email",
+        "**Unsubscribe count** - Shows how many people removed themselves from the mailing list"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Discussion: A/B Testing"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Question:** What is A/B testing?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Answer:** Companies use A/B testing to figure out which version of an email performs better. For example, a business might try two different subject lines to see which one gets more people to open the email. Once they know which version works best, they can use that idea in future campaigns."
+    },
+    {
+      "type": "subheading",
+      "content": "Discussion: Understanding Open Rates and Click Rates"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Question:** Why would a business want to review open rates and click rates? What's the difference between the two?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Answer 1:** Open rates show how many people actually opened the email. This usually tells you how strong your subject line is and how interested your audience is in hearing from you. Over time, open rates can help measure how well your overall marketing style is being received."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Answer 2:** Click rates show how many people clicked a link inside the email. This tells you whether the content or offer inside the message was appealing enough for someone to take the next step. A high click rate means people are not just opening the email but actually engaging with what you sent."
+    },
+    {
+      "type": "subheading",
+      "content": "Discussion: High Unsubscribe Rates"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Question:** What can a high unsubscribe rate tell a marketing department?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Answer:** Customers or potentials unsubscribing from emails can indicate many things. They may feel they're getting too many emails, or not enough emails relevant to them. It's possible subject lines were perceived as \"misleading\" or too sales-heavy."
+    },
+    {
+      "type": "heading",
+      "content": "SMS Marketing"
+    },
+    {
+      "type": "paragraph",
+      "content": "If you have ever received a text from a short five digit number about a sale, a delivery update, or a limited time offer, you have already experienced SMS marketing. Text message marketing works a lot like email marketing, but it reaches people in a more direct way. Emails can be ignored or filtered without much thought, but a text usually appears front and center on your phone."
+    },
+    {
+      "type": "paragraph",
+      "content": "Businesses use SMS for messages that need to feel fast or personal. These might include:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Appointment reminders",
+        "Limited promotions",
+        "Coupon codes",
+        "Notifications about items left in a cart",
+        "Short surveys or simple customer service interactions"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Just like email, SMS messages are often automated. A customer's phone number is stored in a list, and the system decides when each message is sent. Most messages start as templates created ahead of time, and many include **dynamic fields** that fill in personal details at the moment they are delivered."
+    },
+    {
+      "type": "paragraph",
+      "content": "SMS campaigns can be effective, but they carry more risk than email. Text messages feel personal and are immediately visible to the individual receiving them. Modern phones and carriers also make it very easy to block or report a number as spam. If enough people do this, the number can be **flagged by the carrier**. Once that happens, the number may be restricted from sending messages and in some cases even from making calls to mobile customers. This can be a serious problem for any business that depends on the same number for customer communication or service updates."
+    },
+    {
+      "type": "paragraph",
+      "content": "Because of this, most companies keep their SMS content short, simple, and useful. Text messages work best when they provide quick value and do not feel intrusive or overwhelming."
+    },
+    {
+      "type": "heading",
+      "content": "Using Software to Manage Email and SMS Marketing: Zoho Campaigns"
+    },
+    {
+      "type": "paragraph",
+      "content": "Having stated the basics of Email and SMS marketing, it's important to understand how businesses actually manage all of this behind the scenes. Most companies are not sending messages one at a time or juggling multiple spreadsheets. They use software designed specifically for marketing communication."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Zoho Campaigns** is one example of a platform that helps businesses manage everything covered so far."
+    },
+    {
+      "type": "paragraph",
+      "content": "It provides tools for:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Building email templates so every message looks professional",
+        "Managing mailing lists and subscriber preferences",
+        "Signup forms, subscription management portals, and unsubscribe links are all available through Zoho Campaigns",
+        "Creating and sending SMS campaigns",
+        "Automating messages, such as birthday emails or follow-ups for abandoned carts",
+        "Adding personalization using stored customer data",
+        "Reviewing analytics, including open rates, click rates, delivery reports, and unsubscribe numbers"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Campaigns also works closely with **Zoho CRM**, which lets a business sync its contacts, segment its audience, and make sure marketing messages match what is happening with its customer relationships."
+    },
+    {
+      "type": "paragraph",
+      "content": "When everything is connected through a system like this, businesses can deliver consistent, targeted messages and avoid sending irrelevant or unwanted content. It also saves time, prevents mistakes, and allows marketers to focus on strategy rather than manual work."
+    }
+  ]
+}

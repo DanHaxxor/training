@@ -1,0 +1,16 @@
+{
+  "title": "Zoho Social Platform",
+  "description": "Master social media management using Zoho Social - scheduling, analytics, and team collaboration",
+  "version": "1.0.0",
+  "prerequisites": ["social-media-marketing"],
+  "modules": [
+    {
+      "id": "zoho-social-overview",
+      "title": "Zoho Social Platform Overview",
+      "file": "content/zoho-social.json",
+      "category": "Platform Training",
+      "description": "Complete guide to scheduling, monitoring, analytics, and team collaboration with Zoho Social",
+      "order": 1
+    }
+  ]
+}

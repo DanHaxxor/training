@@ -1,0 +1,105 @@
+{
+  "title": "CRM Self-Activities",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Activity 1: Importing Leads"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your instructor will provide you with an import file. Import this file into your Leads module."
+    },
+    {
+      "type": "paragraph",
+      "content": "After your import is complete, answer the following questions:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "How many Leads have \"Web Research\" in the Lead Source field?",
+        "How many Leads have \"Social Media\" in the Lead Source field?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Hint:** Use filters or create a custom view to find this information quickly."
+    },
+    {
+      "type": "heading",
+      "content": "Activity 2: Creating a Webform"
+    },
+    {
+      "type": "paragraph",
+      "content": "Think about a real-world scenario where your business would need to capture information through a web form. Would you be capturing Leads or Contacts? What's the purpose of the form?"
+    },
+    {
+      "type": "subheading",
+      "content": "Your Task: Create a webform that meets these requirements:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Include at least 5 fields",
+        "Apply some customization (color, font, or formatting)",
+        "Configure the form so you can easily identify which records came from it (think about Lead Source values, hidden fields, or campaign tags)",
+        "Test your form — have 5 classmates submit it to make sure it works"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Publishing Option:** If you have a Zoho Sites page set up, try embedding your webform there."
+    },
+    {
+      "type": "heading",
+      "content": "Activity 3: Updating Leads with an Import"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your instructor will provide you with an import update file. Use this file to update your existing Leads."
+    },
+    {
+      "type": "paragraph",
+      "content": "After your update is complete, answer the following questions:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "How many Leads now have \"Webform Signup\" in the Lead Source field?",
+        "How many Leads still have \"Social Media\" in the Lead Source field?",
+        "What specific social platforms now appear in the Lead Source field instead of \"Social Media\"?"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Think About It:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What changed between your first import and this update?",
+        "Why is \"Facebook\" or \"Twitter\" more useful than just \"Social Media\"?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Wrap-Up Questions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Be prepared to discuss:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "When would you use a bulk import versus a webform to get leads into your CRM?",
+        "Why does specific, consistent data in fields like Lead Source matter?",
+        "How can filters and custom views help you work smarter?"
+      ]
+    }
+  ]
+}

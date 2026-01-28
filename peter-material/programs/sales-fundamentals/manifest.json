@@ -1,0 +1,24 @@
+{
+  "title": "Sales Fundamentals",
+  "description": "Learn the foundations of sales processes, customer journey, and effective sales cycle management",
+  "version": "1.0.0",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "intro-sales-cycle",
+      "title": "Introduction to Sales and the Sales Cycle",
+      "file": "content/intro-sales-cycle.json",
+      "category": "Fundamentals",
+      "description": "Understanding the complete sales process from lead generation to closing deals",
+      "order": 1
+    },
+    {
+      "id": "customer-journey",
+      "title": "Understanding the Customer Journey",
+      "file": "content/customer-journey.json",
+      "category": "Fundamentals",
+      "description": "Map the customer experience from awareness to loyalty and build effective touchpoints",
+      "order": 2
+    }
+  ]
+}

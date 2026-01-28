@@ -1,0 +1,176 @@
+{
+  "title": "What is Zoho CRM?",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Pre-Discussion"
+    },
+    {
+      "type": "paragraph",
+      "content": "Given that Zoho has another CRM in Zoho Bigin, **why do you think Zoho CRM and Bigin both exist as product offerings?**"
+    },
+    {
+      "type": "quote",
+      "content": "Alternative: Use the Learn Lesson 'Zoho CRM Basics: Sales' to cover the same information."
+    },
+    {
+      "type": "heading",
+      "content": "What is CRM?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**CRM stands for Customer Relationship Management.** CRMs are used to manage and analyze customer interactions and data throughout the customer lifecycle. The goal is to improve customer service relationships and assist in customer retention, driving sales growth."
+    },
+    {
+      "type": "paragraph",
+      "content": "CRM can also refer to a system or tool that helps businesses manage relationships and interactions with customers and potential customers. A CRM system can help companies stay connected to customers, streamline processes, and improve profitability."
+    },
+    {
+      "type": "subheading",
+      "content": "What CRM Systems Enable Businesses to Do"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Record and manage customer information** - CRM tools can store a wealth of customer data, including personal information, purchase history, preferences, and concerns",
+        "**Track and manage customer interactions** - CRM tools offer the ability to track every customer interaction, from calls and emails to meetings and sales",
+        "**Analyze and interpret customer data** - CRM systems can analyze customer data to reveal patterns, trends, and insights, helping businesses improve their products, services, and customer relationships",
+        "**Automate tasks** - CRM tools provide automation features that can handle repetitive tasks, freeing time for teams to focus on other business areas"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Overall, CRM is about **creating better relationships with your customers** so that you can provide them with the service, support, and experiences they need."
+    },
+    {
+      "type": "heading",
+      "content": "How Does Zoho CRM Differ from Bigin?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Bigin** is more of a **pipeline-focused tool** and is specifically focused on making a sale. While Zoho CRM operates under this goal as well, CRM is a lot more comprehensive."
+    },
+    {
+      "type": "subheading",
+      "content": "Additional Capabilities in Zoho CRM"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho CRM includes advanced features that Bigin doesn't offer:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Inventory management system",
+        "Advanced automations",
+        "Quoting and invoicing capabilities",
+        "Process management (Blueprints and Assignment Rules)",
+        "Many other enterprise-level tools"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Versatility Beyond Sales"
+    },
+    {
+      "type": "paragraph",
+      "content": "In fact, many customers choose to set up Zoho CRM as an **ERP system**. It can be configured for various use cases beyond traditional sales:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Scheduling tool** for school campuses",
+        "**Visit tracking and patient portal system** for medical entities",
+        "**Project management** for service businesses",
+        "**Custom business processes** tailored to specific industries"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "When to Transition from Bigin to CRM"
+    },
+    {
+      "type": "paragraph",
+      "content": "The transition from Bigin to Zoho CRM becomes necessary when:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "A business **outgrows Bigin's record flow** and needs to manage more complex data",
+        "The business needs **advanced capabilities** like process management (Blueprints, Assignment Rules)",
+        "The team requires **inventory management, quoting, or invoicing** features",
+        "The business needs **deeper automation** and workflow customization",
+        "Multiple departments need to **share and collaborate** on customer data in more sophisticated ways"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Think of Bigin as your starting point for pipeline management, and Zoho CRM as the full-featured platform you grow into as your business scales."
+    },
+    {
+      "type": "heading",
+      "content": "Hands-On Activity: Converting Bigin to Zoho CRM"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now it's time to take the step of converting your Bigin account to Zoho CRM (if feasible). This process will migrate your existing data and pipelines to the more robust CRM platform."
+    },
+    {
+      "type": "subheading",
+      "content": "Conversion Process Overview"
+    },
+    {
+      "type": "paragraph",
+      "content": "During this activity, your instructor will:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Explain the conversion process step-by-step",
+        "Show at least one example of how Bigin converts to CRM",
+        "Demonstrate what the CRM account looks like after conversion",
+        "Discuss what happens to your pipelines, contacts, and deals"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Alternative: Starting Fresh with CRM"
+    },
+    {
+      "type": "paragraph",
+      "content": "If conversion is not feasible for any reason, you'll start a new Zoho CRM account instead. Either way, this is just setup and preparation - you don't need to do any work in CRM yet."
+    },
+    {
+      "type": "quote",
+      "content": "Note: You'll be able to explore and learn about CRM functionality in subsequent lessons. This activity is purely for account setup and preparation."
+    },
+    {
+      "type": "subheading",
+      "content": "What to Expect After Conversion"
+    },
+    {
+      "type": "paragraph",
+      "content": "After converting from Bigin to Zoho CRM, you'll notice:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Your pipelines become **Deals** with stages",
+        "Contacts and Companies are organized into separate modules",
+        "Many more modules appear (Accounts, Leads, Products, Quotes, Invoices, etc.)",
+        "Additional customization options in settings",
+        "More advanced automation and workflow tools"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Don't be overwhelmed by the additional features - we'll explore each area systematically in the coming lessons. For now, just get familiar with logging in and navigating the interface."
+    }
+  ]
+}

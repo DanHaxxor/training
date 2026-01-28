@@ -1,0 +1,56 @@
+{
+  "title": "Zoho CRM Essentials",
+  "description": "Master core CRM functionality - modules, records, sales processes, and inventory management",
+  "version": "1.0.0",
+  "prerequisites": ["sales-fundamentals", "bigin-crm"],
+  "modules": [
+    {
+      "id": "what-is-zoho-crm",
+      "title": "What is Zoho CRM?",
+      "file": "content/what-is-zoho-crm.json",
+      "category": "Introduction",
+      "description": "Overview of Zoho CRM capabilities, editions, and how it differs from Bigin",
+      "order": 1
+    },
+    {
+      "id": "modules-records-importing",
+      "title": "Modules, Records, and Importing",
+      "file": "content/modules-records-importing.json",
+      "category": "Core Concepts",
+      "description": "Understanding CRM structure, creating records, and importing your existing data",
+      "order": 2
+    },
+    {
+      "id": "sales-process-demo",
+      "title": "Sales Process Demo",
+      "file": "content/sales-process-demo.json",
+      "category": "Sales Process",
+      "description": "End-to-end walkthrough of managing deals from lead to close in Zoho CRM",
+      "order": 3
+    },
+    {
+      "id": "inventory-finance",
+      "title": "Inventory and Finance Modules",
+      "file": "content/inventory-finance-modules.json",
+      "category": "Advanced Modules",
+      "description": "Managing products, price books, quotes, invoices, and purchase orders",
+      "order": 4
+    },
+    {
+      "id": "secondary-modules",
+      "title": "Secondary Modules - Self Study",
+      "file": "content/secondary-modules.json",
+      "category": "Advanced Modules",
+      "description": "Explore campaigns, vendors, projects, and other supporting modules",
+      "order": 5
+    },
+    {
+      "id": "crm-self-activities",
+      "title": "CRM Self-Activities",
+      "file": "content/crm-self-activities.json",
+      "category": "Practice",
+      "description": "Hands-on exercises to reinforce your understanding of core CRM concepts",
+      "order": 6
+    }
+  ]
+}

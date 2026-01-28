@@ -1,0 +1,419 @@
+{
+  "title": "Inventory and Finance Modules",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Live Demo and Discussion"
+    },
+    {
+      "type": "paragraph",
+      "content": "In this lesson, we'll explore the modules that support inventory management and financial processes in Zoho CRM. These modules work together to track products, manage vendor relationships, generate quotes and invoices, and maintain accurate inventory levels."
+    },
+    {
+      "type": "heading",
+      "content": "Products Module"
+    },
+    {
+      "type": "subheading",
+      "content": "Understanding Products in CRM"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Products** refer to the goods or services sold or procured by any organization. The Products module serves as your central catalog for everything your business offers."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Discussion Questions:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What are products for? How can they be used within the CRM?",
+        "What information should be tracked for each product?",
+        "How do products connect to other modules like Deals, Quotes, and Invoices?"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Key Product Fields"
+    },
+    {
+      "type": "paragraph",
+      "content": "When viewing products in the demo, note important fields such as:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Product Name** - The name of your product or service",
+        "**Stock Number (Quantity in Stock)** - Current inventory level",
+        "**Unit Price** - The price per unit",
+        "**Product Code/SKU** - Unique identifier for the product",
+        "**Product Category** - Classification for organization",
+        "**Description** - Detailed information about the product"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Important: We will be illustrating inventory management with the Stock number later in this lesson, and demonstrating how other modules can affect inventory levels automatically."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity: Create Your Product Catalog"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Hands-On Exercise:** Create 5 different products relevant to your business in the Products module. Include:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Product name and description",
+        "Unit price",
+        "Quantity in stock",
+        "Product code or SKU",
+        "Any other relevant details specific to your business"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Think about the actual products or services your organization offers, and create realistic entries that you could use in practice."
+    },
+    {
+      "type": "heading",
+      "content": "Vendors Module"
+    },
+    {
+      "type": "subheading",
+      "content": "What are Vendors?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Vendors** are the companies, individuals, or contractors from whom your organization procures products and/or services. The Vendors module functions similarly to the Accounts module, but specifically for managing your supply chain relationships."
+    },
+    {
+      "type": "subheading",
+      "content": "Vendor and Contact Relationships"
+    },
+    {
+      "type": "paragraph",
+      "content": "Just like Accounts and Contacts:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Vendors** represent the company or organization you purchase from",
+        "**Contacts** can be linked to Vendors to show representatives or employees of that Vendor",
+        "This maintains the relationship hierarchy for your procurement processes",
+        "Products can be associated with Vendors to track which suppliers provide which items"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity: Create Vendors and Link Products"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Hands-On Exercise:** To explore how Vendors work with Contacts and Products in CRM:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create at least 2 Vendors in your CRM",
+        "Add vendor details such as company name, address, phone, and email",
+        "Link the vendors to the products you created earlier",
+        "Optionally, create Contacts associated with these Vendors (e.g., sales representatives, account managers)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This establishes the connection between your product catalog and your supplier relationships."
+    },
+    {
+      "type": "heading",
+      "content": "Quotes Module"
+    },
+    {
+      "type": "subheading",
+      "content": "Understanding Quotes"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Quotes** are legal agreements between a customer and a vendor to deliver the requested product within the specified time at the agreed-upon price."
+    },
+    {
+      "type": "subheading",
+      "content": "How Quotes Work in CRM"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Quotes provide an estimate of Products totaled up in a **subform**",
+        "Products are added line-by-line to build the complete quote",
+        "Inventory templates compile this information into a typical Quote format with line items",
+        "Quotes can be sent directly to customers from the CRM",
+        "The quote automatically links to the associated Deal, Contact, and Account"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity: Create a Quote and Convert to Invoice"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Hands-On Exercise (if time permits):**"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to a Deal in your CRM (or create a new one)",
+        "Create a Quote for that Deal",
+        "Add Products to the Quote using the products you created earlier",
+        "Review the Quote total and details",
+        "Convert the Quote to an Invoice",
+        "Mark the Invoice status as **'Delivered'**",
+        "Observe what happens to the **'Quantity in Stock'** for the Products you added"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Alternative: If there is limited time, the instructor will demonstrate the full process: creating a Quote, converting to Invoice, marking as Delivered, and showing the automatic inventory subtraction in the Products module."
+    },
+    {
+      "type": "heading",
+      "content": "Invoices Module"
+    },
+    {
+      "type": "subheading",
+      "content": "What are Invoices?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Invoices** are bills issued by the vendor to customers along with the goods or services for the purpose of receiving payment. Invoices represent the formal request for payment after a sale is confirmed."
+    },
+    {
+      "type": "subheading",
+      "content": "Invoice Status and Inventory Impact"
+    },
+    {
+      "type": "paragraph",
+      "content": "Similar to Purchase Orders, Invoices have a direct impact on inventory:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "When an Invoice Status is marked as **'Delivered'**, the system automatically updates inventory",
+        "The **Quantity** specified in the Invoice subform is **subtracted** from the **Stock number** (Quantity in Stock) of each Product",
+        "This ensures real-time inventory tracking as sales are completed",
+        "You can view the updated stock levels immediately in the Products module"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Demo:** The instructor will demonstrate creating an Invoice, marking it as Delivered, and showing the automatic inventory deduction for the same product used in previous examples."
+    },
+    {
+      "type": "heading",
+      "content": "Sales Orders Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Sales Orders** are confirmation of sales, generated after the customer sends a purchase order based on your quotes."
+    },
+    {
+      "type": "subheading",
+      "content": "When to Use Sales Orders"
+    },
+    {
+      "type": "paragraph",
+      "content": "The use of Sales Orders depends on your business process:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Once a Deal is finalized, you might create a Sales Order as an intermediate step",
+        "Alternatively, you might go directly from Quote to Invoice",
+        "Some businesses require Sales Orders for internal approval processes",
+        "Others use Sales Orders when there's a gap between order confirmation and fulfillment",
+        "The workflow depends on how your business conducts this part of a sale"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Sales Orders serve as the bridge between the customer's commitment to purchase (often formalized in their Purchase Order to you) and your Invoice for payment."
+    },
+    {
+      "type": "heading",
+      "content": "Purchase Orders Module"
+    },
+    {
+      "type": "subheading",
+      "content": "Understanding Purchase Orders"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Purchase Orders** are legally binding order-placement documents for procuring products or services from vendors. These are orders **you place with your suppliers** to restock inventory."
+    },
+    {
+      "type": "subheading",
+      "content": "Purchase Orders and Inventory Management"
+    },
+    {
+      "type": "paragraph",
+      "content": "Purchase Orders have the **opposite effect** on inventory compared to Invoices:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create a Purchase Order when ordering products from a Vendor",
+        "Note the **'Quantity'** field within the subform for each product",
+        "When Purchase Orders are marked with Status **'Delivered'**, inventory is updated automatically",
+        "The Quantity from the Purchase Order subform is **added to** the Stock number in the Products module",
+        "This tracks incoming inventory from your vendors"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Demo:** The instructor will demonstrate:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Creating a Purchase Order associated with a Vendor",
+        "Adding products with specified quantities",
+        "Marking the Purchase Order status as 'Delivered'",
+        "Showing the automatic inventory increase in the Products module"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Key Concept: Invoices **subtract** from inventory (products going out to customers), while Purchase Orders **add to** inventory (products coming in from vendors). This creates a complete inventory management system within CRM."
+    },
+    {
+      "type": "heading",
+      "content": "CPQ (Configure, Price, Quote)"
+    },
+    {
+      "type": "subheading",
+      "content": "What is CPQ?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**CPQ** stands for Configure, Price, Quote. This advanced feature set helps sales teams create complex quotes more efficiently and accurately."
+    },
+    {
+      "type": "paragraph",
+      "content": "CPQ allows you to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Connect products together** to be added to a subform automatically",
+        "**Suggest products** in relation to items that have previously been added (cross-selling and upselling)",
+        "**Allow sales people to narrow down subform items** based on their criteria",
+        "**Automate pricing rules** based on quantity, customer type, or other factors",
+        "**Guide sellers** through the quoting process with conditional logic"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "CPQ Components"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Product Configurator:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Product Configurator allows you to build bundles or packages of products that are commonly sold together. When a sales rep selects one product, related products can be automatically added or suggested."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Price Rules:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Price Rules differ from Product Configurators in their purpose. While Product Configurators focus on *which* products to include, Price Rules determine *how much* to charge based on conditions such as:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Quantity discounts (bulk pricing)",
+        "Customer type or tier",
+        "Time-based promotions",
+        "Product combinations",
+        "Custom business logic"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "The builder interface for Price Rules is similar to the Product Configurator, making it easy to create complex pricing logic."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Guided Selling:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Guided Selling walks sales representatives through a series of questions to determine which products best fit the customer's needs. Based on their answers, the system suggests appropriate products and configurations."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: CPQ in Action"
+    },
+    {
+      "type": "paragraph",
+      "content": "During this demonstration, the instructor will show:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "**Product Configurator** - Building a product bundle and executing the automation live",
+        "**Price Rules** - Reviewing a premade example of conditional pricing (the builder is the same as Product Configurator)",
+        "**Guided Selling** - Using a GIF example from the Zoho Knowledge Base or a demo account setup to show the customer-facing experience"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "These CPQ features significantly reduce quote preparation time, minimize errors, and ensure consistent pricing across your sales team."
+    },
+    {
+      "type": "heading",
+      "content": "Summary: Inventory and Finance Flow"
+    },
+    {
+      "type": "paragraph",
+      "content": "The inventory and finance modules work together to create a complete business management system:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Products** - Your central catalog of goods and services",
+        "**Vendors** - Companies you purchase from to restock inventory",
+        "**Purchase Orders** - Orders placed with vendors (adds to inventory when delivered)",
+        "**Quotes** - Proposals sent to customers",
+        "**Sales Orders** - Confirmation of customer orders (optional step)",
+        "**Invoices** - Bills sent to customers (subtracts from inventory when delivered)",
+        "**CPQ** - Tools to streamline and automate the quoting process"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This integrated approach ensures accurate inventory tracking, streamlined sales processes, and better financial management within your CRM."
+    }
+  ]
+}

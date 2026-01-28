@@ -1,0 +1,71 @@
+{
+  "title": "Users, Profiles, Roles, and Permissions",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "In this lesson, you'll learn how security and access control work in Zoho CRM. Understanding the difference between Users, Profiles, Roles, and Permissions is essential for managing who can see and do what in your CRM."
+    },
+    {
+      "type": "heading",
+      "content": "Access the Lesson"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Zoho CRM Basics: Security Control and Profiles](https://learn.zoho.com)"
+    },
+    {
+      "type": "heading",
+      "content": "What You'll Learn"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What Users are and how they're added to the CRM",
+        "The difference between Profiles and Roles (they're not the same thing!)",
+        "How Permissions control what actions users can take",
+        "How Roles control what data users can see",
+        "Why this structure matters for keeping your CRM secure and organized"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Instructions"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Log in to Zoho Learn using your learner credentials",
+        "Navigate to the lesson linked above",
+        "Complete all sections of the lesson",
+        "Take notes on the key differences between Profiles and Roles — this is a common point of confusion"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing the lesson, you should be able to answer:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "If you want to prevent a user from deleting records, would you adjust their **Profile** or their **Role**?",
+        "If you want to limit a user to only seeing records they own, would you adjust their **Profile** or their **Role**?",
+        "A new sales rep joins the team. What do you need to set up for them in terms of Users, Profiles, and Roles?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Need Help?"
+    },
+    {
+      "type": "paragraph",
+      "content": "If you're having trouble accessing the lesson or run into permission issues, let your instructor know."
+    }
+  ]
+}

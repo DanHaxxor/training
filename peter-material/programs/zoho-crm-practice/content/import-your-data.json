@@ -1,0 +1,159 @@
+{
+  "title": "Self Activity: Import Your Own Data",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "This hands-on activity helps you practice importing real business data into Zoho CRM. You'll learn to properly map fields, handle duplicates, and validate your import results."
+    },
+    {
+      "type": "heading",
+      "content": "Prerequisites"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Access to Zoho CRM with import permissions",
+        "Your business data in CSV or Excel format",
+        "Understanding of your data structure and field requirements"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Activity Steps"
+    },
+    {
+      "type": "subheading",
+      "content": "Step 1: Prepare Your Data File"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before importing, ensure your data file is properly formatted:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Export your existing data from your current system (spreadsheet, email list, or other CRM)",
+        "Review the data for any formatting issues, duplicates, or missing required fields",
+        "Make sure column headers match CRM field names where possible",
+        "Save the file in CSV or Excel format"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 2: Map Your Fields"
+    },
+    {
+      "type": "paragraph",
+      "content": "Navigate to the appropriate module in Zoho CRM and start the import process:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Click the **Import** button in your target module (Leads, Contacts, Deals, etc.)",
+        "Upload your prepared data file",
+        "Carefully map each column from your file to the corresponding CRM field",
+        "Pay special attention to required fields (marked with asterisks)",
+        "Use **Lead Source**, **Owner**, or other tracking fields to identify this import batch"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Pro Tip:** Create a custom field like \"Import Batch\" or use tags to track which records came from this specific import."
+    },
+    {
+      "type": "subheading",
+      "content": "Step 3: Configure Import Settings"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Choose how to handle duplicates (skip, update, or merge)",
+        "Select the duplicate check criteria (email, phone, company name, etc.)",
+        "Decide whether to trigger workflows and assignment rules",
+        "Set the record owner (yourself or distribute among team members)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 4: Review and Import"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before finalizing:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Review the field mapping summary",
+        "Check the preview of how your data will appear",
+        "Click **Import** to begin the process",
+        "Wait for the import completion notification"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Validation Tasks"
+    },
+    {
+      "type": "paragraph",
+      "content": "After your import completes, verify the results:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Check the import summary report for any errors or skipped records",
+        "Create a custom view or filter to see only your newly imported records",
+        "Verify that key fields populated correctly (names, emails, phone numbers, etc.)",
+        "Look for any data quality issues that need cleanup",
+        "Test that the records are searchable and accessible"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Reflection Questions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Consider these questions after completing your import:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "How many records imported successfully? Were there any errors?",
+        "What data quality issues did you discover during the import?",
+        "How could you improve your data file before the next import?",
+        "What field mappings were challenging? Why?",
+        "Did you use tags or custom fields to track this import batch?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Next Steps"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now that you've imported your data:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Set up workflows to automate actions on these records",
+        "Create reports and dashboards to track your imported data",
+        "Train your team on working with the new records",
+        "Plan regular data quality audits to maintain accuracy"
+      ]
+    }
+  ]
+}

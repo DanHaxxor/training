@@ -1,0 +1,139 @@
+{
+  "title": "Activity: Add Users to Your CRM",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "To fully understand Security Control and see the difference between Admin and Standard Users, you need more than one user in your CRM that you can access and test with."
+    },
+    {
+      "type": "heading",
+      "content": "Before You Begin"
+    },
+    {
+      "type": "paragraph",
+      "content": "Review this resource to familiarize yourself with Roles: [Zoho CRM Help: Role Management Introduction](https://www.zoho.com/crm/help/security-control/role-management.html)"
+    },
+    {
+      "type": "paragraph",
+      "content": "We'll cover roles in more depth later today, but you'll need to understand the basics before starting this exercise."
+    },
+    {
+      "type": "heading",
+      "content": "What You'll Do"
+    },
+    {
+      "type": "paragraph",
+      "content": "You'll create at least two additional users in your CRM, both with the Standard profile. This includes:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Creating a new role in your hierarchy",
+        "Setting up email accounts for your test users",
+        "Adding the users to your CRM",
+        "Testing their access and permissions"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Step 1: Create a New Role"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Open your CRM and navigate to **Setup → Security Control → Roles**",
+        "You'll see two existing roles: **CEO** and **Manager**",
+        "Create a new role beneath Manager in the hierarchy",
+        "**Suggested name:** Sales or Salesperson"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Make sure the new role reports to Manager, giving you three tiers:"
+    },
+    {
+      "type": "code",
+      "content": "CEO\n └── Manager\n      └── Sales"
+    },
+    {
+      "type": "heading",
+      "content": "Step 2: Create Email Addresses for Your Test Users"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create at least two free email addresses (Zoho Mail, Gmail, or similar work fine)",
+        "Write down each email and password — you'll need to log in as these users during testing",
+        "Keep these credentials somewhere organized; you'll use them throughout training"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Step 3: Add the Users to Your CRM"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "In your CRM, go to **Setup → Users → Add New User**",
+        "Enter the email addresses you just created",
+        "Assign roles like this:\n  - One user under the **Manager** role\n  - One user under the **Sales** role (reporting to Manager)",
+        "Assign the **Standard** profile to both users\n  - You can modify their profiles later as needed"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Step 4: Test User Access"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Use a different browser or browser profile (Chrome, Ulaa, Firefox, etc.) for each new user\n  - This lets you stay logged in to multiple accounts at the same time without conflicts",
+        "Log in to each user's email and accept the CRM invitation",
+        "Follow the prompts to create a Zoho profile and join the CRM",
+        "Give each user a distinct name so you can easily tell them apart",
+        "Log in to the CRM as each user and confirm you can access it"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Step 5: Review Access Permissions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once you're logged in as your new users, you'll probably notice they can't see any records yet. This is expected — all your Leads are currently owned by the Admin and haven't been shared."
+    },
+    {
+      "type": "paragraph",
+      "content": "Think back to the lesson on Profiles, Roles, and Data Sharing."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Bonus Challenge:** Figure out on your own how to adjust sharing permissions so your new users can view or access records. What options do you have?"
+    },
+    {
+      "type": "heading",
+      "content": "Checklist"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before moving on, confirm you've completed the following:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Created a new Role (Sales or similar) that reports to Manager",
+        "Created at least 2 email addresses for test users",
+        "Added both users to your CRM with the Standard profile",
+        "Assigned one user to Manager and one to Sales",
+        "Logged in as each user and confirmed CRM access",
+        "Noticed the permission limitations for Standard users"
+      ]
+    }
+  ]
+}

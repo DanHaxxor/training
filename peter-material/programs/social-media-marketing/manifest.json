@@ -1,0 +1,47 @@
+{
+  "title": "Social Media Marketing Fundamentals",
+  "description": "Learn core social media strategies, brand presence, and engagement tactics with real-world examples",
+  "version": "1.0.0",
+  "modules": [
+    {
+      "id": "intro-social-media",
+      "title": "Introduction to Social Media Marketing",
+      "file": "content/Marketing/SMM/intro-social-media.json",
+      "category": "Fundamentals",
+      "description": "Understanding why social media matters for brands and the foundations of effective social presence",
+      "order": 1
+    },
+    {
+      "id": "managing-social-presence",
+      "title": "Social Media Strategy & Management",
+      "file": "content/Marketing/SMM/managing-social-presence.json",
+      "category": "Strategy",
+      "description": "Core strategies, tools, and best practices for managing an effective social media presence",
+      "order": 2
+    },
+    {
+      "id": "wendys-case-study",
+      "title": "Case Study: The Wendy's Revolution",
+      "file": "content/Marketing/SMM/wendys-case-study.json",
+      "category": "Case Studies",
+      "description": "How Wendy's changed social media marketing forever with bold, personality-driven content",
+      "order": 3
+    },
+    {
+      "id": "brand-examples",
+      "title": "Brand Success Stories",
+      "file": "content/Marketing/SMM/brand-examples.json",
+      "category": "Case Studies",
+      "description": "Learn from Nike's inspiration, Dbrand's sass, and Duolingo's viral engagement tactics",
+      "order": 4
+    },
+    {
+      "id": "quiz",
+      "title": "Final Knowledge Check",
+      "file": "content/Marketing/SMM/quiz.json",
+      "category": "Assessment",
+      "description": "Test your understanding of Social Media Marketing concepts",
+      "order": 5
+    }
+  ]
+}

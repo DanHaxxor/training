@@ -1,0 +1,56 @@
+{
+  "title": "Zoho CRM Mastery",
+  "description": "Expert-level CRM capabilities - custom functions, integrations, reporting, and advanced features",
+  "version": "1.0.0",
+  "prerequisites": ["zoho-crm-advanced"],
+  "modules": [
+    {
+      "id": "custom-functions-client-script",
+      "title": "Custom Functions and Client Scripts",
+      "file": "content/custom-functions-client-script.json",
+      "category": "Development",
+      "description": "Write custom code to extend CRM functionality and automate complex business logic",
+      "order": 1
+    },
+    {
+      "id": "calendar-bookings-integration",
+      "title": "Calendar, Bookings, and Integrations",
+      "file": "content/calendar-bookings-integration.json",
+      "category": "Integrations",
+      "description": "Sync calendars, set up online bookings, and connect third-party applications",
+      "order": 2
+    },
+    {
+      "id": "emailing-templates",
+      "title": "Email Management and Templates",
+      "file": "content/emailing-templates.json",
+      "category": "Communication",
+      "description": "Mass emails, personalized templates, tracking, and email automation",
+      "order": 3
+    },
+    {
+      "id": "reporting-analytics",
+      "title": "Reporting and Analytics",
+      "file": "content/reporting-analytics.json",
+      "category": "Analytics",
+      "description": "Custom reports, dashboards, KPIs, and data-driven decision making",
+      "order": 4
+    },
+    {
+      "id": "wizards",
+      "title": "CRM Wizards",
+      "file": "content/wizards.json",
+      "category": "Advanced Features",
+      "description": "Create guided workflows and step-by-step data entry processes",
+      "order": 5
+    },
+    {
+      "id": "kiosks-crm-for-everyone",
+      "title": "Kiosks and CRM For Everyone",
+      "file": "content/kiosks-crm-for-everyone.json",
+      "category": "Advanced Features",
+      "description": "Public-facing kiosks and extending CRM access to customers and partners",
+      "order": 6
+    }
+  ]
+}

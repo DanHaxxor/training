@@ -1,0 +1,291 @@
+{
+  "title": "Self Activity: Build Approval and Review Process",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "This hands-on activity walks you through creating a multi-stage approval workflow in Zoho CRM. You'll learn to design approval processes for deals, quotes, discounts, or any custom scenario requiring review and authorization."
+    },
+    {
+      "type": "heading",
+      "content": "Prerequisites"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Zoho CRM Professional Edition or higher (required for Approval Processes)",
+        "Admin or workflow configuration permissions",
+        "Clear understanding of your approval hierarchy",
+        "Identified use case (deal approval, discount approval, etc.)"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Activity Steps"
+    },
+    {
+      "type": "subheading",
+      "content": "Step 1: Define Your Approval Scenario"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before building, clearly define what needs approval in your business:"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Common Approval Scenarios:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Large Deals:** Require manager approval for deals over a certain amount",
+        "**Discounts:** Route discount requests to sales leadership for authorization",
+        "**Quotes:** Multi-level review before sending quotes to customers",
+        "**Contract Changes:** Legal and finance review for contract modifications",
+        "**Custom Records:** Approval for partner applications, vendor requests, etc."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "For this activity, choose **one scenario** to implement. Let's use a deal approval process as our example."
+    },
+    {
+      "type": "subheading",
+      "content": "Step 2: Map Out Approval Levels"
+    },
+    {
+      "type": "paragraph",
+      "content": "Determine the approval hierarchy and conditions:"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Example: Deal Approval Levels**"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "**Level 1:** Deals under $10,000 → Direct Manager approval",
+        "**Level 2:** Deals $10,000-$50,000 → Director approval",
+        "**Level 3:** Deals over $50,000 → VP or Executive approval"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Additional Conditions to Consider:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Discount percentage thresholds",
+        "Deal stage (e.g., only require approval at \"Proposal\" stage)",
+        "Product type or deal category",
+        "Customer type (new vs. existing)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 3: Create the Approval Process"
+    },
+    {
+      "type": "paragraph",
+      "content": "Navigate to Zoho CRM and set up your approval workflow:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Go to **Setup > Automation > Approval Processes**",
+        "Click **Create Approval Process**",
+        "Select the module (e.g., Deals)",
+        "Name your process (e.g., \"Deal Value Approval Process\")",
+        "Define the **entry criteria** (when should this approval trigger?)",
+        "Example: Deal Stage = \"Proposal\" AND Amount > $10,000"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 4: Configure Approval Steps"
+    },
+    {
+      "type": "paragraph",
+      "content": "Build the approval workflow with multiple levels:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "**Add Step 1:** Define first level approver (e.g., Record Owner's Manager)",
+        "Set conditions: If Amount < $50,000",
+        "**Add Step 2:** Define second level approver (e.g., VP of Sales)",
+        "Set conditions: If Amount >= $50,000",
+        "Configure what happens when approved vs. rejected at each step"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Approver Options:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Record Owner's Manager (from role hierarchy)",
+        "Specific user (e.g., John Smith)",
+        "Role-based (e.g., anyone in Sales Director role)",
+        "Custom field value (approver specified in a lookup field)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 5: Set Up Actions and Notifications"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure what happens during the approval process:"
+    },
+    {
+      "type": "paragraph",
+      "content": "**On Submit for Approval:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Send email to approver with deal details",
+        "Update a status field (e.g., \"Pending Approval\")",
+        "Lock certain fields to prevent changes during review",
+        "Create a task for the submitter to follow up"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**On Approval:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Move deal to next stage (e.g., \"Approved - Send Quote\")",
+        "Send confirmation email to deal owner",
+        "Update approval status field",
+        "Trigger subsequent workflows or blueprints"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**On Rejection:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Move deal back to previous stage or set to \"On Hold\"",
+        "Send notification explaining why it was rejected",
+        "Create task for sales rep to revise and resubmit",
+        "Log the rejection in the timeline"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 6: Test the Approval Process"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before rolling out to your team, thoroughly test the workflow:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create test deals that meet the approval criteria",
+        "Submit them for approval and verify notifications are sent",
+        "Test approval path as the approver (approve some, reject others)",
+        "Verify that actions trigger correctly (stage changes, emails, etc.)",
+        "Test edge cases (e.g., what if approver is on vacation?)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Set Up Delegation:** Configure delegate approvers for when primary approvers are unavailable."
+    },
+    {
+      "type": "heading",
+      "content": "Validation Tasks"
+    },
+    {
+      "type": "paragraph",
+      "content": "After implementing your approval process:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Confirm approvers receive clear, actionable approval requests",
+        "Verify approvals route to the correct person based on conditions",
+        "Check that rejected items go back to the right stage/owner",
+        "Test multi-level approvals (does it escalate properly?)",
+        "Review audit trail to track approval history"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Advanced Enhancements"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once your basic approval process works, consider these improvements:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Parallel Approvals:** Require approval from multiple people simultaneously (e.g., both Sales Manager AND Finance)",
+        "**Time-Based Escalation:** Auto-escalate to next level if no response within X hours/days",
+        "**Conditional Paths:** Different approval routes based on product type or region",
+        "**Comments and Attachments:** Require approvers to add comments explaining decisions",
+        "**Dashboard for Approvers:** Create a custom view showing all pending approvals"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Reflection Questions"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "How does this approval process improve accountability in your sales cycle?",
+        "What bottlenecks might arise? How can you prevent them?",
+        "Should certain users bypass approvals? (e.g., senior sales reps)",
+        "How will you measure the efficiency of this process?",
+        "What other processes in your business could benefit from structured approvals?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Next Steps"
+    },
+    {
+      "type": "paragraph",
+      "content": "After mastering deal approvals:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create approval processes for quotes, discounts, or contract changes",
+        "Integrate approvals with your blueprint for seamless workflows",
+        "Set up reports to track approval times and bottlenecks",
+        "Train your team on how to submit items for approval",
+        "Review and optimize approval criteria quarterly based on data"
+      ]
+    }
+  ]
+}

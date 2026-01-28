@@ -1,0 +1,256 @@
+{
+  "title": "Automation in Zoho CRM",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 12 Dec 2025"
+    },
+    {
+      "type": "paragraph",
+      "content": "This lesson focuses on creating and testing workflow rules and actions within the CRM. You'll learn how automations can perform updates, send notifications, and trigger related tasks to streamline your sales processes."
+    },
+    {
+      "type": "heading",
+      "content": "Reference Material"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Slide Deck:** Actions and Workflow Rules Presentation"
+    },
+    {
+      "type": "heading",
+      "content": "Live Demo: Workflow Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your instructor will demonstrate creating and testing workflow rules and actions. This section shows how automations work in real-time within the CRM."
+    },
+    {
+      "type": "subheading",
+      "content": "Workflow Rules Overview"
+    },
+    {
+      "type": "paragraph",
+      "content": "During the demo, you'll see:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "An example of a workflow rule already in action",
+        "How to create a new workflow rule that performs a simple action (field update or tag)",
+        "The rule executing within the CRM in real-time"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Exercise: Welcome Email Rule"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now it's your turn to create a workflow rule that welcomes new leads and notifies the Lead Owner."
+    },
+    {
+      "type": "subheading",
+      "content": "Instructions"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Follow along with the instructor or spend five minutes building the rule yourself",
+        "Create a workflow rule triggered when a new lead is created",
+        "Configure the rule to send a welcome email to the lead",
+        "Set up a notification to alert the Lead Owner",
+        "Trigger the rule by creating a test lead",
+        "Review the resulting email and actions in the record timeline"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Follow-up Rule"
+    },
+    {
+      "type": "paragraph",
+      "content": "Next, you'll create a second rule for the Email module that demonstrates conditional automation."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create a workflow rule for the **Email** module",
+        "Set the trigger: when the subject of the previous rule's email is replied to",
+        "Configure the workflow to **schedule a task automatically**",
+        "This creates a seamless follow-up sequence when leads respond"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Actions in Workflow Automation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Workflow rules can trigger various types of actions. Understanding these action types helps you build more sophisticated automations."
+    },
+    {
+      "type": "subheading",
+      "content": "Types of Actions"
+    },
+    {
+      "type": "paragraph",
+      "content": "During this section, you'll review:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The different types of actions available in workflow automation",
+        "How to create a **Task** action and save it for reuse across multiple workflows",
+        "Using **merge fields** in tasks to personalize automated actions",
+        "**Important:** Tasks can be reused as saved actions, but Meetings and Calls cannot",
+        "Notification actions can be sent to the lead, and you can add additional recipients",
+        "Building complete sequences by adding multiple actions (emails, tasks, etc.) to a single workflow"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Assignment Rules and Scoring Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now we'll pivot to explore another automation feature that ties into Workflow Rules. Technically, this is a different feature, but it's a good time to introduce how it works with workflows."
+    },
+    {
+      "type": "subheading",
+      "content": "The Distribution Challenge"
+    },
+    {
+      "type": "paragraph",
+      "content": "Consider this scenario:"
+    },
+    {
+      "type": "quote",
+      "content": "What do you do when you're generating about 100 leads a day, and you have 7 sales people? How do you distribute leads evenly? Better yet, how do you distribute your mid-market or enterprise leads among ONLY your top sales representatives?"
+    },
+    {
+      "type": "paragraph",
+      "content": "The answer to this challenge is **Assignment Rules**."
+    },
+    {
+      "type": "subheading",
+      "content": "What Are Assignment Rules?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Assignment rules allow you to distribute records to owners in a round-robin fashion or based on specific criteria you define."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Examples:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "If **Region = EST**, assign to users on your EST team",
+        "If **Annual Revenue is >50k**, assign to a dedicated user or team",
+        "Round-robin distribution across all sales representatives for balanced workload"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Assignment Rules in Workflow Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "You'll now create a workflow rule that uses an Assignment Rule as its action."
+    },
+    {
+      "type": "subheading",
+      "content": "Use Cases"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "When a deal reaches a certain stage, it's automatically assigned to a team responsible for collecting contract signatures",
+        "Routing specific record types to designated users or departments for handling",
+        "Distributing leads based on geography, industry, or company size"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Assignment Rule Specifics"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Important limitations to understand:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Assignment rules work **automatically** only for records created via **Import, API, and Webforms**",
+        "These must be configured to run automatically: API must contain a line to trigger assignment rules, Webforms must have a toggle turned \"on\" and the rule defined, and Import must have a box checked before completing the import",
+        "For **manually created records**, we can tie the Assignment rule to a Workflow Rule to automate the process"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Scoring Rules in Workflow Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Next, you'll demonstrate creating a workflow rule that uses **Scoring Rules** as the trigger."
+    },
+    {
+      "type": "subheading",
+      "content": "Practical Example"
+    },
+    {
+      "type": "paragraph",
+      "content": "If a lead's score drops below a defined threshold (for instance, due to email bounces or lack of engagement), the workflow could:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Send an automated email to re-engage the lead, or",
+        "Create a follow-up task or call reminder for the owner to verify the lead's interest or contact information"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Scoring Rule Specifics"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Similar to Assignment rules, but scores the lead based on engagement and activity",
+        "**Why Lead scoring is relevant:** Helps track which leads are most engaged and sales-ready",
+        "**How it's used:** Better tracking of engaged leads, prioritization of hot prospects, and automated nurturing of cold leads"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create workflow rules with various triggers and actions",
+        "Build multi-step automation sequences with email and task actions",
+        "Use merge fields to personalize automated communications",
+        "Implement Assignment Rules to distribute leads fairly and strategically",
+        "Set up Scoring Rules to track lead engagement",
+        "Explain when Assignment Rules apply automatically vs. when they need workflow triggers"
+      ]
+    }
+  ]
+}

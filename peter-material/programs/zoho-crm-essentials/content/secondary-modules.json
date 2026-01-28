@@ -1,0 +1,91 @@
+{
+  "title": "Secondary Modules in CRM",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "Secondary modules in CRM include:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Cases**",
+        "**Services**",
+        "**Appointments**",
+        "**Solutions**"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "There are other modules outside the sales modules, but those will either be covered later, or are not within the scope of this training."
+    },
+    {
+      "type": "heading",
+      "content": "Activity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the class research all 4 of the listed modules above on their own. Return to class later in the day, and go around the room to have trainees explain what they've learned."
+    },
+    {
+      "type": "paragraph",
+      "content": "Task the class during their study activity to find a way to implement 1 or multiple of these modules for their type of business."
+    },
+    {
+      "type": "paragraph",
+      "content": "For example, Cases is a support-focused module that could be used by most organizations where the end user faces an issue with a product or service."
+    },
+    {
+      "type": "paragraph",
+      "content": "During the group discussion about these modules, fill in any gaps and answer questions for the class regarding their research and understanding of what these modules are intended for."
+    },
+    {
+      "type": "heading",
+      "content": "Cases"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cases is intended to be a support or ticketing module, connected to Contact, Account, and Deal records. Cases Show in the Related list for associated modules."
+    },
+    {
+      "type": "paragraph",
+      "content": "Cases is designed to be connected to a Product and geared toward product support."
+    },
+    {
+      "type": "paragraph",
+      "content": "Records here contain a Status field that can indicate whether a Case is **New**, **Escalated**, **Closed**, or **On Hold**."
+    },
+    {
+      "type": "heading",
+      "content": "Services"
+    },
+    {
+      "type": "paragraph",
+      "content": "Services allows you to build a catalog of your services by defining each services, set dates and times for the availability of each one, and assign staff to handle and deliver them."
+    },
+    {
+      "type": "paragraph",
+      "content": "Each record needs a service name, duration, location at which the service is performed, and who is tasked with performing the service."
+    },
+    {
+      "type": "paragraph",
+      "content": "Services are not like products, and have very limited functionality in CRM. You would need a custom subform to be able to Quote or Invoice for a service, but may not want to do that due to their intended purpose. This is a pitfall we see customers fall into occasionally by misunderstanding the point of the module."
+    },
+    {
+      "type": "paragraph",
+      "content": "Services links with Appointments so that a service can be executed at a specific date and time and tied to a specific contact, account, or deal."
+    },
+    {
+      "type": "heading",
+      "content": "Appointments"
+    },
+    {
+      "type": "paragraph",
+      "content": "Appointments are similar to Tasks in the CRM, but are linked to a record of a Service, as well as linked to the contact it's being performed for."
+    },
+    {
+      "type": "paragraph",
+      "content": "Just like Services, you would need a custom subform to Quote or Invoice for an Appointment. That being said, Appointments might be the more appropriate record to use for custom building into your Quoting, given that it's already connected to a Contact, has a reference for the Service price, and a duration."
+    }
+  ]
+}

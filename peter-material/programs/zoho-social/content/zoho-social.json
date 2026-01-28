@@ -1,0 +1,391 @@
+{
+  "title": "Zoho Social: Social Media Management Platform",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "What is Zoho Social?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Discussion:** Take this opportunity to ask the class what they think Social is, and what it can do for an organization."
+    },
+    {
+      "type": "paragraph",
+      "content": "Social is a social media management platform meant for managing a brand or company's social media presence."
+    },
+    {
+      "type": "heading",
+      "content": "Supported Platforms"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Social allows you to link most social media accounts including:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Facebook",
+        "X (Twitter)",
+        "LinkedIn",
+        "Instagram",
+        "Pinterest",
+        "Youtube",
+        "TikTok",
+        "Bluesky"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Doing this allows you to **post or schedule posts** to go out from one or all platforms, meaning uniform posting across all your socials."
+    },
+    {
+      "type": "heading",
+      "content": "Key Features"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Social keeps track of:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Your total followers and new followers",
+        "Number of posts",
+        "Your reach to different audiences",
+        "Engagement tracking"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Adding Portal members to your Zoho Social account allows you to have a **team of people** who are all able to manage your social media presence."
+    },
+    {
+      "type": "heading",
+      "content": "Brands and Brand Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "\"Brand\" in Zoho Social refers to your company brand. Across other Zoho Apps like CRM and Marketing Automation, your Social Brand can be integrated for Lead generation and marketing attribution."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Discussion/Demo:** If possible, have the class link a social account to Zoho Social. If willing to do so, have them view interactions with their posts or interact with each other's posts to view what this looks like in Social. If unable to have the class participate this way, instead, have them comment and interact with the demo account's socials that are linked in Zoho Social."
+    },
+    {
+      "type": "heading",
+      "content": "Brand Information"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your brand profile includes:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Display name",
+        "Photo",
+        "Description",
+        "Time Zone",
+        "Cover Photo (Facebook)"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Social Channels"
+    },
+    {
+      "type": "paragraph",
+      "content": "Contains a list of possible social media apps to link Zoho Social to. Some social media platforms require a \"business\" profile to be linked instead of a personal, like TikTok, Google Business, and LinkedIn."
+    },
+    {
+      "type": "heading",
+      "content": "Integrations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Telegram and WhatsApp Business can also be connected to Zoho Social."
+    },
+    {
+      "type": "heading",
+      "content": "Brand Members"
+    },
+    {
+      "type": "paragraph",
+      "content": "These are Team members who are allowed to make and approve posts under your linked socials."
+    },
+    {
+      "type": "heading",
+      "content": "Publishing Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Publishing Preferences:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Add Approvers** - Designate people who are allowed to approve posts made by other team members",
+        "**Pause Posts** - Pause any scheduled posts across the brand until an Admin Resumes them",
+        "**Hashtag Groups** - Group hashtags together and include them in your posts across your socials"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Queue Settings:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Set up a publishing queue so you and your team can easily schedule posts and avoid overlaps. Adding queue slots does not affect posts that are already queued for posting. Can auto-populate slots according to Time Zone, and reset slots."
+    },
+    {
+      "type": "heading",
+      "content": "Inbox Preferences"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Workflows:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Reply and Close",
+        "Muted Users",
+        "Mark interaction as spam using keywords",
+        "Archive Interactions",
+        "Clear Archived interactions"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Automation - Assignment Rules:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create rules to assign interactions to team members either directly, or in a round-robin pattern. These can be based off specified criteria."
+    },
+    {
+      "type": "heading",
+      "content": "Saved Replies"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create saved replies that can be used to reply to inbox interactions. Essentially, these are canned replies that can be used by members of your organization to respond to messages."
+    },
+    {
+      "type": "heading",
+      "content": "Ad Comments"
+    },
+    {
+      "type": "paragraph",
+      "content": "Link your Facebook ad account to be able to reply to Ad comments from your Inbox in Social."
+    },
+    {
+      "type": "heading",
+      "content": "Notifications"
+    },
+    {
+      "type": "paragraph",
+      "content": "Located under Brand Settings > Notifications"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Team Notifications:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Notify team members by email for different posting instances or messages by configuring these settings."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Approvals:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Designate members to be notified when a post is submitted for approval."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Lead Generation:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Specify what actions from your linked socials cause a poster to be added as a lead or contact to your CRM."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Ticket Creation:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Similar to lead creation, but creates a support ticket in Zoho Desk. You can specify if this happens when someone interacts with your brand via post or message, and if they mention specific key words or interact with specific posts."
+    },
+    {
+      "type": "heading",
+      "content": "Zoho Social Modules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Social is organized into several key modules:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Home",
+        "Posts",
+        "Messages",
+        "Inbox",
+        "Monitor",
+        "Connections",
+        "Collaborate",
+        "Reports"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Home Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "The home module is an overview of all your social accounts in a dashboard. Here you can see your recent posts, stats for all your accounts like total followers and your reach, etc."
+    },
+    {
+      "type": "paragraph",
+      "content": "There are **Quick actions** to allow you to create a new post or schedule them in bulk."
+    },
+    {
+      "type": "paragraph",
+      "content": "In **Live Stream**, you can see things like recent followers, mentions, and other ways people have recently interacted with your brand."
+    },
+    {
+      "type": "heading",
+      "content": "Posts Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Published Posts:** Shows you all your published posts across your socials, each with its own tab."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Scheduled Posts:** Shows upcoming posts that haven't been posted yet."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Approvals:** Posts waiting approval."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Unpublished:** Posts that have been pulled or removed."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Drafts:** Unfinished potential posts. Can complete and post from here."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Calendar:** Shows your posts in a calendar view. Previous posts and posts that are scheduled will be shown here."
+    },
+    {
+      "type": "heading",
+      "content": "Messages Module"
+    },
+    {
+      "type": "image",
+      "src": "images/two-people-chatting.jpg",
+      "alt": "Two people having a conversation, representing social media communication"
+    },
+    {
+      "type": "paragraph",
+      "content": "Incoming messages and messages you sent to others will be listed in this module. You can block, mute, and perform other actions here."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Important:** Messages older than 7 days from Facebook cannot be replied to."
+    },
+    {
+      "type": "heading",
+      "content": "Inbox Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "Replies to your posts or to your inbox on a social media platform will be listed here. They can be assigned to users, have a status, and display recent replies or activity."
+    },
+    {
+      "type": "heading",
+      "content": "Monitor Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "Profiles that you have listed in CRM as either Contacts or Leads will show in this module."
+    },
+    {
+      "type": "paragraph",
+      "content": "You can also add columns that contain users, brands, or other people you want to keep track of, essentially like a dashboard of posts you want to keep an eye on."
+    },
+    {
+      "type": "heading",
+      "content": "Connections Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "Place to see your followers interactions with you, who is most engaged, and see who your followers are connected to."
+    },
+    {
+      "type": "heading",
+      "content": "Collaborate Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is a place to have discussions with your team."
+    },
+    {
+      "type": "paragraph",
+      "content": "For posts that have been submitted for approval, scheduled, or posts that have been unpublished, those can be discussed in thread related to the post in question."
+    },
+    {
+      "type": "paragraph",
+      "content": "Reports are also available in this screen."
+    },
+    {
+      "type": "heading",
+      "content": "Reports"
+    },
+    {
+      "type": "paragraph",
+      "content": "The reports tab is a dashboard of your social presence statistics. There are predefined dashboards for:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Overall Summary",
+        "Audience Stats",
+        "Posts and Engagements",
+        "Performance",
+        "Reach and Impression",
+        "Messenger"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Hashtag reports** show the performance of hashtags you use."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Custom Dashboard** is a place where you can build your own dashboard out of pre-defined reports (no customization for these reports)."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Scheduled reports** tab can be used to see reports you have chosen to send on a scheduled basis."
+    },
+    {
+      "type": "paragraph",
+      "content": "Clicking on the 3 dot menu of a report in another report tab allows you to choose to schedule it for sending, which will then have it show up in Scheduled reports."
+    }
+  ]
+}

@@ -1,0 +1,716 @@
+{
+  "title": "Zoho Campaigns Platform Overview",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "What is Zoho Campaigns?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Campaigns is Zoho's dedicated email and SMS marketing platform, designed to help businesses create, send, and track professional marketing messages. It provides tools for building email templates, organizing subscriber lists, automating follow-up messages, and measuring how customers engage with the content you send."
+    },
+    {
+      "type": "paragraph",
+      "content": "Its integrations with other Zoho software, like CRM, Forms, and Survey allow you to target your current customers, build mailing lists and target leads, seek survey responses, and capture new information. Campaigns has one of the more robust workflow builders compared to other Zoho products, allowing it to touch many different applications, subscribe and unsubscribe contacts to mailing lists, send certain emails at certain times, and many other granular actions."
+    },
+    {
+      "type": "subheading",
+      "content": "Discussion Questions"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "**Even if your business is just starting, how could Zoho Campaigns play a role right now?** Think about how new businesses often need to build awareness before they have sales. What types of outreach could help your brand get noticed early?",
+        "**What kinds of messages could your business send at this stage?** Examples might include announcements, educational content, brand introductions, or early sign-up incentives.",
+        "**Since your business doesn't have a sales pipeline yet, who would be your first target audience?** Would you market to friends, early adopters, people already following your brand online, or a general audience?",
+        "**If you wanted to start collecting subscribers now, how would you encourage people to join your mailing list?** Where would you place your sign-up form? Website, social media link, QR code on promotional materials?",
+        "**Would you use any other Zoho apps to support your early marketing efforts?** For example, Zoho Social could help you promote your sign-up form or drive traffic to your Campaigns mailing list."
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Contacts Management"
+    },
+    {
+      "type": "subheading",
+      "content": "Getting Contacts into Campaigns"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Import file",
+        "CRM Integration",
+        "Data migration from other platform",
+        "Webforms (Called Signup forms in Campaigns)",
+        "APIs"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Types of Contacts"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Marketing** – Contacts who have consented to receive emails (counts against org's limit)",
+        "**Non-Marketing** – Contacts without consent (can add an unlimited amount of these)",
+        "**Unsubscribed** – Contacts who opted out. They can only re-subscribe by completing a re-subscribe form"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Important: There is no option to re-subscribe/opt-in a customer yourself if they chose to opt out. Only by the contact filling out a resubscribe form can they receive emails again."
+    },
+    {
+      "type": "paragraph",
+      "content": "Admins may manually move contacts between Marketing and Non-Marketing once per month if needed. When viewing Unsubscribed Contacts, if you filter by contacts who were 'Moved By' a user, you can then move them to marketing or non-marketing."
+    },
+    {
+      "type": "subheading",
+      "content": "Contact Limits and Specifics"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Marketing contacts** are counted against the org's limit for number of 'sendable' contacts. You can have any number of contacts uploaded as Non-marketing and Unsubscribed, but Marketing contacts are limited based on the number allowed per user and number of user licenses."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**5,000 contacts per purchased user license** (10 Licenses = 50,000 contacts in Marketing)",
+        "Customers **cannot delete bounced contacts** - these are retained on the Zoho side to prevent circumventing bounces",
+        "Filters available: Bounced, Blocked, Unsubscribed, Inactive, etc.",
+        "**Custom SMTP is not supported** - Only Zoho's in-house server is used for email sending"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Subscription Limits and Refresh"
+    },
+    {
+      "type": "paragraph",
+      "content": "The limit of contacts being added is based on user license. However, the number of Marketing contacts **refreshes per month** upon the renewal date. This means you can change which contacts you're targeting in your Marketing Contacts list. You can email an unlimited amount of times - the limits come in with the number of contacts and who they are, rather than the number of emails."
+    },
+    {
+      "type": "quote",
+      "content": "Important Restrictions: You can only delete a contact once per month. You can change marketing to non-marketing (or vice versa) once per month per contact. These restrictions prevent users from circumventing contact limits."
+    },
+    {
+      "type": "subheading",
+      "content": "IP Warming and Static IPs"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Static IP** is recommended when sending a lot of emails. Customers can purchase any number of static IPs. Within 50,000 emails, there's no need for static IP. Beyond 50,000, this option is recommended."
+    },
+    {
+      "type": "paragraph",
+      "content": "For static IPs, **IP Warming** is encouraged - a process of ramping up how many emails you send at a time to avoid your IP being blacklisted. This process lasts for **21 days** to build a favorable reputation and prevents mail providers from thinking an IP was purchased just to spam emails."
+    },
+    {
+      "type": "heading",
+      "content": "Lists vs. Segments"
+    },
+    {
+      "type": "subheading",
+      "content": "Lists"
+    },
+    {
+      "type": "paragraph",
+      "content": "Lists are groups of contacts you intentionally organize for a specific mailing purpose."
+    },
+    {
+      "type": "paragraph",
+      "content": "Lists can be populated by:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Importing into a list",
+        "Associating a signup form with a list",
+        "Adding existing contacts",
+        "Copying from another list",
+        "Sending CRM-synced contacts directly into a chosen list"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Segments"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unlike Lists, **Segments are criteria-based groups**, similar to CRM custom views. They automatically include contacts who meet the defined rules."
+    },
+    {
+      "type": "paragraph",
+      "content": "Two types of segments:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Regular Segments** – Built on your own criteria",
+        "**Bulk Segments** – Built from all values of a picklist field (e.g., Job Title → CEOs, Sales Managers, Project Managers)"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Important: You cannot send a campaign to both a list and a segment at the same time. You may convert segments to lists if needed."
+    },
+    {
+      "type": "heading",
+      "content": "Importing and Contact Sync"
+    },
+    {
+      "type": "subheading",
+      "content": "Import Overview"
+    },
+    {
+      "type": "paragraph",
+      "content": "Imports done through files appear in **Contacts > More > Import Overview**. There is **no rollback**, so it's recommended to always import into a dedicated List for easy cleanup."
+    },
+    {
+      "type": "subheading",
+      "content": "Sync Services"
+    },
+    {
+      "type": "paragraph",
+      "content": "You can sync contacts from CRM, Bigin, HubSpot, and other third-party apps."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Important CRM sync notes:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Sync can only be connected to **either** Campaigns **or** Marketing Automation (not both)",
+        "Leads and Contacts can sync; Accounts and Deals sync only as **field data** for segmentation",
+        "'Sync to Lists' should always be used when importing Leads, so they remain distinguishable from Contacts",
+        "'Remove Converted Leads' ensures converted leads no longer appear in your main synced list",
+        "Duplicate contacts are based on **email address**"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Opt-out Options"
+    },
+    {
+      "type": "paragraph",
+      "content": "When syncing from CRM:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Exclude opt-out** → Import them as Unsubscribed in Campaigns",
+        "**Remove opt-out** → Do not import them at all"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Note: CRM Tags do not map directly. If needed, create a Campaigns Custom Field to store the CRM Tag values."
+    },
+    {
+      "type": "subheading",
+      "content": "Group Emails"
+    },
+    {
+      "type": "paragraph",
+      "content": "Distribution lists are generally **not permitted** since Campaigns targets individuals. This may be enabled with caution through Zoho's provided templates, but is generally discouraged due to deliverability risk."
+    },
+    {
+      "type": "heading",
+      "content": "Topics and Subscription Management"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Topics** represent the types of emails your contacts agree to receive. A contact must be subscribed to at least one Topic to receive a campaign."
+    },
+    {
+      "type": "quote",
+      "content": "Admin best practice: Create a workflow that automatically assigns a default Topic whenever a contact is created."
+    },
+    {
+      "type": "paragraph",
+      "content": "You can customize how topics appear in signup forms so customers can opt in/out of categories of content."
+    },
+    {
+      "type": "heading",
+      "content": "Forms and Signup Pages"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Campaigns offers multiple form types:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Full-page (blanket) forms",
+        "Embedded forms",
+        "Popup forms"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Each form can be generated as button code, link, or widget."
+    },
+    {
+      "type": "subheading",
+      "content": "Key Form Options"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Cookie usage** – Determines whether repeat visitors see the form again",
+        "**Double Opt-In** – Adds a confirmation step before contacts are added",
+        "**Push to CRM** – Sends submissions to CRM when mapped",
+        "**Custom Data Field** – Can track source tags (e.g., 'Signup Form – Homepage')"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Creating Campaigns"
+    },
+    {
+      "type": "subheading",
+      "content": "From Addresses"
+    },
+    {
+      "type": "paragraph",
+      "content": "Each user can add up to **5 additional sending addresses**. These can be used by anyone in the org."
+    },
+    {
+      "type": "subheading",
+      "content": "Reply Tracking"
+    },
+    {
+      "type": "paragraph",
+      "content": "Replies can go:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Directly to your 'Reply-To' mailbox",
+        "To a dedicated Campaigns mailbox with optional auto-forwarding"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Template Customization"
+    },
+    {
+      "type": "paragraph",
+      "content": "You can build emails using:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Pre-made templates",
+        "HTML upload",
+        "HTML edit",
+        "Drag-and-drop builder"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Merge Tags"
+    },
+    {
+      "type": "paragraph",
+      "content": "Insert through the merge tag tool (not # like CRM). Admins may add default values to prevent blanks. When inserting merge tags, you can set a default value between the `[|value|]` to be defaulted to, rather than leaving a blank."
+    },
+    {
+      "type": "subheading",
+      "content": "Email Setup Options"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Insert buttons for URL, email address, Anchor, and Phone number",
+        "Add footer (unsubscribe link, update preferences, etc.)"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Important: All Campaigns emails MUST have an unsubscribe link. This can be done by inserting a footer, or using an unsubscribe link merge tag. When using unsubscribe link merge tag, insert it into a hyperlink - otherwise the raw URL will show."
+    },
+    {
+      "type": "subheading",
+      "content": "Dynamic Content"
+    },
+    {
+      "type": "paragraph",
+      "content": "You can send the same email to multiple people, but depending on the dynamic content selected, you can customize what message they see. For example: *'if city is New Braunfels'* they see *'Hello New Braunfels Resident!'* and *'if city is McAllen'* they see *'Hello McAllen Resident!'*"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dynamic content can contain images and other elements as well."
+    },
+    {
+      "type": "subheading",
+      "content": "Polls"
+    },
+    {
+      "type": "paragraph",
+      "content": "You can poll customers within an email by using the poll option when customizing your email template. Results are visible in Reports."
+    },
+    {
+      "type": "subheading",
+      "content": "Recipients and Launch Options"
+    },
+    {
+      "type": "paragraph",
+      "content": "In the Recipients section, you'll choose either a **list or a segment** (can't do both at the same time). After recipients are chosen, select your launch options:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Send immediately",
+        "Schedule later",
+        "Send at recipient's local time",
+        "Optimal time sending"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "If a campaign isn't automatically approved, it will go internally to the Anti-spam team at Zoho for approval. The unsubscribe link is automatically verified before getting to this point. Zoho doesn't allow custom unsubscribe links."
+    },
+    {
+      "type": "subheading",
+      "content": "SMS Campaigns"
+    },
+    {
+      "type": "paragraph",
+      "content": "SMS campaigns require selecting an SMS gateway (credit-based). Limited analytics are available, but they support mass outreach."
+    },
+    {
+      "type": "heading",
+      "content": "Settings and Configuration"
+    },
+    {
+      "type": "subheading",
+      "content": "General Settings"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Profile** - Basic account information",
+        "**Notifications** - How and when you want to receive reports via email",
+        "**Compliance** - GDPR and HIPAA settings",
+        "**Subscription** - Shows subscription details and contact limits (5,000 contacts per user license)",
+        "**Manage Opt-in** - Opt-in options like Double opt-in"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Campaign Policy"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Email Limits (Email Sending Policy):** You can set limits for how many emails a contact can receive per week, per month, and the interval between each email."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Campaign Tracking:** Email Opens and Link Clicks are always on by default. You have the ability to turn each of these off."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Content Approval:** Different from approval by Zoho to send a campaign. This can be set up to allow an approval hierarchy within the organization to vet campaigns designed by team members. Note: This only works for non-admin users to be approved."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Export Policy:** Uses first 4 characters of your user's email address and last 4 of your Zoho User ID. You can also set a specific password."
+    },
+    {
+      "type": "subheading",
+      "content": "Deliverability Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Manage Senders:** Each person gets 5 additional emails they can add on top of theirs. These emails can be used by other users for sending email campaigns. Note: Cannot send from public domains, as you cannot authenticate SPF or DKIM records."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Custom Return Path:** Like email relay for CRM. Allows you to designate a return path/mailbox for emails so that you can handle bounced emails directly."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Imprint Details:** Used in EU. Information available in the footer, used to identify marketer/company information for regulations via the email's footer."
+    },
+    {
+      "type": "subheading",
+      "content": "Customization"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Header and footer customization",
+        "Signup Pages and Emails",
+        "Custom Fields",
+        "Merge Tags (created automatically when field is created)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Other Settings"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Data Administration** - Audit Logs",
+        "**Integration** - Apps, Marketplace, Integration platforms",
+        "**Developer Space** - APIs and Webhooks"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Workflows"
+    },
+    {
+      "type": "paragraph",
+      "content": "Workflows are **drag and drop**, unlike CRM. Similar to journeys in CRM. There are pre-made templates for workflows including:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Welcome and Onboarding",
+        "Nurture Series",
+        "Re-engagement",
+        "Customer Retention",
+        "Ecommerce",
+        "Conditional Workflow"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Workflow Structure"
+    },
+    {
+      "type": "paragraph",
+      "content": "Every workflow has **3 elements:**"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "**Trigger** - What starts the workflow",
+        "**Process** - Logic and flow control",
+        "**Action** - What happens to the contact"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Trigger Types"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Form Submission** - When a contact submits a form",
+        "**List Entry** - When added to a list",
+        "**Enter a Segment** - When criteria is met",
+        "**Date-Field** - Based on a date field value",
+        "**Email Action** - Based on email interaction",
+        "**Open Trigger** - Used when moving contact from one workflow to another",
+        "**Abandoned Cart** - Items left in cart but not purchased",
+        "**Purchase Follow-Up** - After purchase from web store",
+        "**Product Specific Follow Up** - When a specific item is purchased",
+        "**Cyclic Trigger** - Repeat the same email action on a schedule"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Note: Emails are subject to the same limitations as typical campaign emails. If the topic doesn't match a contact's subscribed topics, it won't be sent. Contacts who are non-marketing or unsubscribed will also not be sent mail."
+    },
+    {
+      "type": "subheading",
+      "content": "Actions Available"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Field Update:** Update a field value"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Tag Assigned/Removed:** Assign or remove tags (note: this won't remove tags on records from other applications like CRM since those values go into fields)"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Cyclic Trigger Notes:** Good for sending the same email multiple times on a schedule. Affected by sending policy limits to prevent spam. Allows for exiting the email schedule based on response, field updates, etc."
+    },
+    {
+      "type": "subheading",
+      "content": "Process - Flow Control"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Random Split",
+        "Merge",
+        "Conditions (Simple or Multi-way)",
+        "Email Activity"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Actions Categories"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Engagement:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Send email",
+        "A/B Test",
+        "Send SMS",
+        "Send Survey Email"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Productivity:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Add to list",
+        "Remove from list",
+        "Assign Tag",
+        "Remove Tag",
+        "Add Score",
+        "Subtract score"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Subscription Management:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Update Field",
+        "Internal Notification email"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Workflow Settings (Gear Icon)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Allows you to set up **exit criteria** for a Workflow (like Cadences in CRM). Lets you decide what to do with contacts who have not met workflow trigger configuration."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Re-enrollment:** You can enable contacts to re-enroll in workflows. When enabled, you choose which trigger option categories will allow re-enrollment."
+    },
+    {
+      "type": "subheading",
+      "content": "Workflow Best Practices"
+    },
+    {
+      "type": "paragraph",
+      "content": "Workflows are extremely versatile for sending mail, managing your contacts, pushing information to CRM or other platforms, and selectively targeting your audience better."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "You can have as many triggers as you want, and funnel them into a single chain of actions/conditions",
+        "These can be split again using Conditions for complex logic",
+        "Workflows don't just have to be used for email sending - use them for managing customer data automatically",
+        "Create better lists based on what contacts have done, forms they've submitted, etc.",
+        "Use scoring to push high-value contacts to CRM at certain points",
+        "Use 'subscription management' to remove inactive contacts from lists"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Workflow Editing Note: In scenarios where contacts are in a workflow that don't need to be there, shut down the workflow, clone it, change parameters to correct it, then remove the previous workflow."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Troubleshooting:** Workflow troubleshooting can often be done through the reports. These show the path by which a contact has been touched by a workflow, allowing you to identify issues. This is typically a necessary step for support to troubleshoot."
+    },
+    {
+      "type": "heading",
+      "content": "Integrations"
+    },
+    {
+      "type": "subheading",
+      "content": "Survey Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Insert surveys using the Survey integration panel to enable response tracking and analytics."
+    },
+    {
+      "type": "subheading",
+      "content": "Meeting / CRM Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Direct integrations allow pre-populating fields and mapping responses."
+    },
+    {
+      "type": "subheading",
+      "content": "Third-Party Apps"
+    },
+    {
+      "type": "paragraph",
+      "content": "Available through Marketplace and Integration settings."
+    },
+    {
+      "type": "heading",
+      "content": "Hands-On Practice"
+    },
+    {
+      "type": "subheading",
+      "content": "Demo 1: Import and Sync"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create a sync between Campaigns and CRM to import contacts. If you don't have CRM contacts yet, use an import sheet. Discuss what happens to the Accounts and Deals modules on the Campaigns side whenever you choose to import contacts from CRM."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo 2: Create a Workflow"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create your own workflow. It can be as simple or complex as you like. Consider these use cases:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Welcome series for new subscribers",
+        "Re-engagement campaign for inactive contacts",
+        "Automated list management based on email activity",
+        "Lead scoring and CRM sync based on engagement"
+      ]
+    }
+  ]
+}

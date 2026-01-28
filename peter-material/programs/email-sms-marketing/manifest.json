@@ -1,0 +1,16 @@
+{
+  "title": "Email and SMS Marketing",
+  "description": "Learn email and SMS campaign strategies using marketing automation tools",
+  "version": "1.0.0",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "email-sms-intro",
+      "title": "Email and SMS Campaign Fundamentals",
+      "file": "content/email-sms-intro.json",
+      "category": "Fundamentals",
+      "description": "Master email and SMS marketing strategies, automation tools, and campaign best practices",
+      "order": 1
+    }
+  ]
+}
