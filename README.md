@@ -16,7 +16,7 @@ A clean, modern single-page application for delivering training content with smo
 ## Files Structure
 
 ```
-peter-material/
+training/
 ├── index.html                  # Main HTML file
 ├── styles.css                  # All styling
 ├── app.js                     # JavaScript logic for SPA functionality
