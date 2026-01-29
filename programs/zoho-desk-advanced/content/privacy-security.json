@@ -1,0 +1,680 @@
+{
+  "title": "Privacy and Security",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Helping our customers maintain their data's security and adhering to government policies, like the GDPR, are a top priority for Zoho. Within Desk we provide the tools to allow our customers to help adhere to these policies themselves, as well as protect their own data's integrity."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase and demonstrate the use of the Privacy and Security features",
+        "Understand GDPR compliance and data subject requests",
+        "Learn how to use audit logs for tracking and accountability",
+        "Configure security policies and attachment controls"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Data Subject Requests"
+    },
+    {
+      "type": "paragraph",
+      "content": "Data Subject Requests (DSRs) are formal requests from individuals (data subjects) to exercise their privacy rights regarding their personal data. Privacy regulations like GDPR give individuals specific rights over their data."
+    },
+    {
+      "type": "subheading",
+      "content": "What Are Data Subject Requests?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Under privacy laws like GDPR and CCPA, individuals have rights to control their personal data:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Right to Access:** Request to view what personal data an organization holds about them",
+        "**Right to Rectification:** Request to correct inaccurate or incomplete personal data",
+        "**Right to Erasure (Right to be Forgotten):** Request deletion of their personal data",
+        "**Right to Data Portability:** Request a copy of their data in a machine-readable format",
+        "**Right to Restrict Processing:** Request limitation on how their data is processed",
+        "**Right to Object:** Object to certain types of data processing"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Important:** Organizations must respond to valid data subject requests within specific timeframes (typically 30 days under GDPR). Non-compliance can result in significant fines."
+    },
+    {
+      "type": "subheading",
+      "content": "Handling Data Subject Requests in Desk"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk provides tools to help you fulfill data subject requests efficiently and in compliance with privacy regulations."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Processing a Data Access Request:**"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Privacy and Security > Data Subject Requests**",
+        "Click **Create Request** to initiate a new DSR",
+        "Select the request type (Access, Erasure, Portability, etc.)",
+        "Enter the data subject's information (email, name, etc.)",
+        "The system identifies all data associated with this individual across modules: Tickets, Comments, Contacts, Accounts, Custom modules",
+        "Review the data that will be included in the request",
+        "For Access requests: Generate a comprehensive report of all personal data, Export the data in a readable format, Provide to the data subject",
+        "For Erasure requests: Review what will be deleted, Confirm deletion (this action may be irreversible), Document the deletion for compliance records"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Before processing erasure requests, consider legal obligations to retain certain data (e.g., financial records, legal disputes). Consult legal counsel if uncertain about deletion requests."
+    },
+    {
+      "type": "subheading",
+      "content": "Data Portability Requests"
+    },
+    {
+      "type": "paragraph",
+      "content": "When a data subject requests data portability, they're asking for their personal data in a format they can transfer to another service:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Export data in machine-readable format (typically JSON or CSV)",
+        "Include all personal data associated with the individual",
+        "Provide metadata and context where necessary",
+        "Ensure data is structured and usable"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "GDPR Compliance"
+    },
+    {
+      "type": "paragraph",
+      "content": "The General Data Protection Regulation (GDPR) is a comprehensive data protection law in the European Union that affects any organization processing EU residents' personal data."
+    },
+    {
+      "type": "subheading",
+      "content": "Key GDPR Principles"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Lawfulness, Fairness, and Transparency:** Process data lawfully with clear communication to data subjects",
+        "**Purpose Limitation:** Collect data only for specified, legitimate purposes",
+        "**Data Minimization:** Collect only data that's necessary for the intended purpose",
+        "**Accuracy:** Keep personal data accurate and up to date",
+        "**Storage Limitation:** Retain data only as long as necessary",
+        "**Integrity and Confidentiality:** Protect data with appropriate security measures",
+        "**Accountability:** Demonstrate compliance with GDPR principles"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "GDPR Features in Zoho Desk"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk provides several features to help you maintain GDPR compliance:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Data Subject Request Tools:** Centralized management of access, erasure, and portability requests",
+        "**Audit Logs:** Track who accessed, modified, or deleted personal data",
+        "**Data Retention Policies:** Configure automatic deletion of data after specified periods",
+        "**Consent Management:** Track and manage customer consent for data processing",
+        "**Field-Level Encryption:** Protect sensitive personal data with encryption (covered in Customization)",
+        "**Access Controls:** Role-based permissions to limit who can view personal data",
+        "**Data Processing Agreements:** Zoho provides DPA documentation for GDPR compliance"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Compliance Note:** Using Desk's privacy features is an important part of GDPR compliance, but organizations must also implement policies, training, and procedures beyond the software itself. Consult with privacy professionals or legal counsel for comprehensive compliance."
+    },
+    {
+      "type": "subheading",
+      "content": "Data Retention Policies"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure policies to automatically delete or anonymize data after specified retention periods:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Ticket Retention:** Automatically delete or archive old tickets after X days/months/years",
+        "**Contact Retention:** Remove inactive contact records after a specified period",
+        "**Attachment Retention:** Delete file attachments older than specified age",
+        "**Log Retention:** Automatically purge old log entries (note: audit logs retained for 2 years)"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Best Practice:** Define retention policies based on your business needs, legal obligations, and privacy commitments. Document your retention schedule and apply it consistently."
+    },
+    {
+      "type": "heading",
+      "content": "Audit Log"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Audit Log is a comprehensive record of actions and changes made within your Zoho Desk account. It provides accountability, security monitoring, and compliance documentation."
+    },
+    {
+      "type": "subheading",
+      "content": "What is the Audit Log?"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Audit Log tracks user activities and system events, creating a detailed history of who did what and when:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**User Actions:** Login/logout, record creation/modification/deletion, configuration changes",
+        "**Administrative Changes:** User permission changes, workflow modifications, integration updates",
+        "**Data Access:** Who viewed sensitive records or exported data",
+        "**Security Events:** Failed login attempts, password changes, session terminations",
+        "**System Events:** Automated actions, scheduled tasks, API calls"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Cases for Audit Logs:**\n- **Security Investigations:** Track suspicious activity or unauthorized access\n- **Compliance Audits:** Demonstrate who accessed or modified personal data\n- **Troubleshooting:** Identify when and by whom configurations were changed\n- **Accountability:** Maintain records of user actions for internal governance"
+    },
+    {
+      "type": "subheading",
+      "content": "Accessing the Audit Log"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Privacy and Security > Audit Log**",
+        "View the chronological list of logged events",
+        "See details for each entry: Action performed, User who performed the action, Timestamp, Module affected, Before and after values (for modifications), IP address (for login events)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Audit Log Retention"
+    },
+    {
+      "type": "paragraph",
+      "content": "Audit logs are automatically retained for a specific period to balance compliance needs with storage management."
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Audit logs are retained for **2 years** in Zoho Desk. After this period, logs are automatically purged. If you need longer retention for compliance reasons, export logs periodically and store them securely in external systems."
+    },
+    {
+      "type": "subheading",
+      "content": "Filtering and Searching Audit Logs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Use filters to find specific audit log entries:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Date Range:** Filter by specific time periods",
+        "**User:** Show actions by specific agents or administrators",
+        "**Action Type:** Filter by create, update, delete, login, export, etc.",
+        "**Module:** Show changes to specific modules (Tickets, Contacts, Workflows, etc.)",
+        "**Search:** Search for specific keywords or record IDs"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** When investigating security incidents or compliance questions, start with date and user filters to narrow down the relevant log entries quickly."
+    },
+    {
+      "type": "subheading",
+      "content": "Exporting Audit Logs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Export audit logs for long-term storage, external analysis, or compliance documentation:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to the Audit Log section",
+        "Apply any desired filters to narrow down the logs",
+        "Click **Export** or **Download**",
+        "Choose export format (typically CSV or Excel)",
+        "Select date range for export",
+        "Download the exported file",
+        "Store the file securely in your compliance archive"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Exported Audit Log Format:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Exported logs typically include columns such as:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Timestamp (date and time of action)",
+        "User (who performed the action)",
+        "Action (what was done)",
+        "Module (where it was done)",
+        "Record ID (specific record affected)",
+        "Details (before/after values, additional context)",
+        "IP Address (for login and sensitive actions)"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Best Practice:** Schedule regular quarterly or annual audit log exports for long-term compliance archives, especially if your organization has retention requirements exceeding 2 years."
+    },
+    {
+      "type": "heading",
+      "content": "Attachments Control"
+    },
+    {
+      "type": "paragraph",
+      "content": "Attachments Control allows you to configure security policies for file uploads to protect against malware, limit file types, and control file sizes."
+    },
+    {
+      "type": "subheading",
+      "content": "Why Control Attachments?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Security Risk:** Malicious files can be uploaded by customers or compromised accounts",
+        "**Malware Prevention:** Block executable files and known malware types",
+        "**Storage Management:** Limit file sizes to prevent storage issues",
+        "**Compliance:** Restrict file types based on organizational policies",
+        "**User Experience:** Prevent users from uploading unsupported or problematic file types"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Configuring Attachment Controls"
+    },
+    {
+      "type": "paragraph",
+      "content": "Navigate to **Setup > Privacy and Security > Attachments Control** to configure restrictions:"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Allowed File Types:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Whitelist Approach:** Specify which file extensions are allowed (e.g., .pdf, .jpg, .png, .docx)",
+        "**Blacklist Approach:** Block specific dangerous file types (e.g., .exe, .bat, .sh, .scr)",
+        "**Recommended:** Use whitelist for maximum security - only allow file types you explicitly trust"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Security Best Practice:** Block executable file types by default (.exe, .bat, .cmd, .scr, .js, .vbs, .msi, .app, .dmg). These pose significant security risks and are rarely legitimate support attachments."
+    },
+    {
+      "type": "paragraph",
+      "content": "**File Size Limits:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Set maximum file size for individual attachments (e.g., 20MB per file)",
+        "Set maximum total size for all attachments per ticket",
+        "Balance between usability (customers need to share files) and storage/security concerns"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Virus Scanning:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Enable automatic virus scanning for uploaded files",
+        "Block files that fail virus scan",
+        "Quarantine suspicious files for manual review",
+        "Notify administrators of blocked malicious files"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Recommended Configuration:**\n- Allow common document types: .pdf, .doc, .docx, .xls, .xlsx, .txt\n- Allow image types: .jpg, .jpeg, .png, .gif\n- Allow archive types: .zip, .rar (with caution)\n- Block all executable types\n- Set max file size: 20-25MB\n- Enable virus scanning"
+    },
+    {
+      "type": "subheading",
+      "content": "Customer Communication"
+    },
+    {
+      "type": "paragraph",
+      "content": "When file restrictions block a customer's upload:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Display clear error messages explaining why the file was blocked",
+        "Provide guidance on acceptable file types",
+        "Offer alternative submission methods for necessary files (e.g., secure file sharing links)",
+        "Train agents on how to handle requests involving blocked file types"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Security Policy"
+    },
+    {
+      "type": "paragraph",
+      "content": "Security Policy settings control authentication, password requirements, session management, and other access security measures."
+    },
+    {
+      "type": "subheading",
+      "content": "Password Policies"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure password requirements to enforce strong authentication:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Minimum Length:** Require passwords of at least 8-12 characters",
+        "**Complexity Requirements:** Require uppercase, lowercase, numbers, and special characters",
+        "**Password History:** Prevent reuse of previous passwords (e.g., last 5 passwords)",
+        "**Password Expiration:** Force password changes every X days (e.g., 90 days)",
+        "**Lockout Policy:** Lock accounts after X failed login attempts"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Modern Password Recommendations:** Recent security guidelines recommend long passwords (12+ characters) over frequent forced changes. Consider passphrases like \"Coffee-Morning-2025-Desk\" instead of complex but short passwords like \"P@ssw0rd1\"."
+    },
+    {
+      "type": "subheading",
+      "content": "Two-Factor Authentication (2FA)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Enable two-factor authentication for enhanced security:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Require 2FA:** Mandate two-factor authentication for all users or specific roles",
+        "**2FA Methods:** Support for authenticator apps (recommended), SMS codes, Email codes",
+        "**Backup Codes:** Provide backup codes for account recovery",
+        "**Trusted Devices:** Allow users to mark trusted devices to reduce friction"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Best Practice:** Require 2FA for all administrator and privileged accounts at minimum. For maximum security, require 2FA for all users."
+    },
+    {
+      "type": "subheading",
+      "content": "Session Management"
+    },
+    {
+      "type": "paragraph",
+      "content": "Control how long user sessions remain active:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Session Timeout:** Automatically log out users after X minutes of inactivity (e.g., 30 minutes)",
+        "**Absolute Session Timeout:** Force re-authentication after X hours regardless of activity",
+        "**Concurrent Sessions:** Control whether users can be logged in from multiple devices/locations",
+        "**Session Revocation:** Ability to terminate all active sessions (useful after security incidents)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "IP Restrictions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Restrict access based on IP addresses for additional security:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**IP Whitelist:** Allow access only from specific IP addresses or ranges (e.g., office IPs)",
+        "**IP Blacklist:** Block access from known malicious IP addresses",
+        "**Geo-Restrictions:** Restrict access from specific countries or regions",
+        "**VPN Requirements:** Require users to connect via VPN for remote access"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Caution:** IP restrictions can lock out legitimate users if misconfigured. Always maintain emergency access methods and document IP restriction policies clearly."
+    },
+    {
+      "type": "subheading",
+      "content": "API Access Security"
+    },
+    {
+      "type": "paragraph",
+      "content": "Secure API access to protect programmatic data access:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**API Key Management:** Rotate API keys regularly",
+        "**API Rate Limiting:** Prevent abuse with rate limits",
+        "**API Logging:** Track all API calls in audit logs",
+        "**OAuth:** Use OAuth for more secure API authentication than API keys"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Privacy and Security Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Regular Audits:** Review audit logs regularly for suspicious activity",
+        "**Principle of Least Privilege:** Grant users only the permissions they need",
+        "**Data Classification:** Identify and mark sensitive data (PII, financial, health information)",
+        "**Incident Response Plan:** Have a documented plan for data breaches or security incidents",
+        "**Employee Training:** Train all staff on privacy, security, and GDPR compliance",
+        "**Regular Updates:** Keep security policies current with evolving threats and regulations",
+        "**Third-Party Reviews:** Consider periodic security audits by external experts",
+        "**Documentation:** Maintain clear documentation of all privacy and security policies",
+        "**Data Processing Agreements:** Ensure proper agreements are in place with Zoho and other vendors",
+        "**Privacy by Design:** Consider privacy and security from the start of any new process or feature"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Complete the following privacy and security exercises:"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 1: Audit Log Review and Export"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Privacy and Security > Audit Log**",
+        "Review the audit log entries showing actions you've taken during training: Look for record creation events (tickets, contacts), Configuration changes (workflows, custom fields), Login/logout events",
+        "Apply filters to narrow down to your own actions: Filter by your username, Set date range to the training period, Filter by specific action types",
+        "Identify at least 5 different types of logged actions you performed",
+        "Document what information is captured for each action: Timestamp, User, Action type, Module, Details",
+        "Click **Export** or **Download**",
+        "Choose a date range covering your training activities",
+        "Export the audit log to CSV or Excel format",
+        "Open the exported file and examine the format: Note the column structure, Verify your actions are included, Observe the level of detail captured",
+        "Consider how this data could be used for: Security investigations, Compliance audits, Troubleshooting configuration issues"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Reflection Questions:**\n- What types of actions are logged vs not logged?\n- How could you use audit logs to investigate a security incident?\n- What would happen if logs were only retained for 30 days instead of 2 years?"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 2: Configure Attachment Controls (Optional)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Privacy and Security > Attachments Control**",
+        "Review the current attachment settings",
+        "Configure file type restrictions: Create a whitelist of allowed file types (.pdf, .doc, .docx, .jpg, .png, .txt, .xlsx), Block potentially dangerous file types (.exe, .bat, .scr, .cmd)",
+        "Set file size limits: Individual file size limit (e.g., 20MB), Total attachment size per ticket (if available)",
+        "Enable virus scanning if available",
+        "Save the configuration",
+        "Test the restrictions: Try uploading a blocked file type to a test ticket, Verify the appropriate error message appears, Try uploading an allowed file type to confirm it works"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 3: Review Security Policies (Optional)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Privacy and Security > Security Policy**",
+        "Review current password policy settings: Minimum length, Complexity requirements, Expiration settings",
+        "Review session management settings: Session timeout, Concurrent session limits",
+        "Check if two-factor authentication is enabled",
+        "Review any IP restrictions or access controls",
+        "Document the current security posture",
+        "Consider recommendations for improvement: Should 2FA be required for all users?, Are password requirements sufficient?, Is session timeout appropriate for your use case?"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Continue exploring your test organization and building out the various features within Desk. Experiment with:\n- Creating complex workflows combining multiple features\n- Setting up integrations with other applications\n- Building comprehensive dashboards for different user roles\n- Designing guided conversations for common support scenarios\n- Testing the full ticket lifecycle from creation to resolution"
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Data Subject Requests:** Handle access, erasure, portability, and rectification requests",
+        "**GDPR Rights:** Access, rectification, erasure, portability, restriction, objection",
+        "**Response Timeline:** Typically 30 days to respond to valid data subject requests",
+        "**GDPR Compliance Tools:** DSR management, audit logs, retention policies, consent management, encryption",
+        "**Audit Log:** Comprehensive tracking of user actions and system events",
+        "**Audit Log Retention:** Automatically retained for 2 years, export for longer retention",
+        "**Audit Log Contents:** Timestamp, user, action, module, before/after values, IP address",
+        "**Attachments Control:** Restrict file types, set size limits, enable virus scanning",
+        "**File Type Security:** Whitelist safe types, blacklist executables (.exe, .bat, .scr, etc.)",
+        "**Password Policy:** Length, complexity, history, expiration, lockout settings",
+        "**Two-Factor Authentication:** Require 2FA for enhanced security, especially for admins",
+        "**Session Management:** Timeout settings, concurrent session controls, session revocation",
+        "**IP Restrictions:** Whitelist/blacklist IP addresses, geo-restrictions, VPN requirements"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain what data subject requests are and why they're important",
+        "Identify the key rights granted under GDPR (access, erasure, portability, etc.)",
+        "Process data subject access requests in Zoho Desk",
+        "Handle data erasure (right to be forgotten) requests appropriately",
+        "Export data for portability requests in machine-readable format",
+        "Understand GDPR compliance principles and how Desk supports them",
+        "Configure data retention policies for automated data management",
+        "Access and navigate the audit log",
+        "Filter audit logs by date, user, action type, and module",
+        "Export audit logs for long-term compliance archives",
+        "Understand the 2-year retention period for audit logs",
+        "Interpret audit log entries and use them for investigations",
+        "Configure attachment controls to restrict file types",
+        "Set file size limits for security and storage management",
+        "Enable virus scanning for uploaded attachments",
+        "Create a whitelist of safe file types vs blacklist of dangerous types",
+        "Configure password policies with appropriate requirements",
+        "Enable and enforce two-factor authentication",
+        "Set session timeout policies for security",
+        "Implement IP restrictions when appropriate",
+        "Apply privacy and security best practices in support operations",
+        "Understand the balance between security and usability"
+      ]
+    }
+  ]
+}

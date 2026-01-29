@@ -1,0 +1,176 @@
+{
+  "title": "CRM Customization",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Fields and Data Types"
+    },
+    {
+      "type": "paragraph",
+      "content": "CRM offers multiple different types of fields. You can see **number**, **email**, **lookup**, **URL**, **phone**, and other types of fields being used by default."
+    },
+    {
+      "type": "paragraph",
+      "content": "CRM is **highly customizable**, giving you the ability to remove many of the default fields, and add a plethora of your own custom fields."
+    },
+    {
+      "type": "paragraph",
+      "content": "Some fields in CRM have default functions, like the **Company Name** field in Leads, and the **Stage** field in Deals."
+    },
+    {
+      "type": "heading",
+      "content": "Discussion: Understanding Critical Fields"
+    },
+    {
+      "type": "paragraph",
+      "content": "Consider these questions about field customization:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "If you remove the **Company Name** field from the Leads module, what happens?",
+        "Can you mimic this functionality any other way?",
+        "What are the implications of removing system fields versus custom fields?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Layouts"
+    },
+    {
+      "type": "paragraph",
+      "content": "Custom layouts allow you to tailor the CRM interface for different business scenarios and user needs."
+    },
+    {
+      "type": "subheading",
+      "content": "Why Use Different Layouts?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Contacts Module:** You might have one specific layout for your customers, while you have a different layout for a Vendor Contact",
+        "**Deals Module:** SMB layout might be smaller, with fewer fields for information, while for Mid-market or Enterprise Deals, you may need way more information, and therefore different layouts",
+        "**Field Sharing:** When using custom layouts, the fields are shared among each layout, and are either enabled or disabled, depending on the layout. All fields still exist inside the module as a whole",
+        "**Universal Availability:** All modules can have multiple layouts"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Activity: Create Your Own Custom Layout"
+    },
+    {
+      "type": "paragraph",
+      "content": "Follow these steps to create and test a custom layout with your own fields."
+    },
+    {
+      "type": "subheading",
+      "content": "Step 1: Navigate to Layout Settings"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Within CRM, go to **Setup > Modules and Fields > Leads**",
+        "Click the **\"New Layout\"** button on the right side of the page",
+        "**Important:** Don't modify your default \"Standard\" layout at this point. We're creating a second one to preserve the factory settings as a reference point"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 2: Name Your Layout"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "In the top left, the layout will be titled \"Untitled Layout\"",
+        "Name this **\"Break Me\"** or **\"Sandbox\"** or something to indicate it's being used as your test layout"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 3: Add Custom Fields"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Drag and drop fields into this layout that you think would be useful to know about Leads",
+        "Create **at least 3 custom fields** (more is better)",
+        "**Try to avoid the more complex fields for now**, like Formula Fields, Lookups, and Rollup Summary fields",
+        "Focus on simpler field types like Text, Number, Picklist, Date, Email, Phone, etc."
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step 4: Set Access Permissions"
+    },
+    {
+      "type": "paragraph",
+      "content": "When you save this layout, you'll be asked to set access permissions for who can see/use this layout:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Administrator** will be populated already",
+        "You can add the **Standard** profile here if you wish",
+        "This controls which user profiles can access and use this layout"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Test Your New Layout and Fields"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now it's time to test your custom layout by creating new Lead records."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Note:** None of your existing Leads will automatically be in this layout. You'll need to create new Leads or manually change the layout of existing ones."
+    },
+    {
+      "type": "subheading",
+      "content": "Testing Instructions"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create a few new Leads",
+        "When creating, ensure that you select the layout you just created in the **\"Layout\"** field dropdown",
+        "Create **at least 3 Leads** using your custom layout",
+        "Fill the appropriate fields with information (including the custom fields you created)",
+        "**VERY IMPORTANT:** For at least one of the custom fields YOU CREATED, put the **same information** for all leads you create (we will use this later for filtering and reporting)"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Identify the different types of fields available in Zoho CRM",
+        "Understand the difference between system fields and custom fields",
+        "Create and configure custom layouts for different business scenarios",
+        "Add custom fields to layouts without affecting existing data",
+        "Set appropriate access permissions for custom layouts",
+        "Test and validate custom layouts by creating records"
+      ]
+    }
+  ]
+}

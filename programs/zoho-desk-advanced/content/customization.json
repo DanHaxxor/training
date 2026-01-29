@@ -1,0 +1,471 @@
+{
+  "title": "Desk Customization",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Everybody is different. Every business is different. The various settings and features within the Customization category give us the tools to make Desk look, feel, and function in a way that works best for our customers."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase and demonstrate the various Customization options within Desk",
+        "Provide context to the use of some of these features, such as their uses within other modules"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Modules and Tabs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize which modules are available and how they're organized within your Desk portal."
+    },
+    {
+      "type": "subheading",
+      "content": "Manage Modules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Control which modules are visible and active in your Desk portal. Enable or disable modules based on your support team's needs."
+    },
+    {
+      "type": "subheading",
+      "content": "Organization vs Department Level Data Storage"
+    },
+    {
+      "type": "paragraph",
+      "content": "Understanding the difference between organization-level and department-level data storage is crucial:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Organization Level:** Data is shared across all departments (e.g., Contacts, Accounts)",
+        "**Department Level:** Data is isolated per department (e.g., Tickets are typically department-specific)",
+        "This structure affects visibility, reporting, and data access across your support organization"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Organize Tabs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Arrange the order of tabs in your navigation to match your team's workflow priorities."
+    },
+    {
+      "type": "subheading",
+      "content": "Unselected Modules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Modules that aren't actively used can be hidden from view to reduce clutter and simplify navigation for your agents."
+    },
+    {
+      "type": "subheading",
+      "content": "Rename Tabs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize tab names to match your organization's terminology and make the interface more intuitive for your team."
+    },
+    {
+      "type": "heading",
+      "content": "Layouts and Fields"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize the data you collect and how it's presented through layouts and field configurations."
+    },
+    {
+      "type": "subheading",
+      "content": "Layouts"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create multiple layouts for different use cases, departments, or ticket types. Each layout can have its own set of fields, sections, and organization."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Create separate layouts for \"Technical Support\" vs \"Billing Issues\" to show only relevant fields for each ticket type."
+    },
+    {
+      "type": "subheading",
+      "content": "Field Types"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk supports various field types for capturing different kinds of data:"
+    },
+    {
+      "type": "subheading",
+      "content": "Nested Picklist"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create hierarchical dropdown menus where the options in one field depend on the selection in another field. Perfect for categorization systems like Product > Category > Sub-category."
+    },
+    {
+      "type": "subheading",
+      "content": "Formula"
+    },
+    {
+      "type": "paragraph",
+      "content": "Calculate values automatically based on other fields. Use formulas for calculations, concatenations, and conditional logic."
+    },
+    {
+      "type": "subheading",
+      "content": "Lookup"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pull data from related modules. For example, automatically populate customer details from the Contacts module when a contact is selected on a ticket."
+    },
+    {
+      "type": "subheading",
+      "content": "Field Permissions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Control which profiles can view, edit, or have read-only access to specific fields. This enables role-based data access at a granular level."
+    },
+    {
+      "type": "subheading",
+      "content": "HIPAA and Encryption"
+    },
+    {
+      "type": "paragraph",
+      "content": "For sensitive data, enable field-level encryption to protect confidential information. Essential for HIPAA compliance and handling personally identifiable information (PII)."
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Encrypted fields cannot be used in certain features like search, reports, or workflow conditions. Plan your encryption strategy carefully."
+    },
+    {
+      "type": "subheading",
+      "content": "Layout Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Show or hide fields dynamically based on user selections or field values. Layout rules help create dynamic, context-aware forms that adapt to the data being entered."
+    },
+    {
+      "type": "subheading",
+      "content": "Validation Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Enforce data quality by setting rules that must be satisfied before a record can be saved. Validation rules prevent incorrect or incomplete data entry."
+    },
+    {
+      "type": "subheading",
+      "content": "Field List"
+    },
+    {
+      "type": "paragraph",
+      "content": "View and manage all custom fields across your modules in a centralized location. Track field usage and dependencies."
+    },
+    {
+      "type": "subheading",
+      "content": "Field Dependencies"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create relationships between fields where the options in one field determine what's available in another. This is different from layout rules."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Differences between Layout Rules and Field Dependencies:**\n\n**Layout Rules:** Control field visibility (show/hide fields based on conditions)\n\n**Field Dependencies:** Control field options (filter available choices based on another field's value)"
+    },
+    {
+      "type": "heading",
+      "content": "Ticket Status"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize the ticket lifecycle to match your support processes."
+    },
+    {
+      "type": "subheading",
+      "content": "Status Type"
+    },
+    {
+      "type": "paragraph",
+      "content": "Define custom ticket statuses beyond the default Open, On Hold, and Closed. Create statuses like \"Pending Customer Response,\" \"With Development Team,\" or \"Waiting for Parts.\""
+    },
+    {
+      "type": "subheading",
+      "content": "Fall-Back to Default"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure what happens when a custom status is deleted or no longer available. Ensure tickets don't get stuck in invalid states."
+    },
+    {
+      "type": "heading",
+      "content": "General Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "Various settings that control overall Desk behavior and functionality."
+    },
+    {
+      "type": "subheading",
+      "content": "Tickets"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure core ticket functionality:"
+    },
+    {
+      "type": "subheading",
+      "content": "Secondary Contacts (CCs) in Tickets"
+    },
+    {
+      "type": "paragraph",
+      "content": "Enable CC functionality to keep additional stakeholders informed on ticket updates. All CC'd contacts receive email notifications about ticket activity."
+    },
+    {
+      "type": "subheading",
+      "content": "Send as Email"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure whether agents can send ticket responses as emails directly from the platform."
+    },
+    {
+      "type": "subheading",
+      "content": "Ticket ID Configuration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize how ticket IDs are generated and displayed:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Custom Prefix:** Add department or category identifiers (e.g., TECH-, BILLING-)",
+        "**Custom Suffix:** Add year, month, or other identifiers to ticket numbers"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** Configure ticket IDs as \"SUPPORT-2025-00123\" instead of the default numeric sequence."
+    },
+    {
+      "type": "subheading",
+      "content": "Contacts"
+    },
+    {
+      "type": "paragraph",
+      "content": "Settings related to contact management:"
+    },
+    {
+      "type": "subheading",
+      "content": "Automatic Spam Detection"
+    },
+    {
+      "type": "paragraph",
+      "content": "Enable automatic spam detection to filter out unwanted tickets before they reach your agents. The system learns from tickets you manually mark as spam."
+    },
+    {
+      "type": "subheading",
+      "content": "Agents"
+    },
+    {
+      "type": "paragraph",
+      "content": "Agent-specific configuration:"
+    },
+    {
+      "type": "subheading",
+      "content": "Idle Timeout"
+    },
+    {
+      "type": "paragraph",
+      "content": "Set how long agents can be inactive before they're marked as idle. This setting affects:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Automatic ticket assignment (idle agents may be skipped)",
+        "Agent availability status",
+        "Round-robin distribution rules",
+        "Workload management"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Key Point:** Idle timeout plays into ticket assignment automations. Idle agents can be excluded from automatic assignment rules to ensure tickets go to available team members."
+    },
+    {
+      "type": "heading",
+      "content": "Notifications"
+    },
+    {
+      "type": "paragraph",
+      "content": "Control how and when agents and customers are notified about ticket activity."
+    },
+    {
+      "type": "subheading",
+      "content": "Notification Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create custom notification rules to alert specific people when certain conditions are met. Configure notifications for ticket creation, updates, escalations, and more."
+    },
+    {
+      "type": "subheading",
+      "content": "Feeds Preference"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize what appears in your activity feeds and how notifications are displayed within the platform."
+    },
+    {
+      "type": "heading",
+      "content": "Skills"
+    },
+    {
+      "type": "paragraph",
+      "content": "Skills allow you to tag agents with specific areas of expertise or certifications."
+    },
+    {
+      "type": "paragraph",
+      "content": "Skills tie into automations in several ways:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Assignment Rules:** Route tickets to agents with specific skills (e.g., assign \"Spanish Language\" tickets to agents with Spanish language skills)",
+        "**Round Robin:** Include skill matching in round-robin distribution",
+        "**Escalation Rules:** Escalate to agents with advanced skill levels",
+        "**Workflow Conditions:** Trigger actions based on agent skills"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** Create skills like \"Level 1 Support,\" \"Level 2 Technical,\" \"Billing Expert,\" or \"Spanish Speaking\" to enable intelligent ticket routing."
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the trainees complete the following customization tasks:"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 1: Custom Layout and Fields"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Customization > Layouts and Fields**",
+        "Select the Ticket module for one of your departments",
+        "Create a new custom layout (e.g., \"Technical Support Layout\")",
+        "Add at least 3 custom fields to this layout with different field types: One picklist field (e.g., \"Issue Category\"), One formula field (e.g., calculate days since ticket creation), One lookup field if applicable",
+        "Configure field permissions for at least one field",
+        "Create a layout rule that shows/hides a field based on another field's value",
+        "Save and assign the layout to a profile or department"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 2: Ticket Template"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Templates**",
+        "Create a new ticket template for the custom layout you created",
+        "Configure the template to pre-fill certain fields based on common ticket types",
+        "Test the template by creating a new ticket using it"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Create a Skill for use as criteria in certain automations. Check out some of the various automations and see where you might be able to utilize Skills. For example:\n\n1. Create skills like \"Database Expert\" or \"Network Specialist\"\n2. Assign these skills to agents\n3. Create an assignment rule that routes tickets with specific keywords to agents with matching skills"
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Modules and Tabs:** Manage modules, organize tabs, control visibility, rename for clarity",
+        "**Data Storage:** Understand organization-level vs department-level data isolation",
+        "**Layouts:** Create multiple layouts for different ticket types and departments",
+        "**Field Types:** Nested picklists, formulas, lookups for advanced data capture",
+        "**Field Permissions:** Control view/edit access at the field level",
+        "**HIPAA/Encryption:** Protect sensitive data with field-level encryption",
+        "**Layout Rules vs Field Dependencies:** Layout rules control visibility; field dependencies control available options",
+        "**Validation Rules:** Enforce data quality before records can be saved",
+        "**Custom Statuses:** Define ticket lifecycle stages specific to your process",
+        "**Ticket IDs:** Customize with prefixes and suffixes for better organization",
+        "**Idle Timeout:** Affects automatic ticket assignment and agent availability",
+        "**Skills:** Enable intelligent ticket routing based on agent expertise",
+        "**Notifications:** Customize when and how agents and customers are alerted"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Manage modules and organize tabs in Zoho Desk",
+        "Explain the difference between organization-level and department-level data storage",
+        "Create and configure custom layouts for different use cases",
+        "Add custom fields including nested picklists, formulas, and lookups",
+        "Configure field permissions for role-based access",
+        "Implement field-level encryption for sensitive data (HIPAA compliance)",
+        "Create layout rules to show/hide fields dynamically",
+        "Set up validation rules to enforce data quality",
+        "Understand the difference between layout rules and field dependencies",
+        "Create custom ticket statuses to match your support workflow",
+        "Configure ticket ID format with custom prefixes and suffixes",
+        "Enable and configure secondary contacts (CCs) on tickets",
+        "Set up automatic spam detection for contacts",
+        "Configure idle timeout and understand its impact on ticket assignment",
+        "Create and manage notification rules",
+        "Define agent skills and understand how they integrate with automations",
+        "Create ticket templates for consistent data entry",
+        "Use skills-based routing criteria in assignment rules"
+      ]
+    }
+  ]
+}

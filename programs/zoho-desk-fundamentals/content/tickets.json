@@ -1,0 +1,335 @@
+{
+  "title": "Tickets - Modules and Records",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "The core way we correspond with customers through Desk is through Tickets. This can range from communicating with a customer through a ticket by email, to simply logging chat communications through the SalesIQ integration. Regardless, tickets are the main record type you'll be working with in Desk, and it's important to familiarize yourself with them."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase how to utilize the various views and modes when working in the Tickets Module",
+        "Demonstrate how to navigate a ticket, the various sections and tabs within a ticket, as well as their various functionalities"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Ticket Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Tickets module is where agents spend most of their time in Zoho Desk. Understanding the various views and modes available helps agents work more efficiently."
+    },
+    {
+      "type": "subheading",
+      "content": "Ticket List Views"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk offers multiple ways to display your ticket list, each optimized for different workflows:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Classic:** Traditional list view with key ticket details in rows",
+        "**Compact:** Condensed view showing more tickets on screen with essential information",
+        "**Table:** Spreadsheet-style view with customizable columns for data-focused work"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Work Modes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Work Modes help agents organize and prioritize their ticket queue based on different criteria:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Status:** Group tickets by their current status (Open, On Hold, Escalated, Closed)",
+        "**Countdown:** Sort tickets by time remaining until SLA breach",
+        "**Priority:** Organize tickets by priority level (High, Medium, Low)",
+        "**Handshake:** Available through CRM integration - shows tickets linked to CRM opportunities"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** Countdown mode is particularly useful for ensuring SLA compliance by highlighting tickets that need immediate attention."
+    },
+    {
+      "type": "subheading",
+      "content": "Custom Ticket Views"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create custom views to filter and sort tickets based on specific criteria that matter to your workflow. Custom views can be personal or shared with your team."
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Note:** Custom views with \"All Departments\" currently have some limitations. Be aware of these when creating department-spanning views."
+    },
+    {
+      "type": "subheading",
+      "content": "Archived Tickets"
+    },
+    {
+      "type": "paragraph",
+      "content": "Older closed tickets are automatically archived based on your organization's retention settings. Archived tickets can still be searched and accessed but are removed from active views to improve performance."
+    },
+    {
+      "type": "subheading",
+      "content": "Spam Tickets"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tickets marked as spam are moved to a separate spam folder. Review this folder periodically to ensure legitimate tickets weren't incorrectly flagged."
+    },
+    {
+      "type": "subheading",
+      "content": "Feeds"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Feeds view provides a chronological stream of ticket updates, allowing agents to monitor activity across multiple tickets in real-time."
+    },
+    {
+      "type": "heading",
+      "content": "Ticket Record"
+    },
+    {
+      "type": "paragraph",
+      "content": "Individual ticket records contain all the information and communication history for a customer's support request."
+    },
+    {
+      "type": "subheading",
+      "content": "Conversations"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Conversations section displays all customer-facing communications related to the ticket, including emails, chat transcripts, and social media interactions."
+    },
+    {
+      "type": "subheading",
+      "content": "Comments and Threads"
+    },
+    {
+      "type": "paragraph",
+      "content": "Internal comments allow agents to collaborate on tickets without the customer seeing the discussion. Threads help organize conversations by topic or issue."
+    },
+    {
+      "type": "subheading",
+      "content": "Time Entry"
+    },
+    {
+      "type": "paragraph",
+      "content": "Log time spent working on tickets for billing, reporting, and productivity tracking purposes."
+    },
+    {
+      "type": "subheading",
+      "content": "Time Tracking (Customizations)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure time tracking settings to match your organization's requirements, including billable vs. non-billable hours and time entry requirements."
+    },
+    {
+      "type": "subheading",
+      "content": "History"
+    },
+    {
+      "type": "paragraph",
+      "content": "The History tab shows a complete audit trail of all changes made to the ticket, including status updates, assignment changes, and field modifications."
+    },
+    {
+      "type": "subheading",
+      "content": "Creating a Reply"
+    },
+    {
+      "type": "paragraph",
+      "content": "When responding to tickets, agents can compose emails directly within Desk, with access to templates, merge fields, and rich text formatting."
+    },
+    {
+      "type": "subheading",
+      "content": "Snippets"
+    },
+    {
+      "type": "paragraph",
+      "content": "Snippets are reusable text shortcuts that help agents quickly insert common responses and information. Type a snippet shortcode to expand it into full text."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Pro Tip:** Create snippets for frequently asked questions and common troubleshooting steps to significantly speed up response times."
+    },
+    {
+      "type": "subheading",
+      "content": "Sidebar (Timeline, Followers, Share, etc.)"
+    },
+    {
+      "type": "paragraph",
+      "content": "The ticket sidebar provides quick access to important features:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Timeline:** Visual representation of ticket activity and milestones",
+        "**Followers:** Add team members to follow ticket updates without being the assignee",
+        "**Share:** Share ticket information with external stakeholders",
+        "**Related Tickets:** View and link related customer issues",
+        "**Customer Information:** Quick access to customer profile and history"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "More Actions"
+    },
+    {
+      "type": "paragraph",
+      "content": "The More Actions menu provides additional ticket operations including merge, split, clone, and print."
+    },
+    {
+      "type": "subheading",
+      "content": "Mark Spam"
+    },
+    {
+      "type": "paragraph",
+      "content": "Use the Mark Spam action to flag unwanted or malicious tickets. Marked tickets are moved to the spam folder and can help train spam filters."
+    },
+    {
+      "type": "subheading",
+      "content": "Parent - Child Ticketing"
+    },
+    {
+      "type": "paragraph",
+      "content": "Complex customer issues can be broken down into related sub-tickets using parent-child relationships. This helps organize multi-part problems and track resolution of individual components."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** A customer reports multiple issues in one email. Create child tickets for each specific issue while maintaining a parent ticket to track overall resolution."
+    },
+    {
+      "type": "subheading",
+      "content": "Customer Module"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Customer module stores contact information, support history, and preferences. Agents can access customer profiles directly from tickets to view full interaction history."
+    },
+    {
+      "type": "subheading",
+      "content": "De-duplicate"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk can automatically detect and merge duplicate customer records or tickets to maintain clean data and prevent confusion."
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Using the various channels they have access to, have the trainees submit tickets to their departments and see what's different between them depending on where the ticket originated."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity Steps"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Submit test tickets through different channels: Email, Chat (SalesIQ), Webform, and Social (if configured)",
+        "Compare how tickets appear in the list view based on their origin channel",
+        "Practice switching between Classic, Compact, and Table views to find your preference",
+        "Try each Work Mode (Status, Countdown, Priority) and observe how tickets are organized",
+        "Create a custom view that filters for tickets assigned to you with High priority",
+        "Create a custom view that shows only positive CSAT rated tickets",
+        "Open a ticket and add an internal comment (not visible to customer)",
+        "Reply to a ticket using a template and snippets",
+        "Log time entry on a ticket",
+        "Create a parent ticket with at least one child ticket",
+        "Add a follower to a ticket and observe what notifications they receive",
+        "Practice using the timeline and history features to understand ticket progression"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Check out the various options in the Customization section on your own. Explore ticket layouts, custom fields, and status workflows."
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**List Views:** Classic, Compact, and Table views for different workflow preferences",
+        "**Work Modes:** Status, Countdown, Priority, and Handshake (CRM integration) for ticket organization",
+        "**Custom Views:** Create filtered views for specific ticket criteria",
+        "**Conversations:** Customer-facing communications displayed in chronological order",
+        "**Comments/Threads:** Internal collaboration without customer visibility",
+        "**Time Tracking:** Log time spent on tickets for billing and productivity tracking",
+        "**History:** Complete audit trail of all ticket changes",
+        "**Snippets:** Reusable text shortcuts for faster responses",
+        "**Sidebar Features:** Timeline, Followers, Share, Related Tickets, Customer Info",
+        "**Parent-Child Ticketing:** Organize complex multi-issue support requests",
+        "**Customer Module:** Centralized contact information and support history",
+        "**De-duplication:** Automatic detection and merging of duplicate records"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Navigate between Classic, Compact, and Table list views",
+        "Use different Work Modes to organize tickets (Status, Countdown, Priority, Handshake)",
+        "Create and manage custom ticket views with filters",
+        "Understand the difference between Conversations and Comments",
+        "Add internal comments and collaborate with team members on tickets",
+        "Log time entries and understand time tracking",
+        "Review ticket history to see all changes and updates",
+        "Compose replies to tickets using templates and snippets",
+        "Use snippets to speed up response times",
+        "Navigate the ticket sidebar (Timeline, Followers, Share, etc.)",
+        "Add followers to tickets for team collaboration",
+        "Mark tickets as spam when appropriate",
+        "Create parent-child ticket relationships for complex issues",
+        "Access customer information and support history from tickets",
+        "Understand how tickets differ based on their origin channel",
+        "Use the More Actions menu for advanced ticket operations",
+        "Locate and review archived and spam tickets"
+      ]
+    }
+  ]
+}

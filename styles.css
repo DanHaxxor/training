@@ -115,6 +115,11 @@ body {
     transition: background-color 0.2s, border-color 0.2s;
 }
 
+.program-dropdown.placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+}
+
 .program-dropdown:hover {
     background-color: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.3);
@@ -129,6 +134,11 @@ body {
 .program-dropdown option {
     background-color: var(--sidebar-bg);
     color: var(--sidebar-text);
+}
+
+.program-dropdown option:disabled {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
 }
 
 .sidebar-nav {
@@ -228,6 +238,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     margin-top: 4rem;
     padding-top: 3rem;
     border-top: 1px solid var(--border-color);
@@ -242,7 +253,7 @@ body {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -256,8 +267,20 @@ body {
     font-size: 1.125rem;
 }
 
-.inline-nav-btn.next-btn {
-    margin-left: auto;
+.inline-nav-btn.mark-complete-btn {
+    background-color: var(--brand-green);
+}
+
+.inline-nav-btn.mark-complete-btn:hover {
+    background-color: #15803d;
+}
+
+.inline-nav-btn.mark-incomplete-btn {
+    background-color: #94a3b8;
+}
+
+.inline-nav-btn.mark-incomplete-btn:hover {
+    background-color: #64748b;
 }
 
 /* Content Styling */
@@ -492,6 +515,350 @@ body {
     font-size: 1.125rem;
 }
 
+/* Dashboard Button */
+.dashboard-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--sidebar-text);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.dashboard-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.dashboard-btn span {
+    font-size: 1.125rem;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    padding: 2rem 0;
+}
+
+.dashboard h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.dashboard-subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #64748b;
+    margin-bottom: 3rem;
+}
+
+.dashboard-category {
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.program-card {
+    background-color: var(--content-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.program-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.program-card.program-complete {
+    border-color: var(--brand-green);
+    background-color: var(--brand-soft-green);
+}
+
+.program-card.program-complete:hover {
+    border-color: var(--brand-green);
+}
+
+.program-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.program-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.program-description {
+    font-size: 0.9375rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.program-meta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.program-difficulty {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.program-difficulty.beginner {
+    background-color: var(--brand-soft-green);
+    color: var(--brand-green);
+}
+
+.program-difficulty.intermediate {
+    background-color: var(--brand-soft-yellow);
+    color: var(--brand-yellow);
+}
+
+.program-difficulty.advanced {
+    background-color: var(--brand-soft-red);
+    color: var(--brand-red);
+}
+
+.program-duration {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: var(--brand-soft-blue);
+    color: var(--brand-blue);
+}
+
+.program-prerequisites {
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8125rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.program-progress {
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-blue), var(--brand-green));
+    transition: width 0.3s ease;
+    border-radius: 9999px;
+}
+
+.progress-text {
+    font-size: 0.8125rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.program-action-btn {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    margin-top: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.start-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.start-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.resume-btn {
+    background-color: var(--brand-yellow);
+    color: #78350f;
+}
+
+.resume-btn:hover {
+    background-color: #f59e0b;
+}
+
+.completed-btn {
+    background-color: var(--brand-green);
+    color: white;
+}
+
+.completed-btn:hover {
+    background-color: #15803d;
+}
+
+.nav-item.completed {
+    opacity: 0.8;
+}
+
+.nav-item.completed .nav-item-number {
+    background-color: var(--brand-green);
+    color: white;
+}
+
+/* Dev Tools */
+.dev-tools {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    border-top: 1px dashed #cbd5e1;
+}
+
+.reset-progress-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.reset-progress-btn:hover {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+    color: #475569;
+}
+
+/* Completion Screen */
+.completion-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 2rem;
+}
+
+.completion-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.completion-icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.completion-screen h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.completion-message {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.completion-message strong {
+    color: var(--primary-color);
+}
+
+.completion-stats {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.completion-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.completion-btn {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.completion-btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.completion-btn.primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.completion-btn.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.completion-btn.secondary:hover {
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
@@ -517,10 +884,57 @@ body {
     .inline-nav {
         margin-top: 3rem;
         padding-top: 2rem;
+        flex-wrap: wrap;
     }
 
     .inline-nav-btn {
-        padding: 0.75rem 1.25rem;
-        font-size: 0.9375rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        flex: 1 1 auto;
+        min-width: fit-content;
+    }
+
+    .inline-nav-btn.mark-complete-btn,
+    .inline-nav-btn.mark-incomplete-btn {
+        flex-basis: 100%;
+        order: -1;
+        margin-bottom: 0.5rem;
+    }
+
+    .dashboard h1 {
+        font-size: 1.875rem;
+    }
+
+    .dashboard-subtitle {
+        font-size: 1rem;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-action-btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.875rem;
+    }
+
+    .completion-screen h1 {
+        font-size: 1.875rem;
+    }
+
+    .completion-icon {
+        font-size: 4rem;
+    }
+
+    .completion-message {
+        font-size: 1.125rem;
+    }
+
+    .completion-actions {
+        flex-direction: column;
+    }
+
+    .completion-btn {
+        width: 100%;
     }
 }

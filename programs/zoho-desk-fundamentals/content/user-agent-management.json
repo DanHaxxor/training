@@ -1,0 +1,258 @@
+{
+  "title": "User and Agent Management",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "For the administrators that work with Desk, being able to properly configure their users (referred to as Agents in Desk) is going to be one of the most important things they interface with when managing their team. Through the User Management settings we can invite/deactivate agents, configure teams, and even set up the permissions an agent has access to depending on the profile assigned to them. If we encounter any permission issues, User Management is the first place we check."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Cover the various features and settings within User Management",
+        "Focus on Agent and Profile settings"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Agents"
+    },
+    {
+      "type": "paragraph",
+      "content": "Agents are the support team members who handle customer tickets and interactions within Zoho Desk. Proper agent configuration is essential for effective support operations."
+    },
+    {
+      "type": "subheading",
+      "content": "Inviting Agents"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add new team members to your Desk portal by sending invitations. Agents receive an email with instructions to set up their account and access the system."
+    },
+    {
+      "type": "subheading",
+      "content": "Editing Agent Information"
+    },
+    {
+      "type": "paragraph",
+      "content": "Update agent details including name, email, contact information, and other profile data as needed."
+    },
+    {
+      "type": "subheading",
+      "content": "Role and Permission"
+    },
+    {
+      "type": "paragraph",
+      "content": "Assign roles and permissions to agents to control what data they can access and what actions they can perform. Roles work in conjunction with profiles to determine an agent's overall access level."
+    },
+    {
+      "type": "subheading",
+      "content": "Department Assignment"
+    },
+    {
+      "type": "paragraph",
+      "content": "Associate agents with specific departments to ensure tickets are routed to the right team members. An agent can be assigned to multiple departments based on their expertise."
+    },
+    {
+      "type": "subheading",
+      "content": "Deactivating/Disabling Agents"
+    },
+    {
+      "type": "paragraph",
+      "content": "When team members leave or change roles, deactivate their agent accounts to maintain security and license compliance."
+    },
+    {
+      "type": "subheading",
+      "content": "Ticket/Activity Reassignment"
+    },
+    {
+      "type": "paragraph",
+      "content": "When deactivating an agent, their open tickets and activities must be reassigned to other team members to ensure continuity of support."
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Always reassign tickets and activities before deactivating an agent to prevent orphaned tickets and lost customer communications."
+    },
+    {
+      "type": "heading",
+      "content": "Teams"
+    },
+    {
+      "type": "paragraph",
+      "content": "Teams allow you to group agents together for better organization, collaboration, and ticket assignment."
+    },
+    {
+      "type": "subheading",
+      "content": "Creating and Editing Teams"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create teams based on specialization, department, or any other organizational structure that makes sense for your support operations."
+    },
+    {
+      "type": "subheading",
+      "content": "Agent Association"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add agents to teams to enable team-based ticket assignment, shared workloads, and collaborative support workflows. Agents can belong to multiple teams."
+    },
+    {
+      "type": "heading",
+      "content": "Roles and Data Sharing"
+    },
+    {
+      "type": "paragraph",
+      "content": "Roles define the hierarchy and data visibility within your support organization. They determine which tickets and customer information an agent can access."
+    },
+    {
+      "type": "subheading",
+      "content": "Creating Roles"
+    },
+    {
+      "type": "paragraph",
+      "content": "Define organizational roles that reflect your support team's structure (e.g., Support Agent, Team Lead, Manager, Administrator)."
+    },
+    {
+      "type": "subheading",
+      "content": "Share Data with Peers"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure data sharing settings to control whether agents can see tickets and records owned by their peers at the same role level."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Key Concept:** Roles control data visibility (what an agent can see), while Profiles control permissions (what actions an agent can perform)."
+    },
+    {
+      "type": "heading",
+      "content": "Profiles"
+    },
+    {
+      "type": "paragraph",
+      "content": "Profiles define the permissions and capabilities available to agents. They determine what features, modules, and actions an agent can access within Desk."
+    },
+    {
+      "type": "subheading",
+      "content": "Creating Profiles"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create custom profiles tailored to different agent responsibilities and access requirements. Common profiles include Administrator, Agent, and Light Agent."
+    },
+    {
+      "type": "subheading",
+      "content": "Configuring Profile Permissions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Set granular permissions for each profile including:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Module Access:** Which modules (Tickets, Contacts, Accounts, etc.) the profile can access",
+        "**Action Permissions:** Create, edit, delete, and other actions available within each module",
+        "**Feature Access:** Access to specific features like reports, automations, integrations",
+        "**Administrative Permissions:** Setup access, user management, and configuration capabilities"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Best Practice:** Create profiles based on job functions rather than individual agents. This makes it easier to manage permissions as your team grows."
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the Trainees invite agents to their test accounts, and assign different profiles/roles to them."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity Steps"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > User Management > Agents**",
+        "Invite 2-3 test agents to your portal (use secondary email addresses or colleague emails)",
+        "Create a custom profile with limited permissions (e.g., a profile that can only view and respond to tickets, but cannot delete them)",
+        "Create at least one custom role in the role hierarchy",
+        "Assign different profiles and roles to your test agents",
+        "Create a team and add agents to it",
+        "Test the different permission levels by logging in as different agents (or using impersonation if available)",
+        "Attempt to deactivate one agent and observe the ticket reassignment workflow"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Experiment with data sharing settings to see how they affect ticket visibility between agents. Try creating a scenario where some agents can only see their own tickets while others can see all tickets in their department."
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Agents:** Invite, edit, assign departments, deactivate, and reassign tickets/activities",
+        "**Teams:** Group agents for collaboration and team-based ticket assignment",
+        "**Roles:** Define hierarchy and control data visibility (what agents can see)",
+        "**Profiles:** Define permissions and capabilities (what actions agents can perform)",
+        "**Data Sharing:** Configure whether agents can see peer-owned records",
+        "**Permission Troubleshooting:** User Management is the first place to check for permission issues",
+        "**Best Practice:** Roles control visibility, Profiles control permissions - both work together"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Invite new agents to Zoho Desk",
+        "Edit agent information and configuration",
+        "Assign agents to departments",
+        "Deactivate agents and reassign their tickets/activities",
+        "Create and manage teams",
+        "Add agents to teams for collaboration",
+        "Understand the difference between Roles and Profiles",
+        "Create custom roles to define organizational hierarchy",
+        "Configure data sharing settings for role-based visibility",
+        "Create custom profiles with specific permissions",
+        "Configure granular permissions within profiles (module access, actions, features)",
+        "Assign profiles and roles to agents",
+        "Troubleshoot permission issues using User Management settings",
+        "Understand how roles (visibility) and profiles (permissions) work together"
+      ]
+    }
+  ]
+}

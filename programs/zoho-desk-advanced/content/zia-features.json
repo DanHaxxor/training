@@ -1,0 +1,459 @@
+{
+  "title": "Zia AI Features",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Within the wide world of business software, AI is the new king. Features that can utilize AI to help enhance or provide additional functionality to a team are now an important consideration when companies are looking for any new application for their business."
+    },
+    {
+      "type": "paragraph",
+      "content": "Within Zoho, Zia is the name of our AI platform that enables these types of functionality across our various apps. Within Desk, Zia currently enables various features, from sentiment analysis to gauge the tone of a customer's reply at a glance, to Reply Assistance where Zia will generate a reply suggestion based on the conversation of a ticket. Similar to automations, Zia gives tools to a team to help optimize how they engage with their customers through Desk."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase and demonstrate the various features of Zia within Desk",
+        "Provide context to the use of some of these features, such as their uses within other modules"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Answer Bot"
+    },
+    {
+      "type": "paragraph",
+      "content": "Answer Bot uses AI to automatically respond to customer questions by searching your Knowledge Base and providing relevant article suggestions or direct answers."
+    },
+    {
+      "type": "subheading",
+      "content": "How Answer Bot Works"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Analyzes incoming customer questions",
+        "Searches Knowledge Base articles for relevant information",
+        "Provides article suggestions or generates answers based on KB content",
+        "Can respond automatically via email or through the Help Center",
+        "Learns from agent feedback to improve accuracy over time"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Best Practices for Article Formatting"
+    },
+    {
+      "type": "paragraph",
+      "content": "To maximize Answer Bot's effectiveness, structure your Knowledge Base articles properly:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Clear Titles:** Use descriptive, question-based titles (e.g., \"How do I reset my password?\" instead of \"Password Management\")",
+        "**Structured Content:** Break content into clear sections with subheadings",
+        "**Direct Answers:** Put the most important information at the beginning",
+        "**Simple Language:** Avoid jargon and complex terminology",
+        "**Complete Information:** Ensure articles fully answer the question without requiring external links",
+        "**Regular Updates:** Keep articles current to maintain Answer Bot accuracy",
+        "**Tagging:** Use relevant tags to help Answer Bot categorize and find articles"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** Articles formatted as FAQs with clear question-and-answer structure work particularly well with Answer Bot."
+    },
+    {
+      "type": "subheading",
+      "content": "Use with ASAP"
+    },
+    {
+      "type": "paragraph",
+      "content": "Answer Bot integrates seamlessly with ASAP (Zoho's self-service widget) to provide instant answers to customers before they even create a ticket. When customers type questions into ASAP, Answer Bot suggests relevant articles in real-time."
+    },
+    {
+      "type": "heading",
+      "content": "Field Prediction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zia can automatically predict and populate ticket fields based on the content of the ticket, saving agents time and improving data consistency."
+    },
+    {
+      "type": "subheading",
+      "content": "Predictions Guideline"
+    },
+    {
+      "type": "paragraph",
+      "content": "Field Prediction requires training data to become accurate:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Training Period:** Zia needs historical ticket data to learn patterns (typically 500+ tickets)",
+        "**Consistent Data:** The more consistently fields were filled in the past, the better predictions will be",
+        "**Predictable Fields:** Works best for fields like Category, Priority, Department, Product",
+        "**Agent Review:** Predictions should always be reviewed by agents before finalizing",
+        "**Continuous Learning:** Zia improves predictions as more tickets are processed"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Field Prediction accuracy depends on the quality of your historical data. Inconsistent or incomplete past data will result in less accurate predictions."
+    },
+    {
+      "type": "heading",
+      "content": "Generative AI"
+    },
+    {
+      "type": "paragraph",
+      "content": "Generative AI features in Desk help agents compose, improve, and summarize communications."
+    },
+    {
+      "type": "subheading",
+      "content": "Reply Assistance"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zia can generate suggested replies based on the ticket conversation history:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Analyzes the full ticket conversation thread",
+        "Generates contextually appropriate response suggestions",
+        "Agents can edit suggestions before sending",
+        "Speeds up response times for common inquiries",
+        "Maintains professional tone and language"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Reply Summary"
+    },
+    {
+      "type": "paragraph",
+      "content": "Summarize long ticket conversations into concise overviews:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Condense lengthy email threads into key points",
+        "Help agents quickly understand ticket history",
+        "Can summarize entire conversation or specific portions",
+        "Useful for ticket handoffs between agents",
+        "Responses change based on what content is selected for summarization"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** When taking over a ticket with 15+ back-and-forth emails, use Reply Summary to quickly understand the issue, what's been tried, and what the customer needs."
+    },
+    {
+      "type": "subheading",
+      "content": "Content Improvement"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Tone Adjustment:** Make responses more friendly, formal, or empathetic",
+        "**Grammar Check:** Correct spelling and grammar errors",
+        "**Expand/Shorten:** Adjust response length as needed",
+        "**Translate:** Convert responses to different languages"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Sentiment Analysis"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zia analyzes the emotional tone of customer messages and assigns sentiment scores (Positive, Neutral, Negative)."
+    },
+    {
+      "type": "subheading",
+      "content": "How Sentiment Analysis Works"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Analyzes language, word choice, and context in customer messages",
+        "Assigns sentiment: Positive, Neutral, or Negative",
+        "Displays sentiment indicators on tickets",
+        "Tracks sentiment trends over time",
+        "Helps identify unhappy customers requiring immediate attention"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Use as Criteria Within Automations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sentiment can be used as a condition in workflow rules and other automations:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Escalate Negative Sentiment:** Automatically escalate tickets with negative sentiment to supervisors",
+        "**Priority Adjustment:** Increase priority for tickets with very negative sentiment",
+        "**Supervisor Notifications:** Alert managers when multiple negative sentiment tickets are received",
+        "**Response Templates:** Use different response templates based on customer sentiment",
+        "**Follow-up Actions:** Schedule follow-up calls for negative sentiment tickets after resolution"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example Automation:** Create a workflow rule that triggers when sentiment is \"Very Negative\" to immediately assign the ticket to a senior agent and notify the support manager."
+    },
+    {
+      "type": "heading",
+      "content": "Zia Services"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zia Services provide the underlying AI engine and configuration options for all Zia features in Desk."
+    },
+    {
+      "type": "subheading",
+      "content": "Zia vs ChatGPT"
+    },
+    {
+      "type": "paragraph",
+      "content": "Understanding the difference between Zia and external AI services like ChatGPT:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Zia:** Zoho's proprietary AI trained on your organization's data, integrated directly into Desk workflows",
+        "**ChatGPT Integration:** Can be configured to provide additional AI capabilities using OpenAI's models",
+        "**Data Privacy:** Zia keeps data within Zoho's ecosystem; external services may have different privacy policies",
+        "**Customization:** Zia learns from your specific Knowledge Base and ticket patterns",
+        "**Cost:** Zia is included with Desk plans; external AI may have additional API costs"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "General Preferences"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure Zia's behavior and settings:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Enable/disable specific Zia features",
+        "Set confidence thresholds for Answer Bot suggestions",
+        "Configure which departments or agents can use Zia features",
+        "Choose between Zia models and external AI services"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Model Used by Zia"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zia uses advanced natural language processing (NLP) and machine learning models:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Zia LLM (Large Language Model):** Zoho's proprietary language model for text generation and understanding",
+        "**Specialized Models:** Different models optimized for specific tasks (sentiment analysis, categorization, etc.)",
+        "**Continuous Training:** Models improve over time based on your organization's data",
+        "**Multi-language Support:** Trained on multiple languages for global support teams"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Zia Agents"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zia Agents are AI-powered assistants that can handle end-to-end customer interactions autonomously."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Handle complete customer conversations without human intervention",
+        "Make decisions based on conversation context",
+        "Access Knowledge Base and other resources",
+        "Escalate to human agents when needed",
+        "Learn from interactions to improve performance"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Future of Support:** Zia Agents represent the evolution toward fully autonomous support for routine inquiries, freeing human agents to focus on complex issues requiring empathy and creative problem-solving."
+    },
+    {
+      "type": "heading",
+      "content": "Zia LLM"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zia LLM (Large Language Model) is Zoho's proprietary AI language model that powers generative features:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Powers Reply Assistance, Reply Summary, and content improvement features",
+        "Trained on business communication patterns",
+        "Designed specifically for customer support contexts",
+        "Privacy-focused - data stays within Zoho infrastructure",
+        "Continuously updated and improved"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Complete the following Zia exercises to experience AI features firsthand:"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 1: Reply Assistance and Summary"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create a test ticket in your Desk account",
+        "Simulate an email conversation with at least 5 back-and-forth messages: Customer describes a problem, Agent asks clarifying questions, Customer provides more details, Agent suggests a solution, Customer has follow-up questions",
+        "Add internal comments between some messages to simulate agent notes",
+        "Use Zia's **Reply Assistance** feature to generate a suggested response",
+        "Observe how Zia understands the conversation context",
+        "Edit the suggestion if needed and note what changes you made",
+        "Use **Reply Summary** on the entire conversation - note the key points Zia extracted",
+        "Select only the customer's messages and generate a summary - observe how it differs from the full conversation summary",
+        "Select only agent responses and generate a summary",
+        "Document how the summaries change based on what content is selected"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 2: Answer Bot with Knowledge Base"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Channels > Answer Bot**",
+        "Enable Answer Bot for your test department",
+        "Ensure your Knowledge Base has the articles you created in previous lessons (at least 3 articles)",
+        "Review your articles and optimize them using best practices: Add clear, question-based titles, Structure content with headers, Put key information at the beginning",
+        "Train Answer Bot on your Knowledge Base articles",
+        "Test Answer Bot by: Creating test tickets with questions your articles should answer, Checking if Answer Bot suggests the correct articles, Verifying the accuracy and relevance of suggestions",
+        "Note which types of questions Answer Bot handles well vs. poorly",
+        "Provide feedback to Answer Bot on correct/incorrect suggestions to help it learn"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** With your Answer Bot configured, explore the ASAP widget settings. See if you can figure out how to incorporate the Answer Bot within it so customers can get instant answers before submitting tickets."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 3: Sentiment Analysis (Optional)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Enable Sentiment Analysis in your Zia settings",
+        "Create test tickets with different emotional tones: One very positive/happy customer message, One neutral/informational message, One frustrated/angry customer message",
+        "Check if Zia correctly identifies the sentiment for each",
+        "Create a workflow rule that triggers on negative sentiment: Send notification to supervisor, Increase priority to High, Add tag \"negative-sentiment\"",
+        "Test the automation with a new negative sentiment ticket"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Answer Bot:** AI-powered automatic responses using Knowledge Base content",
+        "**Article Best Practices:** Clear titles, structured content, direct answers, simple language",
+        "**ASAP Integration:** Answer Bot provides real-time article suggestions in self-service widget",
+        "**Field Prediction:** Auto-populate fields based on ticket content (requires training data)",
+        "**Reply Assistance:** Generate response suggestions based on conversation context",
+        "**Reply Summary:** Condense long conversations into key points",
+        "**Content Improvement:** Adjust tone, fix grammar, expand/shorten, translate",
+        "**Sentiment Analysis:** Identify customer emotional tone (Positive, Neutral, Negative)",
+        "**Sentiment in Automations:** Use as criteria for escalations, priority changes, notifications",
+        "**Zia vs ChatGPT:** Proprietary AI vs external service - privacy, cost, customization differences",
+        "**Zia LLM:** Zoho's proprietary language model for generative features",
+        "**Zia Agents:** Autonomous AI assistants for end-to-end customer interactions"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain how Answer Bot works and its benefits",
+        "Apply best practices for formatting Knowledge Base articles for Answer Bot",
+        "Integrate Answer Bot with ASAP for self-service",
+        "Configure Field Prediction and understand training requirements",
+        "Use Reply Assistance to generate response suggestions",
+        "Create Reply Summaries from ticket conversations",
+        "Understand how summary content changes based on selected text",
+        "Use content improvement features (tone, grammar, length, translation)",
+        "Enable and interpret Sentiment Analysis on tickets",
+        "Create automations using sentiment as criteria",
+        "Explain the difference between Zia and ChatGPT integrations",
+        "Configure Zia general preferences and settings",
+        "Understand the role of Zia LLM in generative features",
+        "Explain what Zia Agents are and their potential use cases",
+        "Train Answer Bot on Knowledge Base articles",
+        "Test and provide feedback to improve Zia accuracy",
+        "Identify appropriate use cases for different Zia features"
+      ]
+    }
+  ]
+}

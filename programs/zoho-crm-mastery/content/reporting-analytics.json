@@ -1,0 +1,457 @@
+{
+  "title": "Reporting and Analytics",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Pre-Discussion"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What is the point of reporting on data in the CRM?",
+        "What kinds of data or trends could you see?",
+        "For your specific business, what types of reports do you think you would benefit from creating?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "In our earlier lesson on filters and criteria, we talked about how to narrow down records inside a module. Reports build on that same idea, but instead of just viewing records on screen, they allow you to organize, summarize, and analyze data in a structured format."
+    },
+    {
+      "type": "paragraph",
+      "content": "A report answers specific questions, such as:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Which Deals are currently open or closed for a specific Account?",
+        "Which Deals are in the \"Negotiation\" stage?",
+        "Which Leads are in the \"Awaiting Approval\" stage and owned by Robert?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Reports allow you to take raw CRM data and present it in a way that supports analysis, planning, and decision-making."
+    },
+    {
+      "type": "heading",
+      "content": "What Is a Report?"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Report is essentially a spreadsheet view of CRM data based on:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "A selected module (or combination of modules)",
+        "Chosen fields (columns)",
+        "Applied filters and criteria"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "It is important to point out that:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "An unfiltered report is effectively the same as a Module List View, just displayed in a spreadsheet format",
+        "Reports do not create new data. They only display existing record data in a different way"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Building a Basic Report (Single Module)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Start by demonstrating a report built from a single module."
+    },
+    {
+      "type": "subheading",
+      "content": "Columns"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Show the column selection screen",
+        "Explain that columns are simply fields from the records",
+        "Reinforce that if a field exists on the record, it can usually be added as a column in the report",
+        "This reinforces why choosing the right fields during CRM setup matters"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Filtering Options"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Show the filter options and point out how they mirror filtering in the Module List View",
+        "Reinforce that filters behave the same way across the CRM",
+        "Emphasize consistency. If someone understands filters in a module, they already understand filters in reports"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Date Filters"
+    },
+    {
+      "type": "paragraph",
+      "content": "Use **Created Time** as a first example:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Show how to filter records created during a specific time period",
+        "Ask why a business might want to review records created last week, last month, or last quarter"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "If working with Deals:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Show **Closing Date** as an alternative",
+        "Explain how this can be used to view Deals closing in a specific time frame",
+        "Reinforce that choosing the correct date field changes the meaning of the report"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Row Grouping"
+    },
+    {
+      "type": "paragraph",
+      "content": "Introduce **Row Grouping** as a way to organize data into meaningful categories."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Examples:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Group Leads by **Lead Owner** to see how work is distributed",
+        "Group Deals by **Account Name** to see how many Deals are associated with each Account"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain that grouping allows users to move from individual records to patterns and totals."
+    },
+    {
+      "type": "paragraph",
+      "content": "This is a good moment to reinforce how reports help with visibility and accountability."
+    },
+    {
+      "type": "subheading",
+      "content": "Aggregate Columns"
+    },
+    {
+      "type": "paragraph",
+      "content": "Use a Deals report with the **Amount** field:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Show how aggregate functions like **sum** or **count** work",
+        "Explain that aggregates help answer questions like: How much value is in the pipeline? How much revenue is tied to a specific Account or Owner?",
+        "Emphasize that aggregation turns raw data into insights"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Multi-Module Reports (Intro Only)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Briefly introduce reports that combine multiple modules, such as Accounts and Contacts."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key teaching points:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Column selection changes because fields are now coming from more than one module",
+        "Relationships between modules matter",
+        "This is only an introduction. More detail will come in the advanced reporting lesson"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Reports and Analytics (High-Level Mention)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mention that:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "A report can be used as the foundation for an Analytics component such as a chart",
+        "Analytics require at least one Row Group to function properly",
+        "If time allows, briefly show how a report can be converted into an analytic view"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Activity: Create Your Own Report"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the class create their own report in CRM."
+    },
+    {
+      "type": "paragraph",
+      "content": "Discuss with the class what types of metrics they would like to see. For example, if they know a lot of their records in CRM are from online signups, ask what signifies this in the CRM to them, and what filters they think would be needed to display this in a report."
+    },
+    {
+      "type": "paragraph",
+      "content": "Out of each of the types of reports discussed in class, ask trainees to create their own version of one or multiple of these reports."
+    },
+    {
+      "type": "paragraph",
+      "content": "Review a few of the trainee reports with the class (show and tell)."
+    },
+    {
+      "type": "heading",
+      "content": "Analytics and Analytic Components (Intro)"
+    },
+    {
+      "type": "subheading",
+      "content": "Analytics Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ask the group:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "How do you keep track of trends in your CRM?",
+        "What if you want to show those trends visually so you or your team can understand them at a glance?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This is where **Analytics components** come in."
+    },
+    {
+      "type": "paragraph",
+      "content": "Analytics allow CRM data to be displayed visually using charts, graphs, and summary components. These components appear on the Home screen, making key information visible the moment a user logs in."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Note:** This lesson is only an introduction. A deeper dive into dashboards and complex analytics will be covered next week."
+    },
+    {
+      "type": "subheading",
+      "content": "Home Screen and Analytics Components"
+    },
+    {
+      "type": "paragraph",
+      "content": "Show the Home screen in Zoho CRM."
+    },
+    {
+      "type": "paragraph",
+      "content": "Point out:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Some components list items like meetings or tasks",
+        "Others display visual summaries, such as a Deal funnel showing how many Deals are in each stage"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain that:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Users can switch between multiple Home pages using the dropdown",
+        "Home pages can be personal or shared with others"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Where Analytics Components Come From"
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain that:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Analytics components can be created directly for a Home page",
+        "They can also be selected from the **Analytics module**, which contains dashboards and prebuilt components",
+        "This module was previously called \"Dashboards\" in older CRM systems"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Navigate to the Analytics module to show where components are stored and managed."
+    },
+    {
+      "type": "subheading",
+      "content": "Creating an Analytic Component (Intro Example)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Demonstrate building a simple component, such as **Leads by Industry**."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key teaching points:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Components are built using filters and criteria, just like reports",
+        "Grouping is required to visualize data meaningfully",
+        "Different chart types can be selected depending on the data"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Reinforce:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "If fields and data are not well-structured, analytics will be limited",
+        "Good data setup earlier enables useful visuals later"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Connecting Reports and Analytics"
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain the relationship clearly:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Reports organize data",
+        "Analytics visualize data",
+        "Both rely on the same fields, filters, and criteria"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Point out that:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Analytics components often require at least one Row Group",
+        "Many components are built from report-style logic, even if the user never sees the report itself"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Using Analytics on the Home Page"
+    },
+    {
+      "type": "paragraph",
+      "content": "Show:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "How analytic components appear on Home pages",
+        "How personal Home pages differ from shared ones",
+        "How components can be rearranged or shared depending on permissions"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Activity: Create a Simple Analytic Component"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have trainees create a simple analytic component using default data."
+    },
+    {
+      "type": "paragraph",
+      "content": "They should start by using only one filter and one grouping."
+    },
+    {
+      "type": "paragraph",
+      "content": "Focus on understanding how data selection affects the result, not on design."
+    },
+    {
+      "type": "heading",
+      "content": "Conclusion"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Reports and Analytics both rely on fields, filters, and criteria",
+        "Reports help review and organize data",
+        "Analytics help visualize trends and patterns",
+        "Clean data and good field design make every other CRM function more powerful"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain the purpose of reports and how they differ from module list views",
+        "Build a basic single-module report with columns, filters, and criteria",
+        "Apply date filters using fields like Created Time and Closing Date",
+        "Use row grouping to organize data into meaningful categories",
+        "Apply aggregate functions (sum, count) to extract insights from data",
+        "Understand the basics of multi-module reports",
+        "Explain the relationship between reports and analytics components",
+        "Create a simple analytic component for the Home page",
+        "Recognize how good field design enables better reporting and analytics"
+      ]
+    }
+  ]
+}

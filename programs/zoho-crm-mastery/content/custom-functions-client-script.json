@@ -1,0 +1,331 @@
+{
+  "title": "Custom Functions and Client Scripts",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "This lesson is discussion-based. Students should have Custom Function knowledge coming into this lesson. Use this as an opportunity to allow the class to come up with use-cases and reasons why Custom Functions in CRM would be useful."
+    },
+    {
+      "type": "heading",
+      "content": "Discussion: Familiarity with Deluge"
+    },
+    {
+      "type": "paragraph",
+      "content": "Begin by gauging the class's familiarity with Deluge and Custom Functions:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**What is Deluge typically used for across Zoho apps?**",
+        "If they can provide a satisfactory answer, ask: **Why might you want to use a Custom Function inside Zoho CRM?**",
+        "What problems can Custom Functions solve that standard CRM features cannot?"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Custom Functions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Custom functions in CRM can be used for a multitude of things. Most notably, **Custom Functions are used to make the CRM do something that it doesn't already do**. Or perhaps there's something the CRM already does, but you'd like for it to do so in a slightly different way."
+    },
+    {
+      "type": "paragraph",
+      "content": "To update information in a field on a CRM record, one would need to know the **Module and Field API names**. Those API Names can be found in **Settings > Developer Space > APIs**."
+    },
+    {
+      "type": "subheading",
+      "content": "Example: Cross-Module Email Automation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Records are associated together in CRM as we've seen with the Contacts, Accounts and Deals associations, along with things like Quotes, Tasks, etc. You may want whenever a **Product** is updated in the Products module to send an email to any **Deal's associated Contact**."
+    },
+    {
+      "type": "paragraph",
+      "content": "If the **Invoice** that contains the Product as a line item is connected to a **Deal**, and the Deal is connected back to an **Account**, which is connected to a **Contact** or group of contacts, you wouldn't be able to send an email about a product update to those Contacts by using a Workflow rule alone."
+    },
+    {
+      "type": "paragraph",
+      "content": "Instead you'd need to have a custom function that would contain the following logic:"
+    },
+    {
+      "type": "code",
+      "language": "plaintext",
+      "content": "If any [Product] is modified\n    Get [Invoices] related to the [Product]\n    For each [Invoice]\n        Get [Deals] related to the [Invoice]\n        For each [Deal]\n            Get the [Account] related to the [Deal]\n            For each [Account]\n                Get [Contacts] related to the [Account]\n                For each [Contact]\n                    Get the [Contact Email]\n                    For each [Contact Email]\n                        Send mail"
+    },
+    {
+      "type": "heading",
+      "content": "External Connections and APIs"
+    },
+    {
+      "type": "paragraph",
+      "content": "Functions can either **use external connections or be triggered by them**. This allows functions to automate more than just actions inside CRM. They can also call APIs, update external applications, or trigger automations on third-party platforms."
+    },
+    {
+      "type": "paragraph",
+      "content": "In some cases, Zoho provides an API capability that does not have a direct Deluge task available in CRM. When that happens, a custom function can still perform the action by calling the API directly. This keeps the logic contained within CRM, while allowing you to use functionality that only exists at the API level."
+    },
+    {
+      "type": "paragraph",
+      "content": "Connections are a common way to handle this within the Zoho ecosystem, but the same concept applies when interacting with third-party platforms."
+    },
+    {
+      "type": "subheading",
+      "content": "Example: Bulk Record Creation via API"
+    },
+    {
+      "type": "paragraph",
+      "content": "Suppose you want to perform a **bulk record creation** in CRM when a specific field value is updated. CRM Deluge may not support this action natively, even though the CRM API does."
+    },
+    {
+      "type": "paragraph",
+      "content": "In this scenario:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "You create a **Connection to Zoho CRM** from the Connections menu",
+        "A workflow rule detects the field change and triggers a custom function",
+        "The function uses the Connection to call the CRM API",
+        "The API performs the bulk action on CRM's behalf"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Although the function is written in Deluge, the actual operation is executed through the API."
+    },
+    {
+      "type": "paragraph",
+      "content": "Similarly, instead of using a Connection, you can use the CRM `invokeURL` Deluge task to make an API call directly, as long as valid Zoho API credentials are available."
+    },
+    {
+      "type": "heading",
+      "content": "What Are Connections?"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Connections** are pre-built API integrations that simplify authentication."
+    },
+    {
+      "type": "paragraph",
+      "content": "When creating a Connection, you only need to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Select the application",
+        "Name the connection",
+        "Define the **scopes** that determine what the connection is allowed to do"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Behind the scenes, Zoho handles the OAuth setup for you. In practical terms, a Connection acts as a ready-to-use API client without requiring you to configure redirect URLs, home page URLs, or token management."
+    },
+    {
+      "type": "paragraph",
+      "content": "Connections are available for many Zoho applications and for supported third-party platforms as well."
+    },
+    {
+      "type": "subheading",
+      "content": "API Clients vs Connections"
+    },
+    {
+      "type": "paragraph",
+      "content": "API clients provide the same capabilities as Connections, but they require manual setup."
+    },
+    {
+      "type": "paragraph",
+      "content": "API clients must be created in the **Zoho API Console**, where you:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Choose a client type",
+        "Configure redirect and homepage URLs",
+        "Define scopes",
+        "Generate and manage grant tokens, access tokens, and refresh tokens"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This approach offers more control, but also requires more setup and ongoing management."
+    },
+    {
+      "type": "heading",
+      "content": "Discussion: Custom Function Use Cases"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ask the class to think of a use case for a custom function. Have them write down their idea somewhere, then discuss in class after a moment of brainstorming."
+    },
+    {
+      "type": "paragraph",
+      "content": "Have a few trainees participate in sharing their use case with the class. Address any misunderstandings, and explain why their scenario would or wouldn't be appropriate for a function."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Discussion Guidelines:** Encourage students to think about scenarios where standard workflow rules fall short. Look for use cases involving: complex multi-module relationships, external API calls, advanced calculations, or conditional logic that requires loops or API lookups."
+    },
+    {
+      "type": "heading",
+      "content": "Client Script"
+    },
+    {
+      "type": "paragraph",
+      "content": "Like a custom function, **Client Script** is used to make CRM behave in ways that are not available out of the box or through standard configuration."
+    },
+    {
+      "type": "paragraph",
+      "content": "The key difference is **where the logic runs**."
+    },
+    {
+      "type": "paragraph",
+      "content": "Client Script runs in the **user's browser** and is used to modify CRM's user interface and on-screen behavior, rather than performing server-side automation. Client Script is written using **JavaScript**, but it is executed within CRM using triggers that are specific to CRM pages and user actions."
+    },
+    {
+      "type": "subheading",
+      "content": "What Client Script Can Do"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Validate field values before a record is saved",
+        "Auto-fill or manipulate field values based on changes in other fields",
+        "Dynamically show or hide fields or sections",
+        "Display alerts, warnings, or confirmation dialogs",
+        "Modify field behavior based on the user's role or profile"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Example 1: Visual Indicators"
+    },
+    {
+      "type": "paragraph",
+      "content": "If you want to visually indicate to a salesperson that a Deal is important, you could use Client Script to **change the page background color to red**. You could further refine this behavior by applying criteria, such as only displaying the warning if the **Amount is greater than 10,000**."
+    },
+    {
+      "type": "subheading",
+      "content": "Example 2: User Feedback Before Save"
+    },
+    {
+      "type": "paragraph",
+      "content": "Suppose you have a Workflow rule that sends an email when certain fields on a record are updated. Client Script can be used to **display a banner or confirmation message** in the UI that informs the user that, once they save their changes, an email will be sent to the customer."
+    },
+    {
+      "type": "paragraph",
+      "content": "In both cases, the automation itself still happens on the server, but **Client Script helps guide the user** by providing real-time feedback before the action is completed."
+    },
+    {
+      "type": "heading",
+      "content": "Client Script Event Types"
+    },
+    {
+      "type": "paragraph",
+      "content": "Client Script events are grouped into three main categories:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Page Events**",
+        "**Field Events**",
+        "**Subform Events**"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Each category contains its own event triggers that determine when the script runs, such as `onLoad`, `onChange`, and similar actions."
+    },
+    {
+      "type": "subheading",
+      "content": "Field Events"
+    },
+    {
+      "type": "paragraph",
+      "content": "Field Events are triggered when a user interacts with a specific field. One of the most common triggers is **`onChange`**, which runs whenever the value of the selected field is updated."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Example:** You might create a Field Event script for address fields such as Billing and Shipping. When a user fills in one of the Billing address fields, a Client Script can automatically copy those values into the corresponding Shipping fields in real time. This prevents the user from having to enter the same information twice when the Billing and Shipping addresses are the same."
+    },
+    {
+      "type": "paragraph",
+      "content": "Field Events are best used when the logic depends on **immediate user input**."
+    },
+    {
+      "type": "subheading",
+      "content": "Page Events"
+    },
+    {
+      "type": "paragraph",
+      "content": "Page Events run at the page level, rather than being tied to a single field. A common Page Event trigger is **`onLoad`**, which runs when a record is opened or created."
+    },
+    {
+      "type": "paragraph",
+      "content": "A Page `onLoad` script can evaluate existing field values and display banners, warnings, or other UI elements based on the data already present on the record. In some cases, no criteria are required at all. A Page `onLoad` event may simply run every time the page loads, regardless of field values, depending on the intended behavior."
+    },
+    {
+      "type": "paragraph",
+      "content": "Page Events are useful when the UI should react to **existing data**, rather than changes being made in the current session."
+    },
+    {
+      "type": "subheading",
+      "content": "Subform Events"
+    },
+    {
+      "type": "paragraph",
+      "content": "Subform Events are triggered by actions that occur within a subform, such as adding, editing, or updating rows."
+    },
+    {
+      "type": "paragraph",
+      "content": "These events are useful when business logic depends on **repeated or grouped data**, such as line items, products, or related entries that exist within a single record."
+    },
+    {
+      "type": "subheading",
+      "content": "Choosing the Right Event Type"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Use **Field Events** when logic should respond immediately to user input",
+        "Use **Page Events** when logic should run when a record is opened or loaded",
+        "Use **Subform Events** when logic depends on changes inside a subform"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Understanding these event types helps ensure that Client Script runs at the correct time and provides feedback to the user when it is most useful."
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain when to use Custom Functions vs. Client Scripts",
+        "Identify scenarios where Custom Functions are necessary",
+        "Understand the difference between Connections and API Clients",
+        "Explain the three types of Client Script events (Page, Field, Subform)",
+        "Choose the appropriate event type for different business requirements",
+        "Describe how Custom Functions can interact with external systems via APIs",
+        "Design use cases for Custom Functions that involve complex multi-module logic"
+      ]
+    }
+  ]
+}

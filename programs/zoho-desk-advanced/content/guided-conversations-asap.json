@@ -1,0 +1,563 @@
+{
+  "title": "Guided Conversations and ASAP",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Self service is an important option to offer to customers. Sometimes, customers would rather find a solution to their issue themselves, rather than connecting with a support team, and while the numbers vary slightly, on average one third of customers report wanting access to some self service options."
+    },
+    {
+      "type": "paragraph",
+      "content": "Within Desk, two features that greatly enable this self service functionality are Guided Conversations in conjunction with the ASAP widget. Guided Conversations allow for a team to build out a support process that, as the name suggests, guides a customer to a solution or next step in their support journey. The ASAP widget is an interface that not only contains these guided conversations, but a condensed version of a help center that can be embedded as a widget on the customer's website for use."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase and demonstrate the creation and use of Guided Conversations and the ASAP widget within Desk",
+        "Understand the building blocks and flow logic of Guided Conversations",
+        "Configure the ASAP widget to provide comprehensive self-service options"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Guided Conversations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Guided Conversations (GC) are interactive, conversational flows that guide customers through problem-solving processes, data collection, or decision trees. They provide a chat-like interface that feels natural while systematically gathering information or directing customers to solutions."
+    },
+    {
+      "type": "subheading",
+      "content": "What Are Guided Conversations?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Interactive chatbot-style conversations that don't require live agents",
+        "Built using a visual flow builder with drag-and-drop blocks",
+        "Can collect information, provide answers, create tickets, or route to agents",
+        "Available through ASAP widget, standalone widget, or directly in Help Center",
+        "Can integrate with external systems via webhooks and APIs"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Create a guided conversation for \"Account Access Issues\" that asks diagnostic questions (Forgot password? Account locked? New device?), provides appropriate solutions, and only creates a ticket if self-service options don't resolve the issue."
+    },
+    {
+      "type": "subheading",
+      "content": "Blocks Library"
+    },
+    {
+      "type": "paragraph",
+      "content": "Guided Conversations are built using blocks - pre-configured components that represent different conversation elements or actions."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Common Block Types:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Message Block:** Display text messages to customers",
+        "**Question Block:** Ask questions and collect responses (text, number, email, phone, etc.)",
+        "**Button Block:** Present multiple choice options for customers to select",
+        "**Card Block:** Display rich content with images, titles, descriptions, and action buttons",
+        "**Knowledge Base Article Block:** Show relevant KB articles based on the conversation",
+        "**Create Ticket Block:** Automatically create a support ticket with collected information",
+        "**Transfer to Agent Block:** Hand off the conversation to a live agent",
+        "**API/Webhook Block:** Call external services or trigger integrations",
+        "**Condition Block:** Create branching logic based on customer responses",
+        "**Set Field Block:** Store collected information in variables for later use"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** Use condition blocks to create dynamic flows that adapt based on customer responses. For example, if a customer selects \"Billing Issue,\" route them to billing-specific questions and solutions."
+    },
+    {
+      "type": "subheading",
+      "content": "Building a Guided Conversation"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Channels > Guided Conversations**",
+        "Click **Add Guided Conversation**",
+        "Give your conversation a name and description",
+        "Define the starting trigger or welcome message",
+        "Drag blocks from the library onto the canvas",
+        "Connect blocks to create the conversation flow",
+        "Configure each block's properties (questions, button labels, conditions, etc.)",
+        "Test the conversation using the preview feature",
+        "Publish the conversation when ready"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Integrations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Guided Conversations can integrate with other systems and Zoho applications to provide dynamic, data-driven experiences:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Zoho CRM:** Look up customer information, deals, or account details",
+        "**Zoho Invoice:** Check invoice status or payment history",
+        "**External APIs:** Verify account status, check inventory, or retrieve order information",
+        "**Custom Integrations:** Connect to your internal systems via webhooks"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** A guided conversation for \"Order Status\" can use an API integration to look up the customer's order number and display real-time shipping information without agent involvement."
+    },
+    {
+      "type": "subheading",
+      "content": "Webhooks"
+    },
+    {
+      "type": "paragraph",
+      "content": "Webhooks allow Guided Conversations to communicate with external systems in real-time:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Send data collected during the conversation to external systems",
+        "Trigger actions in other applications based on customer responses",
+        "Retrieve data from external sources to display in the conversation",
+        "Update records in third-party databases",
+        "Notify external teams or systems when specific conditions are met"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Setting Up Webhooks:**"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "In the Guided Conversation builder, add a Webhook block",
+        "Configure the webhook URL (the endpoint you want to call)",
+        "Set the HTTP method (GET, POST, PUT, etc.)",
+        "Map conversation variables to webhook payload fields",
+        "Configure authentication if required (API keys, OAuth, etc.)",
+        "Test the webhook to ensure proper connectivity",
+        "Handle the webhook response and use returned data in subsequent blocks"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Webhooks execute in real-time during customer conversations. Ensure external endpoints respond quickly (under 5 seconds) to avoid conversation delays or timeouts."
+    },
+    {
+      "type": "subheading",
+      "content": "Standalone GC Widget"
+    },
+    {
+      "type": "paragraph",
+      "content": "While Guided Conversations are typically accessed through the ASAP widget, you can also embed them as standalone widgets on specific pages:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Targeted Placement:** Place specific guided conversations on relevant pages (e.g., \"Refund Request\" GC on your refund policy page)",
+        "**Dedicated Experience:** Create a focused self-service experience without the full ASAP interface",
+        "**Custom Styling:** Customize the widget appearance to match your website design",
+        "**Embed Code:** Generate and embed a simple JavaScript snippet on your website"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Embed a \"Demo Request\" guided conversation on your pricing page to collect lead information and schedule demos automatically."
+    },
+    {
+      "type": "heading",
+      "content": "ASAP (Zoho Assist Automated Platform)"
+    },
+    {
+      "type": "paragraph",
+      "content": "ASAP is Zoho Desk's comprehensive self-service widget that can be embedded on your website to provide customers with instant access to support resources."
+    },
+    {
+      "type": "subheading",
+      "content": "What is ASAP?"
+    },
+    {
+      "type": "paragraph",
+      "content": "ASAP is an all-in-one customer support widget that combines multiple self-service features into a single interface:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Knowledge Base article search and browsing",
+        "Guided Conversations for interactive problem-solving",
+        "Live Chat to connect with agents",
+        "Answer Bot for AI-powered responses",
+        "Community forum access",
+        "Ticket submission forms",
+        "Customizable appearance and branding"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Key Benefit:** ASAP provides a unified, always-available support interface that deflects tickets by helping customers find answers themselves before contacting support."
+    },
+    {
+      "type": "subheading",
+      "content": "Configuring ASAP"
+    },
+    {
+      "type": "paragraph",
+      "content": "Navigate to **Setup > Channels > ASAP** to configure your ASAP widget settings."
+    },
+    {
+      "type": "subheading",
+      "content": "Help Center Visibility"
+    },
+    {
+      "type": "paragraph",
+      "content": "Control which Knowledge Base articles and categories are visible within the ASAP widget:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Public Articles:** Accessible to all visitors without authentication",
+        "**Private Articles:** Only visible to logged-in customers",
+        "**Category-Based Visibility:** Show or hide entire categories",
+        "**Department-Specific Content:** Display different articles based on department context",
+        "**Search Functionality:** Customers can search articles directly from ASAP"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Best Practice:** Keep your most common support topics as public articles in ASAP. Reserve private articles for customer-specific information or sensitive content."
+    },
+    {
+      "type": "subheading",
+      "content": "Module Association"
+    },
+    {
+      "type": "paragraph",
+      "content": "Associate the ASAP widget with specific departments and configure which features are available:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Department Selection:** Choose which department(s) the ASAP widget serves",
+        "**Feature Enablement:** Enable or disable specific ASAP features (Chat, GC, Answer Bot, Community)",
+        "**Ticket Creation:** Configure which module new tickets are created in (Tickets, Cases, etc.)",
+        "**Field Mapping:** Map ASAP form fields to Desk ticket fields"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Integrating Components in ASAP"
+    },
+    {
+      "type": "paragraph",
+      "content": "The power of ASAP comes from integrating multiple support channels and features into one widget."
+    },
+    {
+      "type": "subheading",
+      "content": "Chat"
+    },
+    {
+      "type": "paragraph",
+      "content": "Enable live chat within ASAP to allow customers to connect with agents in real-time:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Toggle chat on/off in ASAP settings",
+        "Configure business hours for chat availability",
+        "Set up agent availability and routing",
+        "Customize pre-chat forms to collect customer information",
+        "Configure chat-to-ticket conversion for follow-up"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Note:** Chat in ASAP can be powered by SalesIQ integration or Desk's native chat functionality depending on your configuration."
+    },
+    {
+      "type": "subheading",
+      "content": "Guided Conversations (GC)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add your Guided Conversations to ASAP so customers can access interactive support flows:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Select which Guided Conversations appear in ASAP",
+        "Organize GCs by category or topic",
+        "Set trigger conditions (show specific GCs based on page URL or customer data)",
+        "Configure GC priority and ordering in the ASAP interface"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Display a \"Troubleshooting Wi-Fi Issues\" GC prominently in ASAP for an ISP, while keeping less common topics like \"Change Billing Address\" accessible but not featured."
+    },
+    {
+      "type": "subheading",
+      "content": "Answer Bot"
+    },
+    {
+      "type": "paragraph",
+      "content": "Integrate Zia's Answer Bot into ASAP to provide AI-powered responses based on your Knowledge Base:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Enable Answer Bot in ASAP settings",
+        "Configure confidence thresholds for article suggestions",
+        "Set up Answer Bot to appear when customers type questions",
+        "Allow Answer Bot to suggest articles before customers submit tickets",
+        "Track Answer Bot effectiveness through analytics"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**The Answer Bot Flow in ASAP:**"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Customer opens ASAP and starts typing a question",
+        "Answer Bot analyzes the question and searches the Knowledge Base",
+        "Relevant articles are suggested in real-time",
+        "Customer can read suggested articles without leaving ASAP",
+        "If articles solve the issue, no ticket is created (ticket deflection)",
+        "If articles don't help, customer can proceed to create a ticket or start a chat"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Ticket Deflection:** Answer Bot in ASAP is one of the most effective ticket deflection tools. Well-maintained Knowledge Base articles combined with Answer Bot can reduce ticket volume by 20-40%."
+    },
+    {
+      "type": "subheading",
+      "content": "ASAP Customization"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize the ASAP widget to match your brand and website design:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Widget Position:** Choose where ASAP appears on your site (bottom-right, bottom-left, etc.)",
+        "**Colors and Branding:** Match your brand colors, logo, and fonts",
+        "**Welcome Message:** Customize the greeting customers see when opening ASAP",
+        "**Widget Icon:** Use a custom icon or the default ASAP icon",
+        "**Language:** Configure multiple languages for international support",
+        "**Display Rules:** Show or hide ASAP on specific pages based on URL patterns"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Embedding ASAP on Your Website"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Channels > ASAP**",
+        "Configure all desired features and settings",
+        "Customize the appearance and branding",
+        "Copy the embed code (JavaScript snippet)",
+        "Paste the code into your website's HTML, typically before the closing </body> tag",
+        "Test the widget on your staging site before deploying to production",
+        "Monitor ASAP analytics to track usage and effectiveness"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Ensure your website's Content Security Policy (CSP) allows scripts from Zoho domains. Some strict CSP configurations may block the ASAP widget from loading."
+    },
+    {
+      "type": "heading",
+      "content": "Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Start Simple:** Begin with a few high-value Guided Conversations for your most common support issues",
+        "**Test Thoroughly:** Walk through every conversation path to ensure logic works correctly",
+        "**Keep Conversations Short:** Aim for 5-10 interactions maximum; long conversations have high abandonment rates",
+        "**Provide Escape Routes:** Always offer options to create a ticket or chat with an agent if self-service isn't working",
+        "**Monitor Analytics:** Track which GCs are used most, where customers drop off, and which lead to ticket creation",
+        "**Update Knowledge Base:** Ensure KB articles are current and well-written for Answer Bot effectiveness",
+        "**Mobile Optimization:** Test ASAP and GCs on mobile devices - many customers access support from phones",
+        "**Progressive Enhancement:** Start with basic ASAP features, add complexity gradually based on usage data"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Complete the following exercises to gain hands-on experience with Guided Conversations and ASAP:"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 1: Create a Guided Conversation"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Channels > Guided Conversations**",
+        "Click **Add Guided Conversation**",
+        "Create a guided conversation for one of your departments (Example topics: Submitting Support Request, Feedback Submission, Account Access Issues, Product Demo Request)",
+        "Build the conversation flow using at least 5 different block types: Message block for welcome message, Question blocks to collect information (name, email, issue description), Button block for multiple choice options, Knowledge Base Article block to suggest relevant articles, Create Ticket block to generate a ticket with collected information",
+        "Add conditional logic: Use a Condition block to branch based on customer responses, Create different paths for different issue types",
+        "Configure a Transfer to Agent block as a fallback option",
+        "Test the conversation using the preview feature: Walk through every possible path, Verify data is collected correctly, Ensure tickets are created with proper information",
+        "Publish the guided conversation when testing is complete"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 2: Configure ASAP Widget"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Channels > ASAP**",
+        "Enable the following features in ASAP: Chat, Guided Conversations, Answer Bot, Knowledge Base access",
+        "Configure Help Center visibility: Select which KB categories should be visible, Ensure your test articles are accessible",
+        "Associate ASAP with your test department",
+        "Add the Guided Conversation you created in Activity 1 to ASAP",
+        "Customize ASAP appearance: Update colors to match your brand or preferences, Set a custom welcome message, Choose widget position",
+        "Configure Answer Bot settings: Enable Answer Bot for ASAP, Set confidence threshold for article suggestions",
+        "Copy the ASAP embed code",
+        "Test ASAP functionality: Use the preview feature or embed on a test page, Search for articles, Try the Guided Conversation, Test Answer Bot by typing questions, Verify Chat functionality"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Begin looking at the Analytics module. Try to configure some custom reports, components, and dashboards to track ASAP usage, Guided Conversation completion rates, and ticket deflection metrics."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 3: Advanced Guided Conversation (Optional)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create a more advanced Guided Conversation that uses webhooks or API integration",
+        "Example: \"Order Status Lookup\" that calls an external API to retrieve order information",
+        "Set up a webhook block to call an external service (you can use a test API like https://jsonplaceholder.typicode.com/)",
+        "Map conversation variables to the webhook payload",
+        "Use the webhook response to display dynamic information to the customer",
+        "Add error handling for cases where the webhook fails or times out",
+        "Test the integration thoroughly"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Guided Conversations:** Interactive, conversational flows for self-service problem-solving",
+        "**Blocks Library:** Pre-configured components (Message, Question, Button, Card, KB Article, Create Ticket, Transfer to Agent, Webhook, Condition, Set Field)",
+        "**Integrations:** Connect GCs with Zoho CRM, Invoice, external APIs, and internal systems",
+        "**Webhooks:** Real-time communication with external systems for data exchange",
+        "**Standalone GC Widget:** Embed specific guided conversations on targeted pages",
+        "**ASAP:** All-in-one self-service widget combining KB, GC, Chat, Answer Bot, Community",
+        "**Help Center Visibility:** Control which KB articles appear in ASAP (public vs private)",
+        "**Module Association:** Link ASAP to departments and configure feature availability",
+        "**Chat in ASAP:** Live agent communication with business hours and routing",
+        "**GC in ASAP:** Display guided conversations in the widget for easy customer access",
+        "**Answer Bot in ASAP:** AI-powered article suggestions for ticket deflection (20-40% reduction)",
+        "**Customization:** Brand ASAP with colors, logos, welcome messages, and positioning",
+        "**Best Practices:** Start simple, test thoroughly, keep conversations short, provide escape routes, monitor analytics"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain what Guided Conversations are and their benefits for self-service",
+        "Identify and use different block types in the Blocks Library",
+        "Build a complete Guided Conversation with multiple paths and conditional logic",
+        "Integrate Guided Conversations with external systems using webhooks",
+        "Configure webhook blocks with proper authentication and data mapping",
+        "Embed standalone GC widgets on specific website pages",
+        "Explain what ASAP is and how it combines multiple support features",
+        "Configure Help Center visibility settings in ASAP",
+        "Associate ASAP with departments and modules",
+        "Enable and configure Chat functionality in ASAP",
+        "Add Guided Conversations to the ASAP widget",
+        "Integrate Answer Bot into ASAP for AI-powered article suggestions",
+        "Customize ASAP appearance to match brand identity",
+        "Embed the ASAP widget on a website using the provided code",
+        "Understand ticket deflection and how Answer Bot contributes to it",
+        "Apply best practices for creating effective Guided Conversations",
+        "Test Guided Conversations thoroughly before publishing",
+        "Identify appropriate use cases for Guided Conversations vs live agent support",
+        "Monitor analytics to improve GC and ASAP effectiveness"
+      ]
+    }
+  ]
+}

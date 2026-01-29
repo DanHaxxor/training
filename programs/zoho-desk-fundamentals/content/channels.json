@@ -1,0 +1,229 @@
+{
+  "title": "Support Channels",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Departments are where your customer communications get funneled to, but how do we communicate with the customer to begin with? Channels are the various ways we can engage with the customer, whether it's emails, chats, or even instant messaging, we have various tools we can use to provide support to a customer through Desk."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase the various channels available for customization",
+        "Demonstrate how channels can be department specific",
+        "Ask if anyone attempted the Step Beyond from the Departments, and if so have them showcase their findings"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Email Channel"
+    },
+    {
+      "type": "subheading",
+      "content": "Support Email Address"
+    },
+    {
+      "type": "paragraph",
+      "content": "Note that this is where we can also configure and add Support Email Addresses for a department."
+    },
+    {
+      "type": "subheading",
+      "content": "Email Fetching"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure how Desk fetches emails from your support inbox."
+    },
+    {
+      "type": "subheading",
+      "content": "From Address/DKIM Authentication"
+    },
+    {
+      "type": "paragraph",
+      "content": "**State:** Recent updates basically necessitate DKIM for custom From Address domains."
+    },
+    {
+      "type": "subheading",
+      "content": "Email Advanced Configurations"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Subject Based Threading:** Configure how email threads are grouped and managed."
+    },
+    {
+      "type": "heading",
+      "content": "Phone Channel"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Handled through Phonebridge**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Phone support integration allows agents to handle customer calls directly within Desk, with automatic ticket creation and call logging."
+    },
+    {
+      "type": "heading",
+      "content": "Chat Channel"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Powered by SalesIQ**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Show Integration Settings within SalesIQ side."
+    },
+    {
+      "type": "paragraph",
+      "content": "Chat integration enables real-time customer conversations that can be converted into tickets when needed."
+    },
+    {
+      "type": "heading",
+      "content": "Instant Messaging"
+    },
+    {
+      "type": "subheading",
+      "content": "Business Messaging Setup"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase Creation of Business Messaging",
+        "Showcase Department/Agent association"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "WhatsApp"
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** 24hr to reply back to a customer message. After 24 hours, you cannot respond to a customer-initiated conversation without their new message."
+    },
+    {
+      "type": "heading",
+      "content": "Social Channel"
+    },
+    {
+      "type": "subheading",
+      "content": "Brands"
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain **Brands** and how they relate to social media accounts."
+    },
+    {
+      "type": "subheading",
+      "content": "Zoho Social Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Talk about how the Social module relates to Zoho Social."
+    },
+    {
+      "type": "subheading",
+      "content": "Auto-Conversions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Touch on **Auto-conversions to tickets** - how social media mentions, comments, and messages can automatically create support tickets."
+    },
+    {
+      "type": "heading",
+      "content": "Webforms"
+    },
+    {
+      "type": "paragraph",
+      "content": "Speak on the differences between **Feedback Widget** and **Advanced Webform**:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Feedback Widget:** You have to use predefined fields; simpler setup for basic feedback collection",
+        "**Advanced Webforms:** Allow for customization with custom fields, conditional logic, and department routing"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the trainees continue to build out their test account; this time have them configure their **Chat (SalesIQ)** for one of their departments."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity Steps"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Configure Chat (SalesIQ) integration for one of your departments",
+        "Use **W3Schools** (or other HTML tester) to test the embed of the widget",
+        "Initiate a chat session",
+        "Have a ticket created in Desk related to that chat"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Recommend your class to start looking into the Knowledge Base/Help Center. Suggest creating some articles and look over the customization settings within Help Center settings."
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Email:** Support email addresses can be department-specific; DKIM authentication is now essential for custom domains",
+        "**Phone:** Integrated through Phonebridge for seamless call handling",
+        "**Chat:** Powered by SalesIQ with real-time conversation capabilities",
+        "**Instant Messaging:** Includes WhatsApp with 24-hour reply window limitation",
+        "**Social:** Connect brands and leverage Zoho Social integration with auto-ticket creation",
+        "**Webforms:** Choose between simple Feedback Widgets or fully customizable Advanced Webforms"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain the different channels available in Zoho Desk",
+        "Configure email channels with DKIM authentication",
+        "Set up Chat integration using SalesIQ",
+        "Understand department-specific channel configurations",
+        "Configure instant messaging channels including WhatsApp",
+        "Set up social media channels and auto-conversion to tickets",
+        "Differentiate between Feedback Widgets and Advanced Webforms",
+        "Create and test embedded chat widgets",
+        "Route channel communications to appropriate departments"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "title": "Email Management and Templates",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 22 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Templates"
+    },
+    {
+      "type": "subheading",
+      "content": "Discussion"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What would email templates be for in CRM?",
+        "Why would a business choose to use these instead of writing their own emails each time?",
+        "What about Templates saves time for users of an organization?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Email templates allow businesses to send pre-configured emails to their customers, vendors, etc."
+    },
+    {
+      "type": "paragraph",
+      "content": "Not only do templates hold repeatable formatting, the largest advantage of email templates is the ability to use **merge fields**, which can fill in information dynamically."
+    },
+    {
+      "type": "paragraph",
+      "content": "This allows emails to feel personalized without requiring manual entry for each message."
+    },
+    {
+      "type": "subheading",
+      "content": "Example"
+    },
+    {
+      "type": "paragraph",
+      "content": "Using merge fields such as:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "First Name",
+        "Record Owner Name",
+        "Record Owner Phone",
+        "Lead Source"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "You could create a welcome email that is automatically sent when a Lead submits a webform. The email might read:"
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "\"Hello John,\n\nThank you for filling out our Contact Us page. We've received your submission and someone will be reaching out shortly.\n\nMy name is Peter, and if you have any questions, you can reach me at 123-456-7890.\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Although the message is sent automatically, it still feels personal because the content is populated dynamically from the CRM."
+    },
+    {
+      "type": "paragraph",
+      "content": "Email templates can be used for:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Automated welcome emails",
+        "Status updates for Deals or Invoices",
+        "Ongoing communication with existing Contacts",
+        "Internal notifications"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Self-Lesson Activity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the class create an email template with the intention that this email will be used for welcoming new signups to their CRM from their Zoho Sites page. Ask them to include at least 3 merge fields of relevant field data from the record. (Encourage them to use at least one User/Owner field related to the record)"
+    },
+    {
+      "type": "heading",
+      "content": "Individual Emails"
+    },
+    {
+      "type": "paragraph",
+      "content": "Individual emails are sent directly to one or more recipients, with each recipient receiving the same copy of the message. These are typically used for one-to-one or small-group communication, similar to everyday email correspondence."
+    },
+    {
+      "type": "paragraph",
+      "content": "In CRM, individual emails are stored in the **Email related list** for records such as Leads, Contacts, Deals, and other supported modules."
+    },
+    {
+      "type": "paragraph",
+      "content": "Email templates can also be used for individual emails. Since templates can be plain text, they work well for repeatable one-on-one communication and do not need to look like a marketing email or campaign. Templates created through the email builder can also be used for individual messages."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Sending Individual Emails"
+    },
+    {
+      "type": "paragraph",
+      "content": "Show the different ways you can send individual emails, either by:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Clicking on a name in the list view and using the email button",
+        "Clicking on the **\"send email\"** button inside a record"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Mass Emails"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mass emails (also referred to as email blasts or campaigns) allow you to send a single email to many recipients at once."
+    },
+    {
+      "type": "paragraph",
+      "content": "In CRM, mass emails can be sent by selecting multiple records from a list view. When combined with custom views and filters, this makes mass email useful for targeted communication and marketing."
+    },
+    {
+      "type": "paragraph",
+      "content": "Mass emails allow you to reach hundreds or thousands of recipients while maintaining consistency in messaging."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Creating Mass Emails"
+    },
+    {
+      "type": "paragraph",
+      "content": "Show the different ways you can create a mass email:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Find a custom view list and choose to send an email to it to show the interface. Make note of the criteria being used in the view",
+        "Using the same criteria, this time choose to send a mass email through the **\"Mass Email\"** module/page. This should demonstrate for the class that you have multiple ways of doing the same thing"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Automated/Workflow Emails"
+    },
+    {
+      "type": "paragraph",
+      "content": "Automated emails, such as those sent through workflow rules, also rely on email templates. In fact, a workflow email cannot be sent without an associated template."
+    },
+    {
+      "type": "paragraph",
+      "content": "Workflow emails allow CRM to send pre-configured messages when specific conditions are met."
+    },
+    {
+      "type": "subheading",
+      "content": "Examples"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "When an Invoice status changes to **Negotiation**, automatically send an invoice email to the customer",
+        "When a Deal is marked as **Rejected by Client**, notify the assigned salesperson and their manager",
+        "If a customer logs into a portal and updates their information, CRM can automatically send a confirmation email summarizing the changes after the record is saved"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Creating a Workflow Email"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ask the class to come up with a use case for an automated email (that hasn't already been discussed in a previous lesson)."
+    },
+    {
+      "type": "paragraph",
+      "content": "Create this workflow with the class, and show the ability to link an existing template, or create a new template for this specific workflow rule notification."
+    },
+    {
+      "type": "heading",
+      "content": "Cadences"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cadences are designed to help automate follow-up processes by guiding users through a sequence of actions."
+    },
+    {
+      "type": "paragraph",
+      "content": "For example, after converting a Contact, there may be a series of:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Tasks",
+        "Calls",
+        "Meetings",
+        "Emails",
+        "Information-gathering steps"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Without automation, all of this work must be tracked manually. Cadences introduce logic into the process so that follow-ups are not missed, and next steps adjust automatically based on outcomes such as email replies or completed tasks."
+    },
+    {
+      "type": "paragraph",
+      "content": "Cadences help ensure that:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Customers are notified when they need to take action",
+        "Internal users know what to do next without guessing",
+        "Customers feel looped in",
+        "Tasks and followups don't fall through the cracks"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Scenario: Building a Cadence"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ask the class what kind of follow ups might occur after converting a contact."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What types of tasks or emails might you see?",
+        "If the customer replies to that email, what's the next step in the chain?",
+        "If that email results in a task needing to be completed by a team member, what happens when that task is marked as \"Complete?\""
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Build a Cadence with the class that walks through the scenario you all have put together while discussing possible use cases."
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain the purpose and benefits of email templates in CRM",
+        "Create email templates using merge fields for dynamic personalization",
+        "Send individual emails through multiple methods in CRM",
+        "Create and send mass emails to targeted groups using custom views and filters",
+        "Configure automated workflow emails triggered by specific record conditions",
+        "Understand how Cadences automate multi-step follow-up processes",
+        "Build a Cadence that includes tasks, emails, and conditional logic",
+        "Choose the appropriate email method based on communication needs"
+      ]
+    }
+  ]
+}

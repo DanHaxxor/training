@@ -1,0 +1,391 @@
+{
+  "title": "Desk Integrations",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Often times, Desk isn't the only application a customer is using to run their business, and more often than not they want some way to have these different applications connect to Desk to better support their teams and their customers. Whether it's setting up an integration with one of the many other Zoho apps, or using a third-party extension to connect with apps outside of our ecosystem, we have options to make these connections happen."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase and demonstrate the use of the various native integrations within Desk",
+        "Demonstrate how to utilize the Marketplace for additional integrations"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Marketplace"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Zoho Marketplace is your central hub for discovering, installing, and managing integrations and extensions for Zoho Desk."
+    },
+    {
+      "type": "subheading",
+      "content": "Accessing the Marketplace"
+    },
+    {
+      "type": "paragraph",
+      "content": "Navigate to **Setup > Marketplace** to browse available integrations, extensions, and add-ons that can enhance your Desk functionality."
+    },
+    {
+      "type": "subheading",
+      "content": "Types of Marketplace Items"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Native Zoho Integrations:** Pre-built connections to other Zoho applications",
+        "**Third-Party Integrations:** Connections to external platforms and services",
+        "**Extensions:** Add-on features that enhance Desk capabilities",
+        "**Widgets:** Custom interface components for displaying data or adding functionality"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** Use the Marketplace search and filter features to find integrations specific to your industry or use case."
+    },
+    {
+      "type": "heading",
+      "content": "Zoho Integrations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk offers native integrations with many other Zoho applications, enabling seamless data flow across your business tools."
+    },
+    {
+      "type": "subheading",
+      "content": "Zoho CRM Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "The CRM integration is one of the most powerful connections available, linking your sales and support operations."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Features:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Bi-directional sync:** Share Contacts, Accounts, and other records between CRM and Desk",
+        "**Field Mapping:** Customize which fields sync and how they map between systems",
+        "**Ticket Visibility in CRM:** View and manage support tickets directly from CRM records",
+        "**Handshake Work Mode:** Available in Desk when CRM integration is enabled",
+        "**Deal Linking:** Associate tickets with sales opportunities for better context",
+        "**Automated Record Creation:** Automatically create CRM records from Desk tickets or vice versa"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Sales teams can see a customer's support history before closing deals, while support teams can see purchase history and opportunity status when handling tickets."
+    },
+    {
+      "type": "subheading",
+      "content": "Setting Up CRM Integration"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Integrations > Zoho CRM**",
+        "Authenticate with your CRM account credentials",
+        "Configure field mapping between Desk and CRM modules",
+        "Set sync preferences (one-way or bi-directional)",
+        "Choose which record types to sync (Contacts, Accounts, etc.)",
+        "Test the integration by creating a test ticket and verifying data appears in CRM"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Zoho Invoice Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Connect Desk with Zoho Invoice to link support tickets with billing and invoicing information."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Features:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "View customer invoice history from within Desk tickets",
+        "Link tickets to specific invoices for billing-related support",
+        "Track billable support hours and convert to invoices",
+        "Access customer payment status during support interactions"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Support agents can quickly identify if a customer has outstanding invoices or payment issues while troubleshooting their support request."
+    },
+    {
+      "type": "subheading",
+      "content": "Zoho Projects Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Integrate with Zoho Projects to connect support tickets with project management workflows."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Features:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Convert tickets into project tasks automatically",
+        "Link tickets to specific projects for tracking",
+        "View project status and timelines from Desk",
+        "Track time spent on support-related project work",
+        "Escalate complex tickets to development or implementation teams"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Bug reports or feature requests can be escalated directly to the development team's project management system without manual data entry."
+    },
+    {
+      "type": "subheading",
+      "content": "Other Zoho Integrations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desk integrates with many other Zoho applications:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Zoho SalesIQ:** Live chat and visitor tracking (covered in Channels)",
+        "**Zoho Campaigns:** Email marketing for customer communications",
+        "**Zoho Analytics:** Advanced reporting and business intelligence",
+        "**Zoho Sign:** Document signing and approval workflows",
+        "**Zoho Books:** Accounting integration for financial context",
+        "**Zoho Social:** Social media monitoring and response",
+        "**Zoho Cliq:** Internal team communication and collaboration"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Third-Party Integrations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk supports integration with many popular third-party platforms through the Marketplace."
+    },
+    {
+      "type": "subheading",
+      "content": "Jira Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Connect Desk with Atlassian Jira for seamless support-to-development workflows."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Features:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create Jira issues directly from Desk tickets",
+        "Link tickets to existing Jira issues",
+        "View Jira issue status updates within Desk",
+        "Sync comments and updates between platforms",
+        "Track development progress on bug reports",
+        "Automatically update tickets when Jira issues are resolved"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Support teams can escalate bugs to development teams using Jira while maintaining visibility into resolution status without leaving Desk."
+    },
+    {
+      "type": "subheading",
+      "content": "Setting Up Jira Integration"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Marketplace**",
+        "Search for \"Jira\" and install the Jira integration",
+        "Authenticate with your Jira account credentials",
+        "Configure field mapping between Desk tickets and Jira issues",
+        "Set up sync rules and automation preferences",
+        "Test by creating a Jira issue from a Desk ticket"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Other Popular Third-Party Integrations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Browse the Marketplace for integrations with:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Slack:** Team communication and notifications",
+        "**Microsoft Teams:** Collaboration and ticket updates",
+        "**Salesforce:** CRM connectivity for Salesforce users",
+        "**GitHub:** Development workflow integration",
+        "**Trello:** Visual project management",
+        "**Zapier:** Connect to hundreds of apps via automation",
+        "**Twilio:** SMS and voice communication",
+        "**PayPal/Stripe:** Payment processing information"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Integration Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Test in sandbox:** Test integrations in a non-production environment first",
+        "**Map fields carefully:** Ensure field mappings make sense and required fields are included",
+        "**Monitor sync status:** Regularly check integration logs for errors or sync failures",
+        "**Document your setup:** Keep records of field mappings and sync rules for troubleshooting",
+        "**Limit sync scope:** Only sync the data you actually need to avoid clutter and performance issues",
+        "**Set up error notifications:** Configure alerts for integration failures",
+        "**Review regularly:** Periodically review integrations to ensure they still meet your needs"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Some integrations may have limitations based on your Zoho Desk plan or the external service's API limits. Check documentation for any restrictions before relying on an integration for critical workflows."
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Complete the following integration exercises to gain hands-on experience:"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 1: CRM Integration Setup"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Integrations > Zoho CRM**",
+        "Set up the integration between Desk and your test CRM account",
+        "Configure field mapping for: Contacts (map name, email, phone), Accounts (map company name, website), Tickets (if available, map to Cases or custom module)",
+        "Set sync direction (recommend bi-directional for testing)",
+        "Create a test contact in Desk and verify it syncs to CRM",
+        "Create a test contact in CRM and verify it syncs to Desk",
+        "Create a ticket in Desk associated with the synced contact",
+        "Open the contact in CRM and verify the ticket appears",
+        "Document any field mapping issues or data that didn't sync as expected"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 2: Jira Integration (Optional)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Sign up for a free Jira account at https://www.atlassian.com/software/jira",
+        "Create a test project in Jira",
+        "Return to Desk and navigate to **Setup > Marketplace**",
+        "Search for and install the Jira integration",
+        "Authenticate with your Jira credentials",
+        "Configure field mapping between Desk tickets and Jira issues",
+        "Create a test ticket in Desk with a technical issue",
+        "Use the integration to create a Jira issue from the ticket",
+        "Verify the issue appears in Jira with the correct information",
+        "Update the Jira issue status and check if it reflects in Desk",
+        "Practice linking existing tickets to Jira issues"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Explore other integrations in the Marketplace that might be useful for your specific use case. Install and test at least one additional integration (e.g., Slack for notifications, or Zoho Projects for task management)."
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Marketplace:** Central hub for discovering and installing integrations",
+        "**Zoho CRM:** Bi-directional sync, field mapping, ticket visibility in CRM, Handshake work mode",
+        "**Zoho Invoice:** View invoices and payment status during support interactions",
+        "**Zoho Projects:** Convert tickets to tasks, link to projects, track project-related support",
+        "**Other Zoho Apps:** SalesIQ, Campaigns, Analytics, Sign, Books, Social, Cliq available",
+        "**Jira Integration:** Create and link Jira issues, sync status updates, support-to-development workflow",
+        "**Third-Party Options:** Slack, Teams, GitHub, Trello, Zapier, and many more",
+        "**Best Practices:** Test first, map fields carefully, monitor sync status, document setup",
+        "**Limitations:** Check plan restrictions and API limits before relying on integrations"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Navigate and use the Zoho Marketplace to find integrations",
+        "Set up the Zoho CRM integration with Desk",
+        "Configure field mapping between Desk and CRM",
+        "Understand bi-directional sync and its implications",
+        "Explain the benefits of CRM integration (Handshake mode, deal linking, unified view)",
+        "Set up Zoho Invoice integration for billing context",
+        "Configure Zoho Projects integration for task management",
+        "Identify other useful Zoho integrations (SalesIQ, Campaigns, Analytics, etc.)",
+        "Install and configure the Jira integration",
+        "Create Jira issues from Desk tickets",
+        "Understand when to use third-party integrations",
+        "Apply integration best practices (testing, field mapping, monitoring)",
+        "Troubleshoot common integration sync issues",
+        "Identify potential plan or API limitations with integrations",
+        "Document integration configurations for future reference"
+      ]
+    }
+  ]
+}

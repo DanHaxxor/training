@@ -1,0 +1,716 @@
+{
+  "title": "Data Administration",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desk, at the end of the day, is an application that sorts out data. Emails get created as tickets or replies within a ticket, contact information is saved in records, and actions done within Desk get logged as a point of data within Desk."
+    },
+    {
+      "type": "paragraph",
+      "content": "For our customers, being able to properly manage and protect this data is of critical importance, and through the use of our tools within the Data Administration features, we have the ability to do so. From being able to bring new data through import or migration to protecting existing data with data backups, Desk gives our users the tools to manage the data that is important to them."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase and demonstrate the creation and use of the Data Administration features and settings",
+        "Understand sandbox environments and deployment workflows",
+        "Learn how to import and export data effectively",
+        "Configure data backup strategies for business continuity"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Sandbox"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Sandbox is a replica of your production environment where you can safely test configurations, customizations, and integrations without affecting your live support operations."
+    },
+    {
+      "type": "subheading",
+      "content": "What is a Sandbox?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Think of a Sandbox as a testing playground that mirrors your production Desk setup. It's an isolated environment where you can experiment freely."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Replica Environment:** Contains a copy of your configuration, workflows, and settings (but not all production data)",
+        "**Safe Testing:** Make changes without risk to your live support operations",
+        "**Configuration Testing:** Test new workflows, automations, customizations, and integrations",
+        "**Training Environment:** Use for training new agents without affecting real tickets",
+        "**Deployment Ready:** Changes can be deployed from Sandbox to Production once validated"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Before implementing a complex blueprint with multiple states and transitions, create and test it in your Sandbox first. This allows you to identify issues and refine the process before deploying to your live support team."
+    },
+    {
+      "type": "subheading",
+      "content": "Creating a Sandbox"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Data Administration > Sandbox**",
+        "Click **Create Sandbox**",
+        "Choose what to include in the sandbox: Configuration settings, Workflows and automations, Custom fields and layouts, Users and teams (without passwords)",
+        "Optionally include sample data for testing",
+        "Give your sandbox a descriptive name",
+        "Wait for the sandbox creation process to complete (this may take several minutes)",
+        "Access your sandbox through the provided URL"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Sandboxes typically do NOT include all production data (tickets, contacts, etc.) to protect customer privacy and reduce creation time. They include configuration and structure, not full operational data."
+    },
+    {
+      "type": "subheading",
+      "content": "Working in a Sandbox"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once your sandbox is created, you can access it separately from your production environment:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Separate Login:** Sandbox has its own URL (typically includes 'sandbox' in the domain)",
+        "**Visual Indicator:** Sandbox environments usually have a banner or indicator showing you're in sandbox mode",
+        "**Make Changes Freely:** Test workflows, create custom fields, modify automations without risk",
+        "**Create Test Data:** Add test tickets, contacts, and scenarios for comprehensive testing",
+        "**Document Changes:** Keep track of what you've configured for deployment planning"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Deployable Changes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Not all changes made in a sandbox can be automatically deployed to production. Understanding what's deployable is crucial for effective sandbox usage."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Deployable Items:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Workflows and Rules:** Workflow rules, assignment rules, escalation rules",
+        "**Blueprints:** Blueprint configurations with states and transitions",
+        "**Custom Fields:** New custom fields and modifications",
+        "**Layouts:** Layout configurations and customizations",
+        "**Email Templates:** Response templates and notification templates",
+        "**Macros:** Macro configurations",
+        "**Custom Functions:** Deluge scripts and custom functions",
+        "**Web Forms:** Custom web form configurations"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Non-Deployable Items:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Data Records:** Tickets, contacts, accounts (these are environment-specific)",
+        "**User Accounts:** Agent and user accounts must be managed separately",
+        "**Integrations:** API connections and authentication credentials",
+        "**Department-Specific Settings:** Department configurations may need manual replication",
+        "**Installed Extensions:** Marketplace extensions must be installed separately"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** Always document non-deployable changes separately so you can manually replicate them in production after deployment."
+    },
+    {
+      "type": "subheading",
+      "content": "Deploying Changes from Sandbox to Production"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Complete and test all changes in your sandbox environment",
+        "Navigate to **Sandbox > Deploy**",
+        "Select the components you want to deploy (workflows, custom fields, layouts, etc.)",
+        "Review the deployment summary showing what will change in production",
+        "Schedule the deployment (immediately or at a specific time)",
+        "Confirm the deployment",
+        "Monitor the deployment progress",
+        "Verify changes in production after deployment completes",
+        "Test functionality in production to ensure everything works as expected"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Best Practice:** Schedule deployments during off-peak hours to minimize impact on active support operations. Always notify your team before deploying significant changes."
+    },
+    {
+      "type": "heading",
+      "content": "Import"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Import feature allows you to bring data from external sources into Zoho Desk in bulk, saving time compared to manual data entry."
+    },
+    {
+      "type": "subheading",
+      "content": "What Can You Import?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Tickets:** Migrate historical tickets from other systems",
+        "**Contacts:** Import customer contact information",
+        "**Accounts:** Bulk create or update account records",
+        "**Products:** Import product catalogs",
+        "**Contracts:** Bring in support contract data",
+        "**Custom Modules:** Import data into custom modules you've created"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Supported File Formats"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk supports two primary formats for data import:"
+    },
+    {
+      "type": "subheading",
+      "content": "CSV Files"
+    },
+    {
+      "type": "paragraph",
+      "content": "CSV (Comma-Separated Values) is the most common import format for structured data."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Simple Structure:** Each row represents a record, columns represent fields",
+        "**Header Row:** First row should contain field names matching Desk fields",
+        "**Best For:** Contacts, Accounts, Products, simple data structures",
+        "**Size Limits:** Typically limited to 25,000 rows per import",
+        "**Encoding:** UTF-8 encoding recommended for international characters"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**CSV Example:**\n```\nFirst Name,Last Name,Email,Phone,Company\nJohn,Smith,john.smith@example.com,555-0100,Acme Corp\nJane,Doe,jane.doe@example.com,555-0101,Tech Solutions\n```"
+    },
+    {
+      "type": "subheading",
+      "content": "ZIP Files"
+    },
+    {
+      "type": "paragraph",
+      "content": "ZIP files are used for more complex imports, especially when importing tickets with attachments or threaded conversations."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Multiple Files:** Contains CSV file(s) plus additional assets like attachments",
+        "**Ticket Threads:** Can include email threads and conversation history",
+        "**Attachments:** Import tickets with associated file attachments",
+        "**Complex Relationships:** Maintain parent-child relationships between records",
+        "**Best For:** Migrating from other help desk systems with full ticket history"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**ZIP Structure Example:**\n```\nimport.zip\n├── tickets.csv (main ticket data)\n├── comments.csv (ticket comments/threads)\n└── attachments/\n    ├── file1.pdf\n    ├── file2.png\n    └── file3.docx\n```"
+    },
+    {
+      "type": "subheading",
+      "content": "Import Process"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Data Administration > Import**",
+        "Select the module to import into (Tickets, Contacts, Accounts, etc.)",
+        "Click **Import** and upload your CSV or ZIP file",
+        "Map your file columns to Desk fields: Match source columns to destination fields, Set field mapping for all required fields, Configure how duplicates should be handled",
+        "Configure import settings: Skip duplicates, Update existing records, or Create new records always",
+        "Preview the import to verify field mapping is correct",
+        "Review any errors or warnings",
+        "Start the import",
+        "Monitor import progress",
+        "Review the import summary showing successful and failed records",
+        "Check imported records in the module to verify data integrity"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Always test imports with a small sample file first (10-20 records) before importing large datasets. This helps identify mapping issues without corrupting large amounts of data."
+    },
+    {
+      "type": "subheading",
+      "content": "Import Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Clean Your Data:** Remove duplicates and fix formatting issues before importing",
+        "**Match Field Names:** Use Desk field names in your CSV headers for automatic mapping",
+        "**Test Small First:** Always import a small sample before running large imports",
+        "**Backup First:** Export existing data before importing to ensure you can revert if needed",
+        "**Handle Duplicates:** Decide on a duplicate strategy (skip, update, or create)",
+        "**Required Fields:** Ensure all required fields have values in your import file",
+        "**Date Formatting:** Use consistent date formats (preferably YYYY-MM-DD)",
+        "**Picklist Values:** Ensure picklist values in your import match existing values in Desk",
+        "**Review Logs:** Check import logs for errors and warnings"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Export"
+    },
+    {
+      "type": "paragraph",
+      "content": "Export functionality allows you to extract data from Zoho Desk for backup, analysis, migration, or reporting purposes."
+    },
+    {
+      "type": "subheading",
+      "content": "What Can You Export?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Tickets:** Export ticket records with field data",
+        "**Contacts:** Export customer contact information",
+        "**Accounts:** Export account/company records",
+        "**Any Module:** Export data from any standard or custom module",
+        "**Reports:** Export report results to CSV or Excel",
+        "**Filtered Data:** Export based on search criteria or views"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Export Process"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to the module you want to export (e.g., Tickets)",
+        "Apply any filters or views to narrow down records",
+        "Click the **Export** button or action",
+        "Choose export format (CSV or Excel)",
+        "Select which fields to include in the export",
+        "Configure export settings: Include related records (e.g., comments, attachments), Date range for export, Maximum records (if limited)",
+        "Start the export",
+        "Wait for export completion (large exports are emailed)",
+        "Download the exported file",
+        "Verify the exported data is complete and accurate"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Ticket Thread Limitations"
+    },
+    {
+      "type": "paragraph",
+      "content": "When exporting tickets, there are specific limitations regarding ticket threads (email conversations and comments)."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Thread Data Not Included in Standard Export:** Basic ticket exports include ticket fields but NOT the full conversation thread",
+        "**Separate Thread Export:** Ticket threads must be exported separately or through Data Backup",
+        "**Attachments:** File attachments are not included in standard CSV exports",
+        "**Comments vs Threads:** Internal comments and customer-facing threads are handled differently",
+        "**Export Limitations:** Large ticket histories may exceed export size limits"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Critical:** If you need complete ticket histories with all conversations and attachments, use the **Data Backup** feature instead of standard export. Standard exports are suitable for ticket metadata and field values only."
+    },
+    {
+      "type": "subheading",
+      "content": "Export Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Regular Backups:** Schedule regular exports for data backup purposes",
+        "**Filter Before Export:** Export only the data you need to reduce file size and processing time",
+        "**Document Exports:** Keep a log of what was exported and when",
+        "**Verify Data:** Always verify exported data before deleting anything from Desk",
+        "**Consider Privacy:** Be mindful of customer data privacy when exporting and storing files",
+        "**Use Data Backup for Complete Data:** For full backups with threads, use Data Backup feature"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Data Backup"
+    },
+    {
+      "type": "paragraph",
+      "content": "Data Backup is a comprehensive backup solution that creates complete snapshots of your Desk data, including ticket threads, attachments, and all related information."
+    },
+    {
+      "type": "subheading",
+      "content": "What is Data Backup?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Data Backup provides a more complete backup solution compared to standard exports:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Complete Data:** Includes all ticket threads, conversations, and history",
+        "**Attachments Included:** Backs up file attachments associated with tickets",
+        "**Multiple Modules:** Backs up tickets, contacts, accounts, and other modules simultaneously",
+        "**Scheduled Backups:** Set up automatic recurring backups",
+        "**Disaster Recovery:** Provides a comprehensive restore point for disaster recovery scenarios",
+        "**Compliance:** Helps meet data retention and compliance requirements"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Key Difference:** Standard exports provide field data only. Data Backup provides field data PLUS ticket thread data, attachments, and complete conversation history."
+    },
+    {
+      "type": "subheading",
+      "content": "Ticket Thread Data in Backups"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unlike standard exports, Data Backup specifically includes complete ticket thread information:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Email Threads:** All customer and agent email exchanges",
+        "**Internal Comments:** Private notes and comments between agents",
+        "**Conversation History:** Complete chronological conversation flow",
+        "**Attachments:** Files attached to tickets and comments",
+        "**Metadata:** Timestamps, sender information, and conversation context"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Creating Data Backups"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Data Administration > Data Backup**",
+        "Click **Create Backup** or **Schedule Backup**",
+        "Select which modules to include: Tickets (with threads and attachments), Contacts, Accounts, Custom modules",
+        "Configure backup settings: Date range (all data or specific period), Include attachments (yes/no), File format preferences",
+        "For scheduled backups, set: Frequency (Daily, Weekly, Monthly), Time of day, Retention period",
+        "Start the backup or save the schedule",
+        "Wait for backup completion (large backups can take time)",
+        "Download the backup file when ready (usually a ZIP file)",
+        "Store the backup securely in a safe location"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Storage Requirement:** Data Backup files can be very large, especially with attachments. Ensure you have adequate storage space before initiating large backups."
+    },
+    {
+      "type": "subheading",
+      "content": "Backup Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Regular Schedule:** Set up automated weekly or monthly backups",
+        "**Multiple Storage Locations:** Store backups in multiple secure locations (cloud storage, local drives)",
+        "**Test Restores:** Periodically test restoring from backups to ensure they're usable",
+        "**Monitor Backup Size:** Track backup file sizes to manage storage requirements",
+        "**Retention Policy:** Define how long to keep backups based on compliance requirements",
+        "**Encrypt Backups:** Encrypt backup files if they contain sensitive customer data",
+        "**Document Process:** Maintain documentation of your backup and restore procedures"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Recycle Bin"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Recycle Bin is a safety net that temporarily stores deleted records, allowing you to recover accidentally deleted data."
+    },
+    {
+      "type": "subheading",
+      "content": "How Recycle Bin Works"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Temporary Storage:** Deleted records are moved to the Recycle Bin instead of being permanently deleted",
+        "**Retention Period:** Records remain in Recycle Bin for a specific period (typically 60-90 days)",
+        "**Easy Recovery:** Restore deleted records with a few clicks",
+        "**Module-Specific:** Each module (Tickets, Contacts, etc.) has its own Recycle Bin",
+        "**Permanent Deletion:** Records can be permanently deleted from Recycle Bin if needed",
+        "**Automatic Purge:** After the retention period, records are automatically purged"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Accessing the Recycle Bin"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Data Administration > Recycle Bin**",
+        "Select the module to view (Tickets, Contacts, Accounts, etc.)",
+        "Browse deleted records with timestamps showing when they were deleted",
+        "Use filters to find specific deleted records",
+        "Select records to restore or permanently delete"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Restoring from Recycle Bin"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Open the Recycle Bin for the relevant module",
+        "Find the record(s) you want to restore",
+        "Select the record(s) using checkboxes",
+        "Click **Restore** or **Recover**",
+        "Confirm the restoration",
+        "The record is moved back to the active module",
+        "Verify the restored record appears correctly with all data intact"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** Related records (like ticket comments) are usually restored along with the parent record. However, some relationships may need to be manually re-established."
+    },
+    {
+      "type": "subheading",
+      "content": "Permanently Deleting from Recycle Bin"
+    },
+    {
+      "type": "paragraph",
+      "content": "Records can be permanently deleted from the Recycle Bin if you're certain they're no longer needed:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Select the record(s) in the Recycle Bin",
+        "Click **Permanently Delete** or **Empty Recycle Bin**",
+        "Confirm the permanent deletion (this action cannot be undone)",
+        "Records are removed from Desk entirely"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Warning:** Permanent deletion is irreversible. Ensure you have backups before permanently deleting important data. Consider exporting records before permanent deletion if there's any doubt."
+    },
+    {
+      "type": "heading",
+      "content": "Data Administration Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Test in Sandbox:** Always test major configuration changes in sandbox before production",
+        "**Regular Backups:** Implement scheduled data backups with appropriate retention",
+        "**Clean Imports:** Validate and clean data before importing large datasets",
+        "**Monitor Recycle Bin:** Regularly review and clean up the Recycle Bin",
+        "**Document Processes:** Maintain documentation for data management procedures",
+        "**Access Controls:** Limit data administration permissions to authorized personnel only",
+        "**Audit Trail:** Keep logs of major data operations (imports, exports, mass deletes)",
+        "**Disaster Recovery Plan:** Have a documented plan for data recovery scenarios",
+        "**Privacy Compliance:** Ensure data handling practices comply with GDPR, CCPA, and other regulations"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Complete the following data administration exercises:"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 1: Sandbox Testing and Deployment"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Data Administration > Sandbox**",
+        "Create a new sandbox environment for your Desk instance",
+        "Wait for sandbox creation to complete and access the sandbox URL",
+        "In the sandbox, make a deployable change: Create a new workflow rule, Add a custom field to the Ticket module, Create or modify an email template, Or create a new macro",
+        "Test your change in the sandbox with test data",
+        "Document what you changed and verify it works correctly",
+        "Navigate to the Sandbox deployment section",
+        "Select your change to deploy to production",
+        "Review the deployment summary",
+        "Deploy the change to your production environment",
+        "Verify the change appears correctly in production",
+        "Test the deployed feature in production to ensure it works as expected"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 2: Data Import"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Use ChatGPT or another AI tool to generate fake test data: Ask for 10-15 contact records with: First Name, Last Name, Email, Phone, Company, Ask for 5-10 ticket records with: Subject, Description, Priority, Status, Contact Email",
+        "Save the generated data in CSV format",
+        "Navigate to **Setup > Data Administration > Import**",
+        "First, import the contact data: Select Contacts module, Upload your contacts CSV file, Map the columns to Desk fields, Preview and verify the mapping, Complete the import, Check the imported contacts in the Contacts module",
+        "Then, import the ticket data: Select Tickets module, Upload your tickets CSV file, Map columns including linking to imported contacts, Set appropriate field mappings, Complete the import, Verify tickets were created and linked to contacts correctly",
+        "Review the import summary for both imports",
+        "Check for any errors or warnings",
+        "Verify data integrity in both modules"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**ChatGPT Prompt Example:**\n\n\"Generate 15 fake contact records in CSV format with columns: FirstName, LastName, Email, Phone, Company. Use realistic but fictional data.\"\n\n\"Generate 10 fake support ticket records in CSV format with columns: Subject, Description, Priority (High/Medium/Low), Status (Open/Pending/Closed), ContactEmail. Make the subjects and descriptions realistic support issues.\""
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 3: Data Backup and Recycle Bin (Optional)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Data Administration > Data Backup**",
+        "Create a manual backup: Select modules to include (Tickets, Contacts), Include attachments if available, Set date range or select all data",
+        "Start the backup and wait for completion",
+        "Download and review the backup file structure",
+        "Delete one of your test tickets from Activity 2",
+        "Navigate to **Setup > Data Administration > Recycle Bin**",
+        "Find the deleted ticket in the Recycle Bin",
+        "Restore the deleted ticket",
+        "Verify the ticket is back in your Tickets module with all data intact"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Review the **Privacy and Security** section ahead of the next lesson. Familiarize yourself with concepts like GDPR compliance, data encryption, audit logs, and security settings."
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Sandbox:** Replica testing environment for safe configuration changes",
+        "**Deployable Changes:** Workflows, blueprints, custom fields, layouts, templates, macros, custom functions",
+        "**Non-Deployable:** Data records, user accounts, integrations, department settings",
+        "**Import Formats:** CSV for simple data, ZIP for complex data with attachments and threads",
+        "**Import Limitations:** Typically 25,000 rows per CSV import",
+        "**Export Limitation:** Standard exports do NOT include ticket threads or attachments",
+        "**Data Backup:** Complete backup including ticket threads, conversations, and attachments",
+        "**Backup Scheduling:** Automate regular backups (daily, weekly, monthly)",
+        "**Recycle Bin:** Temporary storage for deleted records (60-90 day retention)",
+        "**Restore Process:** Easily recover accidentally deleted records from Recycle Bin",
+        "**Permanent Deletion:** Irreversible - ensure backups exist before permanent deletion",
+        "**Best Practices:** Test in sandbox, regular backups, clean data before import, monitor Recycle Bin"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain the purpose and benefits of using a sandbox environment",
+        "Create a sandbox replica of your production environment",
+        "Identify which changes are deployable vs non-deployable",
+        "Make configuration changes in sandbox and test them safely",
+        "Deploy changes from sandbox to production",
+        "Understand when to use CSV vs ZIP file formats for imports",
+        "Prepare data files for import with proper formatting",
+        "Import contacts, tickets, and other records into Desk",
+        "Map import columns to Desk fields correctly",
+        "Handle duplicate records during import",
+        "Export data from Desk for backup or analysis",
+        "Understand limitations of standard exports (no ticket threads)",
+        "Create comprehensive data backups including ticket threads and attachments",
+        "Schedule automatic recurring backups",
+        "Access and navigate the Recycle Bin",
+        "Restore deleted records from the Recycle Bin",
+        "Permanently delete records when necessary",
+        "Apply data administration best practices for data integrity and security",
+        "Develop a disaster recovery strategy using backups",
+        "Maintain compliance with data retention policies"
+      ]
+    }
+  ]
+}

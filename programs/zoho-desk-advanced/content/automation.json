@@ -1,0 +1,442 @@
+{
+  "title": "Desk Automation",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "When working in Desk, or frankly support in general, customers are going to encounter common, repeat requests. Maybe they have processes that a team needs to follow, but agents deviate from the process, causing errors. Or, they simply might be having delays in tickets being assigned to the right person for the job, resulting in delays to resolutions for your team."
+    },
+    {
+      "type": "paragraph",
+      "content": "For all of these scenarios and more, Automations allow our customers to utilize their team better, allocate their resources increasing productivity, which in the end allows for a better customer experience."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase and demonstrate the various Automation options within Desk",
+        "Provide context to the use of some of these features, such as their uses within other modules"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Assignment Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Assignment rules automatically assign tickets to specific agents or distribute them among team members based on defined criteria."
+    },
+    {
+      "type": "subheading",
+      "content": "Direct Assignment"
+    },
+    {
+      "type": "paragraph",
+      "content": "Direct assignment routes tickets to a specific agent based on conditions like keywords, customer type, or product category."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Set criteria based on ticket fields (subject, description, product, priority, etc.)",
+        "Assign to specific agents based on their expertise or availability",
+        "Can include time-based conditions (business hours)",
+        "Can factor in agent skills for intelligent routing"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Direct assignment is the **only way to move tickets between departments through automation**. Use this when tickets need to be routed to a different department based on specific conditions."
+    },
+    {
+      "type": "subheading",
+      "content": "Round Robin"
+    },
+    {
+      "type": "paragraph",
+      "content": "Round Robin distributes tickets evenly among a group of agents to balance workload."
+    },
+    {
+      "type": "subheading",
+      "content": "Round Robin Preferences"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize how Round Robin distribution works:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Backlog:** Considers the number of open tickets each agent has - assigns to agents with fewer open tickets",
+        "**Load Based:** Takes into account the total workload and priority of tickets assigned to each agent",
+        "**Sequential:** Rotates through agents in a fixed order, assigning one ticket at a time to each agent in sequence",
+        "**Skill Based:** Routes tickets to agents who possess the required skills, then applies Round Robin among qualified agents"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** Use Load Based distribution during high-volume periods to ensure agents with lighter workloads receive more tickets, preventing bottlenecks."
+    },
+    {
+      "type": "heading",
+      "content": "Workflows"
+    },
+    {
+      "type": "paragraph",
+      "content": "Workflow rules automate actions when specific conditions are met, reducing manual work and ensuring consistency."
+    },
+    {
+      "type": "subheading",
+      "content": "Workflow Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create rules that trigger actions automatically based on ticket events and conditions."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Trigger Types:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Create:** Executes when a ticket is first created",
+        "**Edit:** Executes when a ticket is updated or modified",
+        "**Field Update:** Executes when a specific field value changes"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Key Difference:** Create rules run only once when the ticket is new. Edit rules can run multiple times throughout the ticket lifecycle. Test both behaviors to understand which fits your use case."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Common Workflow Actions:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Send email notifications to agents or customers",
+        "Update ticket fields automatically",
+        "Add tags or labels",
+        "Create tasks or follow-up activities",
+        "Post to team feeds or external systems",
+        "Execute custom functions",
+        "Escalate to supervisors"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Custom Functions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Custom functions allow you to write Deluge scripts that execute complex logic beyond what standard workflow actions provide."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Call external APIs to integrate with third-party services",
+        "Perform complex calculations or data transformations",
+        "Query and update records across multiple modules",
+        "Implement business logic specific to your organization"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Developer Space"
+    },
+    {
+      "type": "paragraph",
+      "content": "Access the Developer Space to create and manage custom functions. This is where you write Deluge code that can be triggered by workflows, buttons, or other automation."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Developer Space:** Navigate to **Setup > Developer Space** to create custom functions, connections to external services, and webhooks for advanced automation scenarios."
+    },
+    {
+      "type": "heading",
+      "content": "SLA (Service Level Agreements)"
+    },
+    {
+      "type": "paragraph",
+      "content": "SLAs define response and resolution time commitments for tickets. They ensure your team meets customer expectations and contractual obligations."
+    },
+    {
+      "type": "subheading",
+      "content": "SLA Components"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Response Time:** How quickly an agent must provide the first response",
+        "**Resolution Time:** Maximum time allowed to fully resolve the ticket",
+        "**Escalation Rules:** What happens when SLA targets are at risk or breached",
+        "**Business Hours:** SLA timers respect configured business hours",
+        "**Priority-Based:** Different SLA targets for different priority levels"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Association with Support Plans and Contracts"
+    },
+    {
+      "type": "paragraph",
+      "content": "SLAs can be associated with Support Plans and Contracts to provide different service levels based on customer subscription tiers:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Premium customers may receive faster response times (e.g., 1 hour vs 24 hours)",
+        "Enterprise contracts can have stricter resolution SLAs",
+        "Free tier customers might have basic SLA coverage",
+        "Contracts can override default SLA settings"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Create separate SLAs for \"Basic Support\" (24-hour response), \"Premium Support\" (4-hour response), and \"Enterprise Support\" (1-hour response) to reflect your service tiers."
+    },
+    {
+      "type": "heading",
+      "content": "Blueprints"
+    },
+    {
+      "type": "paragraph",
+      "content": "Blueprints enforce structured processes that tickets must follow from creation to resolution. They're perfect for ensuring compliance and consistency."
+    },
+    {
+      "type": "subheading",
+      "content": "Blueprint Components"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**States:** Stages a ticket goes through (e.g., New, Investigating, Pending Customer, Resolved)",
+        "**Transitions:** Actions that move tickets from one state to another",
+        "**Field Validation:** Required fields that must be filled before transitioning",
+        "**Conditional Transitions:** Different paths based on ticket data",
+        "**Actions:** Automated tasks that execute during transitions"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example Blueprint:** New → Investigating → Pending Customer Response → Solution Provided → Closed. Each transition requires specific fields (e.g., \"Resolution Notes\" must be filled before marking as Closed)."
+    },
+    {
+      "type": "subheading",
+      "content": "Creating Blueprints"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Automation > Blueprints**",
+        "Define the states your tickets will move through",
+        "Create transitions between states",
+        "Set field requirements and validation for each transition",
+        "Add before/after transition actions (notifications, field updates, etc.)",
+        "Assign the blueprint to specific departments or layouts",
+        "Test the blueprint with sample tickets"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Blueprints enforce rigid workflows. Agents cannot skip steps or take shortcuts. This is great for compliance but can slow down urgent situations. Consider providing override permissions for supervisors."
+    },
+    {
+      "type": "heading",
+      "content": "Supervisor Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Supervisor rules are time-based automation that runs periodically to check for specific conditions and take action."
+    },
+    {
+      "type": "subheading",
+      "content": "How Supervisor Rules Work"
+    },
+    {
+      "type": "paragraph",
+      "content": "Unlike workflows that trigger on events, supervisor rules trigger approximately **once every hour** to scan tickets and perform actions."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Check for tickets that meet specific conditions (e.g., no response in 24 hours)",
+        "Take automated actions (escalate, reassign, notify, etc.)",
+        "Run continuously in the background",
+        "Useful for catching tickets that slip through the cracks"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Create a supervisor rule that checks for tickets with \"High\" priority that haven't been updated in 2 hours. Automatically escalate these tickets to a manager and send email notifications."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Common Supervisor Rule Scenarios:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Escalate tickets approaching SLA breach",
+        "Reassign idle tickets that haven't been touched in X hours",
+        "Send reminders for tickets pending customer response for too long",
+        "Auto-close tickets that have been resolved but not closed",
+        "Flag tickets with certain keywords that need immediate attention"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Macros"
+    },
+    {
+      "type": "paragraph",
+      "content": "Macros are pre-configured sets of actions that agents can apply to tickets with a single click."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Combine multiple actions (status change, add tag, send email, update fields)",
+        "Available as buttons in the ticket interface",
+        "Speed up repetitive tasks",
+        "Ensure consistency in how common scenarios are handled"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example Macro:** \"Escalate to Tier 2\" - Changes priority to High, assigns to Tier 2 team, adds \"escalated\" tag, and sends notification to supervisor."
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Complete the following automation exercises:"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 1: Workflow Rule"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Automation > Workflows**",
+        "Create a workflow rule with **Create** trigger: Name: \"Welcome Email on Ticket Creation\", Condition: Department equals [Your Test Department], Action: Send email to customer with welcome message",
+        "Create a second workflow rule with **Edit** trigger: Name: \"High Priority Notification\", Condition: Priority changes to High, Action: Send email notification to supervisor",
+        "Test both workflows by: Creating a new ticket (should trigger Create workflow), Editing an existing ticket to change priority to High (should trigger Edit workflow)",
+        "Observe the difference in behavior - the Create rule runs only once, the Edit rule can run multiple times",
+        "Check ticket history to verify which workflows executed"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 2: Blueprint"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Automation > Blueprints**",
+        "Create a new blueprint for one of your departments",
+        "Define at least 4 states: New, In Progress, Pending Customer, Resolved",
+        "Create transitions between states: New → In Progress (require agent to add initial notes), In Progress → Pending Customer (require response to be sent), Pending Customer → In Progress (when customer replies), In Progress → Resolved (require resolution summary field)",
+        "Add field validation - make certain fields mandatory before allowing transitions",
+        "Assign the blueprint to your test department",
+        "Create a test ticket and work through the entire blueprint process",
+        "Try to skip a step - verify the blueprint prevents it",
+        "Document the process flow and any issues encountered"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Check out the Corp Desk to see what automations are being used. Look at the history on tickets to see what has triggered. Also, explore some of the Zia features on your own to discover what AI functionality is available in Desk."
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Assignment Rules:** Direct assignment and Round Robin with preferences (Backlog, Load Based, Sequential, Skill Based)",
+        "**Direct Assignment:** Only way to move tickets between departments via automation",
+        "**Workflows:** Create, Edit, and Field Update triggers with multiple action types",
+        "**Create vs Edit:** Create runs once on ticket creation; Edit can run multiple times on updates",
+        "**Custom Functions:** Write Deluge scripts for complex logic and external API calls",
+        "**Developer Space:** Central location for creating custom functions and integrations",
+        "**SLAs:** Define response and resolution time commitments with priority-based targets",
+        "**Support Plans:** SLAs can be associated with customer contracts for tiered service levels",
+        "**Blueprints:** Enforce structured processes with states, transitions, and validation",
+        "**Supervisor Rules:** Time-based checks that run approximately once per hour",
+        "**Macros:** One-click actions that combine multiple operations"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create assignment rules with direct assignment and Round Robin",
+        "Understand the difference between Round Robin preferences (Backlog, Load Based, Sequential, Skill Based)",
+        "Explain why direct assignment is the only way to move tickets between departments",
+        "Create workflow rules with Create, Edit, and Field Update triggers",
+        "Understand the behavioral difference between Create and Edit triggers",
+        "Configure workflow actions including email notifications and field updates",
+        "Create custom functions using Developer Space",
+        "Set up SLAs with response and resolution time targets",
+        "Associate SLAs with Support Plans and Contracts for tiered service",
+        "Understand how SLAs respect business hours and priority levels",
+        "Create blueprints with states, transitions, and field validation",
+        "Configure transition requirements and actions",
+        "Set up supervisor rules for time-based automation",
+        "Understand that supervisor rules trigger approximately once per hour",
+        "Create macros for one-click multi-action operations",
+        "Test and troubleshoot automation by checking ticket history",
+        "Apply appropriate automation types for different business scenarios"
+      ]
+    }
+  ]
+}

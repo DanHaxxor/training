@@ -1,0 +1,244 @@
+{
+  "title": "Knowledge Base and Help Center",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "When providing support, it's good to have reference material to provide to customers, or even just to reference yourself when troubleshooting. The Knowledge Base in Desk gives us an area to create and organize articles, both internal and public documentation, for easy reference."
+    },
+    {
+      "type": "paragraph",
+      "content": "The Help Center comes into play when we want to display these articles for customers to reference publicly. However, the Help Center isn't just a place to view articles. Users can be given the ability to submit tickets through the help center, and with the addition of Communities, the Help Center is an amazing Self-Service utility that can be utilized by a customer."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Demonstrate utilizing/customizing the Knowledge Base, Help Center, and Community as an Agent",
+        "Showcase how end users can use the KB, submit tickets, and communicate with others in the community through the Help Center"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Knowledge Base"
+    },
+    {
+      "type": "subheading",
+      "content": "Creating/Editing Articles"
+    },
+    {
+      "type": "paragraph",
+      "content": "Articles are the foundation of your knowledge base. They can be created, edited, and organized to provide comprehensive documentation for both internal teams and customers."
+    },
+    {
+      "type": "subheading",
+      "content": "Display Permissions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Control who can view each article through granular permission settings."
+    },
+    {
+      "type": "subheading",
+      "content": "Review Process"
+    },
+    {
+      "type": "paragraph",
+      "content": "Implement a review workflow to ensure article quality and accuracy before publication."
+    },
+    {
+      "type": "subheading",
+      "content": "Manage KB Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure global Knowledge Base settings to control functionality and organization."
+    },
+    {
+      "type": "subheading",
+      "content": "Organize Categories"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Sections and Sub Sections:** Organize articles hierarchically for easy navigation",
+        "**Primary and Associated Departments:** Link articles to specific departments",
+        "**Visibility Settings:** Control whether articles are internal or public-facing (Help Center)"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Key Distinction:** Articles can be set as **Internal** (visible only to agents) or **Public** (visible in the Help Center to customers)."
+    },
+    {
+      "type": "heading",
+      "content": "Help Center"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Help Center is your customer-facing self-service portal where users can search for articles, submit tickets, and engage with your community."
+    },
+    {
+      "type": "subheading",
+      "content": "Access Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure who can access the Help Center and what features they can use."
+    },
+    {
+      "type": "subheading",
+      "content": "Languages/Translation Options"
+    },
+    {
+      "type": "paragraph",
+      "content": "Support multiple languages to serve a global customer base with translated articles and interface."
+    },
+    {
+      "type": "subheading",
+      "content": "Customization"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Themes:** Pre-built themes for quick styling",
+        "**HTML/CSS/JavaScript:** Advanced customization for complete control over appearance and functionality",
+        "**Widgets:** Add interactive elements and custom functionality to your Help Center"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Managing End Users"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Users:** Manage individual customer accounts and access",
+        "**Labels:** Organize and categorize users",
+        "**User Groups:** Create groups for targeted content and permissions"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Community"
+    },
+    {
+      "type": "paragraph",
+      "content": "Communities enable peer-to-peer support, allowing customers to help each other and engage with your brand."
+    },
+    {
+      "type": "subheading",
+      "content": "Moderation Options"
+    },
+    {
+      "type": "paragraph",
+      "content": "Control content quality with moderation settings and workflows."
+    },
+    {
+      "type": "subheading",
+      "content": "Setting Up/Organizing"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Categories:** Top-level organization for community content",
+        "**Forums:** Discussion areas within categories",
+        "**Posts:** Individual community contributions"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Important:** Cannot delete Categories, only renamed, disabled, or locked. Plan your category structure carefully before creating them."
+    },
+    {
+      "type": "subheading",
+      "content": "Gamification"
+    },
+    {
+      "type": "paragraph",
+      "content": "Encourage community participation through badges, points, and leaderboards that reward helpful contributors."
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the Trainees create **3 test articles** for each of the departments they had created previously. (For the content, recommend having them generate it through ChatGPT)."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity Instructions"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create 3 articles for each department you've previously set up",
+        "Set one department's articles as **internal** (agent-only access)",
+        "Set the other departments' articles to be viewable within the **Help Center** (public-facing)",
+        "Test the visibility by viewing articles from both agent and customer perspectives"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Recommend the trainees look over the Zoho Help Center. Have them check out our community, view posts, and see how our users engage with us.\n\nhttps://help.zoho.com/portal/en/community"
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Knowledge Base:** Create internal and public articles organized by categories, sections, and departments",
+        "**Help Center:** Customer-facing portal with customizable themes, multi-language support, and ticket submission",
+        "**Community:** Peer-to-peer support platform with moderation, gamification, and structured forums",
+        "**Visibility Control:** Articles can be internal-only or public-facing through granular permission settings",
+        "**Customization:** Full HTML/CSS/JavaScript access for advanced Help Center customization",
+        "**User Management:** Organize customers with labels and groups for targeted content delivery"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create and edit Knowledge Base articles",
+        "Organize articles using categories, sections, and sub-sections",
+        "Configure article visibility (internal vs public)",
+        "Set up and customize the Help Center portal",
+        "Implement multi-language support for global customers",
+        "Customize Help Center appearance using themes and code",
+        "Manage end users, labels, and user groups",
+        "Create and organize community categories and forums",
+        "Configure moderation settings for community content",
+        "Understand the limitations of category management (cannot delete)",
+        "Implement gamification to encourage community participation",
+        "Associate articles with primary and secondary departments"
+      ]
+    }
+  ]
+}

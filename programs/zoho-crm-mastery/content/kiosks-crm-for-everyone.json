@@ -1,0 +1,578 @@
+{
+  "title": "Kiosks and CRM For Everyone",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 08 Jan, 03:35 PM"
+    },
+    {
+      "type": "heading",
+      "content": "CRM Kiosk Studio (Intro Lesson)"
+    },
+    {
+      "type": "paragraph",
+      "content": "This lesson introduces CRM Kiosk Studio at a high level. The class should be able to understand at the end of this lesson what a Kiosk is, what can be done with a Kiosk, and why a customer might choose to use a Kiosk over a Wizard or other form."
+    },
+    {
+      "type": "subheading",
+      "content": "Pre-Discussion"
+    },
+    {
+      "type": "paragraph",
+      "content": "Give the class about 10/15 minutes to look over the KB for Kiosk studio. Ask the class to voice at least 3 use cases (collectively) for using a Kiosk."
+    },
+    {
+      "type": "heading",
+      "content": "What Is CRM Kiosk Studio?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Kiosk Studio is a button-guided interface. It mimics other types of short-form forms, typically in an embedded or pop-up interface somewhere in the CRM. It allows businesses to collect information from users who:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Should not have full CRM access",
+        "Only need to submit specific data",
+        "Need a simplified, guided interface"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "\"Collecting information\" in this context doesn't necessarily mean information that will be applied to a record. Instead, inputs from the user can be used as search criteria for record lookup, email content, parameters in a custom function, as well as record creation."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Working Kiosk Interface"
+    },
+    {
+      "type": "paragraph",
+      "content": "Show a working, already built Kiosk to establish what the interface looks like, and how a user interfaces with a Kiosk."
+    },
+    {
+      "type": "paragraph",
+      "content": "You can show the same Kiosk being used in multiple places, like in a Dashboard, inside a record, etc to illustrate a Kiosk's versatility."
+    },
+    {
+      "type": "heading",
+      "content": "What Are Kiosks Used For, and Why Would You Use One?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Kiosks are often used for:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Walk-in customer intake",
+        "Event registrations",
+        "Internal requests",
+        "Front-desk or public-facing data collection"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Kiosks allow you to present fields to a user for them to input data. The data can be single line, picklists, email fields, URL fields, etc. Later down the configuration chain, that information can either be used logically to show different interface pages, to create records, as parameters in a custom function or all three if that's the goal."
+    },
+    {
+      "type": "heading",
+      "content": "Why Use a Kiosk Instead of a CRM Form?"
+    },
+    {
+      "type": "paragraph",
+      "content": "In addition to simplifying user interfaces, Kiosks offer far more flexibility than standard CRM forms. While CRM create pages are designed primarily for record creation or updates, kiosks are built to guide users through a process that may or may not result in record creation."
+    },
+    {
+      "type": "paragraph",
+      "content": "Kiosks can:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Perform quick, filtered lookups of existing records",
+        "Execute actions at multiple points within a single flow",
+        "Branch based on prior inputs or conditions",
+        "Perform tasks even when creating or editing a record is not the primary goal"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Creating a record is only one possible outcome of a kiosk. In many cases, the goal is to guide a user through a decision, gather information, or perform actions without exposing the full CRM interface. This can either be for security reasons, or for ease of use."
+    },
+    {
+      "type": "paragraph",
+      "content": "Standard CRM create pages can trigger automation, but this usually relies on workflow rules that run only when a record is saved or updated. Kiosks work differently. Their button-guided structure allows actions to occur at multiple stages of the interaction, without requiring a record to be created or edited immediately. If record creation is needed, the kiosk can still handle that as part of the process."
+    },
+    {
+      "type": "paragraph",
+      "content": "Kiosks are also designed with control and safety in mind:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Users only see the fields and options they need",
+        "Users do not have access to any CRM records or modules to use a Kiosk",
+        "Fewer mistakes occur because steps are guided",
+        "There is less risk of accidental record edits or deletions",
+        "Kiosk users do not require a CRM license if used within a Portal, allowing customers, vendors, or other third-party entities to interact with your system"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "How Kiosks Relate to CRM Records"
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain that:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Kiosks can still create or update CRM records",
+        "Fields can map directly to CRM modules (but do not have to)",
+        "Validation rules, required fields, and automation still apply"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Common Use Cases"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Receptionist logging a new Lead",
+        "Event staff capturing Contacts",
+        "Employees submitting internal requests",
+        "Customers filling out intake forms"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Kiosks vs Wizards vs Forms"
+    },
+    {
+      "type": "paragraph",
+      "content": "While we've covered what Kiosks are, we haven't talked about what makes them different from other types of forms or interfaces in CRM."
+    },
+    {
+      "type": "paragraph",
+      "content": "Wizards and Create pages and Canvas forms in CRM are all intended to create a record by the end. The point is to input the field data that will be available on a record when the form is completed."
+    },
+    {
+      "type": "paragraph",
+      "content": "Kiosks can do the same, but that's only one of many actions you can perform with a kiosk. Kiosks have the added benefit of allowing you to create multiple records at once and even link them together all within the same interface."
+    },
+    {
+      "type": "paragraph",
+      "content": "Kiosks can also be embedded into records for the purpose of providing information, like simply showing other connected records at a glance, or providing an interface within a record to quickly schedule a meeting, like with a single button press."
+    },
+    {
+      "type": "heading",
+      "content": "Demo Overview"
+    },
+    {
+      "type": "subheading",
+      "content": "Demonstration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Present one or two use-cases for a Kiosk. Two examples could be:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "An embedded Kiosk for scheduling a meeting or task with one button press",
+        "A kiosk that lives on a dashboard and allows for quickly looking up a contact and creating a deal or meeting or other record for them"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Show a simple kiosk and how to add **Screens**, **GetRecords**, **Decisions**, and **Actions**."
+    },
+    {
+      "type": "paragraph",
+      "content": "Show the record created in CRM afterward."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Key Takeaway:** Kiosks provide a flexible, button-guided interface that can perform lookups, create records, execute custom functions, and branch based on user input—all while maintaining security and simplicity for users without CRM licenses."
+    },
+    {
+      "type": "heading",
+      "content": "CRM For Everyone"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Navigation in the Next-Gen UI"
+    },
+    {
+      "type": "subheading",
+      "content": "Overview"
+    },
+    {
+      "type": "paragraph",
+      "content": "Overview of the new left-hand sidebar:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Primary Sidebar:** Modules, Reports, Analytics, Requests, Marketplace, Global Search, Add New, Calendar, Mail Magnet, Signals, Setup, Profile",
+        "**Secondary Sidebar:** Context-sensitive options, Edit layouts, access folders, add webforms"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Navigating the Sidebar"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Click through the primary sidebar options",
+        "Show how secondary sidebar changes contextually",
+        "Demonstrate finding a module, accessing calendar, navigating to Setup"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Instructor Talking Points:** Emphasize how the new vertical navigation saves space and is context-aware. Help reps build familiarity so they can walk customers through finding key items like Reports, Calendar, and Setup. Sidebar logic mimics other modern business tools."
+    },
+    {
+      "type": "heading",
+      "content": "Understanding Teamspaces"
+    },
+    {
+      "type": "subheading",
+      "content": "What is a Teamspace?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Replaces traditional tab groups",
+        "A collection of modules specific to a department or team"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "CRM Teamspace"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Acts as the default CRM view",
+        "Contains all traditional modules unless changed by central admin",
+        "This happens when turning on CRM4E for existing accounts",
+        "The CRM Teamspace when starting a new subscription will be here as well with the traditional modules"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Licensing Breakdown"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**CRM Plus:** Teamspace users = Lite Users",
+        "**Zoho One:** Teamspace users = Teamspace Users",
+        "**Standalone CRM:** Also uses Teamspace Users"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Identifying and Navigating a Teamspace"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Open the CRM and switch between Teamspaces using the dropdown",
+        "Show how modules and folders change depending on the active Teamspace",
+        "Compare CRM Teamspace to another custom Teamspace"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Instructor Talking Points:** Draw a comparison between Teamspaces and folders for modules by department. Teamspaces help segment visibility so users only see what's relevant to them. CRM Teamspace is the \"legacy\" CRM tab group. Point out this can still be used for broad visibility."
+    },
+    {
+      "type": "heading",
+      "content": "Creating and Managing Teamspaces"
+    },
+    {
+      "type": "subheading",
+      "content": "Overview"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Who can create a Teamspace",
+        "Assigning the Teamspace Admin (only one allowed)",
+        "Adding/removing modules from the Teamspace",
+        "Reorganizing folders and adding modules to folders",
+        "Difference between Org modules and Team modules"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Creating a Teamspace"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Go to **Setup > Teamspaces**",
+        "Create a new Teamspace, name it, and assign an admin",
+        "Add modules and organize them into folders",
+        "Switch into that Teamspace to preview the view"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Instructor Talking Points:** One Teamspace Admin per space — make that distinction clear. Teamspaces give teams control without affecting CRM-wide settings."
+    },
+    {
+      "type": "heading",
+      "content": "Team Modules"
+    },
+    {
+      "type": "subheading",
+      "content": "What is a Team Module?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Modules tied to one or more Teamspaces",
+        "Created for team-specific workflows"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Creating a Team Module"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Start from scratch or use templates (HR, Finance, Legal, etc.)",
+        "Assigning Team Module Admins (can be multiple)",
+        "Customizing access down to field-level",
+        "Creating automations (blueprints, workflows, etc.)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Creating a Team Module"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Within a Teamspace, click **\"Create Module\"**",
+        "Select template and start from scratch",
+        "Start with a Template. Show the ability to customize what fields are here, and the lookup fields it generates automatically",
+        "Start from scratch and emphasize the need to put a lookup field for this module to \"make sense\" and be connected to existing modules (if the need for the new module is for augmenting existing modules/records)",
+        "Add fields, especially lookup fields for cross-module connections",
+        "Assign multiple admins to the module",
+        "Show field-level permissions screen"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Instructor Talking Points:** Team Modules are NOT the same as standard modules — they're scoped to Teamspaces. Emphasize field-level customization and how they allow for tailored user roles. Use templates when available, especially during early implementation."
+    },
+    {
+      "type": "heading",
+      "content": "User Roles Within Team Modules"
+    },
+    {
+      "type": "subheading",
+      "content": "Overview"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Types of users: **Manager**, **Member**, **Participant**, **Requester**",
+        "Role assignment per Team Module (not global)",
+        "CRM Roles/Profiles still apply for general access"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Assigning Team Module Roles"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to a Team Module > Settings > Users & Permissions",
+        "Assign a user as Manager, Member, Participant",
+        "Show how a Requester can be added",
+        "Preview the access differences by impersonating users"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Instructor Talking Points:** Clarify that these roles apply per module — not globally. Expect questions like \"Why can't I see another user's record?\" → likely due to Participant/Member permissions. Role confusion is common, so this demo will help reps troubleshoot visibility issues."
+    },
+    {
+      "type": "heading",
+      "content": "Requesters & Cross-Team Collaboration"
+    },
+    {
+      "type": "subheading",
+      "content": "Who is a Requester?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "External to the team",
+        "Can request new records in a module they don't have access to",
+        "Requests are visible only in the **\"My Requests\"** tab",
+        "Ideal for legal/review/support workflows"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Making a Request as a Requester"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to the **\"Requests\"** icon in the sidebar",
+        "Submit a new request for a record in another Team Module",
+        "Switch to the Teamspace user and show how they view and complete that request"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Instructor Talking Points:** Highlight Requesters as a major innovation — limited access with the ability to interact. The requester DOES \"own\" the record, though they cannot see the actual module - only by proxy of the Requests module. Make the \"Request a Quote\" example relatable: perfect use case. Use the example that Zoho Sales might make use of this by creating a \"Support\" request. Reps may need to explain how Requesters can track progress through the Requests tab."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key points about the Requests module:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "For the most part, the requests tab is like a list view for records in a module, but ONLY for your requests that you've submitted",
+        "There are no custom views in the Requests module",
+        "Requests module contains requests you've made for any module, so multiple module's requests are seen here"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Permissions and FAQs"
+    },
+    {
+      "type": "subheading",
+      "content": "Overview"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Global create-module permission",
+        "Teamspace Admin scope",
+        "Visibility determined by Teamspace membership"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Permissions in Action"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Show difference in UI between a user with and without module creation rights",
+        "Show that only Teamspace Admins see the **\"Create Module\"** button within that space"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Instructor Talking Points:** Reinforce that module creation requires global permission, but access is scoped to the user's assigned Teamspace. Maybe encourage reps to ask \"Which Teamspace are you an admin of?\" when permissions issues arise."
+    },
+    {
+      "type": "heading",
+      "content": "Wrapping Up"
+    },
+    {
+      "type": "subheading",
+      "content": "Overview"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Recap of key concepts",
+        "Common support scenarios",
+        "Reference docs and internal escalation paths"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Instructor Talking Points:** Reinforce the core benefits of CRM4E: modular access, team-specific workflows, and cleaner UI. Direct reps to reference material — including official Zoho articles — to build confidence. Invite questions, and share that more changes may roll out over time."
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain what CRM Kiosk Studio is and its purpose",
+        "Identify appropriate use cases for Kiosks",
+        "Understand the difference between Kiosks, Wizards, and standard CRM forms",
+        "Explain how Kiosks can be used without creating CRM records",
+        "Recognize the security and usability benefits of Kiosks",
+        "Understand how Kiosks can be embedded in dashboards or records",
+        "Describe how Kiosks allow users without CRM licenses to interact with the system",
+        "Identify the components of a Kiosk (Screens, GetRecords, Decisions, Actions)",
+        "Navigate the Next-Gen UI and understand the primary and secondary sidebars",
+        "Explain what Teamspaces are and how they replace traditional tab groups",
+        "Create and manage Teamspaces, including assigning Teamspace Admins",
+        "Understand the difference between Org modules and Team modules",
+        "Create Team Modules using templates or from scratch",
+        "Assign user roles within Team Modules (Manager, Member, Participant, Requester)",
+        "Explain how Requesters can interact with modules they don't have access to",
+        "Navigate the Requests module and understand cross-team collaboration",
+        "Understand permission scoping and Teamspace membership"
+      ]
+    }
+  ]
+}

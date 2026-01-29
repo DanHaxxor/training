@@ -1,0 +1,208 @@
+{
+  "title": "Organization Settings",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Within the Organization category, there are various features and settings that not only affect things like the branding of the portal, but features like Business Hours can play a part in the behavior of the automations we can configure within Desk."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Cover the various features of the Organization category",
+        "Touch on Domain Mapping and how it correlates to the Help Center",
+        "Multi-brand help centers",
+        "Introduce how Business Hours can play into automations within Desk"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Company Settings"
+    },
+    {
+      "type": "subheading",
+      "content": "Primary Contact"
+    },
+    {
+      "type": "paragraph",
+      "content": "Set the primary contact person for your organization who will be the main point of contact for administrative matters."
+    },
+    {
+      "type": "subheading",
+      "content": "Currency Locale"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure your organization's default currency and locale settings to ensure proper formatting of dates, numbers, and monetary values throughout Desk."
+    },
+    {
+      "type": "subheading",
+      "content": "Rebranding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize the look and feel of your Zoho Desk portal to match your company's branding, including logos, colors, and other visual elements."
+    },
+    {
+      "type": "heading",
+      "content": "Domain Mapping"
+    },
+    {
+      "type": "subheading",
+      "content": "Portal Name"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure your portal's name and URL structure to provide a professional, branded experience for your customers."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Note:** Changing the portal name only affects the portal name itself, not the domains tied with the support email addresses."
+    },
+    {
+      "type": "subheading",
+      "content": "Multi-Brand Help Centers"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk supports multi-brand help centers, allowing you to create separate branded experiences for different product lines or customer segments."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Common User Base:** All brands share the same user database, allowing customers to access multiple help centers with one login",
+        "**Unique User Base:** Each brand maintains a separate user database for complete isolation between brands"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Business Hours and Holiday Lists"
+    },
+    {
+      "type": "paragraph",
+      "content": "Business Hours define when your support team is actively working, and they play a critical role in how various automations function within Desk."
+    },
+    {
+      "type": "subheading",
+      "content": "Impact on Automations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Business Hours affect how automations like SLAs and Round Robin rules, among others, will function."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**SLA Timers:** SLA countdown timers pause outside of business hours",
+        "**Round Robin Assignment:** Can be configured to only distribute tickets during business hours",
+        "**Workflow Rules:** Can be triggered based on business hours",
+        "**Escalation Rules:** Time-based escalations respect business hours"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Holiday Lists"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create holiday lists to define days when your support team is unavailable. These holidays are automatically excluded from business hours calculations."
+    },
+    {
+      "type": "heading",
+      "content": "Products"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure products that can be associated with departments, tickets, and other records to help organize and categorize your support operations."
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the Trainees create a set of Business Hours and Holiday list for their test portal as well as some Products they would like to have associated to their departments."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity Steps"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Organization > Business Hours**",
+        "Create a new business hours configuration (e.g., 9 AM - 5 PM, Monday-Friday)",
+        "Create a holiday list and add relevant holidays",
+        "Navigate to **Setup > Organization > Products**",
+        "Create 2-3 products and associate them with the departments you created earlier",
+        "Test how business hours affect ticket views and automation timing"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Optional Activity:** If the Trainee already has a domain, or if they are ok with purchasing one, have them attempt to go through the Domain mapping process."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Recommend the trainees begin looking at the User management settings. Check out the different Profile settings, create teams, etc."
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Company Settings:** Configure primary contact, currency locale, and rebranding options",
+        "**Domain Mapping:** Customize portal name and set up multi-brand help centers with common or unique user bases",
+        "**Business Hours:** Critical for automation behavior - affects SLAs, Round Robin, workflows, and escalations",
+        "**Holiday Lists:** Define non-working days that are excluded from business hours calculations",
+        "**Products:** Organize support operations by associating products with departments and tickets",
+        "**Portal Name Changes:** Only affect the portal name, not support email address domains"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Configure company settings including primary contact and currency locale",
+        "Customize portal branding and appearance",
+        "Understand domain mapping and portal name configuration",
+        "Explain the difference between common and unique user bases in multi-brand help centers",
+        "Create and configure business hours for your organization",
+        "Create holiday lists and understand their impact on business hours",
+        "Explain how business hours affect SLAs, Round Robin, workflows, and escalations",
+        "Create products and associate them with departments",
+        "Understand the relationship between organization settings and automation behavior",
+        "Set up domain mapping for a custom domain (optional)"
+      ]
+    }
+  ]
+}

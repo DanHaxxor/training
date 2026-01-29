@@ -1,0 +1,669 @@
+{
+  "title": "Desk Analytics",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "Organizing and presenting data is always an important feature within any application, and Desk is no exception. Using the Analytics module, we can create reports and components to help represent the data in a way useful for a team. This can be anything from getting a report that shows a trend in the amount of requests related to a specific subject, to tracking the amount of replies an agent has sent out for the day. Essentially, Analytics gives a team the tools and data to help them make accurate business decisions."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase and demonstrate the creation and use of Reports and Components within the Analytics module",
+        "Understand the differences between static and custom reports",
+        "Learn when to use different report types (Summary, Tabular, Matrix)",
+        "Create dashboards to visualize support metrics"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Reports"
+    },
+    {
+      "type": "paragraph",
+      "content": "Reports are the foundation of analytics in Zoho Desk. They allow you to extract, organize, and analyze data from your support operations to gain insights and make informed decisions."
+    },
+    {
+      "type": "subheading",
+      "content": "Accessing Reports"
+    },
+    {
+      "type": "paragraph",
+      "content": "Navigate to the **Analytics** tab in the main navigation to access the reporting interface. Here you'll find pre-built reports and the ability to create custom reports."
+    },
+    {
+      "type": "subheading",
+      "content": "Static Reports"
+    },
+    {
+      "type": "paragraph",
+      "content": "Static reports are pre-configured reports provided by Zoho Desk that cover common support metrics and use cases. These reports are ready to use out of the box and require no configuration."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Common Static Reports:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Tickets by Status:** Shows ticket distribution across different statuses",
+        "**Tickets by Priority:** Breakdown of tickets by priority levels",
+        "**Agent Performance:** Metrics on agent activity, response times, and resolution rates",
+        "**SLA Compliance:** Tracks adherence to service level agreements",
+        "**Customer Satisfaction:** CSAT scores and trends over time",
+        "**Channel Performance:** Ticket volume by channel (email, chat, phone, etc.)",
+        "**Time-based Metrics:** Response time, resolution time, and first contact resolution"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Static reports are perfect for quick insights and standard metrics. Start with static reports to understand available data before building custom reports."
+    },
+    {
+      "type": "subheading",
+      "content": "Custom Reports"
+    },
+    {
+      "type": "paragraph",
+      "content": "Custom reports allow you to create tailored reports that match your specific business needs. You control which data is included, how it's grouped, what filters are applied, and how it's visualized."
+    },
+    {
+      "type": "paragraph",
+      "content": "**When to Use Custom Reports:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Static reports don't provide the exact metrics you need",
+        "You need to analyze data from a unique perspective or combination of fields",
+        "You want to track custom fields or specific business processes",
+        "You need to filter data in ways not available in static reports",
+        "You want to create department-specific or role-specific reports"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Custom Report Types"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk offers three types of custom reports, each suited for different analysis needs. Understanding when to use each type is crucial for effective reporting."
+    },
+    {
+      "type": "subheading",
+      "content": "Summary Report"
+    },
+    {
+      "type": "paragraph",
+      "content": "Summary reports group data and provide aggregate calculations (count, sum, average, etc.) for each group. They're ideal for high-level overviews and trend analysis."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Features:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Group data by one or more fields (e.g., by Department, by Status, by Agent)",
+        "Calculate aggregates like Count, Sum, Average, Min, Max",
+        "Show subtotals for each group",
+        "Display data in collapsed format for easy scanning",
+        "Best for answering \"how many\" or \"how much\" questions"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** Create a summary report showing ticket count by Status, grouped by Agent. This quickly shows each agent's workload distribution across Open, Pending, and Closed tickets."
+    },
+    {
+      "type": "paragraph",
+      "content": "**When to Use Summary Reports:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "You need to see totals or averages for groups of records",
+        "You want to compare metrics across different categories",
+        "You're creating charts or visualizations (summary reports work best with charts)",
+        "You don't need to see individual record details",
+        "You want a high-level dashboard view"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Tabular Report"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tabular reports display data in a simple table format, showing individual records with selected columns. Think of them as customizable list views with more flexibility."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Features:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Show individual records as rows",
+        "Select specific columns to display",
+        "Apply filters to narrow down results",
+        "Sort by any column",
+        "Export to CSV or Excel for further analysis",
+        "Best for detailed, record-level analysis"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** Create a tabular report listing all High Priority tickets with columns for Ticket Number, Subject, Agent, Status, and Created Date. This provides a detailed view for investigation or follow-up."
+    },
+    {
+      "type": "paragraph",
+      "content": "**When to Use Tabular Reports:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "You need to see individual record details",
+        "You want to export a list of records for external processing",
+        "You're investigating specific tickets or patterns",
+        "You need to review detailed information for auditing or compliance",
+        "You want to create a filtered list for manual review"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Matrix Report"
+    },
+    {
+      "type": "paragraph",
+      "content": "Matrix reports provide a grid view with data grouped by both rows and columns, creating a cross-tabulation. They're powerful for comparing multiple dimensions simultaneously."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Features:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Group data by rows (e.g., Agent) and columns (e.g., Status)",
+        "See intersections of two groupings at once",
+        "Calculate aggregates for each cell, row, and column",
+        "Identify patterns across multiple dimensions",
+        "Best for complex comparative analysis"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** Create a matrix report with Agents as rows and Status as columns, showing ticket count for each combination. This reveals at a glance which agents have how many Open, Pending, and Closed tickets."
+    },
+    {
+      "type": "paragraph",
+      "content": "**When to Use Matrix Reports:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "You need to analyze data across two dimensions simultaneously",
+        "You want to compare metrics in a grid format",
+        "You're looking for patterns or anomalies in cross-categorized data",
+        "You need a compact view of complex relationships",
+        "You want to create heat map visualizations"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Choosing the Right Report Type:**\n\n**Tabular:** Need record details? Use Tabular.\n\n**Summary:** Need grouped totals for charts? Use Summary.\n\n**Matrix:** Need to compare two dimensions? Use Matrix."
+    },
+    {
+      "type": "heading",
+      "content": "Creating Custom Reports"
+    },
+    {
+      "type": "paragraph",
+      "content": "Follow these steps to create a custom report in Zoho Desk:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Analytics > Reports**",
+        "Click **Create Report** or **New Report**",
+        "Select the module to report on (Tickets, Contacts, Accounts, etc.)",
+        "Choose the report type (Summary, Tabular, or Matrix)",
+        "Select the columns/fields to include in your report",
+        "Configure grouping (for Summary and Matrix reports)",
+        "Set filters to narrow down the data (e.g., Department = Technical Support, Created Time = Last Month)",
+        "Configure sorting and ordering",
+        "Preview the report to verify data",
+        "Save the report with a descriptive name",
+        "Share with specific users, teams, or make it public"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Report Filters"
+    },
+    {
+      "type": "paragraph",
+      "content": "Filters control which records appear in your report. Use filters to focus on specific subsets of data:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Time-based filters:** Created Time, Modified Time, Closed Time (Today, Yesterday, This Week, This Month, Last Month, This Quarter, Custom Range)",
+        "**Status filters:** Status, Sub-status, Resolution Status",
+        "**Assignment filters:** Department, Agent, Team",
+        "**Priority filters:** Priority level",
+        "**Custom field filters:** Any custom fields you've created",
+        "**Multiple filters:** Combine filters with AND/OR logic for complex criteria"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** Use relative date filters like \"This Month\" or \"Last 30 Days\" instead of fixed dates. This ensures your report stays current automatically without manual updates."
+    },
+    {
+      "type": "subheading",
+      "content": "Global Reports"
+    },
+    {
+      "type": "paragraph",
+      "content": "Global reports provide cross-department visibility by aggregating data from all departments in your organization."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Characteristics:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Pull data from multiple departments simultaneously",
+        "Provide organization-wide metrics and trends",
+        "Useful for executives and managers overseeing multiple support teams",
+        "Can compare performance across departments",
+        "Require appropriate permissions to create and view"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Create a global report showing total ticket volume by department to understand which teams are handling the most support requests and may need additional resources."
+    },
+    {
+      "type": "subheading",
+      "content": "Scheduled Reports"
+    },
+    {
+      "type": "paragraph",
+      "content": "Scheduled reports automatically run at specified intervals and email the results to designated recipients. This ensures stakeholders receive regular updates without manual report generation."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Scheduling Options:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Frequency:** Daily, Weekly, Monthly, or Custom intervals",
+        "**Time:** Choose specific time of day for report execution",
+        "**Recipients:** Send to specific users, teams, or external email addresses",
+        "**Format:** Choose between PDF, Excel, or CSV formats",
+        "**Conditions:** Only send if certain conditions are met (e.g., if SLA breaches > 0)"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** Schedule a weekly summary report of all High Priority tickets to be sent to the support manager every Monday morning at 8 AM, ensuring they start the week with current information."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Setting Up Scheduled Reports:**"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create or open an existing report",
+        "Click the **Schedule** button or option",
+        "Choose frequency (Daily, Weekly, Monthly)",
+        "Select the day(s) and time for report execution",
+        "Add email recipients (users or external addresses)",
+        "Select the export format (PDF, Excel, CSV)",
+        "Configure optional conditions for sending",
+        "Save the schedule"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Chart Generation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Charts transform report data into visual representations, making trends and patterns easier to identify and understand. Most report types (especially Summary reports) can be visualized as charts."
+    },
+    {
+      "type": "subheading",
+      "content": "Available Chart Types"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Column Chart:** Compare values across categories (good for showing ticket counts by status)",
+        "**Bar Chart:** Horizontal version of column chart (good when category names are long)",
+        "**Line Chart:** Show trends over time (perfect for tracking ticket volume by week or month)",
+        "**Pie Chart:** Show proportions and percentages (useful for showing ticket distribution by department)",
+        "**Donut Chart:** Similar to pie chart with a hole in the center (modern alternative to pie)",
+        "**Area Chart:** Similar to line chart but with filled area below the line",
+        "**Funnel Chart:** Show progressive reduction through stages (good for showing ticket lifecycle)",
+        "**Table Chart:** Display data in table format with visual enhancements"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Best Practice:** Choose chart types based on your data:\n\n- **Comparisons:** Column/Bar charts\n- **Trends over time:** Line/Area charts\n- **Proportions:** Pie/Donut charts\n- **Progressive stages:** Funnel charts"
+    },
+    {
+      "type": "subheading",
+      "content": "Creating Charts from Reports"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create or open a Summary or Matrix report (Tabular reports have limited chart options)",
+        "Click the **Chart** button or icon",
+        "Select the chart type that best represents your data",
+        "Configure chart settings: X-axis (categories), Y-axis (values), Legend, Colors",
+        "Customize chart appearance (title, labels, colors)",
+        "Save the chart",
+        "Add the chart to a dashboard (covered next)"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Dashboards"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dashboards are customizable pages that display multiple reports, charts, and components together, providing a comprehensive view of your support operations at a glance."
+    },
+    {
+      "type": "subheading",
+      "content": "What Are Dashboards?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dashboards consolidate multiple analytics components into a single, easy-to-read interface. They're designed for quick insights and monitoring of key metrics."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Multiple Components:** Combine reports, charts, KPIs, and metrics on one page",
+        "**Real-time Data:** Components update automatically with current data",
+        "**Customizable Layout:** Drag and drop components, resize, and arrange as needed",
+        "**Role-specific Views:** Create different dashboards for managers, agents, executives",
+        "**Interactive:** Click on components to drill down into detailed reports"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Use Case:** Create a \"Support Manager Dashboard\" with components showing: Total tickets by status, Average response time, SLA compliance rate, Agent performance metrics, Top 5 most common issues."
+    },
+    {
+      "type": "subheading",
+      "content": "Dashboard Components"
+    },
+    {
+      "type": "paragraph",
+      "content": "Components are individual elements that display data on a dashboard. Each component is based on a report or metric."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Component Types:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Chart Component:** Display a chart generated from a report",
+        "**KPI Component:** Show a single key metric with a large number (e.g., \"247 Open Tickets\")",
+        "**Table Component:** Display report data in table format",
+        "**Metric Component:** Show calculated values or comparisons (e.g., \"Response Time: 2.5 hours ↓15%\")",
+        "**Target Meter:** Visual gauge showing progress toward a goal"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Creating Dashboards"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Analytics > Dashboards**",
+        "Click **Create Dashboard** or **New Dashboard**",
+        "Give your dashboard a descriptive name",
+        "Click **Add Component** to start adding elements",
+        "Select the component type (Chart, KPI, Table, etc.)",
+        "Choose the report or metric the component will display",
+        "Configure the component appearance and settings",
+        "Position and resize the component on the dashboard canvas",
+        "Repeat to add multiple components",
+        "Arrange components in a logical layout (most important metrics at the top)",
+        "Save the dashboard",
+        "Share the dashboard with specific users, teams, or make it public"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Layout Tip:** Organize dashboards with a clear hierarchy:\n- **Top row:** High-level KPIs (total tickets, satisfaction score, SLA compliance)\n- **Middle rows:** Trend charts (ticket volume over time, response time trends)\n- **Bottom rows:** Detailed breakdowns (tickets by agent, tickets by category)"
+    },
+    {
+      "type": "subheading",
+      "content": "Dashboard Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Focus on Key Metrics:** Don't overcrowd dashboards - include only the most important information",
+        "**Use Consistent Time Periods:** Ensure all components use the same time range for accurate comparison",
+        "**Choose Appropriate Visualizations:** Match chart types to data (trends = line charts, comparisons = bar charts)",
+        "**Update Regularly:** Review and refine dashboards based on changing business needs",
+        "**Create Role-specific Dashboards:** Executives need different metrics than agents or team leads",
+        "**Use Color Strategically:** Green for positive metrics, red for issues needing attention",
+        "**Include Context:** Add titles and descriptions so viewers understand what they're seeing",
+        "**Make It Interactive:** Enable drill-down functionality so users can explore details"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Analytics Best Practices"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Start with Questions:** Define what you want to learn before building reports",
+        "**Use Consistent Metrics:** Standardize how you measure performance across teams",
+        "**Regular Review Cycles:** Schedule weekly or monthly report reviews with your team",
+        "**Validate Data:** Periodically check report accuracy against actual records",
+        "**Document Reports:** Add descriptions explaining what each report shows and how to interpret it",
+        "**Archive Unused Reports:** Keep your reports library organized by removing obsolete reports",
+        "**Train Your Team:** Ensure agents and managers know how to read and interpret reports",
+        "**Act on Insights:** Analytics are only valuable if you use them to drive improvements"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Complete the following analytics exercises to gain hands-on experience:"
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 1: Create a Custom Summary Report"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Analytics > Reports**",
+        "Click **Create Report** and select the Tickets module",
+        "Choose **Summary Report** as the report type",
+        "Configure the report to show: How many tickets you have created under each status (Open, Closed, Pending, etc.), Grouped by the agent assigned to them (Ticket Owner)",
+        "Include columns that you feel might be useful for this analysis (Examples: Ticket Number, Subject, Priority, Department, Created Time, Closed Time, Response Time)",
+        "Apply filters if desired (e.g., Created Time = Last 30 Days, Department = Your Test Department)",
+        "Add grouping: Primary grouping by Ticket Owner (Agent), Secondary grouping by Status",
+        "Configure aggregates to show ticket count for each group",
+        "Preview the report to verify data appears correctly",
+        "Experiment with different column selections to see what provides the most insight",
+        "Save the report with a descriptive name (e.g., \"Tickets by Agent and Status\")"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 2: Create a Chart and Dashboard"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Open the report you created in Activity 1",
+        "Click the **Chart** button to generate a visual representation",
+        "Try different chart types: Column chart showing ticket counts by agent, Stacked column chart showing status breakdown per agent, Bar chart if agent names are long",
+        "Select the chart type that best represents your data",
+        "Customize the chart appearance (colors, title, labels)",
+        "Save the chart",
+        "Navigate to **Analytics > Dashboards**",
+        "Click **Create Dashboard** and give it a name (e.g., \"My Test Dashboard\" or \"Agent Performance Dashboard\")",
+        "Add the chart you just created as a component on the dashboard",
+        "Add at least 2 more components: A KPI component showing total ticket count, A table component showing the detailed report data, Or another chart from a different report",
+        "Arrange the components in a logical layout",
+        "Resize components for optimal viewing",
+        "Save the dashboard",
+        "Share the dashboard with yourself or make it private for testing"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Reflection Questions:** After creating your report and dashboard, consider:\n- What insights does this data provide about agent workload?\n- Are tickets distributed evenly across agents?\n- Which status has the most tickets?\n- How could you use this information to improve support operations?"
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** Check out the options available under **Data Administration**. Attempt to import some records into Desk using test data. You can use ChatGPT to generate fake test records in CSV format, then import them to see how bulk data operations work."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity 3: Create a Scheduled Report (Optional)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Open one of your existing reports",
+        "Click the **Schedule** option",
+        "Set up a schedule: Frequency: Weekly (every Monday), Time: 8:00 AM, Recipients: Your email address",
+        "Choose export format (Excel or PDF)",
+        "Save the schedule",
+        "Wait for the scheduled time or test the schedule by changing it to execute soon",
+        "Verify you receive the report via email at the scheduled time"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Static Reports:** Pre-configured reports for common metrics, ready to use out of the box",
+        "**Custom Reports:** Tailored reports matching specific business needs and analysis requirements",
+        "**Summary Reports:** Group data with aggregates, best for high-level overviews and charts",
+        "**Tabular Reports:** Show individual records in table format, best for detailed analysis",
+        "**Matrix Reports:** Cross-tabulation grid view, best for comparing two dimensions simultaneously",
+        "**Report Filters:** Time-based, status, assignment, priority, custom fields - use AND/OR logic",
+        "**Global Reports:** Cross-department visibility with organization-wide metrics",
+        "**Scheduled Reports:** Automated report execution and email delivery at specified intervals",
+        "**Chart Types:** Column, Bar, Line, Pie, Donut, Area, Funnel, Table - choose based on data",
+        "**Dashboards:** Consolidate multiple reports, charts, and KPIs into single customizable page",
+        "**Components:** Chart, KPI, Table, Metric, Target Meter - individual dashboard elements",
+        "**Best Practices:** Start with questions, use consistent metrics, regular reviews, act on insights"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain the purpose and value of analytics in support operations",
+        "Distinguish between static and custom reports",
+        "Identify when to use Summary, Tabular, and Matrix report types",
+        "Create a Summary report with grouping and aggregates",
+        "Create a Tabular report showing individual record details",
+        "Create a Matrix report for cross-dimensional analysis",
+        "Apply filters to reports to focus on specific data subsets",
+        "Use relative date filters for automatically updating reports",
+        "Understand the purpose and use of global reports",
+        "Schedule reports for automated execution and email delivery",
+        "Generate charts from report data",
+        "Choose appropriate chart types for different data visualizations",
+        "Create dashboards to consolidate multiple analytics components",
+        "Add and configure components on dashboards (Chart, KPI, Table)",
+        "Arrange dashboard layouts for optimal information hierarchy",
+        "Share reports and dashboards with appropriate users or teams",
+        "Apply analytics best practices for effective data-driven decision making",
+        "Export reports in various formats (CSV, Excel, PDF)",
+        "Interpret report data to identify trends, patterns, and areas for improvement",
+        "Use analytics to monitor SLA compliance, agent performance, and customer satisfaction"
+      ]
+    }
+  ]
+}

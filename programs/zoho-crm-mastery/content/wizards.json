@@ -1,0 +1,402 @@
+{
+  "title": "CRM Wizards",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 05 Jan, 10:13 AM"
+    },
+    {
+      "type": "heading",
+      "content": "Wizards"
+    },
+    {
+      "type": "paragraph",
+      "content": "This lesson introduces Wizards as a tool for simplifying record creation."
+    },
+    {
+      "type": "paragraph",
+      "content": "The goal is not to cover every advanced capability of Wizards, but to show:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Why Wizards exist",
+        "When they are useful",
+        "How they differ from the standard record creation screen"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This lesson uses a **Quotes Wizard** as a practical example."
+    },
+    {
+      "type": "heading",
+      "content": "What Are Wizards?"
+    },
+    {
+      "type": "paragraph",
+      "content": "By default, creating a record in the CRM means using the standard Create Record screen. Depending on the module, this screen can display a large number of fields all at once. While this works, it can be overwhelming, especially for complex modules or new users."
+    },
+    {
+      "type": "paragraph",
+      "content": "Wizards provide an alternative way to create records by:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Breaking record creation into smaller, guided steps",
+        "Showing only the fields needed at each stage",
+        "Reducing mistakes and skipped fields",
+        "Allowing actions to occur during record creation"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "In addition to fields, Wizards can include:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Custom buttons and actions",
+        "Informational text",
+        "Record lookups and searches",
+        "Automated actions like sending an email"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Lesson Demonstration Overview"
+    },
+    {
+      "type": "paragraph",
+      "content": "For this lesson, we will create a Wizard for the **Quotes module**."
+    },
+    {
+      "type": "paragraph",
+      "content": "The goal of this Wizard is to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Focus users on the key parts of a Quote",
+        "Allow users to review quoted items clearly, and see that it's possible to create Wizards that make use of subforms",
+        "Send the Quote by email at the end of the process using automations",
+        "Complete all of this without opening the full Quote record first"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Important Demo Notes for the Class"
+    },
+    {
+      "type": "paragraph",
+      "content": "This Wizard is designed to be launched from the **Deals module related list**."
+    },
+    {
+      "type": "paragraph",
+      "content": "When launched from a Deal:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The Account, Deal, and Contact fields will auto-populate",
+        "This works the same way as the standard Create screen"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Let the class know:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "If the Wizard is launched outside of a Deal, these fields must be filled in manually",
+        "Wizards respect the same field logic and dependencies as normal record creation"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Prerequisites for the Demo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Before creating the Wizard:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create a regular email template for the Quotes module",
+        "Do **not** use an Inventory email template",
+        "Wizards can only use general module email templates, not Inventory templates"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Creating the Wizard"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create a new Wizard for the Quotes module."
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain to the class:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The purpose of this Wizard is to make Quote creation simpler and more focused",
+        "The Wizard will contain three screens"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Wizard Layout (DEMO)"
+    },
+    {
+      "type": "subheading",
+      "content": "Screen 1: Quote Basics"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add the following fields:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Subject",
+        "Deal Name",
+        "Account Name",
+        "Contact Name"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This screen establishes the context of the Quote."
+    },
+    {
+      "type": "subheading",
+      "content": "Screen 2: Quoted Items"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The **Quoted Items** subform",
+        "Rename the button on this screen to: **\"Proceed to Address Information\"**"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "This screen allows users to focus only on products and pricing",
+        "No extra fields or distractions are shown"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Screen 3: Billing and Shipping"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Billing address fields",
+        "Shipping address fields"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure the button on this screen to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Save the record",
+        "Send an email notification"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Email action details:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Use the prerequisite Quotes email template",
+        "Send the email to: Contact email, Account email (if available)"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Finalizing the Wizard"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing configuration:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Save the Wizard",
+        "Ensure it is enabled for all profiles"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Then navigate to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Modules and Fields",
+        "Quotes",
+        "Layout",
+        "Layout and Type Assignment"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Assign the Wizard as the active creation method for Quotes."
+    },
+    {
+      "type": "heading",
+      "content": "Running the Demo"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Open an existing Deal",
+        "Confirm: Account and Contact are populated, The Contact or Account has a valid email address",
+        "Create a Quote using the Wizard",
+        "Walk through each screen with the class",
+        "Demonstrate: Saving the Quote as a Draft, Completing the Wizard and sending the email",
+        "Wait briefly and show the received email to the class"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Reinforce:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The record was created",
+        "The email was sent",
+        "The user never had to open the full Quote form"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Additional Wizard Features"
+    },
+    {
+      "type": "paragraph",
+      "content": "Briefly demonstrate features not used in the demo:"
+    },
+    {
+      "type": "subheading",
+      "content": "Text Components"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Can display merged field data",
+        "Useful for instructions or context during record creation"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Widgets"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Allow insertion of pre-built widgets into Wizard screens"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Queries"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Can look up records based on entered data",
+        "Can be conditional based on user input"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Explain that these features enable more advanced Wizards, which may be covered later."
+    },
+    {
+      "type": "heading",
+      "content": "Closing Thoughts"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Wizards simplify complex record creation",
+        "They guide users step-by-step",
+        "They reduce errors and missed fields",
+        "They can perform actions during record creation",
+        "They are especially useful for complex modules like Quotes"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain the purpose and benefits of Wizards in CRM",
+        "Understand when to use Wizards vs. standard record creation",
+        "Create a basic Wizard with multiple screens",
+        "Configure Wizard screens with fields and subforms",
+        "Set up automated actions (like sending emails) within Wizards",
+        "Assign Wizards as the default creation method for a module",
+        "Recognize additional Wizard features (text components, widgets, queries)",
+        "Launch Wizards from related lists with auto-populated fields"
+      ]
+    }
+  ]
+}

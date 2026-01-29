@@ -1,0 +1,264 @@
+{
+  "title": "Data Organization",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Custom Views and How to Segregate Data"
+    },
+    {
+      "type": "paragraph",
+      "content": "So let's talk about what to do with all this data you have. **Separating and organizing data in CRM is the key to success.**"
+    },
+    {
+      "type": "paragraph",
+      "content": "In addition to filters and criteria, you can save more permanent criteria as **\"Custom Views.\"** Custom Views are like filtered folders within the Module List View page."
+    },
+    {
+      "type": "subheading",
+      "content": "When to Use Custom Views"
+    },
+    {
+      "type": "paragraph",
+      "content": "A use case for a Custom View might be that you have all of your Contacts within the Contacts module. But some of them are **Vendors**, while others are your **Customers**, and some could be **employees** of your company. How do you tell them apart?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Custom Views help you organize records by creating permanent filtered views that segment your data based on specific criteria."
+    },
+    {
+      "type": "heading",
+      "content": "Live Demo: Tags and Custom Views"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your instructor will demonstrate the following concepts:"
+    },
+    {
+      "type": "subheading",
+      "content": "Demo Part 1: Using Tags"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Using **Tags** in the CRM Contacts module to tag some records as \"Vendors,\" some as \"Customers,\" and some as \"Internal\"",
+        "Creating a custom view around those tags to quickly filter by contact type",
+        "How tags provide a flexible way to categorize records without creating custom fields"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo Part 2: Complex Criteria with Multiple Filters"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your instructor will show a more complex example using the **Industry** and **Billing State** fields to demonstrate how you can narrow down records with multiple filters in a View to create sophisticated \"Criteria.\""
+    },
+    {
+      "type": "subheading",
+      "content": "Demo Part 3: Filters Within Views"
+    },
+    {
+      "type": "paragraph",
+      "content": "Using a view, your instructor will demonstrate how you can have a View, but also use filters inside this view for even more granular control:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create or use an existing view (perhaps filtering by the \"Industry\" field in \"Leads\", choosing a specific Industry like \"Real Estate\")",
+        "While sorted in this view, create a filter and filter by \"State IS (Texas)\"",
+        "Create another filter for a different state, and save this one as well",
+        "Show that within this view, you can further filter down your results by their billing states or other criteria"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**Scenario example:** I want to see \"Real Estate\" Leads in Oklahoma. This requires combining a custom view with additional filters."
+    },
+    {
+      "type": "heading",
+      "content": "Quick Project: Create Your Own View"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now it's your turn to create a custom view based on the work you did in the previous lesson."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Remember:** In the previous \"CRM Customization\" lesson, you created Leads and filled in the same value for at least one custom field across 3 Leads. You'll use that now."
+    },
+    {
+      "type": "subheading",
+      "content": "Instructions"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create a custom view in the Leads module",
+        "Configure the view to show **only Leads** who have your chosen value in the custom field you created",
+        "Save the view with a descriptive name",
+        "Test the view to ensure it displays only the expected records"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "After about 5 minutes to complete this, verify that your view is working according to the instructions. If time permits, be prepared to share examples of the layout/fields and Leads you created, and your custom view."
+    },
+    {
+      "type": "heading",
+      "content": "Test Your Lead Conversion Mapping"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Leads that you created in the \"CRM Customization\" project should not be located under the existing Lead Conversion mapping. Let's test what happens when you convert them."
+    },
+    {
+      "type": "subheading",
+      "content": "Conversion Test Activity"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Have everyone convert one of their test Leads",
+        "**What happened?** Did all your custom field data carry over?",
+        "Observe what data was preserved and what was lost during conversion"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Understanding Lead Conversion Mapping"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your instructor will now demonstrate the **Lead Conversion Mapping** and explain what it does."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Key Concept:** Any time you create a field in a layout, it will **not capture that data when converting** unless the Lead conversion mapping is mapped to a corresponding field."
+    },
+    {
+      "type": "paragraph",
+      "content": "This might result in you needing to create a corresponding field in the conversion module (like Contacts) to receive the data from your custom Lead field."
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Common Customer Pitfall:** \\\"My Lead information didn't come over when I converted! I lost it all!\\\" Conversion mapping is almost always the answer to that issue."
+    },
+    {
+      "type": "paragraph",
+      "content": "**Pro Tip:** If you ever need to find previous lead information after conversion, the **\"Converted Leads\"** view in the Leads module can provide assistance."
+    },
+    {
+      "type": "heading",
+      "content": "Filters and Criteria"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now that you have records in CRM and have them organized with your custom fields, what if you want to find specific records, or just one specific record?"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is where **filters and criteria** come in. Much like filtering a spreadsheet that a module essentially is, we can choose to show only records which have the results we want to see within specific columns according to what value is in the spreadsheet cell."
+    },
+    {
+      "type": "subheading",
+      "content": "What Are Filters?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Filters are essentially filtering a spreadsheet by a column (or columns)",
+        "They only show rows of data that have your desired result in a given column",
+        "Filters can be saved for repeated use",
+        "Different field types offer different filtering options (text, number, date, picklist, etc.)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Filters vs. Custom Views"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your instructor will demonstrate:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Creating and saving filters",
+        "The different filter options based on the type of field being used (text fields, date fields, number fields, picklists, etc.)",
+        "Using filters within Custom Views",
+        "The relationship between Views and Filters, and when to use each"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Activity: Create Custom Views for Your Test Data"
+    },
+    {
+      "type": "paragraph",
+      "content": "Practice creating custom views to organize and find your test data."
+    },
+    {
+      "type": "subheading",
+      "content": "Task 1: Find Your Test Leads"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create custom views to find your Leads from earlier, which you updated with a common value in your custom field."
+    },
+    {
+      "type": "subheading",
+      "content": "Task 2: Think Like a Business Owner"
+    },
+    {
+      "type": "paragraph",
+      "content": "Consider your test business scenario and answer:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "What other value or field could you use to find specific information as it would pertain to your test business?",
+        "What common searches would your sales team need to perform?",
+        "What views would save time for your organization?",
+        "How could you combine multiple criteria to create useful, focused views?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Create at least one additional custom view based on your business needs."
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain the difference between tags, filters, and custom views",
+        "Create custom views with single and multiple criteria",
+        "Use filters within existing custom views for more granular searches",
+        "Understand Lead Conversion Mapping and its importance",
+        "Map custom fields for lead conversion to prevent data loss",
+        "Apply filters and views to organize data for real business scenarios",
+        "Save and share filters for team use"
+      ]
+    }
+  ]
+}

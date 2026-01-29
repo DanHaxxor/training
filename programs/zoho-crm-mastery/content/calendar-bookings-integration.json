@@ -1,0 +1,196 @@
+{
+  "title": "Calendar, Bookings, and Integrations",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 17 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Calendar"
+    },
+    {
+      "type": "paragraph",
+      "content": "The CRM calendar shows events for users in a calendar view. If you have access to the Meeting module, you should see events you can see in that module here in the Calendar view."
+    },
+    {
+      "type": "paragraph",
+      "content": "By creating User or Group views, you can control which meetings are shown in the calendar for which users, allowing you an expanded or narrowed view of the organization."
+    },
+    {
+      "type": "paragraph",
+      "content": "By default, records shown in the calendar are:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Meetings",
+        "Calls",
+        "Appointments"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Exploration Self-Study"
+    },
+    {
+      "type": "paragraph",
+      "content": "**Is there any way to make Tasks show in the calendar? Why wouldn't they be shown here by default?**"
+    },
+    {
+      "type": "paragraph",
+      "content": "In the Preferences, there are a few options that make balancing your calendar easier, like integration with your Zoho calendar, online meeting preferences, reminders, default meeting duration, and integrations with other calendars, and notification settings."
+    },
+    {
+      "type": "heading",
+      "content": "Calendar Booking"
+    },
+    {
+      "type": "subheading",
+      "content": "Self-Study Activity"
+    },
+    {
+      "type": "paragraph",
+      "content": "Have the class look into the Calendar Booking system. Ask them to find it within the CRM, and set up a calendar booking successfully, and send the link to one another to create bookings in their CRM."
+    },
+    {
+      "type": "subheading",
+      "content": "Ask the Class"
+    },
+    {
+      "type": "paragraph",
+      "content": "**What is a \"Team\" booking, and how does it work?**"
+    },
+    {
+      "type": "paragraph",
+      "content": "Can book with a team, and assign in round-robin or first available."
+    },
+    {
+      "type": "paragraph",
+      "content": "**What is the purpose of the \"Questions for Participant\" section, and what can be done with this information after is has been answered?**"
+    },
+    {
+      "type": "paragraph",
+      "content": "You can set questions to be answered by the participant, and map these questions to fields in the CRM record."
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Create New Booking"
+    },
+    {
+      "type": "paragraph",
+      "content": "Your instructor will demonstrate creating a calendar booking link:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "You can find this setting within **Setup > General > Calendar Booking**",
+        "You have the option on this page to create a new calendar booking link for either yourself, or for the team",
+        "Click **\"Create Calendar Booking\"** and select to create one for you, the user, or a team booking"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Demo: Fill the Booking Details"
+    },
+    {
+      "type": "paragraph",
+      "content": "**For individual (User) bookings:**"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Select the **Calendar type** (Call or Meeting.) The type you pick is the type of meeting created in the respective CRM module",
+        "Select the **Meeting Duration** of the meeting being booked",
+        "Define the **\"Questions for Participant\"** section. Show the ability to add more questions, and show that you can map them to fields within the Meeting record",
+        "Define **Advanced Settings:**",
+        "**Availability increments** can be set for 10, 15, 30, and 60 minutes. This is the time between meetings that can be booked. For example, if a meeting is booked by someone for 30 minutes at 2:30, the next meeting available to book won't be until 4:00",
+        "**Minimum notice:** prevents meetings from being booked that are less than \"x\" hours away",
+        "Set **how far in advance** meetings can be booked. It can be on a rolling set of \"x\" days, or between a set of two dates",
+        "**Buffer** can be set to allow a set amount of time where meetings cannot be booked after another would be ending",
+        "**Reminders** can be sent to participants in a set amount of time before the meeting begins"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "**For Team Bookings:**"
+    },
+    {
+      "type": "paragraph",
+      "content": "All the above can be set just the same."
+    },
+    {
+      "type": "paragraph",
+      "content": "Additionally, the **\"Host Information\"** allows the users this meeting is assigned to to be defined. You can select a Group, specific users in the Org, or for members of a Territory."
+    },
+    {
+      "type": "heading",
+      "content": "Calendar Integrations"
+    },
+    {
+      "type": "subheading",
+      "content": "Google"
+    },
+    {
+      "type": "paragraph",
+      "content": "Can integrate with the CRM to show bookings across your Google calendar, and sync one way or two way with both calendars to share events and stay coordinated."
+    },
+    {
+      "type": "paragraph",
+      "content": "This only works with personal calendars, however. Shared calendars in Google won't show in the CRM unless THAT calendar's owner is connected to the CRM calendar, and those events are created in the CRM Meeting module (through sync)."
+    },
+    {
+      "type": "subheading",
+      "content": "Microsoft (Outlook)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Similar to the Google integration, but for Outlook."
+    },
+    {
+      "type": "subheading",
+      "content": "CALDAV"
+    },
+    {
+      "type": "paragraph",
+      "content": "Universal calendar booking system. This is what you'd use for things like your Apple calendar or other calendar booking system that doesn't have a native integration, but does support Caldav."
+    },
+    {
+      "type": "heading",
+      "content": "Activity: Integrate Your Own Calendar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Integrate your own calendar into the CRM. This can be a personal calendar or a test account calendar, like Google or Outlook."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Practice Task:** Set up at least one calendar integration and test the two-way sync functionality to ensure events are properly synchronized between CRM and your external calendar."
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain how the CRM calendar displays events from different modules",
+        "Create and configure individual and team calendar booking links",
+        "Set up questions for participants and map them to CRM fields",
+        "Configure advanced booking settings (availability increments, minimum notice, buffer times)",
+        "Integrate external calendars (Google, Outlook, or CALDAV) with Zoho CRM",
+        "Understand the difference between individual and team bookings",
+        "Apply round-robin or first-available assignment for team bookings"
+      ]
+    }
+  ]
+}

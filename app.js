@@ -9,11 +9,13 @@ class TrainingApp {
         this.currentPageIndex = 0;
         this.contentArea = document.getElementById('content-area');
         this.navMenu = document.getElementById('nav-menu');
+        this.progressIndicator = document.querySelector('.progress-indicator');
         this.currentPageSpan = document.getElementById('current-page');
         this.totalPagesSpan = document.getElementById('total-pages');
         this.programSelect = document.getElementById('program-select');
         this.libraryTitle = document.getElementById('library-title');
         this.contentContainer = document.querySelector('.content');
+        this.progress = this.loadProgress(); // Load progress tracking
 
         this.init();
     }
@@ -27,14 +29,16 @@ class TrainingApp {
             const hashState = this.getStateFromHash();
             const storedState = this.getStoredState();
 
-            const defaultProgramId = this.programs?.programs?.[0]?.id || null;
-            const programId = hashState.programId || storedState.programId || defaultProgramId;
+            const programId = hashState.programId || storedState.programId || null;
             const pageIndex = Number.isInteger(hashState.pageIndex)
                 ? hashState.pageIndex
                 : (Number.isInteger(storedState.pageIndex) ? storedState.pageIndex : 0);
 
             if (programId) {
                 await this.switchProgram(programId, pageIndex);
+            } else {
+                // Show dashboard by default
+                this.showDashboard();
             }
         } catch (error) {
             this.showError('Failed to load training content. Please refresh the page.');
@@ -56,8 +60,189 @@ class TrainingApp {
         }
     }
 
+    async showDashboard() {
+        // Clear current program state
+        this.currentProgram = null;
+        this.manifest = null;
+        this.modules = [];
+        this.programSelect.value = '';
+        this.programSelect.classList.add('placeholder');
+
+        // Update page title
+        document.title = 'Training Library';
+
+        // Clear navigation
+        this.navMenu.innerHTML = '';
+        this.progressIndicator.innerHTML = 'Dashboard';
+
+        // Show loading state
+        this.contentArea.innerHTML = '<div class="loading">Loading dashboard...</div>';
+
+        // Render dashboard (async to load progress)
+        this.contentArea.innerHTML = await this.renderDashboardContent();
+
+        // Update URL
+        history.pushState({ dashboard: true }, '', '#');
+        this.storeState(null, null);
+
+        // Setup card click listeners
+        this.setupDashboardListeners();
+    }
+
+    async renderDashboardContent() {
+        let html = `
+            <div class="dashboard">
+                <h1>Welcome to ${this.programs.title}</h1>
+                <p class="dashboard-subtitle">Select a training program to begin your learning journey</p>
+        `;
+
+        // Group programs by category
+        const categories = {};
+        this.programs.programs.forEach(program => {
+            const category = program.category || 'Other';
+            if (!categories[category]) {
+                categories[category] = [];
+            }
+            categories[category].push(program);
+        });
+
+        // Load progress for all programs
+        const progressPromises = this.programs.programs.map(program =>
+            this.getProgramProgressWithManifest(program.id)
+        );
+        const progressResults = await Promise.all(progressPromises);
+        const progressMap = {};
+        this.programs.programs.forEach((program, index) => {
+            progressMap[program.id] = progressResults[index];
+        });
+
+        // Render each category
+        Object.keys(categories).sort().forEach(categoryName => {
+            html += `
+                <div class="dashboard-category">
+                    <h2 class="category-title">${categoryName}</h2>
+                    <div class="program-grid">
+            `;
+
+            categories[categoryName].forEach(program => {
+                const icon = program.icon || '📚';
+                const prerequisites = program.prerequisites && program.prerequisites.length > 0
+                    ? `<div class="program-prerequisites">Prerequisites: ${program.prerequisites.join(', ')}</div>`
+                    : '';
+
+                const progress = progressMap[program.id];
+                const hasProgress = progress.completed > 0;
+                const isComplete = progress.completed === progress.total && progress.total > 0;
+
+                let progressBar = '';
+                let actionButton = '';
+
+                if (progress.total > 0) {
+                    progressBar = `
+                        <div class="program-progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" style="width: ${progress.percentage}%"></div>
+                            </div>
+                            <div class="progress-text">${progress.completed}/${progress.total} modules ${isComplete ? '✓' : ''}</div>
+                        </div>
+                    `;
+
+                    if (isComplete) {
+                        actionButton = `<button class="program-action-btn completed-btn" data-program-id="${program.id}" data-action="restart">Review</button>`;
+                    } else if (hasProgress) {
+                        actionButton = `<button class="program-action-btn resume-btn" data-program-id="${program.id}" data-action="resume">Resume</button>`;
+                    } else {
+                        actionButton = `<button class="program-action-btn start-btn" data-program-id="${program.id}" data-action="start">Start</button>`;
+                    }
+                } else {
+                    actionButton = `<button class="program-action-btn start-btn" data-program-id="${program.id}" data-action="start">Start</button>`;
+                }
+
+                html += `
+                    <div class="program-card ${isComplete ? 'program-complete' : ''}" data-program-id="${program.id}">
+                        <div class="program-icon">${icon}</div>
+                        <h3 class="program-title">${program.title}</h3>
+                        <p class="program-description">${program.description}</p>
+                        <div class="program-meta">
+                            <span class="program-difficulty ${program.difficulty.toLowerCase()}">${program.difficulty}</span>
+                            <span class="program-duration">${program.duration}</span>
+                        </div>
+                        ${progressBar}
+                        ${actionButton}
+                        ${prerequisites}
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                </div>
+            `;
+        });
+
+        html += '</div>';
+
+        // Dev tools - Reset progress button
+        html += `
+            <div class="dev-tools">
+                <button class="reset-progress-btn" onclick="window.trainingApp.resetAllProgress()">
+                    🔄 Reset All Progress (Dev)
+                </button>
+            </div>
+        `;
+
+        return html;
+    }
+
+    setupDashboardListeners() {
+        // Handle action button clicks (start/resume/review)
+        const actionButtons = this.contentArea.querySelectorAll('.program-action-btn');
+        actionButtons.forEach(button => {
+            button.addEventListener('click', async (e) => {
+                e.stopPropagation(); // Prevent card click
+                const programId = button.dataset.programId;
+                const action = button.dataset.action;
+
+                if (action === 'resume') {
+                    // Find next incomplete module
+                    const program = this.programs.programs.find(p => p.id === programId);
+                    if (program) {
+                        await this.loadManifest(program.manifest);
+                        const nextIndex = this.getNextIncompleteModule(programId);
+                        await this.switchProgram(programId, nextIndex);
+                    }
+                } else {
+                    // Start from beginning (or restart)
+                    await this.switchProgram(programId, 0);
+                }
+            });
+        });
+
+        // Handle card clicks (default to resume or start)
+        const programCards = this.contentArea.querySelectorAll('.program-card');
+        programCards.forEach(card => {
+            card.addEventListener('click', async () => {
+                const programId = card.dataset.programId;
+                const program = this.programs.programs.find(p => p.id === programId);
+                if (program) {
+                    await this.loadManifest(program.manifest);
+                    const nextIndex = this.getNextIncompleteModule(programId);
+                    await this.switchProgram(programId, nextIndex);
+                }
+            });
+        });
+    }
+
     renderProgramSelector() {
         this.programSelect.innerHTML = '';
+
+        // Add placeholder option
+        const placeholderOption = document.createElement('option');
+        placeholderOption.value = '';
+        placeholderOption.textContent = 'Select a program';
+        placeholderOption.disabled = true;
+        placeholderOption.selected = true;
+        this.programSelect.appendChild(placeholderOption);
 
         // Group programs by category
         const categories = {};
@@ -91,12 +276,14 @@ class TrainingApp {
 
         this.currentProgram = program;
         this.programSelect.value = programId;
+        this.programSelect.classList.remove('placeholder');
 
         // Update page title
         document.title = `${program.title} - Training`;
 
-        // Load program manifest
+        // Always load the manifest for the selected program
         await this.loadManifest(program.manifest);
+
         this.renderNavigation();
         const safePageIndex = Math.min(
             Math.max(pageIndex, 0),
@@ -114,6 +301,12 @@ class TrainingApp {
             this.manifest = await response.json();
             // Sort modules by order
             this.modules = this.manifest.modules.sort((a, b) => a.order - b.order);
+
+            // Restore progress indicator structure if needed (e.g., coming from dashboard)
+            this.progressIndicator.innerHTML = '<span id="current-page">1</span> / <span id="total-pages">1</span>';
+            this.currentPageSpan = document.getElementById('current-page');
+            this.totalPagesSpan = document.getElementById('total-pages');
+
             this.totalPagesSpan.textContent = this.modules.length;
         } catch (error) {
             console.error('Error loading manifest:', error);
@@ -155,8 +348,14 @@ class TrainingApp {
         this.modules.forEach((module, index) => {
             const navItem = document.createElement('div');
             navItem.className = 'nav-item';
+            const isComplete = this.isModuleComplete(this.currentProgram.id, module.id);
+
+            if (isComplete) {
+                navItem.classList.add('completed');
+            }
+
             navItem.innerHTML = `
-                <span class="nav-item-number">${index + 1}</span>
+                <span class="nav-item-number">${isComplete ? '✓' : index + 1}</span>
                 <span class="nav-item-title">${module.title}</span>
             `;
             navItem.addEventListener('click', () => this.loadPage(index));
@@ -165,9 +364,20 @@ class TrainingApp {
     }
 
     setupEventListeners() {
+        // Dashboard button
+        const dashboardBtn = document.getElementById('dashboard-btn');
+        dashboardBtn.addEventListener('click', () => {
+            this.showDashboard();
+        });
+
         // Program selector
         this.programSelect.addEventListener('change', (e) => {
-            this.switchProgram(e.target.value);
+            if (e.target.value) {
+                this.programSelect.classList.remove('placeholder');
+                this.switchProgram(e.target.value);
+            } else {
+                this.programSelect.classList.add('placeholder');
+            }
         });
 
         // Keyboard navigation
@@ -305,13 +515,12 @@ class TrainingApp {
     renderInlineNavigation() {
         const hasPrevious = this.currentPageIndex > 0;
         const hasNext = this.currentPageIndex < this.modules.length - 1;
-
-        if (!hasPrevious && !hasNext) {
-            return ''; // No navigation needed if single page
-        }
+        const currentModule = this.modules[this.currentPageIndex];
+        const isComplete = this.isModuleComplete(this.currentProgram.id, currentModule.id);
 
         let html = '<div class="inline-nav">';
 
+        // Previous button
         if (hasPrevious) {
             html += `
                 <button class="inline-nav-btn prev-btn" onclick="window.trainingApp.navigatePrevious()">
@@ -322,16 +531,68 @@ class TrainingApp {
             html += '<div></div>'; // Empty div for spacing
         }
 
+        // Mark complete button (center)
+        if (isComplete) {
+            html += `
+                <button class="inline-nav-btn mark-incomplete-btn" onclick="window.trainingApp.toggleModuleComplete()">
+                    ✗ Mark Incomplete
+                </button>
+            `;
+        } else {
+            html += `
+                <button class="inline-nav-btn mark-complete-btn" onclick="window.trainingApp.toggleModuleComplete()">
+                    ✓ Mark Complete
+                </button>
+            `;
+        }
+
+        // Next button
         if (hasNext) {
             html += `
                 <button class="inline-nav-btn next-btn" onclick="window.trainingApp.navigateNext()">
                     Next <span>→</span>
                 </button>
             `;
+        } else {
+            html += '<div></div>'; // Empty div for spacing
         }
 
         html += '</div>';
         return html;
+    }
+
+    toggleModuleComplete() {
+        const currentModule = this.modules[this.currentPageIndex];
+        if (!currentModule || !this.currentProgram) return;
+
+        const isCurrentlyComplete = this.isModuleComplete(this.currentProgram.id, currentModule.id);
+
+        if (isCurrentlyComplete) {
+            // Mark as incomplete
+            if (this.progress[this.currentProgram.id]) {
+                delete this.progress[this.currentProgram.id][currentModule.id];
+                this.saveProgress();
+            }
+            // Refresh the page content to update button
+            this.loadPage(this.currentPageIndex);
+            // Rebuild navigation to show/hide checkmark
+            this.renderNavigation();
+        } else {
+            // Mark as complete
+            this.markModuleComplete(this.currentProgram.id, currentModule.id);
+            this.renderNavigation();
+
+            // Check if this is the last module
+            const isLastModule = this.currentPageIndex === this.modules.length - 1;
+
+            if (isLastModule) {
+                // Show completion celebration
+                this.showProgramCompletion();
+            } else {
+                // Auto-advance to next module
+                this.loadPage(this.currentPageIndex + 1);
+            }
+        }
     }
 
     parseMarkdown(text) {
@@ -404,6 +665,12 @@ class TrainingApp {
 
     navigateNext() {
         if (this.currentPageIndex < this.modules.length - 1) {
+            // Mark current module as complete when moving forward
+            const currentModule = this.modules[this.currentPageIndex];
+            if (this.currentProgram && currentModule) {
+                this.markModuleComplete(this.currentProgram.id, currentModule.id);
+                this.renderNavigation(); // Rebuild navigation to show checkmark
+            }
             this.loadPage(this.currentPageIndex + 1);
         }
     }
@@ -415,6 +682,63 @@ class TrainingApp {
                 <p>${message}</p>
             </div>
         `;
+    }
+
+    showProgramCompletion() {
+        // Trigger confetti animation
+        const duration = 3000;
+        const end = Date.now() + duration;
+
+        const colors = ['#2563eb', '#16a34a', '#f59e0b', '#dc2626', '#8b5cf6'];
+
+        (function frame() {
+            confetti({
+                particleCount: 3,
+                angle: 60,
+                spread: 55,
+                origin: { x: 0 },
+                colors: colors
+            });
+            confetti({
+                particleCount: 3,
+                angle: 120,
+                spread: 55,
+                origin: { x: 1 },
+                colors: colors
+            });
+
+            if (Date.now() < end) {
+                requestAnimationFrame(frame);
+            }
+        }());
+
+        // Show completion message
+        this.contentArea.innerHTML = `
+            <div class="completion-screen">
+                <div class="completion-content">
+                    <div class="completion-icon">🎉</div>
+                    <h1>Congratulations!</h1>
+                    <p class="completion-message">You've completed <strong>${this.currentProgram.title}</strong>!</p>
+                    <p class="completion-stats">All ${this.modules.length} modules completed</p>
+                    <div class="completion-actions">
+                        <button class="completion-btn primary" onclick="window.trainingApp.showDashboard()">
+                            Back to Dashboard
+                        </button>
+                        <button class="completion-btn secondary" onclick="window.trainingApp.loadPage(0)">
+                            Review Program
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Update progress indicator
+        this.currentPageSpan.textContent = this.modules.length;
+
+        // Scroll to top
+        if (this.contentContainer) {
+            this.contentContainer.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     }
 
     getStateFromHash() {
@@ -476,6 +800,96 @@ class TrainingApp {
             // Ignore storage failures (private mode, etc.)
         }
     }
+
+    // Progress tracking methods
+    loadProgress() {
+        try {
+            const raw = localStorage.getItem('trainingProgress');
+            if (!raw) {
+                return {};
+            }
+            return JSON.parse(raw);
+        } catch (error) {
+            return {};
+        }
+    }
+
+    saveProgress() {
+        try {
+            localStorage.setItem('trainingProgress', JSON.stringify(this.progress));
+        } catch (error) {
+            // Ignore storage failures
+        }
+    }
+
+    markModuleComplete(programId, moduleId) {
+        if (!this.progress[programId]) {
+            this.progress[programId] = {};
+        }
+        this.progress[programId][moduleId] = {
+            completed: true,
+            lastVisited: Date.now()
+        };
+        this.saveProgress();
+    }
+
+    isModuleComplete(programId, moduleId) {
+        return this.progress[programId]?.[moduleId]?.completed || false;
+    }
+
+    getProgramProgress(programId) {
+        const program = this.programs.programs.find(p => p.id === programId);
+        if (!program) return { completed: 0, total: 0, percentage: 0 };
+
+        // We need to load the manifest to know how many modules
+        // For now, we'll calculate based on what we have in progress
+        const programProgress = this.progress[programId] || {};
+        const completedCount = Object.values(programProgress).filter(m => m.completed).length;
+
+        return { completed: completedCount, total: 0, percentage: 0 };
+    }
+
+    async getProgramProgressWithManifest(programId) {
+        const program = this.programs.programs.find(p => p.id === programId);
+        if (!program) return { completed: 0, total: 0, percentage: 0 };
+
+        try {
+            const response = await fetch(program.manifest);
+            if (!response.ok) throw new Error('Failed to fetch manifest');
+            const manifest = await response.json();
+            const totalModules = manifest.modules.length;
+
+            const programProgress = this.progress[programId] || {};
+            const completedCount = Object.values(programProgress).filter(m => m.completed).length;
+            const percentage = totalModules > 0 ? Math.round((completedCount / totalModules) * 100) : 0;
+
+            return { completed: completedCount, total: totalModules, percentage };
+        } catch (error) {
+            return { completed: 0, total: 0, percentage: 0 };
+        }
+    }
+
+    getNextIncompleteModule(programId) {
+        if (!this.modules || this.modules.length === 0) return 0;
+
+        for (let i = 0; i < this.modules.length; i++) {
+            if (!this.isModuleComplete(programId, this.modules[i].id)) {
+                return i;
+            }
+        }
+
+        // All complete, return first module
+        return 0;
+    }
+
+    // Dev tool - Reset all progress
+    resetAllProgress() {
+        if (confirm('Reset all progress? This will clear all completion tracking.')) {
+            localStorage.removeItem('trainingProgress');
+            this.progress = {};
+            this.showDashboard();
+        }
+    }
 }
 
 // Initialize the app when DOM is ready
@@ -485,6 +899,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle browser back/forward buttons
     window.addEventListener('popstate', (e) => {
         if (!window.trainingApp) return;
+
+        // Check if returning to dashboard
+        if (e.state && e.state.dashboard) {
+            window.trainingApp.showDashboard();
+            return;
+        }
 
         if (e.state && typeof e.state.page === 'number' && e.state.programId) {
             if (window.trainingApp.currentProgram?.id !== e.state.programId) {
@@ -496,7 +916,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const hashState = window.trainingApp.getStateFromHash();
-        if (hashState.programId && window.trainingApp.currentProgram?.id !== hashState.programId) {
+        if (!hashState.programId) {
+            // No program in hash, show dashboard
+            window.trainingApp.showDashboard();
+        } else if (hashState.programId && window.trainingApp.currentProgram?.id !== hashState.programId) {
             window.trainingApp.switchProgram(hashState.programId, hashState.pageIndex ?? 0);
         } else if (Number.isInteger(hashState.pageIndex)) {
             window.trainingApp.loadPage(hashState.pageIndex);

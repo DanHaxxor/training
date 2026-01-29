@@ -9,7 +9,8 @@
       "category": "Marketing Fundamentals",
       "difficulty": "Beginner",
       "duration": "5 modules",
-      "prerequisites": []
+      "prerequisites": [],
+      "icon": "📱"
     },
     {
       "id": "email-sms-marketing",
@@ -19,7 +20,8 @@
       "category": "Marketing Fundamentals",
       "difficulty": "Beginner",
       "duration": "1 module",
-      "prerequisites": []
+      "prerequisites": [],
+      "icon": "📧"
     },
     {
       "id": "zoho-social",
@@ -29,7 +31,8 @@
       "category": "Marketing Tools",
       "difficulty": "Intermediate",
       "duration": "1 module",
-      "prerequisites": ["social-media-marketing"]
+      "prerequisites": ["social-media-marketing"],
+      "icon": "🌐"
     },
     {
       "id": "zoho-campaigns",
@@ -39,7 +42,8 @@
       "category": "Marketing Tools",
       "difficulty": "Intermediate",
       "duration": "1 module",
-      "prerequisites": ["email-sms-marketing"]
+      "prerequisites": ["email-sms-marketing"],
+      "icon": "📬"
     },
     {
       "id": "sales-fundamentals",
@@ -49,7 +53,8 @@
       "category": "Sales Fundamentals",
       "difficulty": "Beginner",
       "duration": "2 modules",
-      "prerequisites": []
+      "prerequisites": [],
+      "icon": "💼"
     },
     {
       "id": "bigin-crm",
@@ -59,7 +64,8 @@
       "category": "Sales Tools",
       "difficulty": "Beginner",
       "duration": "3 modules",
-      "prerequisites": ["sales-fundamentals"]
+      "prerequisites": ["sales-fundamentals"],
+      "icon": "🎯"
     },
     {
       "id": "zoho-crm-essentials",
@@ -69,7 +75,8 @@
       "category": "Sales Tools",
       "difficulty": "Intermediate",
       "duration": "6 modules",
-      "prerequisites": ["sales-fundamentals", "bigin-crm"]
+      "prerequisites": ["sales-fundamentals", "bigin-crm"],
+      "icon": "📊"
     },
     {
       "id": "zoho-crm-advanced",
@@ -79,7 +86,8 @@
       "category": "Sales Tools",
       "difficulty": "Advanced",
       "duration": "6 modules",
-      "prerequisites": ["zoho-crm-essentials"]
+      "prerequisites": ["zoho-crm-essentials"],
+      "icon": "⚙️"
     },
     {
       "id": "zoho-crm-mastery",
@@ -89,7 +97,8 @@
       "category": "Sales Tools",
       "difficulty": "Advanced",
       "duration": "6 modules",
-      "prerequisites": ["zoho-crm-advanced"]
+      "prerequisites": ["zoho-crm-advanced"],
+      "icon": "🏆"
     },
     {
       "id": "zoho-crm-practice",
@@ -99,7 +108,8 @@
       "category": "Sales Tools",
       "difficulty": "Intermediate",
       "duration": "3 activities",
-      "prerequisites": ["zoho-crm-advanced"]
+      "prerequisites": ["zoho-crm-advanced"],
+      "icon": "✍️"
     },
     {
       "id": "zoho-desk-fundamentals",
@@ -109,7 +119,8 @@
       "category": "Customer Support",
       "difficulty": "Intermediate",
       "duration": "6 modules",
-      "prerequisites": []
+      "prerequisites": [],
+      "icon": "🎧"
     },
     {
       "id": "zoho-desk-advanced",
@@ -119,7 +130,8 @@
       "category": "Customer Support",
       "difficulty": "Advanced",
       "duration": "8 modules",
-      "prerequisites": ["zoho-desk-fundamentals"]
+      "prerequisites": ["zoho-desk-fundamentals"],
+      "icon": "🚀"
     }
   ]
 }
