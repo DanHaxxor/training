@@ -17,6 +17,13 @@ class TrainingApp {
         this.contentContainer = document.querySelector('.content');
         this.progress = this.loadProgress(); // Load progress tracking
 
+        // Custom dropdown elements
+        this.customDropdownTrigger = document.getElementById('custom-dropdown-trigger');
+        this.customDropdownText = document.getElementById('custom-dropdown-text');
+        this.customDropdownMenu = document.getElementById('custom-dropdown-menu');
+        this.customDropdownList = document.getElementById('custom-dropdown-list');
+        this.customDropdownClose = document.getElementById('custom-dropdown-close');
+
         this.init();
     }
 
@@ -68,8 +75,20 @@ class TrainingApp {
         this.programSelect.value = '';
         this.programSelect.classList.add('placeholder');
 
+        // Reset custom dropdown
+        if (this.customDropdownText) {
+            this.customDropdownText.textContent = 'Select a program';
+        }
+        this.updateCustomDropdownSelection(null);
+
         // Update page title
         document.title = 'Training Library';
+
+        // Update mobile header title
+        const mobileTitle = document.getElementById('mobile-title');
+        if (mobileTitle) {
+            mobileTitle.textContent = 'Training Library';
+        }
 
         // Clear navigation
         this.navMenu.innerHTML = '';
@@ -268,6 +287,94 @@ class TrainingApp {
 
             this.programSelect.appendChild(optgroup);
         });
+
+        // Render custom dropdown for mobile
+        this.renderCustomDropdown(categories);
+    }
+
+    renderCustomDropdown(categories) {
+        if (!this.customDropdownList) return;
+
+        this.customDropdownList.innerHTML = '';
+
+        // Create custom dropdown structure
+        Object.keys(categories).sort().forEach(categoryName => {
+            // Add category header
+            const categoryHeader = document.createElement('div');
+            categoryHeader.className = 'custom-dropdown-category';
+            categoryHeader.textContent = categoryName;
+            this.customDropdownList.appendChild(categoryHeader);
+
+            // Add options for this category
+            categories[categoryName].forEach(program => {
+                const option = document.createElement('button');
+                option.type = 'button';
+                option.className = 'custom-dropdown-option';
+                option.dataset.programId = program.id;
+                option.textContent = program.title;
+
+                option.addEventListener('click', () => {
+                    this.selectCustomDropdownOption(program.id, program.title);
+                });
+
+                this.customDropdownList.appendChild(option);
+            });
+        });
+    }
+
+    selectCustomDropdownOption(programId, programTitle) {
+        // Update trigger text
+        this.customDropdownText.textContent = programTitle;
+
+        // Close the dropdown
+        this.closeCustomDropdown();
+
+        // Switch to the selected program
+        this.switchProgram(programId);
+
+        // Update selected state visually
+        this.updateCustomDropdownSelection(programId);
+    }
+
+    updateCustomDropdownSelection(programId) {
+        if (!this.customDropdownList) return;
+
+        // Remove selected class from all options
+        const allOptions = this.customDropdownList.querySelectorAll('.custom-dropdown-option');
+        allOptions.forEach(opt => opt.classList.remove('selected'));
+
+        // Add selected class to the chosen option
+        const selectedOption = this.customDropdownList.querySelector(`[data-program-id="${programId}"]`);
+        if (selectedOption) {
+            selectedOption.classList.add('selected');
+        }
+    }
+
+    openCustomDropdown() {
+        if (!this.customDropdownMenu) return;
+
+        // Close mobile menu if open
+        const sidebar = document.getElementById('sidebar');
+        if (sidebar?.classList.contains('open')) {
+            this.closeMobileMenu();
+        }
+
+        this.customDropdownMenu.classList.add('open');
+        this.customDropdownTrigger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    closeCustomDropdown() {
+        if (!this.customDropdownMenu) return;
+
+        this.customDropdownMenu.classList.remove('open');
+        this.customDropdownTrigger.setAttribute('aria-expanded', 'false');
+
+        // Only restore scroll if mobile menu is not open
+        const sidebar = document.getElementById('sidebar');
+        if (!sidebar?.classList.contains('open')) {
+            document.body.style.overflow = '';
+        }
     }
 
     async switchProgram(programId, pageIndex = 0) {
@@ -278,8 +385,20 @@ class TrainingApp {
         this.programSelect.value = programId;
         this.programSelect.classList.remove('placeholder');
 
+        // Update custom dropdown
+        if (this.customDropdownText) {
+            this.customDropdownText.textContent = program.title;
+        }
+        this.updateCustomDropdownSelection(programId);
+
         // Update page title
         document.title = `${program.title} - Training`;
+
+        // Update mobile header title
+        const mobileTitle = document.getElementById('mobile-title');
+        if (mobileTitle) {
+            mobileTitle.textContent = program.title;
+        }
 
         // Always load the manifest for the selected program
         await this.loadManifest(program.manifest);
@@ -345,6 +464,23 @@ class TrainingApp {
     renderNavigation() {
         this.navMenu.innerHTML = '';
 
+        // Create collapsible container for mobile
+        const lessonsToggle = document.createElement('button');
+        lessonsToggle.className = 'lessons-toggle';
+        lessonsToggle.innerHTML = `
+            <span class="lessons-toggle-text">Show Lessons</span>
+            <span class="lessons-toggle-icon">▼</span>
+        `;
+
+        const lessonsContainer = document.createElement('div');
+        lessonsContainer.className = 'lessons-container collapsed';
+
+        lessonsToggle.addEventListener('click', () => {
+            const isCollapsed = lessonsContainer.classList.toggle('collapsed');
+            lessonsToggle.querySelector('.lessons-toggle-text').textContent = isCollapsed ? 'Show Lessons' : 'Hide Lessons';
+            lessonsToggle.querySelector('.lessons-toggle-icon').textContent = isCollapsed ? '▼' : '▲';
+        });
+
         this.modules.forEach((module, index) => {
             const navItem = document.createElement('div');
             navItem.className = 'nav-item';
@@ -358,9 +494,15 @@ class TrainingApp {
                 <span class="nav-item-number">${isComplete ? '✓' : index + 1}</span>
                 <span class="nav-item-title">${module.title}</span>
             `;
-            navItem.addEventListener('click', () => this.loadPage(index));
-            this.navMenu.appendChild(navItem);
+            navItem.addEventListener('click', () => {
+                this.loadPage(index);
+                this.closeMobileMenu(); // Close menu after selecting item
+            });
+            lessonsContainer.appendChild(navItem);
         });
+
+        this.navMenu.appendChild(lessonsToggle);
+        this.navMenu.appendChild(lessonsContainer);
     }
 
     setupEventListeners() {
@@ -368,6 +510,7 @@ class TrainingApp {
         const dashboardBtn = document.getElementById('dashboard-btn');
         dashboardBtn.addEventListener('click', () => {
             this.showDashboard();
+            this.closeMobileMenu(); // Close menu when navigating
         });
 
         // Program selector
@@ -375,19 +518,98 @@ class TrainingApp {
             if (e.target.value) {
                 this.programSelect.classList.remove('placeholder');
                 this.switchProgram(e.target.value);
+                this.closeMobileMenu(); // Close menu when selecting program
             } else {
                 this.programSelect.classList.add('placeholder');
             }
         });
 
+        // Custom dropdown for mobile
+        if (this.customDropdownTrigger) {
+            this.customDropdownTrigger.addEventListener('click', () => {
+                this.openCustomDropdown();
+            });
+        }
+
+        if (this.customDropdownClose) {
+            this.customDropdownClose.addEventListener('click', () => {
+                this.closeCustomDropdown();
+            });
+        }
+
+        // Close custom dropdown when clicking outside
+        if (this.customDropdownMenu) {
+            this.customDropdownMenu.addEventListener('click', (e) => {
+                if (e.target === this.customDropdownMenu) {
+                    this.closeCustomDropdown();
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                this.toggleMobileMenu();
+            });
+        }
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                this.navigatePrevious();
-            } else if (e.key === 'ArrowRight') {
-                this.navigateNext();
+            // Close menus on Escape
+            if (e.key === 'Escape') {
+                // Close custom dropdown if open
+                if (this.customDropdownMenu?.classList.contains('open')) {
+                    this.closeCustomDropdown();
+                } else {
+                    this.closeMobileMenu();
+                }
+            }
+            // Navigation only when menus are closed
+            if (!sidebar?.classList.contains('open') && !this.customDropdownMenu?.classList.contains('open')) {
+                if (e.key === 'ArrowLeft') {
+                    this.navigatePrevious();
+                } else if (e.key === 'ArrowRight') {
+                    this.navigateNext();
+                }
             }
         });
+    }
+
+    toggleMobileMenu() {
+        const sidebar = document.getElementById('sidebar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+        if (sidebar && mobileMenuBtn) {
+            const isOpen = sidebar.classList.toggle('open');
+            mobileMenuBtn.classList.toggle('active', isOpen);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+
+            // Rebuild navigation when opening menu if we have a program loaded
+            if (isOpen && this.currentProgram && this.modules.length > 0) {
+                this.renderNavigation();
+                this.updateNavigation();
+            }
+        }
+    }
+
+    closeMobileMenu() {
+        const sidebar = document.getElementById('sidebar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+        if (sidebar && mobileMenuBtn) {
+            sidebar.classList.remove('open');
+            mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Clear navigation items when closing mobile menu
+            // They will be rebuilt when the menu is opened again
+            this.navMenu.innerHTML = '';
+        }
     }
 
     async loadPage(index) {
