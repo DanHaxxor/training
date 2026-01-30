@@ -5,12 +5,20 @@
   "prerequisites": [],
   "modules": [
     {
+      "id": "getting-started",
+      "title": "Admin's Guide to Getting Started",
+      "file": "content/getting-started.json",
+      "category": "Introduction",
+      "description": "What is Zoho Desk, essential functionalities, and the first 10 things to set up",
+      "order": 1
+    },
+    {
       "id": "departments",
       "title": "Desk Departments",
       "file": "content/departments.json",
       "category": "Setup",
       "description": "Organizing support teams into departments with specialized focus areas",
-      "order": 1
+      "order": 2
     },
     {
       "id": "channels",
@@ -18,7 +26,7 @@
       "file": "content/channels.json",
       "category": "Setup",
       "description": "Email, web forms, social media, chat, and phone integration for omnichannel support",
-      "order": 2
+      "order": 3
     },
     {
       "id": "knowledge-base-help-center",
@@ -26,7 +34,7 @@
       "file": "content/knowledge-base-help-center.json",
       "category": "Self-Service",
       "description": "Build self-service portals, articles, FAQs, and community forums",
-      "order": 3
+      "order": 4
     },
     {
       "id": "organization-settings",
@@ -34,7 +42,7 @@
       "file": "content/organization-settings.json",
       "category": "Configuration",
       "description": "Business hours, holidays, SLAs, and global configurations",
-      "order": 4
+      "order": 5
     },
     {
       "id": "user-agent-management",
@@ -42,7 +50,7 @@
       "file": "content/user-agent-management.json",
       "category": "Team Management",
       "description": "Adding agents, assigning roles, and managing team permissions",
-      "order": 5
+      "order": 6
     },
     {
       "id": "tickets",
@@ -50,7 +58,7 @@
       "file": "content/tickets.json",
       "category": "Core Features",
       "description": "Creating, assigning, updating, and resolving customer support tickets",
-      "order": 6
+      "order": 7
     }
   ]
 }

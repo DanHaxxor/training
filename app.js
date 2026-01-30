@@ -605,10 +605,6 @@ class TrainingApp {
             sidebar.classList.remove('open');
             mobileMenuBtn.classList.remove('active');
             document.body.style.overflow = '';
-
-            // Clear navigation items when closing mobile menu
-            // They will be rebuilt when the menu is opened again
-            this.navMenu.innerHTML = '';
         }
     }
 

@@ -38,6 +38,12 @@
       "content": "Ticket List Views"
     },
     {
+      "type": "image",
+      "src": "images/ticket-view.png",
+      "alt": "Zoho Desk Ticket View",
+      "caption": "Ticket list view in Zoho Desk"
+    },
+    {
       "type": "paragraph",
       "content": "Zoho Desk offers multiple ways to display your ticket list, each optimized for different workflows:"
     },

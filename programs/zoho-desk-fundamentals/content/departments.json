@@ -1,0 +1,244 @@
+{
+  "title": "Desk Departments",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "**Last Modified:** 11 Dec 2025"
+    },
+    {
+      "type": "heading",
+      "content": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "content": "When working within Desk, you'll find yourself working with multiple Departments within the organization. The best way to think of Departments are the various divisions within an organization. For example, a company might have their support department and a separate RMA department, with their own unique agents, mailboxes, automations and channels of communications with their customers."
+    },
+    {
+      "type": "paragraph",
+      "content": "This separation allows for teams to tailor processes that work best for that specific department's team."
+    },
+    {
+      "type": "heading",
+      "content": "Objectives"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Showcase the creation and customization of a new department",
+        "Explain how departments play into how tickets are routed within Desk",
+        "Support Email Addresses and Email Forwarding",
+        "Speak on the differences between Public and Private Departments",
+        "Toggle Show in Help Center",
+        "Explain that different channels can be applied for use by the department and how some can be associated within the Department settings"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Creating a Department"
+    },
+    {
+      "type": "paragraph",
+      "content": "Departments in Zoho Desk serve as the organizational backbone for your support operations. Each department can have its own:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Unique agents** - Assign specific team members to handle department tickets",
+        "**Dedicated mailboxes** - Separate email addresses for different support needs",
+        "**Custom automations** - Workflows tailored to department-specific processes",
+        "**Communication channels** - Email, chat, social media, and more configured per department"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Steps to Create a Department"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Navigate to **Setup > Departments**",
+        "Click **New Department**",
+        "Enter the department name and description",
+        "Configure the support email address",
+        "Set visibility options (Public or Private)",
+        "Assign agents to the department",
+        "Save your changes"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Support Email Addresses"
+    },
+    {
+      "type": "paragraph",
+      "content": "Each department can have its own support email address. When customers send emails to these addresses, tickets are automatically created and routed to the appropriate department."
+    },
+    {
+      "type": "subheading",
+      "content": "Email Forwarding"
+    },
+    {
+      "type": "paragraph",
+      "content": "If you already have existing email addresses that customers use, you can set up email forwarding to route those emails to your Zoho Desk department email addresses. This allows you to maintain your existing email addresses while leveraging Desk's ticket management capabilities."
+    },
+    {
+      "type": "heading",
+      "content": "Public vs Private Departments"
+    },
+    {
+      "type": "paragraph",
+      "content": "Understanding the difference between public and private departments is crucial for organizing your support structure:"
+    },
+    {
+      "type": "subheading",
+      "content": "Public Departments"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Visible to customers in the Help Center",
+        "Customers can submit tickets directly to these departments",
+        "Ideal for general support, sales inquiries, and customer-facing teams"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Private Departments"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Hidden from customers in the Help Center",
+        "Only accessible internally by agents",
+        "Useful for internal escalations, specialized teams, or sensitive operations"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Show in Help Center"
+    },
+    {
+      "type": "paragraph",
+      "content": "The **Show in Help Center** toggle controls whether a department appears in your customer-facing Help Center. When enabled, customers can:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "See the department listed in the Help Center",
+        "Submit tickets directly to that department",
+        "Access department-specific knowledge base articles"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** Even if a department is public, you can choose not to show it in the Help Center. This gives you granular control over customer visibility."
+    },
+    {
+      "type": "heading",
+      "content": "Department Channels"
+    },
+    {
+      "type": "paragraph",
+      "content": "Different communication channels can be configured and associated with each department. This allows customers to reach specific teams through their preferred method of communication."
+    },
+    {
+      "type": "paragraph",
+      "content": "Available channels include:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Email** - The most common channel, configured via support email addresses",
+        "**Web Forms** - Embedded forms on your website that create tickets",
+        "**Live Chat** - Real-time customer conversations",
+        "**Social Media** - Facebook, Twitter, and other social platforms",
+        "**Phone** - Telephony integration for call-based support",
+        "**Community Forums** - Customer discussion boards"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Some channels can be associated directly within the Department settings, while others are configured separately and then linked to departments."
+    },
+    {
+      "type": "heading",
+      "content": "Training Activities"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create a fictional business and set up two departments within your test account related to this business."
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Example:** Gaming PC Company \"Z Gaming PCs\" has a Customer Service and RMA team, and they would like to keep their requests separate within their departments."
+    },
+    {
+      "type": "subheading",
+      "content": "Activity Steps"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Create your fictional business concept",
+        "Navigate to **Setup > Departments**",
+        "Create two departments related to your business (e.g., Customer Service and RMA)",
+        "Configure a unique Support Email Address for each department",
+        "Send test emails to each department's email address",
+        "Verify that tickets are created and routed to the correct department",
+        "Explore the department settings and visibility options"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Step Beyond:** If time permits, start exploring some of the channels and attempt to create and associate them to your departments. This will prepare you for the next module on Support Channels."
+    },
+    {
+      "type": "heading",
+      "content": "Important Details Summary"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Departments** are organizational divisions within Desk, each with their own agents, mailboxes, automations, and channels",
+        "**Support Email Addresses** can be unique per department for automatic ticket routing",
+        "**Email Forwarding** allows existing email addresses to route to Desk",
+        "**Public Departments** are visible to customers; **Private Departments** are internal only",
+        "**Show in Help Center** controls customer visibility independently of public/private status",
+        "**Channels** can be configured per department for multi-channel support"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Create and customize a new department in Zoho Desk",
+        "Configure unique support email addresses for each department",
+        "Set up email forwarding to route existing emails to Desk",
+        "Explain the differences between public and private departments",
+        "Use the Show in Help Center toggle appropriately",
+        "Understand how different channels can be associated with departments",
+        "Route tickets to the appropriate department based on email addresses"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "title": "Admin's Guide to Getting Started",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "What is a Help Desk?"
+    },
+    {
+      "type": "image",
+      "src": "images/01helpdesk.jpeg",
+      "alt": "Help Desk Overview",
+      "caption": "A person running a helpdesk"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Help Desk is a department in an organization that is in charge of providing the support needed by customers while using the company's product or service. Customers contact the help desk when they have a question or a problem, and a product expert addresses the question and resolves the problem."
+    },
+    {
+      "type": "paragraph",
+      "content": "Help desk is managed by the product experts from the customer support department who address customers' queries or issues. Most companies give out an email address or a toll-free number to contact these experts. Nowadays, companies have opened various channels like chat, SMS, social media, webforms, and community forums to help customers reach the help desk anytime, anywhere."
+    },
+    {
+      "type": "heading",
+      "content": "Help Desk Software Components"
+    },
+    {
+      "type": "paragraph",
+      "content": "Help desk software organizes customers' requests and helps resolve them in the quickest way possible. It automates as many steps in this process as possible. Help desk software consists of three core parts:"
+    },
+    {
+      "type": "subheading",
+      "content": "Ticket Management"
+    },
+    {
+      "type": "image",
+      "src": "images/ticket-view.png",
+      "alt": "Zoho Desk Ticket View",
+      "caption": "Ticket list view in Zoho Desk"
+    },
+    {
+      "type": "paragraph",
+      "content": "The software pulls customer emails from an email address and lists them in a single place. It allows a help desk executive to easily answer and log calls from customers. It enables customer support executives to listen and respond to customer feedback on social media, such as Facebook and Twitter."
+    },
+    {
+      "type": "subheading",
+      "content": "Automation Suite"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Automation Suite allows a help desk coordinator to ensure that questions from customers are redirected to employees who can answer them satisfactorily. It enables the coordinator to monitor when a support executive hasn't responded to a ticket, when a ticket is taking too long to get resolved, or one of several other possible cases."
+    },
+    {
+      "type": "subheading",
+      "content": "Reporting and Optimization"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is the most important function of customer service. It pulls pertinent information about the critical aspects of the help desk. Managers can understand parameters such as load on the help desk team, turnaround time, and resolution rate of each executive from this data. Metrics like these give managers a quick perspective on how things are faring and let them make amends for the better."
+    },
+    {
+      "type": "heading",
+      "content": "Why Zoho Desk?"
+    },
+    {
+      "type": "paragraph",
+      "content": "A web-based help desk software like Zoho Desk can give you the ability to manage your customer support activities efficiently. In addition to the key functionalities to manage tickets, offer multiple channels for support and service, provide easy branding and customization, and essential automations like SLA and workflows, there is quite a lot more in Zoho Desk. All these put together ensures that you give a great customer support experience."
+    },
+    {
+      "type": "heading",
+      "content": "Essential Functionalities of Zoho Desk"
+    },
+    {
+      "type": "subheading",
+      "content": "Multi-Channel Customer Connection"
+    },
+    {
+      "type": "paragraph",
+      "content": "Collect customer requests via phone, email, social channels, or web form and set priority to incoming tickets. Additionally, the community forums provide your customers a platform for discussion with the ability to convert a forum post into a ticket."
+    },
+    {
+      "type": "subheading",
+      "content": "Agent Productivity Tools"
+    },
+    {
+      "type": "paragraph",
+      "content": "Improve the resolution time and customer service by creating an internal repository of solutions and articles that agents can refer to. This Help Desk Solution for your support teams will allow your support staff to provide appropriate solutions for customer tickets effectively and save valuable time otherwise spent drafting the same solutions repeatedly."
+    },
+    {
+      "type": "subheading",
+      "content": "Self-Service Help Center"
+    },
+    {
+      "type": "paragraph",
+      "content": "Help your customers proactively before they contact your support team by building a self-service customer portal. This portal can be totally customized according to your brand's needs and includes essential components: a comprehensive knowledge base, a community platform, and a portal to submit, view, and track one's own tickets."
+    },
+    {
+      "type": "subheading",
+      "content": "Task Automation"
+    },
+    {
+      "type": "paragraph",
+      "content": "Send acknowledgment emails on receiving tickets from your customers, assign tickets to agents based on various criteria, and notify customers and agents via email or SMS. Additionally, you can create SLAs to define ticket due dates and escalate them to multiple levels when they fall overdue."
+    },
+    {
+      "type": "subheading",
+      "content": "Reporting and Analytics"
+    },
+    {
+      "type": "paragraph",
+      "content": "Take stock of your help desk activities and important facts about your support center's performance using in-built reports. Measure specific aspects of your ticketing process by generating custom reports effortlessly. You can determine the average resolution time, the number of tickets closed per agent per day, the number of tickets opened, and more."
+    },
+    {
+      "type": "subheading",
+      "content": "Security and Access Control"
+    },
+    {
+      "type": "paragraph",
+      "content": "Do you receive sensitive information from your customers? Take charge by defining profiles, roles, and groups in Zoho Desk. Configure data-sharing rules and field-level security to ensure your proprietary information stays protected."
+    },
+    {
+      "type": "subheading",
+      "content": "Zoho CRM Integration"
+    },
+    {
+      "type": "paragraph",
+      "content": "Close your customer loop from sales to support by integrating with Zoho CRM, an industry-leading customer relationship management application. You can import your contacts and accounts information from Zoho CRM for contextual support service and view support tickets raised by your leads, contacts, and accounts from within Zoho CRM."
+    },
+    {
+      "type": "heading",
+      "content": "Supported Browsers"
+    },
+    {
+      "type": "paragraph",
+      "content": "Zoho Desk is a web-based help desk software that only requires an operating system that can run the latest compatible web browsers. We recommend that you keep your computer up to date with the latest browser versions. By running an older browser you'll probably be missing out on useful new Zoho Desk features that newer browsers support."
+    },
+    {
+      "type": "paragraph",
+      "content": "Supported browser versions for the agent and administrator interface:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Google Chrome:** Version 60 and above",
+        "**Mozilla Firefox:** Version 44 and above",
+        "**Microsoft Edge:** Version 12 and above",
+        "**Safari:** Version 9 and above",
+        "**Opera:** Version 45 and above"
+      ]
+    },
+    {
+      "type": "callout",
+      "calloutType": "warning",
+      "content": "**Note:** Zoho Desk withdrew support and compatibility testing for all versions of Internet Explorer (including IE 11.0). Communication between Zoho Desk and the web browser must be secured using the Transport Layer Security (TLS) 1.2 protocol. Make sure you enable third-party cookies (especially on Safari) to have a trouble-free experience."
+    },
+    {
+      "type": "heading",
+      "content": "First 10 Things to Get Started"
+    },
+    {
+      "type": "paragraph",
+      "content": "As you begin using your Zoho Desk account and start getting familiar with its features, refer to this checklist for help setting up and onboarding your team effortlessly."
+    },
+    {
+      "type": "subheading",
+      "content": "1. Rebrand Your Account"
+    },
+    {
+      "type": "paragraph",
+      "content": "Reflect your company's identity with logo, custom portal name, and domain mapping. Enable multi-branding if you need to maintain separate Help Centers for different brands or products."
+    },
+    {
+      "type": "paragraph",
+      "content": "Your portal name is a unique identifier for each Zoho Desk account. It's usually the company name entered during signup, but you can customize it. The default support email address will use the portal name. For example, if the portal name is 'zylkerdesigns', then the support email address would be **support@zylkerdesigns.zohodesk.com**. Your default Help Center URL can also be customized by mapping the organization's domain, such as **www.support.zylkerdesigns.com**."
+    },
+    {
+      "type": "subheading",
+      "content": "2. Create Departments"
+    },
+    {
+      "type": "paragraph",
+      "content": "Plan and create departments based on teams, products, or geographical locations. Every department can have its own identity with a separate set of automations, workflows, agent access, and multiple channels to collect tickets."
+    },
+    {
+      "type": "subheading",
+      "content": "3. Set Up Business Hours and Holidays"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add the organization's work hours and mark the holidays so the system knows when an agent is available to take up tickets and tasks. This helps automatically assign tickets to available agents, escalate tickets, or calculate due time."
+    },
+    {
+      "type": "subheading",
+      "content": "4. Configure the Email Channel"
+    },
+    {
+      "type": "paragraph",
+      "content": "Setting up the email channel is one of the first things you need to complete, as emails are the most widely used means of communication in business. You can set up other channels later, including community, chat, web form, and social media."
+    },
+    {
+      "type": "subheading",
+      "content": "5. Customize the Help Center"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize the Help Center according to your brand and organization's theme. Choose from available themes and start with basic customizations. You can perform advanced customizations using HTML and CSS options, and add default and custom widgets to display more information."
+    },
+    {
+      "type": "subheading",
+      "content": "6. Customize Fields and Modules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Once you make a list of the data you collect and store, add new fields, edit existing fields, mark them mandatory where required, or place them under relevant sections. When you import your data, you will have the layout ready."
+    },
+    {
+      "type": "subheading",
+      "content": "7. Define Roles and Profiles"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is essential before onboarding your agents. **Roles** define the data that one can access, while **Profiles** define the feature access for individuals. Data-sharing rules add an extra layer of security. Once set up, onboard your teams and agents with relevant roles and profiles. Group them into **Teams** for ticket assignment automations and workflow configurations."
+    },
+    {
+      "type": "subheading",
+      "content": "8. Enable Notification Rules"
+    },
+    {
+      "type": "paragraph",
+      "content": "Stay on top of all your tasks with notifications for new responses, calls, and task assignments via email or text. Your contacts can also receive notifications when comments are added, tickets are edited, or tickets are closed. Enable **Customer Happiness Ratings** to collect feedback and improve your service."
+    },
+    {
+      "type": "subheading",
+      "content": "9. Configure Basic Automations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Start with **Assignment Rules** to automate ticket assignment to agents and teams. Set up **Round Robin** if that works for your organization. Configure **Service Level Agreements (SLAs)** to define response time, resolution time, escalations, and ticket reassignment. Build **Workflow Rules** for important processes like handling customer feedback or high-priority support services."
+    },
+    {
+      "type": "subheading",
+      "content": "10. Import Your Data"
+    },
+    {
+      "type": "paragraph",
+      "content": "When your Desk account is all set up, import support tickets, contacts, customer accounts, knowledge base articles, products, calls, events, and tasks. Start supporting your customers right away!"
+    },
+    {
+      "type": "callout",
+      "calloutType": "info",
+      "content": "**Tip:** There is much more to discover in your Desk account! Based on the edition you have subscribed to, you can implement additional features as you go."
+    },
+    {
+      "type": "heading",
+      "content": "Check Your Understanding"
+    },
+    {
+      "type": "paragraph",
+      "content": "After completing this lesson, you should be able to:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Explain what a Help Desk is and its purpose",
+        "Describe the three core components of help desk software",
+        "Identify the key functionalities Zoho Desk provides",
+        "List the supported browsers for Zoho Desk",
+        "Outline the first 10 steps to get started with Zoho Desk",
+        "Explain the difference between Roles and Profiles",
+        "Understand how departments and channels work together"
+      ]
+    }
+  ]
+}
