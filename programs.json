@@ -2,6 +2,30 @@
   "title": "Training Library",
   "programs": [
     {
+      "id": "zoho-suite-overview",
+      "title": "Zoho Suite Overview",
+      "description": "Understand how Zoho apps work together - integrations, data flow, and building an effective tech stack",
+      "manifest": "programs/foundations/theory/zoho-suite-overview/manifest.json",
+      "category": "Foundations",
+      "subcategory": "Theory",
+      "difficulty": "Beginner",
+      "duration": "1 module",
+      "prerequisites": [],
+      "icon": "🧩"
+    },
+    {
+      "id": "security-basics",
+      "title": "Security Basics",
+      "description": "Essential security practices - passwords, permissions, data protection, and compliance fundamentals",
+      "manifest": "programs/foundations/theory/security-basics/manifest.json",
+      "category": "Foundations",
+      "subcategory": "Theory",
+      "difficulty": "Beginner",
+      "duration": "1 module",
+      "prerequisites": [],
+      "icon": "🔒"
+    },
+    {
       "id": "sales-fundamentals",
       "title": "Sales Fundamentals",
       "description": "Learn the foundations of sales processes, customer journey, and effective sales cycle management",
@@ -156,6 +180,18 @@
       "duration": "1 module",
       "prerequisites": ["email-sms-marketing"],
       "icon": "📬"
+    },
+    {
+      "id": "workdrive-fundamentals",
+      "title": "Zoho WorkDrive Fundamentals",
+      "description": "Learn cloud storage and collaboration essentials - file management, team folders, and sharing",
+      "manifest": "programs/workdrive/fundamentals/workdrive-fundamentals/manifest.json",
+      "category": "Workdrive",
+      "subcategory": "Fundamentals",
+      "difficulty": "Beginner",
+      "duration": "1 module",
+      "prerequisites": [],
+      "icon": "📁"
     }
   ]
 }

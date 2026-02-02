@@ -101,22 +101,6 @@ class TrainingApp {
     }
 
     async renderDashboardContent() {
-        let html = `
-            <div class="dashboard">
-                <h1>Welcome to ${this.programs.title}</h1>
-                <p class="dashboard-subtitle">Select a training program to begin your learning journey</p>
-        `;
-
-        // Group programs by category
-        const categories = {};
-        this.programs.programs.forEach(program => {
-            const category = program.category || 'Other';
-            if (!categories[category]) {
-                categories[category] = [];
-            }
-            categories[category].push(program);
-        });
-
         // Load progress for all programs
         const progressPromises = this.programs.programs.map(program =>
             this.getProgramProgressWithManifest(program.id)
@@ -127,71 +111,82 @@ class TrainingApp {
             progressMap[program.id] = progressResults[index];
         });
 
-        // Render each category
-        Object.keys(categories).sort().forEach(categoryName => {
-            html += `
-                <div class="dashboard-category">
-                    <h2 class="category-title">${categoryName}</h2>
-                    <div class="program-grid">
-            `;
+        // Calculate overall stats
+        let totalModules = 0;
+        let completedModules = 0;
+        let completedPrograms = 0;
+        let inProgressPrograms = [];
 
-            categories[categoryName].forEach(program => {
-                const icon = program.icon || '📚';
-                const prerequisites = program.prerequisites && program.prerequisites.length > 0
-                    ? `<div class="program-prerequisites">Prerequisites: ${program.prerequisites.join(', ')}</div>`
-                    : '';
-
-                const progress = progressMap[program.id];
-                const hasProgress = progress.completed > 0;
-                const isComplete = progress.completed === progress.total && progress.total > 0;
-
-                let progressBar = '';
-                let actionButton = '';
-
-                if (progress.total > 0) {
-                    progressBar = `
-                        <div class="program-progress">
-                            <div class="progress-bar">
-                                <div class="progress-bar-fill" style="width: ${progress.percentage}%"></div>
-                            </div>
-                            <div class="progress-text">${progress.completed}/${progress.total} modules ${isComplete ? '✓' : ''}</div>
-                        </div>
-                    `;
-
-                    if (isComplete) {
-                        actionButton = `<button class="program-action-btn completed-btn" data-program-id="${program.id}" data-action="restart">Review</button>`;
-                    } else if (hasProgress) {
-                        actionButton = `<button class="program-action-btn resume-btn" data-program-id="${program.id}" data-action="resume">Resume</button>`;
-                    } else {
-                        actionButton = `<button class="program-action-btn start-btn" data-program-id="${program.id}" data-action="start">Start</button>`;
-                    }
-                } else {
-                    actionButton = `<button class="program-action-btn start-btn" data-program-id="${program.id}" data-action="start">Start</button>`;
-                }
-
-                html += `
-                    <div class="program-card ${isComplete ? 'program-complete' : ''}" data-program-id="${program.id}">
-                        <div class="program-icon">${icon}</div>
-                        <h3 class="program-title">${program.title}</h3>
-                        <p class="program-description">${program.description}</p>
-                        <div class="program-meta">
-                            <span class="program-difficulty ${program.difficulty.toLowerCase()}">${program.difficulty}</span>
-                            <span class="program-duration">${program.duration}</span>
-                        </div>
-                        ${progressBar}
-                        ${actionButton}
-                        ${prerequisites}
-                    </div>
-                `;
-            });
-
-            html += `
-                    </div>
-                </div>
-            `;
+        this.programs.programs.forEach(program => {
+            const progress = progressMap[program.id];
+            totalModules += progress.total;
+            completedModules += progress.completed;
+            if (progress.completed === progress.total && progress.total > 0) {
+                completedPrograms++;
+            } else if (progress.completed > 0) {
+                inProgressPrograms.push({ program, progress });
+            }
         });
 
-        html += '</div>';
+        const overallPercentage = totalModules > 0 ? Math.round((completedModules / totalModules) * 100) : 0;
+
+        let html = `
+            <div class="dashboard">
+                <div class="welcome-banner">
+                    <div class="welcome-content">
+                        <h1>Welcome</h1>
+                        <p>Build your skills with guided programs designed to help you master Zoho tools and best practices.</p>
+                    </div>
+                    <div class="welcome-graphic">
+                        <img src="one-logo.png" alt="Zoho One" class="welcome-logo">
+                    </div>
+                </div>
+                <div class="dashboard-progress-section">
+                    <div class="overall-progress">
+                        <div class="overall-progress-header">
+                            <h2>Your Progress</h2>
+                            <span class="overall-percentage">${overallPercentage}%</span>
+                        </div>
+                        <div class="overall-progress-bar">
+                            <div class="overall-progress-fill" style="width: ${overallPercentage}%"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="stat">
+                                <span class="stat-value">${completedModules}</span>
+                                <span class="stat-label">Modules Completed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">${completedPrograms}</span>
+                                <span class="stat-label">Programs Completed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">${this.programs.programs.length}</span>
+                                <span class="stat-label">Total Programs</span>
+                            </div>
+                        </div>
+                    </div>
+                    ${inProgressPrograms.length > 0 ? `
+                    <div class="in-progress-section">
+                        <h3>Continue Learning</h3>
+                        <div class="in-progress-list">
+                            ${inProgressPrograms.map(({ program, progress }) => `
+                                <button class="in-progress-item" data-program-id="${program.id}" data-action="resume">
+                                    <span class="in-progress-icon">${program.icon || '📚'}</span>
+                                    <div class="in-progress-info">
+                                        <span class="in-progress-title">${program.title}</span>
+                                        <div class="in-progress-bar">
+                                            <div class="in-progress-fill" style="width: ${progress.percentage}%"></div>
+                                        </div>
+                                    </div>
+                                    <span class="in-progress-percent">${progress.percentage}%</span>
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+                </div>
+            </div>
+        `;
 
         // Dev tools - Reset progress button
         html += `
@@ -206,34 +201,11 @@ class TrainingApp {
     }
 
     setupDashboardListeners() {
-        // Handle action button clicks (start/resume/review)
-        const actionButtons = this.contentArea.querySelectorAll('.program-action-btn');
-        actionButtons.forEach(button => {
-            button.addEventListener('click', async (e) => {
-                e.stopPropagation(); // Prevent card click
-                const programId = button.dataset.programId;
-                const action = button.dataset.action;
-
-                if (action === 'resume') {
-                    // Find next incomplete module
-                    const program = this.programs.programs.find(p => p.id === programId);
-                    if (program) {
-                        await this.loadManifest(program.manifest);
-                        const nextIndex = this.getNextIncompleteModule(programId);
-                        await this.switchProgram(programId, nextIndex);
-                    }
-                } else {
-                    // Start from beginning (or restart)
-                    await this.switchProgram(programId, 0);
-                }
-            });
-        });
-
-        // Handle card clicks (default to resume or start)
-        const programCards = this.contentArea.querySelectorAll('.program-card');
-        programCards.forEach(card => {
-            card.addEventListener('click', async () => {
-                const programId = card.dataset.programId;
+        // Handle "Continue Learning" item clicks
+        const inProgressItems = this.contentArea.querySelectorAll('.in-progress-item');
+        inProgressItems.forEach(item => {
+            item.addEventListener('click', async () => {
+                const programId = item.dataset.programId;
                 const program = this.programs.programs.find(p => p.id === programId);
                 if (program) {
                     await this.loadManifest(program.manifest);
@@ -264,7 +236,16 @@ class TrainingApp {
         });
 
         // Create collapsible directory tree
-        Object.keys(categories).sort((a, b) => a.localeCompare(b)).forEach(categoryName => {
+        // Custom sort: Foundations first, Workdrive second, then alphabetical
+        const categoryOrder = ['Foundations', 'Workdrive'];
+        Object.keys(categories).sort((a, b) => {
+            const aIndex = categoryOrder.indexOf(a);
+            const bIndex = categoryOrder.indexOf(b);
+            if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+            if (aIndex !== -1) return -1;
+            if (bIndex !== -1) return 1;
+            return a.localeCompare(b);
+        }).forEach(categoryName => {
             const categorySection = document.createElement('div');
             categorySection.className = 'directory-category';
             categorySection.dataset.category = categoryName;
