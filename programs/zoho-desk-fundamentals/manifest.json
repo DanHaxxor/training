@@ -59,6 +59,14 @@
       "category": "Core Features",
       "description": "Creating, assigning, updating, and resolving customer support tickets",
       "order": 7
+    },
+    {
+      "id": "quiz",
+      "title": "Desk Fundamentals Quiz",
+      "file": "content/quiz.json",
+      "category": "Assessment",
+      "description": "Test your understanding of Zoho Desk fundamentals",
+      "order": 8
     }
   ]
 }

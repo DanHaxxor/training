@@ -67,6 +67,14 @@
       "category": "Administration",
       "description": "GDPR compliance, data encryption, audit logs, and security best practices",
       "order": 8
+    },
+    {
+      "id": "quiz",
+      "title": "Desk Advanced Quiz",
+      "file": "content/quiz.json",
+      "category": "Assessment",
+      "description": "Test your understanding of Zoho Desk advanced concepts",
+      "order": 9
     }
   ]
 }

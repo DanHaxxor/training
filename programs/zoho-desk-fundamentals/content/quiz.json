@@ -1,0 +1,73 @@
+{
+  "title": "Desk Fundamentals Quiz",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "Test your understanding of Zoho Desk concepts covered in this training program."
+    },
+    {
+      "type": "heading",
+      "content": "Quiz Questions"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "Which Work Mode is most useful for ensuring SLA compliance by showing tickets based on time remaining?",
+          "options": [
+            "Status Mode",
+            "Priority Mode",
+            "Countdown Mode",
+            "Handshake Mode"
+          ],
+          "correct": 2,
+          "explanation": "Countdown Mode sorts tickets by time remaining until SLA breach, making it the best choice for ensuring SLA compliance by highlighting tickets that need immediate attention."
+        },
+        {
+          "question": "What is the key difference between Conversations and Comments in a ticket?",
+          "options": [
+            "Conversations are for emails only, Comments are for chat",
+            "Conversations are customer-facing, Comments are internal and not visible to customers",
+            "Conversations are permanent, Comments can be deleted",
+            "There is no difference - they are the same feature"
+          ],
+          "correct": 1,
+          "explanation": "Conversations display all customer-facing communications (emails, chat, social), while Comments are internal notes that allow agents to collaborate without the customer seeing the discussion."
+        },
+        {
+          "question": "When should you use Parent-Child ticketing?",
+          "options": [
+            "When a ticket needs to be escalated to a manager",
+            "When a customer reports multiple issues that need to be tracked separately",
+            "When you want to archive old tickets",
+            "When merging duplicate tickets"
+          ],
+          "correct": 1,
+          "explanation": "Parent-Child ticketing is used when a customer reports multiple issues in one request. You create child tickets for each specific issue while maintaining a parent ticket to track overall resolution."
+        },
+        {
+          "question": "What are Snippets used for in Zoho Desk?",
+          "options": [
+            "Automatically categorizing tickets based on keywords",
+            "Reusable text shortcuts that expand into common responses",
+            "Recording time spent on tickets",
+            "Creating custom ticket views"
+          ],
+          "correct": 1,
+          "explanation": "Snippets are reusable text shortcuts that help agents quickly insert common responses and information. Type a snippet shortcode to expand it into full text, significantly speeding up response times."
+        },
+        {
+          "question": "Which list view displays tickets in a spreadsheet-style format with customizable columns?",
+          "options": [
+            "Classic View",
+            "Compact View",
+            "Table View",
+            "Feeds View"
+          ],
+          "correct": 2,
+          "explanation": "Table View provides a spreadsheet-style display with customizable columns, ideal for data-focused work. Classic View shows traditional rows, and Compact View is a condensed version showing more tickets on screen."
+        }
+      ]
+    }
+  ]
+}

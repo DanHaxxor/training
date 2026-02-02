@@ -1,0 +1,128 @@
+{
+  "title": "Zoho Desk Mastery Test",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "This mastery test covers all advanced Zoho Desk concepts including automation, AI features, analytics, and administration. A passing score demonstrates comprehensive understanding of the platform."
+    },
+    {
+      "type": "heading",
+      "content": "Mastery Test Questions"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "What is the ONLY way to move tickets between departments through automation?",
+          "options": [
+            "Workflow rules with Edit trigger",
+            "Round Robin assignment",
+            "Direct Assignment rules",
+            "Supervisor rules"
+          ],
+          "correct": 2,
+          "explanation": "Direct Assignment is the only way to move tickets between departments via automation. Round Robin distributes tickets among agents within a department but cannot transfer tickets across departments."
+        },
+        {
+          "question": "What is the key difference between Workflow rules with 'Create' trigger vs 'Edit' trigger?",
+          "options": [
+            "Create triggers are faster than Edit triggers",
+            "Create runs only once when ticket is new; Edit can run multiple times on updates",
+            "Create triggers only work for email tickets",
+            "Edit triggers cannot send email notifications"
+          ],
+          "correct": 1,
+          "explanation": "Create rules execute only once when a ticket is first created. Edit rules can run multiple times throughout the ticket lifecycle whenever the ticket is updated or modified."
+        },
+        {
+          "question": "How often do Supervisor rules trigger to check for conditions?",
+          "options": [
+            "Every 5 minutes",
+            "In real-time when tickets change",
+            "Approximately once every hour",
+            "Only once per day at midnight"
+          ],
+          "correct": 2,
+          "explanation": "Unlike workflows that trigger on events, Supervisor rules run approximately once every hour to scan tickets and perform actions. They're useful for catching tickets that slip through the cracks."
+        },
+        {
+          "question": "What is required for Zia Field Prediction to become accurate?",
+          "options": [
+            "Enabling ChatGPT integration",
+            "Historical ticket data (typically 500+ tickets) for training",
+            "Manual configuration of prediction rules",
+            "Premium Zoho subscription only"
+          ],
+          "correct": 1,
+          "explanation": "Field Prediction requires training data to become accurate. Zia needs historical ticket data (typically 500+ tickets) with consistently filled fields to learn patterns and make accurate predictions."
+        },
+        {
+          "question": "Which Zia feature can be used as criteria in workflow automation rules?",
+          "options": [
+            "Reply Assistance",
+            "Reply Summary",
+            "Sentiment Analysis",
+            "Content Improvement"
+          ],
+          "correct": 2,
+          "explanation": "Sentiment Analysis can be used as a condition in workflow rules and automations. For example, you can create rules that escalate tickets with negative sentiment or notify supervisors when very negative sentiment is detected."
+        },
+        {
+          "question": "When creating reports, which report type is best for seeing grouped totals and creating charts?",
+          "options": [
+            "Tabular Report",
+            "Summary Report",
+            "Matrix Report",
+            "Static Report"
+          ],
+          "correct": 1,
+          "explanation": "Summary Reports group data and provide aggregate calculations (count, sum, average) for each group. They work best with charts and are ideal for high-level overviews and trend analysis."
+        },
+        {
+          "question": "What is the purpose of a Blueprint in Zoho Desk?",
+          "options": [
+            "To create email templates for agents",
+            "To design the visual layout of tickets",
+            "To enforce structured processes that tickets must follow from creation to resolution",
+            "To generate automatic reports"
+          ],
+          "correct": 2,
+          "explanation": "Blueprints enforce structured processes with defined states, transitions, and field validation. They ensure tickets follow a specific workflow path and that required information is captured at each stage."
+        },
+        {
+          "question": "Which Round Robin preference considers the number of open tickets each agent currently has?",
+          "options": [
+            "Sequential",
+            "Skill Based",
+            "Load Based",
+            "Backlog"
+          ],
+          "correct": 3,
+          "explanation": "Backlog preference considers the number of open tickets each agent has and assigns new tickets to agents with fewer open tickets. Load Based considers total workload and priority, while Sequential simply rotates through agents in order."
+        },
+        {
+          "question": "What is the best practice for formatting Knowledge Base articles to maximize Answer Bot effectiveness?",
+          "options": [
+            "Use complex technical terminology",
+            "Write long, detailed paragraphs without headers",
+            "Use clear, question-based titles and structured content with direct answers at the beginning",
+            "Avoid using tags or categories"
+          ],
+          "correct": 2,
+          "explanation": "For Answer Bot to work effectively, articles should have clear question-based titles, structured content with subheadings, direct answers at the beginning, and relevant tags. FAQ-style articles work particularly well."
+        },
+        {
+          "question": "When analyzing data across two dimensions simultaneously (e.g., Agents as rows and Status as columns), which report type should you use?",
+          "options": [
+            "Tabular Report",
+            "Summary Report",
+            "Matrix Report",
+            "Global Report"
+          ],
+          "correct": 2,
+          "explanation": "Matrix Reports provide a grid view with data grouped by both rows and columns, creating cross-tabulation. They're powerful for comparing multiple dimensions simultaneously and identifying patterns across categorized data."
+        }
+      ]
+    }
+  ]
+}

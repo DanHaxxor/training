@@ -1,0 +1,73 @@
+{
+  "title": "Desk Advanced Quiz",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "Test your understanding of Zoho Desk advanced concepts covered in this training program."
+    },
+    {
+      "type": "heading",
+      "content": "Quiz Questions"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "Which automation method is the ONLY way to move tickets between departments?",
+          "options": [
+            "Workflow rules",
+            "Round Robin assignment",
+            "Direct Assignment rules",
+            "Macros"
+          ],
+          "correct": 2,
+          "explanation": "Direct Assignment is the only way to move tickets between departments via automation. Other methods like Round Robin and workflows operate within a single department."
+        },
+        {
+          "question": "What is the key difference between 'Create' and 'Edit' workflow triggers?",
+          "options": [
+            "Create triggers are faster to execute",
+            "Create runs once when ticket is new; Edit can run multiple times on updates",
+            "Edit triggers cannot send notifications",
+            "Create triggers only work for email tickets"
+          ],
+          "correct": 1,
+          "explanation": "Create rules execute only once when a ticket is first created. Edit rules can run multiple times throughout the ticket lifecycle whenever the ticket is updated or modified."
+        },
+        {
+          "question": "How often do Supervisor rules check for conditions?",
+          "options": [
+            "In real-time when tickets change",
+            "Every 5 minutes",
+            "Approximately once every hour",
+            "Once per day"
+          ],
+          "correct": 2,
+          "explanation": "Supervisor rules trigger approximately once every hour to scan tickets and perform actions, unlike workflows that trigger on specific events."
+        },
+        {
+          "question": "What does Zia Sentiment Analysis allow you to do in automations?",
+          "options": [
+            "Automatically translate ticket content",
+            "Generate reply suggestions",
+            "Use customer emotional tone as criteria for escalations and notifications",
+            "Predict which fields to populate"
+          ],
+          "correct": 2,
+          "explanation": "Sentiment Analysis can be used as a condition in workflow rules to escalate tickets with negative sentiment, adjust priority, or notify supervisors based on customer emotional tone."
+        },
+        {
+          "question": "Which report type is best for analyzing data across two dimensions simultaneously?",
+          "options": [
+            "Tabular Report",
+            "Summary Report",
+            "Matrix Report",
+            "Global Report"
+          ],
+          "correct": 2,
+          "explanation": "Matrix Reports provide a grid view with data grouped by both rows and columns, creating cross-tabulation ideal for comparing two dimensions (e.g., Agents vs Status)."
+        }
+      ]
+    }
+  ]
+}

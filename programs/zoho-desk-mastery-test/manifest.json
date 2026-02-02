@@ -1,0 +1,16 @@
+{
+  "title": "Zoho Desk Mastery Test",
+  "description": "Comprehensive assessment covering all Zoho Desk fundamentals and advanced concepts",
+  "version": "1.0.0",
+  "prerequisites": ["zoho-desk-fundamentals", "zoho-desk-advanced"],
+  "modules": [
+    {
+      "id": "mastery-test",
+      "title": "Zoho Desk Mastery Test",
+      "file": "content/mastery-test.json",
+      "category": "Assessment",
+      "description": "Comprehensive test covering all Zoho Desk concepts",
+      "order": 1
+    }
+  ]
+}
