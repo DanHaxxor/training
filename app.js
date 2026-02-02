@@ -8,7 +8,6 @@ class TrainingApp {
         this.contentCache = new Map(); // Cache loaded pages
         this.currentPageIndex = 0;
         this.contentArea = document.getElementById('content-area');
-        this.navMenu = document.getElementById('nav-menu');
         this.progressIndicator = document.querySelector('.progress-indicator');
         this.currentPageSpan = document.getElementById('current-page');
         this.totalPagesSpan = document.getElementById('total-pages');
@@ -18,8 +17,17 @@ class TrainingApp {
 
         // Program directory element
         this.programDirectory = document.getElementById('program-directory');
-        this.expandedCategories = new Set(); // Track which categories are expanded
-        this.expandedSubcategories = new Set(); // Track which subcategories are expanded
+
+        // Sidebar toggle elements
+        this.sidebar = document.getElementById('sidebar');
+        this.sidebarToggle = document.getElementById('sidebar-toggle');
+        this.appContainer = document.querySelector('.app-container');
+
+        // Utility bar elements
+        this.utilityBar = document.getElementById('utility-bar');
+        this.utilityPrevBtn = document.getElementById('utility-prev');
+        this.utilityNextBtn = document.getElementById('utility-next');
+        this.utilityCompleteBtn = document.getElementById('utility-complete');
 
         this.init();
     }
@@ -27,8 +35,11 @@ class TrainingApp {
     async init() {
         try {
             await this.loadPrograms();
-            this.renderProgramDirectory();
+            await this.renderProgramDirectory();
             this.setupEventListeners();
+            this.setupQuickNav();
+            this.setupSidebarToggle();
+            this.setupUtilityBar();
 
             const hashState = this.getStateFromHash();
             const storedState = this.getStoredState();
@@ -82,8 +93,21 @@ class TrainingApp {
             mobileTitle.textContent = 'Training Library';
         }
 
-        // Clear navigation
-        this.navMenu.innerHTML = '';
+        // Hide breadcrumb on dashboard
+        this.renderBreadcrumb();
+
+        // Hide quick nav on dashboard
+        const quickNav = document.getElementById('quick-nav');
+        if (quickNav) {
+            quickNav.style.display = 'none';
+        }
+
+        // Hide utility bar on dashboard
+        if (this.utilityBar) {
+            this.utilityBar.classList.add('hidden');
+        }
+
+        // Update progress indicator
         this.progressIndicator.innerHTML = 'Dashboard';
 
         // Show loading state
@@ -216,26 +240,34 @@ class TrainingApp {
         });
     }
 
-    renderProgramDirectory() {
+    async renderProgramDirectory() {
         if (!this.programDirectory) return;
+
+        this.programDirectory.innerHTML = '<div class="directory-loading">Loading...</div>';
+
+        // Load progress for all programs
+        const progressPromises = this.programs.programs.map(program =>
+            this.getProgramProgressWithManifest(program.id)
+        );
+        const progressResults = await Promise.all(progressPromises);
+        const progressMap = {};
+        this.programs.programs.forEach((program, index) => {
+            progressMap[program.id] = progressResults[index];
+        });
 
         this.programDirectory.innerHTML = '';
 
-        // Group programs by category and subcategory
+        // Group programs by category (topic) only
         const categories = {};
         this.programs.programs.forEach(program => {
             const category = program.category || 'Other';
-            const subcategory = program.subcategory || 'General';
             if (!categories[category]) {
-                categories[category] = {};
+                categories[category] = [];
             }
-            if (!categories[category][subcategory]) {
-                categories[category][subcategory] = [];
-            }
-            categories[category][subcategory].push(program);
+            categories[category].push(program);
         });
 
-        // Create collapsible directory tree
+        // Create directory tree with topics and lessons inline
         // Custom sort: Foundations first, Workdrive second, then alphabetical
         const categoryOrder = ['Foundations', 'Workdrive'];
         Object.keys(categories).sort((a, b) => {
@@ -250,95 +282,56 @@ class TrainingApp {
             categorySection.className = 'directory-category';
             categorySection.dataset.category = categoryName;
 
-            // Category header (clickable to expand/collapse)
-            const categoryHeader = document.createElement('button');
-            categoryHeader.type = 'button';
+            // Calculate category progress
+            const categoryPrograms = categories[categoryName];
+            const categoryCompleted = categoryPrograms.filter(p => {
+                const prog = progressMap[p.id];
+                return prog.completed === prog.total && prog.total > 0;
+            }).length;
+
+            // Category header with progress count
+            const categoryHeader = document.createElement('div');
             categoryHeader.className = 'directory-category-header';
-            const isExpanded = this.expandedCategories.has(categoryName);
             categoryHeader.innerHTML = `
-                <span class="directory-toggle">${isExpanded ? '▼' : '▶'}</span>
                 <span class="directory-category-name">${categoryName}</span>
+                <span class="directory-category-progress">${categoryCompleted}/${categoryPrograms.length}</span>
             `;
-            categoryHeader.addEventListener('click', () => this.toggleCategory(categoryName));
             categorySection.appendChild(categoryHeader);
 
-            // Category content (subcategories and programs)
-            const categoryContent = document.createElement('div');
-            categoryContent.className = 'directory-category-content';
-            if (!isExpanded) {
-                categoryContent.classList.add('collapsed');
-            }
+            // Lessons directly under category (always visible)
+            const lessonsContainer = document.createElement('div');
+            lessonsContainer.className = 'directory-lessons';
 
-            // Add subcategories
-            Object.keys(categories[categoryName]).sort((a, b) => a.localeCompare(b)).forEach(subcategoryName => {
-                const subcatKey = `${categoryName}:${subcategoryName}`;
-                const subcategorySection = document.createElement('div');
-                subcategorySection.className = 'directory-subcategory';
+            categories[categoryName].forEach(program => {
+                const progress = progressMap[program.id];
+                const isComplete = progress.completed === progress.total && progress.total > 0;
+                const isInProgress = progress.completed > 0 && !isComplete;
 
-                // Subcategory header
-                const subcatHeader = document.createElement('button');
-                subcatHeader.type = 'button';
-                subcatHeader.className = 'directory-subcategory-header';
-                const isSubExpanded = this.expandedSubcategories.has(subcatKey);
-                subcatHeader.innerHTML = `
-                    <span class="directory-toggle">${isSubExpanded ? '▼' : '▶'}</span>
-                    <span class="directory-subcategory-name">${subcategoryName}</span>
-                `;
-                subcatHeader.addEventListener('click', () => this.toggleSubcategory(categoryName, subcategoryName));
-                subcategorySection.appendChild(subcatHeader);
+                const programItem = document.createElement('button');
+                programItem.type = 'button';
+                programItem.className = `directory-program ${isComplete ? 'complete' : ''} ${isInProgress ? 'in-progress' : ''}`;
+                programItem.dataset.programId = program.id;
 
-                // Subcategory content (programs)
-                const subcatContent = document.createElement('div');
-                subcatContent.className = 'directory-subcategory-content';
-                if (!isSubExpanded) {
-                    subcatContent.classList.add('collapsed');
+                let progressIndicator = '';
+                if (isInProgress) {
+                    progressIndicator = `<span class="directory-program-percent">${progress.percentage}%</span>`;
                 }
 
-                // Add programs
-                categories[categoryName][subcategoryName].forEach(program => {
-                    const programItem = document.createElement('button');
-                    programItem.type = 'button';
-                    programItem.className = 'directory-program';
-                    programItem.dataset.programId = program.id;
-                    programItem.innerHTML = `
-                        <span class="directory-program-icon">${program.icon || '📚'}</span>
-                        <span class="directory-program-title">${program.title}</span>
-                    `;
-                    programItem.addEventListener('click', () => {
-                        this.switchProgram(program.id);
-                        this.closeMobileMenu();
-                    });
-                    subcatContent.appendChild(programItem);
+                programItem.innerHTML = `
+                    <span class="directory-program-icon">${program.icon || '📚'}</span>
+                    <span class="directory-program-title">${program.title}</span>
+                    ${progressIndicator}
+                `;
+                programItem.addEventListener('click', () => {
+                    this.switchProgram(program.id);
+                    this.closeMobileMenu();
                 });
-
-                subcategorySection.appendChild(subcatContent);
-                categoryContent.appendChild(subcategorySection);
+                lessonsContainer.appendChild(programItem);
             });
 
-            categorySection.appendChild(categoryContent);
+            categorySection.appendChild(lessonsContainer);
             this.programDirectory.appendChild(categorySection);
         });
-    }
-
-    toggleCategory(categoryName) {
-        if (this.expandedCategories.has(categoryName)) {
-            this.expandedCategories.delete(categoryName);
-        } else {
-            this.expandedCategories.add(categoryName);
-        }
-        this.renderProgramDirectory();
-        this.updateDirectorySelection(this.currentProgram?.id);
-    }
-
-    toggleSubcategory(categoryName, subcategoryName) {
-        const key = `${categoryName}:${subcategoryName}`;
-        if (this.expandedSubcategories.has(key)) {
-            this.expandedSubcategories.delete(key);
-        } else {
-            this.expandedSubcategories.add(key);
-        }
-        this.renderProgramDirectory();
-        this.updateDirectorySelection(this.currentProgram?.id);
     }
 
     updateDirectorySelection(programId) {
@@ -353,27 +346,43 @@ class TrainingApp {
             const selectedProgram = this.programDirectory.querySelector(`[data-program-id="${programId}"]`);
             if (selectedProgram) {
                 selectedProgram.classList.add('selected');
-
-                // Auto-expand parent categories if not already expanded
-                const program = this.programs.programs.find(p => p.id === programId);
-                if (program) {
-                    const category = program.category || 'Other';
-                    const subcategory = program.subcategory || 'General';
-                    const subcatKey = `${category}:${subcategory}`;
-
-                    if (!this.expandedCategories.has(category) || !this.expandedSubcategories.has(subcatKey)) {
-                        this.expandedCategories.add(category);
-                        this.expandedSubcategories.add(subcatKey);
-                        this.renderProgramDirectory();
-                        // Re-select after re-render
-                        const reselected = this.programDirectory.querySelector(`[data-program-id="${programId}"]`);
-                        if (reselected) {
-                            reselected.classList.add('selected');
-                        }
-                    }
-                }
             }
         }
+    }
+
+    renderBreadcrumb() {
+        const breadcrumb = document.getElementById('breadcrumb');
+        if (!breadcrumb) return;
+
+        // Dashboard view - hide breadcrumb
+        if (!this.currentProgram) {
+            breadcrumb.innerHTML = '';
+            breadcrumb.style.display = 'none';
+            return;
+        }
+
+        breadcrumb.style.display = 'flex';
+        const currentModule = this.modules[this.currentPageIndex];
+        const category = this.currentProgram.category || 'Programs';
+
+        breadcrumb.innerHTML = `
+            <button class="breadcrumb-item breadcrumb-home" onclick="window.trainingApp.showDashboard()" title="Back to Dashboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </button>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item breadcrumb-category">${category}</span>
+            <span class="breadcrumb-separator">/</span>
+            <button class="breadcrumb-item breadcrumb-program" onclick="window.trainingApp.loadPage(0)">
+                ${this.currentProgram.title}
+            </button>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item breadcrumb-current" aria-current="page">
+                ${currentModule?.title || 'Loading...'}
+            </span>
+        `;
     }
 
     async switchProgram(programId, pageIndex = 0) {
@@ -397,7 +406,6 @@ class TrainingApp {
         // Always load the manifest for the selected program
         await this.loadManifest(program.manifest);
 
-        this.renderNavigation();
         const safePageIndex = Math.min(
             Math.max(pageIndex, 0),
             Math.max(this.modules.length - 1, 0)
@@ -455,49 +463,6 @@ class TrainingApp {
         }
     }
 
-    renderNavigation() {
-        this.navMenu.innerHTML = '';
-
-        // Create collapsible container for mobile
-        const lessonsToggle = document.createElement('button');
-        lessonsToggle.className = 'lessons-toggle';
-        lessonsToggle.innerHTML = `
-            <span class="lessons-toggle-text">Show Lessons</span>
-            <span class="lessons-toggle-icon">▼</span>
-        `;
-
-        const lessonsContainer = document.createElement('div');
-        lessonsContainer.className = 'lessons-container collapsed';
-
-        lessonsToggle.addEventListener('click', () => {
-            const isCollapsed = lessonsContainer.classList.toggle('collapsed');
-            lessonsToggle.querySelector('.lessons-toggle-text').textContent = isCollapsed ? 'Show Lessons' : 'Hide Lessons';
-            lessonsToggle.querySelector('.lessons-toggle-icon').textContent = isCollapsed ? '▼' : '▲';
-        });
-
-        this.modules.forEach((module, index) => {
-            const navItem = document.createElement('div');
-            navItem.className = 'nav-item';
-            const isComplete = this.isModuleComplete(this.currentProgram.id, module.id);
-
-            if (isComplete) {
-                navItem.classList.add('completed');
-            }
-
-            navItem.innerHTML = `
-                <span class="nav-item-number">${isComplete ? '✓' : index + 1}</span>
-                <span class="nav-item-title">${module.title}</span>
-            `;
-            navItem.addEventListener('click', () => {
-                this.loadPage(index);
-                this.closeMobileMenu(); // Close menu after selecting item
-            });
-            lessonsContainer.appendChild(navItem);
-        });
-
-        this.navMenu.appendChild(lessonsToggle);
-        this.navMenu.appendChild(lessonsContainer);
-    }
 
     setupEventListeners() {
         // Dashboard button
@@ -522,6 +487,28 @@ class TrainingApp {
             // Close menus on Escape
             if (e.key === 'Escape') {
                 this.closeMobileMenu();
+                // Close keyboard help if open
+                const helpPanel = document.getElementById('keyboard-help');
+                if (helpPanel && !helpPanel.hidden) {
+                    helpPanel.hidden = true;
+                }
+                // Close quick nav dropdown
+                const quickNavTrigger = document.getElementById('quick-nav-trigger');
+                const quickNavDropdown = document.getElementById('quick-nav-dropdown');
+                if (quickNavTrigger && quickNavDropdown) {
+                    quickNavTrigger.setAttribute('aria-expanded', 'false');
+                    quickNavDropdown.hidden = true;
+                }
+            }
+            // Show keyboard help with ?
+            if (e.key === '?' && !e.ctrlKey && !e.metaKey) {
+                e.preventDefault();
+                this.toggleKeyboardHelp();
+            }
+            // Toggle sidebar with [
+            if (e.key === '[' && !e.ctrlKey && !e.metaKey) {
+                e.preventDefault();
+                this.toggleSidebar();
             }
             // Navigation only when sidebar is closed
             if (!sidebar?.classList.contains('open')) {
@@ -545,11 +532,6 @@ class TrainingApp {
             // Prevent body scroll when menu is open
             document.body.style.overflow = isOpen ? 'hidden' : '';
 
-            // Rebuild navigation when opening menu if we have a program loaded
-            if (isOpen && this.currentProgram && this.modules.length > 0) {
-                this.renderNavigation();
-                this.updateNavigation();
-            }
         }
     }
 
@@ -561,6 +543,159 @@ class TrainingApp {
             sidebar.classList.remove('open');
             mobileMenuBtn.classList.remove('active');
             document.body.style.overflow = '';
+        }
+    }
+
+    setupQuickNav() {
+        const trigger = document.getElementById('quick-nav-trigger');
+        const dropdown = document.getElementById('quick-nav-dropdown');
+
+        if (!trigger || !dropdown) return;
+
+        trigger.addEventListener('click', () => {
+            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+            trigger.setAttribute('aria-expanded', !isExpanded);
+            dropdown.hidden = isExpanded;
+
+            if (!isExpanded) {
+                this.populateQuickNavDropdown();
+            }
+        });
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.quick-nav')) {
+                trigger.setAttribute('aria-expanded', 'false');
+                dropdown.hidden = true;
+            }
+        });
+    }
+
+    populateQuickNavDropdown() {
+        const dropdown = document.getElementById('quick-nav-dropdown');
+        if (!dropdown || !this.modules || !this.currentProgram) return;
+
+        let html = '';
+        this.modules.forEach((module, index) => {
+            const isCurrent = index === this.currentPageIndex;
+
+            html += `
+                <button class="quick-nav-item ${isCurrent ? 'current' : ''}"
+                        onclick="window.trainingApp.jumpToModule(${index})">
+                    <span class="quick-nav-number">${index + 1}</span>
+                    <span class="quick-nav-title">${module.title}</span>
+                </button>
+            `;
+        });
+
+        dropdown.innerHTML = html;
+    }
+
+    jumpToModule(index) {
+        const trigger = document.getElementById('quick-nav-trigger');
+        const dropdown = document.getElementById('quick-nav-dropdown');
+
+        if (trigger && dropdown) {
+            trigger.setAttribute('aria-expanded', 'false');
+            dropdown.hidden = true;
+        }
+
+        this.loadPage(index);
+    }
+
+    toggleKeyboardHelp() {
+        const helpPanel = document.getElementById('keyboard-help');
+        if (helpPanel) {
+            helpPanel.hidden = !helpPanel.hidden;
+        }
+    }
+
+    setupSidebarToggle() {
+        if (!this.sidebarToggle || !this.sidebar) return;
+
+        // Load saved sidebar state
+        const savedState = localStorage.getItem('sidebarCollapsed');
+        if (savedState === 'true') {
+            this.sidebar.classList.add('collapsed');
+            this.appContainer?.classList.add('focus-mode');
+        }
+
+        this.sidebarToggle.addEventListener('click', () => {
+            this.toggleSidebar();
+        });
+    }
+
+    toggleSidebar() {
+        if (!this.sidebar) return;
+
+        const isCollapsed = this.sidebar.classList.toggle('collapsed');
+        this.appContainer?.classList.toggle('focus-mode', isCollapsed);
+
+        // Save state
+        localStorage.setItem('sidebarCollapsed', isCollapsed);
+    }
+
+    setupUtilityBar() {
+        if (!this.utilityBar) return;
+
+        // Previous button
+        this.utilityPrevBtn?.addEventListener('click', () => {
+            this.navigatePrevious();
+        });
+
+        // Next button
+        this.utilityNextBtn?.addEventListener('click', () => {
+            this.navigateNext();
+        });
+
+        // Complete button
+        this.utilityCompleteBtn?.addEventListener('click', () => {
+            this.toggleModuleComplete();
+        });
+    }
+
+    updateUtilityBar() {
+        if (!this.utilityBar) return;
+
+        // Hide on dashboard
+        if (!this.currentProgram) {
+            this.utilityBar.classList.add('hidden');
+            return;
+        }
+
+        this.utilityBar.classList.remove('hidden');
+
+        // Update prev button
+        const hasPrevious = this.currentPageIndex > 0;
+        if (this.utilityPrevBtn) {
+            this.utilityPrevBtn.disabled = !hasPrevious;
+        }
+
+        // Update next button
+        const hasNext = this.currentPageIndex < this.modules.length - 1;
+        if (this.utilityNextBtn) {
+            this.utilityNextBtn.disabled = !hasNext;
+            const textSpan = this.utilityNextBtn.querySelector('.utility-btn-text');
+            if (textSpan) {
+                textSpan.textContent = hasNext ? 'Next' : 'Finish';
+            }
+        }
+
+        // Update complete button
+        if (this.utilityCompleteBtn) {
+            const currentModule = this.modules[this.currentPageIndex];
+            const isComplete = currentModule && this.isModuleComplete(this.currentProgram.id, currentModule.id);
+
+            this.utilityCompleteBtn.classList.toggle('completed', isComplete);
+            const iconSpan = this.utilityCompleteBtn.querySelector('.complete-icon');
+            const textSpan = this.utilityCompleteBtn.querySelector('.complete-text');
+
+            if (iconSpan) {
+                iconSpan.textContent = isComplete ? '✓' : '○';
+            }
+            if (textSpan) {
+                textSpan.textContent = isComplete ? 'Completed' : 'Mark Complete';
+            }
         }
     }
 
@@ -584,11 +719,20 @@ class TrainingApp {
             // Setup quiz event listeners if quiz exists
             this.setupQuizListeners();
 
-            // Update navigation
-            this.updateNavigation();
-
             // Update progress indicator
             this.currentPageSpan.textContent = index + 1;
+
+            // Update breadcrumb
+            this.renderBreadcrumb();
+
+            // Show quick nav
+            const quickNav = document.getElementById('quick-nav');
+            if (quickNav) {
+                quickNav.style.display = 'block';
+            }
+
+            // Update utility bar state
+            this.updateUtilityBar();
 
             // Scroll to top of content container
             if (this.contentContainer) {
@@ -605,8 +749,69 @@ class TrainingApp {
         }
     }
 
+    renderModuleProgressBar() {
+        const currentModule = this.modules[this.currentPageIndex];
+        const isComplete = this.isModuleComplete(this.currentProgram.id, currentModule.id);
+
+        let html = `
+            <div class="module-progress-bar">
+                <div class="module-steps-wrapper">
+                    <div class="module-steps" role="tablist" aria-label="Module navigation">
+        `;
+
+        this.modules.forEach((module, index) => {
+            const isModuleComplete = this.isModuleComplete(this.currentProgram.id, module.id);
+            const isCurrent = index === this.currentPageIndex;
+            const stepClass = `module-step ${isCurrent ? 'current' : ''} ${isModuleComplete ? 'complete' : ''}`;
+
+            html += `
+                <button class="${stepClass}" onclick="window.trainingApp.loadPage(${index})"
+                    role="tab" aria-selected="${isCurrent}"
+                    aria-label="${module.title}${isModuleComplete ? ' (completed)' : ''}"
+                    title="${module.title}">
+                    <span class="step-indicator">${index + 1}</span>
+                    <span class="step-title">${module.title}</span>
+                </button>
+            `;
+        });
+
+        html += `
+                    </div>
+                </div>
+                <div class="module-current-title">
+                    <span class="current-module-label">Module ${this.currentPageIndex + 1}:</span>
+                    <span class="current-module-name">${currentModule.title}</span>
+                </div>
+                <div class="module-actions">
+        `;
+
+        if (isComplete) {
+            html += `
+                <button class="module-complete-btn completed" onclick="window.trainingApp.toggleModuleComplete()">
+                    ✓ Completed
+                </button>
+            `;
+        } else {
+            html += `
+                <button class="module-complete-btn" onclick="window.trainingApp.toggleModuleComplete()">
+                    Mark Complete
+                </button>
+            `;
+        }
+
+        html += `
+                </div>
+            </div>
+        `;
+
+        return html;
+    }
+
     renderPageContent(page) {
-        let html = `<h1>${page.title}</h1>`;
+        // Add module progress bar at the top
+        let html = this.renderModuleProgressBar();
+
+        html += `<h1>${page.title}</h1>`;
 
         // Get program directory for resolving relative paths
         const programDir = this.currentProgram.manifest.replace('/manifest.json', '');
@@ -649,7 +854,7 @@ class TrainingApp {
             }
         });
 
-        // Add inline navigation buttons at the bottom
+        // Add simplified navigation buttons at the bottom (just prev/next)
         html += this.renderInlineNavigation();
 
         return html;
@@ -689,46 +894,56 @@ class TrainingApp {
     renderInlineNavigation() {
         const hasPrevious = this.currentPageIndex > 0;
         const hasNext = this.currentPageIndex < this.modules.length - 1;
-        const currentModule = this.modules[this.currentPageIndex];
-        const isComplete = this.isModuleComplete(this.currentProgram.id, currentModule.id);
+
+        const prevModule = hasPrevious ? this.modules[this.currentPageIndex - 1] : null;
+        const nextModule = hasNext ? this.modules[this.currentPageIndex + 1] : null;
 
         let html = '<div class="inline-nav">';
 
-        // Previous button
+        // Previous button with destination title
         if (hasPrevious) {
             html += `
                 <button class="inline-nav-btn prev-btn" onclick="window.trainingApp.navigatePrevious()">
-                    <span>←</span> Previous
+                    <span class="nav-arrow">←</span>
+                    <div class="nav-content">
+                        <span class="nav-direction">Previous</span>
+                        <span class="nav-destination">${prevModule.title}</span>
+                    </div>
                 </button>
             `;
         } else {
-            html += '<div></div>'; // Empty div for spacing
+            html += '<div class="nav-spacer"></div>';
         }
 
-        // Mark complete button (center)
-        if (isComplete) {
-            html += `
-                <button class="inline-nav-btn mark-incomplete-btn" onclick="window.trainingApp.toggleModuleComplete()">
-                    ✗ Mark Incomplete
-                </button>
-            `;
-        } else {
-            html += `
-                <button class="inline-nav-btn mark-complete-btn" onclick="window.trainingApp.toggleModuleComplete()">
-                    ✓ Mark Complete
-                </button>
-            `;
-        }
+        // Keyboard shortcut hint (desktop only)
+        html += `
+            <div class="nav-keyboard-hints">
+                <kbd>←</kbd> / <kbd>→</kbd> to navigate
+            </div>
+        `;
 
-        // Next button
+        // Next button with destination title
         if (hasNext) {
             html += `
                 <button class="inline-nav-btn next-btn" onclick="window.trainingApp.navigateNext()">
-                    Next <span>→</span>
+                    <div class="nav-content">
+                        <span class="nav-direction">Next</span>
+                        <span class="nav-destination">${nextModule.title}</span>
+                    </div>
+                    <span class="nav-arrow">→</span>
                 </button>
             `;
         } else {
-            html += '<div></div>'; // Empty div for spacing
+            // Show finish action when on last module
+            html += `
+                <button class="inline-nav-btn finish-btn" onclick="window.trainingApp.toggleModuleComplete()">
+                    <div class="nav-content">
+                        <span class="nav-direction">Finish Program</span>
+                        <span class="nav-destination">Mark as Complete</span>
+                    </div>
+                    <span class="nav-arrow">🎉</span>
+                </button>
+            `;
         }
 
         html += '</div>';
@@ -749,22 +964,24 @@ class TrainingApp {
             }
             // Refresh the page content to update button
             this.loadPage(this.currentPageIndex);
-            // Rebuild navigation to show/hide checkmark
-            this.renderNavigation();
         } else {
             // Mark as complete
             this.markModuleComplete(this.currentProgram.id, currentModule.id);
-            this.renderNavigation();
 
-            // Check if this is the last module
-            const isLastModule = this.currentPageIndex === this.modules.length - 1;
+            // Check if ALL modules in the program are now complete
+            const allModulesComplete = this.modules.every(
+                module => this.isModuleComplete(this.currentProgram.id, module.id)
+            );
 
-            if (isLastModule) {
-                // Show completion celebration
+            if (allModulesComplete) {
+                // Show completion celebration only when entire program is done
                 this.showProgramCompletion();
-            } else {
-                // Auto-advance to next module
+            } else if (this.currentPageIndex < this.modules.length - 1) {
+                // Auto-advance to next module if not on last
                 this.loadPage(this.currentPageIndex + 1);
+            } else {
+                // On last module but program not complete - just refresh
+                this.loadPage(this.currentPageIndex);
             }
         }
     }
@@ -819,18 +1036,6 @@ class TrainingApp {
         });
     }
 
-    updateNavigation() {
-        // Update active state in sidebar
-        const navItems = this.navMenu.querySelectorAll('.nav-item');
-        navItems.forEach((item, index) => {
-            if (index === this.currentPageIndex) {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
-        });
-    }
-
     navigatePrevious() {
         if (this.currentPageIndex > 0) {
             this.loadPage(this.currentPageIndex - 1);
@@ -843,7 +1048,6 @@ class TrainingApp {
             const currentModule = this.modules[this.currentPageIndex];
             if (this.currentProgram && currentModule) {
                 this.markModuleComplete(this.currentProgram.id, currentModule.id);
-                this.renderNavigation(); // Rebuild navigation to show checkmark
             }
             this.loadPage(this.currentPageIndex + 1);
         }

@@ -28,7 +28,7 @@
 
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <nav class="sidebar" id="sidebar">
+        <nav class="sidebar" id="sidebar" aria-label="Program navigation">
             <div class="sidebar-header">
                 <div class="header-title-row">
                     <img src="zoho-logo-512.png" alt="Zoho" class="sidebar-logo">
@@ -42,16 +42,30 @@
                     <!-- Directory tree will be dynamically loaded -->
                 </div>
             </div>
-            <div class="sidebar-nav" id="nav-menu">
-                <!-- Navigation items will be dynamically loaded -->
-            </div>
+            <!-- Sidebar Toggle Button (inside sidebar when open) -->
+            <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar" title="Toggle sidebar (Press [ to toggle)">
+                <svg class="toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
         </nav>
 
         <!-- Main Content Area -->
         <main class="content">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb navigation"></nav>
+
             <div class="content-header">
-                <div class="progress-indicator">
-                    <span id="current-page">1</span> / <span id="total-pages">1</span>
+                <div class="quick-nav" id="quick-nav">
+                    <button class="quick-nav-trigger" id="quick-nav-trigger" aria-expanded="false">
+                        <span class="progress-indicator">
+                            <span id="current-page">1</span> / <span id="total-pages">1</span>
+                        </span>
+                        <svg class="quick-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="quick-nav-dropdown" id="quick-nav-dropdown" hidden></div>
                 </div>
             </div>
 
@@ -59,7 +73,63 @@
                 <!-- Content will be dynamically loaded here -->
                 <div class="loading">Loading content...</div>
             </article>
+
+            <!-- Bottom Utility Bar -->
+            <div class="utility-bar hidden" id="utility-bar">
+                <div class="utility-bar-left">
+                    <button class="utility-btn nav-btn" id="utility-prev" aria-label="Previous module">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        <span class="utility-btn-text">Previous</span>
+                    </button>
+                </div>
+                <div class="utility-bar-center">
+                    <button class="utility-btn complete-btn" id="utility-complete">
+                        <span class="complete-icon">○</span>
+                        <span class="complete-text">Mark Complete</span>
+                    </button>
+                </div>
+                <div class="utility-bar-right">
+                    <button class="utility-btn nav-btn" id="utility-next" aria-label="Next module">
+                        <span class="utility-btn-text">Next</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </main>
+    </div>
+
+    <!-- Keyboard Help Panel -->
+    <div class="keyboard-help-panel" id="keyboard-help" hidden>
+        <div class="keyboard-help-content">
+            <h3>Keyboard Shortcuts</h3>
+            <div class="shortcut-list">
+                <div class="shortcut-item">
+                    <kbd>←</kbd>
+                    <span>Previous module</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>→</kbd>
+                    <span>Next module</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>[</kbd>
+                    <span>Toggle sidebar</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Esc</kbd>
+                    <span>Close menu</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>?</kbd>
+                    <span>Show this help</span>
+                </div>
+            </div>
+            <button class="keyboard-help-close" onclick="window.trainingApp.toggleKeyboardHelp()">Got it</button>
+        </div>
     </div>
 
     <script src="app.js"></script>
