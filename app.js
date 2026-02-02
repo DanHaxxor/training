@@ -12,17 +12,14 @@ class TrainingApp {
         this.progressIndicator = document.querySelector('.progress-indicator');
         this.currentPageSpan = document.getElementById('current-page');
         this.totalPagesSpan = document.getElementById('total-pages');
-        this.programSelect = document.getElementById('program-select');
         this.libraryTitle = document.getElementById('library-title');
         this.contentContainer = document.querySelector('.content');
         this.progress = this.loadProgress(); // Load progress tracking
 
-        // Custom dropdown elements
-        this.customDropdownTrigger = document.getElementById('custom-dropdown-trigger');
-        this.customDropdownText = document.getElementById('custom-dropdown-text');
-        this.customDropdownMenu = document.getElementById('custom-dropdown-menu');
-        this.customDropdownList = document.getElementById('custom-dropdown-list');
-        this.customDropdownClose = document.getElementById('custom-dropdown-close');
+        // Program directory element
+        this.programDirectory = document.getElementById('program-directory');
+        this.expandedCategories = new Set(); // Track which categories are expanded
+        this.expandedSubcategories = new Set(); // Track which subcategories are expanded
 
         this.init();
     }
@@ -30,7 +27,7 @@ class TrainingApp {
     async init() {
         try {
             await this.loadPrograms();
-            this.renderProgramSelector();
+            this.renderProgramDirectory();
             this.setupEventListeners();
 
             const hashState = this.getStateFromHash();
@@ -72,14 +69,9 @@ class TrainingApp {
         this.currentProgram = null;
         this.manifest = null;
         this.modules = [];
-        this.programSelect.value = '';
-        this.programSelect.classList.add('placeholder');
 
-        // Reset custom dropdown
-        if (this.customDropdownText) {
-            this.customDropdownText.textContent = 'Select a program';
-        }
-        this.updateCustomDropdownSelection(null);
+        // Update directory selection
+        this.updateDirectorySelection(null);
 
         // Update page title
         document.title = 'Training Library';
@@ -252,128 +244,154 @@ class TrainingApp {
         });
     }
 
-    renderProgramSelector() {
-        this.programSelect.innerHTML = '';
+    renderProgramDirectory() {
+        if (!this.programDirectory) return;
 
-        // Add placeholder option
-        const placeholderOption = document.createElement('option');
-        placeholderOption.value = '';
-        placeholderOption.textContent = 'Select a program';
-        placeholderOption.disabled = true;
-        placeholderOption.selected = true;
-        this.programSelect.appendChild(placeholderOption);
+        this.programDirectory.innerHTML = '';
 
-        // Group programs by category
+        // Group programs by category and subcategory
         const categories = {};
         this.programs.programs.forEach(program => {
             const category = program.category || 'Other';
+            const subcategory = program.subcategory || 'General';
             if (!categories[category]) {
-                categories[category] = [];
+                categories[category] = {};
             }
-            categories[category].push(program);
+            if (!categories[category][subcategory]) {
+                categories[category][subcategory] = [];
+            }
+            categories[category][subcategory].push(program);
         });
 
-        // Create optgroups for each category
-        Object.keys(categories).sort().forEach(categoryName => {
-            const optgroup = document.createElement('optgroup');
-            optgroup.label = categoryName;
+        // Create collapsible directory tree
+        Object.keys(categories).sort((a, b) => a.localeCompare(b)).forEach(categoryName => {
+            const categorySection = document.createElement('div');
+            categorySection.className = 'directory-category';
+            categorySection.dataset.category = categoryName;
 
-            categories[categoryName].forEach(program => {
-                const option = document.createElement('option');
-                option.value = program.id;
-                option.textContent = program.title;
-                optgroup.appendChild(option);
-            });
+            // Category header (clickable to expand/collapse)
+            const categoryHeader = document.createElement('button');
+            categoryHeader.type = 'button';
+            categoryHeader.className = 'directory-category-header';
+            const isExpanded = this.expandedCategories.has(categoryName);
+            categoryHeader.innerHTML = `
+                <span class="directory-toggle">${isExpanded ? '▼' : '▶'}</span>
+                <span class="directory-category-name">${categoryName}</span>
+            `;
+            categoryHeader.addEventListener('click', () => this.toggleCategory(categoryName));
+            categorySection.appendChild(categoryHeader);
 
-            this.programSelect.appendChild(optgroup);
-        });
+            // Category content (subcategories and programs)
+            const categoryContent = document.createElement('div');
+            categoryContent.className = 'directory-category-content';
+            if (!isExpanded) {
+                categoryContent.classList.add('collapsed');
+            }
 
-        // Render custom dropdown for mobile
-        this.renderCustomDropdown(categories);
-    }
+            // Add subcategories
+            Object.keys(categories[categoryName]).sort((a, b) => a.localeCompare(b)).forEach(subcategoryName => {
+                const subcatKey = `${categoryName}:${subcategoryName}`;
+                const subcategorySection = document.createElement('div');
+                subcategorySection.className = 'directory-subcategory';
 
-    renderCustomDropdown(categories) {
-        if (!this.customDropdownList) return;
+                // Subcategory header
+                const subcatHeader = document.createElement('button');
+                subcatHeader.type = 'button';
+                subcatHeader.className = 'directory-subcategory-header';
+                const isSubExpanded = this.expandedSubcategories.has(subcatKey);
+                subcatHeader.innerHTML = `
+                    <span class="directory-toggle">${isSubExpanded ? '▼' : '▶'}</span>
+                    <span class="directory-subcategory-name">${subcategoryName}</span>
+                `;
+                subcatHeader.addEventListener('click', () => this.toggleSubcategory(categoryName, subcategoryName));
+                subcategorySection.appendChild(subcatHeader);
 
-        this.customDropdownList.innerHTML = '';
+                // Subcategory content (programs)
+                const subcatContent = document.createElement('div');
+                subcatContent.className = 'directory-subcategory-content';
+                if (!isSubExpanded) {
+                    subcatContent.classList.add('collapsed');
+                }
 
-        // Create custom dropdown structure
-        Object.keys(categories).sort().forEach(categoryName => {
-            // Add category header
-            const categoryHeader = document.createElement('div');
-            categoryHeader.className = 'custom-dropdown-category';
-            categoryHeader.textContent = categoryName;
-            this.customDropdownList.appendChild(categoryHeader);
-
-            // Add options for this category
-            categories[categoryName].forEach(program => {
-                const option = document.createElement('button');
-                option.type = 'button';
-                option.className = 'custom-dropdown-option';
-                option.dataset.programId = program.id;
-                option.textContent = program.title;
-
-                option.addEventListener('click', () => {
-                    this.selectCustomDropdownOption(program.id, program.title);
+                // Add programs
+                categories[categoryName][subcategoryName].forEach(program => {
+                    const programItem = document.createElement('button');
+                    programItem.type = 'button';
+                    programItem.className = 'directory-program';
+                    programItem.dataset.programId = program.id;
+                    programItem.innerHTML = `
+                        <span class="directory-program-icon">${program.icon || '📚'}</span>
+                        <span class="directory-program-title">${program.title}</span>
+                    `;
+                    programItem.addEventListener('click', () => {
+                        this.switchProgram(program.id);
+                        this.closeMobileMenu();
+                    });
+                    subcatContent.appendChild(programItem);
                 });
 
-                this.customDropdownList.appendChild(option);
+                subcategorySection.appendChild(subcatContent);
+                categoryContent.appendChild(subcategorySection);
             });
+
+            categorySection.appendChild(categoryContent);
+            this.programDirectory.appendChild(categorySection);
         });
     }
 
-    selectCustomDropdownOption(programId, programTitle) {
-        // Update trigger text
-        this.customDropdownText.textContent = programTitle;
-
-        // Close the dropdown
-        this.closeCustomDropdown();
-
-        // Switch to the selected program
-        this.switchProgram(programId);
-
-        // Update selected state visually
-        this.updateCustomDropdownSelection(programId);
-    }
-
-    updateCustomDropdownSelection(programId) {
-        if (!this.customDropdownList) return;
-
-        // Remove selected class from all options
-        const allOptions = this.customDropdownList.querySelectorAll('.custom-dropdown-option');
-        allOptions.forEach(opt => opt.classList.remove('selected'));
-
-        // Add selected class to the chosen option
-        const selectedOption = this.customDropdownList.querySelector(`[data-program-id="${programId}"]`);
-        if (selectedOption) {
-            selectedOption.classList.add('selected');
+    toggleCategory(categoryName) {
+        if (this.expandedCategories.has(categoryName)) {
+            this.expandedCategories.delete(categoryName);
+        } else {
+            this.expandedCategories.add(categoryName);
         }
+        this.renderProgramDirectory();
+        this.updateDirectorySelection(this.currentProgram?.id);
     }
 
-    openCustomDropdown() {
-        if (!this.customDropdownMenu) return;
-
-        // Close mobile menu if open
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar?.classList.contains('open')) {
-            this.closeMobileMenu();
+    toggleSubcategory(categoryName, subcategoryName) {
+        const key = `${categoryName}:${subcategoryName}`;
+        if (this.expandedSubcategories.has(key)) {
+            this.expandedSubcategories.delete(key);
+        } else {
+            this.expandedSubcategories.add(key);
         }
-
-        this.customDropdownMenu.classList.add('open');
-        this.customDropdownTrigger.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
+        this.renderProgramDirectory();
+        this.updateDirectorySelection(this.currentProgram?.id);
     }
 
-    closeCustomDropdown() {
-        if (!this.customDropdownMenu) return;
+    updateDirectorySelection(programId) {
+        if (!this.programDirectory) return;
 
-        this.customDropdownMenu.classList.remove('open');
-        this.customDropdownTrigger.setAttribute('aria-expanded', 'false');
+        // Remove selected class from all programs
+        const allPrograms = this.programDirectory.querySelectorAll('.directory-program');
+        allPrograms.forEach(p => p.classList.remove('selected'));
 
-        // Only restore scroll if mobile menu is not open
-        const sidebar = document.getElementById('sidebar');
-        if (!sidebar?.classList.contains('open')) {
-            document.body.style.overflow = '';
+        if (programId) {
+            // Add selected class to the chosen program
+            const selectedProgram = this.programDirectory.querySelector(`[data-program-id="${programId}"]`);
+            if (selectedProgram) {
+                selectedProgram.classList.add('selected');
+
+                // Auto-expand parent categories if not already expanded
+                const program = this.programs.programs.find(p => p.id === programId);
+                if (program) {
+                    const category = program.category || 'Other';
+                    const subcategory = program.subcategory || 'General';
+                    const subcatKey = `${category}:${subcategory}`;
+
+                    if (!this.expandedCategories.has(category) || !this.expandedSubcategories.has(subcatKey)) {
+                        this.expandedCategories.add(category);
+                        this.expandedSubcategories.add(subcatKey);
+                        this.renderProgramDirectory();
+                        // Re-select after re-render
+                        const reselected = this.programDirectory.querySelector(`[data-program-id="${programId}"]`);
+                        if (reselected) {
+                            reselected.classList.add('selected');
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -382,14 +400,9 @@ class TrainingApp {
         if (!program) return;
 
         this.currentProgram = program;
-        this.programSelect.value = programId;
-        this.programSelect.classList.remove('placeholder');
 
-        // Update custom dropdown
-        if (this.customDropdownText) {
-            this.customDropdownText.textContent = program.title;
-        }
-        this.updateCustomDropdownSelection(programId);
+        // Update directory selection
+        this.updateDirectorySelection(programId);
 
         // Update page title
         document.title = `${program.title} - Training`;
@@ -513,39 +526,6 @@ class TrainingApp {
             this.closeMobileMenu(); // Close menu when navigating
         });
 
-        // Program selector
-        this.programSelect.addEventListener('change', (e) => {
-            if (e.target.value) {
-                this.programSelect.classList.remove('placeholder');
-                this.switchProgram(e.target.value);
-                this.closeMobileMenu(); // Close menu when selecting program
-            } else {
-                this.programSelect.classList.add('placeholder');
-            }
-        });
-
-        // Custom dropdown for mobile
-        if (this.customDropdownTrigger) {
-            this.customDropdownTrigger.addEventListener('click', () => {
-                this.openCustomDropdown();
-            });
-        }
-
-        if (this.customDropdownClose) {
-            this.customDropdownClose.addEventListener('click', () => {
-                this.closeCustomDropdown();
-            });
-        }
-
-        // Close custom dropdown when clicking outside
-        if (this.customDropdownMenu) {
-            this.customDropdownMenu.addEventListener('click', (e) => {
-                if (e.target === this.customDropdownMenu) {
-                    this.closeCustomDropdown();
-                }
-            });
-        }
-
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const sidebar = document.getElementById('sidebar');
@@ -560,15 +540,10 @@ class TrainingApp {
         document.addEventListener('keydown', (e) => {
             // Close menus on Escape
             if (e.key === 'Escape') {
-                // Close custom dropdown if open
-                if (this.customDropdownMenu?.classList.contains('open')) {
-                    this.closeCustomDropdown();
-                } else {
-                    this.closeMobileMenu();
-                }
+                this.closeMobileMenu();
             }
-            // Navigation only when menus are closed
-            if (!sidebar?.classList.contains('open') && !this.customDropdownMenu?.classList.contains('open')) {
+            // Navigation only when sidebar is closed
+            if (!sidebar?.classList.contains('open')) {
                 if (e.key === 'ArrowLeft') {
                     this.navigatePrevious();
                 } else if (e.key === 'ArrowRight') {

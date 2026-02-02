@@ -37,42 +37,15 @@
                 <button id="dashboard-btn" class="dashboard-btn">
                     <span>🏠</span> Back to Dashboard
                 </button>
-                <div class="program-selector">
-                    <label for="program-select">Program:</label>
-                    <select id="program-select" class="program-dropdown">
-                        <option value="">Loading programs...</option>
-                    </select>
-                    <!-- Custom dropdown for mobile -->
-                    <button type="button" id="custom-dropdown-trigger" class="custom-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
-                        <span id="custom-dropdown-text">Select a program</span>
-                        <svg class="dropdown-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
+                <!-- Program Directory Tree -->
+                <div id="program-directory" class="program-directory">
+                    <!-- Directory tree will be dynamically loaded -->
                 </div>
             </div>
             <div class="sidebar-nav" id="nav-menu">
                 <!-- Navigation items will be dynamically loaded -->
             </div>
         </nav>
-
-        <!-- Custom dropdown menu for mobile -->
-        <div id="custom-dropdown-menu" class="custom-dropdown-menu" role="listbox" aria-labelledby="custom-dropdown-trigger">
-            <div class="custom-dropdown-content">
-                <div class="custom-dropdown-header">
-                    <h3>Select Program</h3>
-                    <button type="button" id="custom-dropdown-close" class="custom-dropdown-close" aria-label="Close program selector">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-                <div id="custom-dropdown-list" class="custom-dropdown-list">
-                    <!-- Options will be dynamically loaded -->
-                </div>
-            </div>
-        </div>
 
         <!-- Main Content Area -->
         <main class="content">

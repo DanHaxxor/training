@@ -3,7 +3,13 @@
     "allow": [
       "Bash(tree:*)",
       "Bash(python3:*)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "Bash(for f in programs/sales/fundamentals/sales-fundamentals/manifest.json programs/sales/tools/bigin-crm/manifest.json programs/customer-support/fundamentals/zoho-desk-fundamentals/manifest.json programs/marketing/fundamentals/social-media-marketing/manifest.json)",
+      "Bash(do if [ -f \"$f\" ])",
+      "Bash(then echo \"EXISTS: $f\")",
+      "Bash(else echo \"MISSING: $f\")",
+      "Bash(fi)",
+      "Bash(done)"
     ]
   }
 }
