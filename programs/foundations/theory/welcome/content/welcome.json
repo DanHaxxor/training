@@ -1,0 +1,106 @@
+{
+  "title": "Welcome to Training",
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Welcome"
+    },
+    {
+      "type": "paragraph",
+      "content": "This training library is designed to help you build practical skills with the tools and processes you'll use every day. Each program is broken into short, focused modules that you can work through at your own pace."
+    },
+    {
+      "type": "heading",
+      "content": "What to Expect"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**Short modules** - Each module covers one topic and can be completed in a single sitting",
+        "**Hands-on practice** - Many programs include activities and real-world scenarios",
+        "**Quizzes** - Test your understanding at the end of key programs",
+        "**Progress tracking** - Your progress is saved automatically so you can pick up where you left off"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "How It Works"
+    },
+    {
+      "type": "paragraph",
+      "content": "Programs are organized by topic in the sidebar. Each program contains one or more modules that build on each other. Some programs have prerequisites -- you'll see these noted in the program description."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Pick a program from the sidebar",
+        "Work through each module in order",
+        "Mark modules complete as you finish them",
+        "Use the dashboard to track your overall progress"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Available Training Tracks"
+    },
+    {
+      "type": "subheading",
+      "content": "Foundations"
+    },
+    {
+      "type": "paragraph",
+      "content": "Start here. These programs cover the Zoho ecosystem overview and essential security practices that apply across all tools."
+    },
+    {
+      "type": "subheading",
+      "content": "Sales"
+    },
+    {
+      "type": "paragraph",
+      "content": "Learn sales fundamentals, then progress through Bigin CRM for small-team pipelines and Zoho CRM for full-featured sales management. Includes beginner through advanced tracks with hands-on practice."
+    },
+    {
+      "type": "subheading",
+      "content": "Customer Support"
+    },
+    {
+      "type": "paragraph",
+      "content": "Build effective support systems with Zoho Desk -- from setting up departments and channels to advanced automation and AI features."
+    },
+    {
+      "type": "subheading",
+      "content": "Marketing"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cover social media and email marketing fundamentals, then learn the Zoho Social and Zoho Campaigns platforms."
+    },
+    {
+      "type": "subheading",
+      "content": "WorkDrive"
+    },
+    {
+      "type": "paragraph",
+      "content": "Learn cloud storage and collaboration essentials with Zoho WorkDrive."
+    },
+    {
+      "type": "heading",
+      "content": "Tips"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Use keyboard shortcuts for faster navigation -- press **?** to see the full list",
+        "Collapse the sidebar with **[** to focus on content",
+        "Your progress saves to your browser, so use the same browser to keep your history"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "When you're ready, pick your first program from the sidebar and get started."
+    }
+  ]
+}

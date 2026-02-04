@@ -2,6 +2,18 @@
   "title": "Training Library",
   "programs": [
     {
+      "id": "welcome",
+      "title": "Welcome",
+      "description": "Course overview, what to expect, and how to navigate the training library",
+      "manifest": "programs/foundations/theory/welcome/manifest.json",
+      "category": "Foundations",
+      "subcategory": "Theory",
+      "difficulty": "Beginner",
+      "duration": "1 module",
+      "prerequisites": [],
+      "icon": ""
+    },
+    {
       "id": "zoho-suite-overview",
       "title": "Zoho Suite Overview",
       "description": "Understand how Zoho apps work together - integrations, data flow, and building an effective tech stack",
@@ -11,7 +23,7 @@
       "difficulty": "Beginner",
       "duration": "1 module",
       "prerequisites": [],
-      "icon": "🧩"
+      "icon": ""
     },
     {
       "id": "security-basics",
@@ -23,7 +35,7 @@
       "difficulty": "Beginner",
       "duration": "1 module",
       "prerequisites": [],
-      "icon": "🔒"
+      "icon": ""
     },
     {
       "id": "sales-fundamentals",
@@ -35,7 +47,7 @@
       "difficulty": "Beginner",
       "duration": "2 modules",
       "prerequisites": [],
-      "icon": "💼"
+      "icon": ""
     },
     {
       "id": "bigin-crm",
@@ -47,7 +59,7 @@
       "difficulty": "Beginner",
       "duration": "3 modules",
       "prerequisites": ["sales-fundamentals"],
-      "icon": "🎯"
+      "icon": ""
     },
     {
       "id": "zoho-crm-essentials",
@@ -59,7 +71,7 @@
       "difficulty": "Intermediate",
       "duration": "6 modules",
       "prerequisites": ["sales-fundamentals", "bigin-crm"],
-      "icon": "📊"
+      "icon": ""
     },
     {
       "id": "zoho-crm-advanced",
@@ -71,7 +83,7 @@
       "difficulty": "Advanced",
       "duration": "6 modules",
       "prerequisites": ["zoho-crm-essentials"],
-      "icon": "⚙️"
+      "icon": ""
     },
     {
       "id": "zoho-crm-mastery",
@@ -83,7 +95,7 @@
       "difficulty": "Advanced",
       "duration": "6 modules",
       "prerequisites": ["zoho-crm-advanced"],
-      "icon": "🏆"
+      "icon": ""
     },
     {
       "id": "zoho-crm-practice",
@@ -95,7 +107,7 @@
       "difficulty": "Intermediate",
       "duration": "3 activities",
       "prerequisites": ["zoho-crm-advanced"],
-      "icon": "✍️"
+      "icon": ""
     },
     {
       "id": "zoho-desk-fundamentals",
@@ -107,7 +119,7 @@
       "difficulty": "Intermediate",
       "duration": "7 modules",
       "prerequisites": [],
-      "icon": "🎧"
+      "icon": ""
     },
     {
       "id": "zoho-desk-advanced",
@@ -119,7 +131,7 @@
       "difficulty": "Advanced",
       "duration": "8 modules",
       "prerequisites": ["zoho-desk-fundamentals"],
-      "icon": "🚀"
+      "icon": ""
     },
     {
       "id": "zoho-desk-mastery-test",
@@ -131,7 +143,7 @@
       "difficulty": "Advanced",
       "duration": "1 assessment",
       "prerequisites": ["zoho-desk-fundamentals", "zoho-desk-advanced"],
-      "icon": "📝"
+      "icon": ""
     },
     {
       "id": "social-media-marketing",
@@ -143,7 +155,7 @@
       "difficulty": "Beginner",
       "duration": "5 modules",
       "prerequisites": [],
-      "icon": "📱"
+      "icon": ""
     },
     {
       "id": "email-sms-marketing",
@@ -155,7 +167,7 @@
       "difficulty": "Beginner",
       "duration": "1 module",
       "prerequisites": [],
-      "icon": "📧"
+      "icon": ""
     },
     {
       "id": "zoho-social",
@@ -167,7 +179,7 @@
       "difficulty": "Intermediate",
       "duration": "1 module",
       "prerequisites": ["social-media-marketing"],
-      "icon": "🌐"
+      "icon": ""
     },
     {
       "id": "zoho-campaigns",
@@ -179,7 +191,7 @@
       "difficulty": "Intermediate",
       "duration": "1 module",
       "prerequisites": ["email-sms-marketing"],
-      "icon": "📬"
+      "icon": ""
     },
     {
       "id": "workdrive-fundamentals",
@@ -191,7 +203,7 @@
       "difficulty": "Beginner",
       "duration": "1 module",
       "prerequisites": [],
-      "icon": "📁"
+      "icon": ""
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "title": "Welcome",
+  "description": "Course overview, what to expect, and how to navigate the training library",
+  "version": "1.0.0",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "welcome",
+      "title": "Welcome to Training",
+      "file": "content/welcome.json",
+      "category": "Introduction",
+      "description": "Course overview, what to expect, and how to get started",
+      "order": 1
+    }
+  ]
+}

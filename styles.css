@@ -178,10 +178,28 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: color 0.2s;
+}
+
+.directory-category-header:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .directory-category-name {
     flex: 1;
+}
+
+.directory-category-chevron {
+    font-size: 0.625rem;
+    transition: transform 0.2s ease;
+    margin-left: 0.5rem;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.directory-category.collapsed .directory-category-chevron {
+    transform: rotate(-90deg);
 }
 
 .directory-lesson-count {
@@ -196,6 +214,13 @@ body {
 .directory-lessons {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 0.25s ease;
+}
+
+.directory-category.collapsed .directory-lessons {
+    max-height: 0;
 }
 
 .directory-program {
@@ -1633,11 +1658,11 @@ body {
     /* Larger touch targets and text for accessibility */
     .sidebar-header {
         padding: 1.5rem 1.5rem;
-        text-align: center;
+        text-align: left;
     }
 
     .header-title-row {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 1rem;
         margin-bottom: 1.5rem;
@@ -1815,6 +1840,19 @@ body {
         display: none;
     }
 
+    /* Override collapsed state on mobile so hamburger menu still works */
+    .sidebar.collapsed {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        overflow-y: auto;
+    }
+
+    .sidebar.collapsed .sidebar-header {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
     /* Utility Bar - Mobile */
     .utility-bar {
         padding: 0.75rem 1rem;
@@ -1845,7 +1883,7 @@ body {
 
     /* Dashboard */
     .welcome-banner {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
         padding: 1.5rem;
         gap: 1rem;

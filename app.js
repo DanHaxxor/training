@@ -179,7 +179,7 @@ class TrainingApp {
                         <div class="in-progress-list">
                             ${inProgressPrograms.map(({ program, progress }) => `
                                 <button class="in-progress-item" data-program-id="${program.id}" data-action="resume">
-                                    <span class="in-progress-icon">${program.icon || '📚'}</span>
+                                    <span class="in-progress-icon">${program.icon}</span>
                                     <div class="in-progress-info">
                                         <span class="in-progress-title">${program.title}</span>
                                         <div class="in-progress-bar">
@@ -200,7 +200,7 @@ class TrainingApp {
         html += `
             <div class="dev-tools">
                 <button class="reset-progress-btn" onclick="window.trainingApp.resetAllProgress()">
-                    🔄 Reset All Progress (Dev)
+                    Reset All Progress (Dev)
                 </button>
             </div>
         `;
@@ -273,13 +273,33 @@ class TrainingApp {
                 return prog.completed === prog.total && prog.total > 0;
             }).length;
 
-            // Category header with progress count
+            // Category header with progress count and collapse toggle
             const categoryHeader = document.createElement('div');
             categoryHeader.className = 'directory-category-header';
             categoryHeader.innerHTML = `
                 <span class="directory-category-name">${categoryName}</span>
                 <span class="directory-category-progress">${categoryCompleted}/${categoryPrograms.length}</span>
+                <span class="directory-category-chevron">&#9660;</span>
             `;
+
+            // Restore collapsed state from localStorage
+            const collapsedCategories = JSON.parse(localStorage.getItem('collapsedCategories') || '[]');
+            if (collapsedCategories.includes(categoryName)) {
+                categorySection.classList.add('collapsed');
+            }
+
+            categoryHeader.addEventListener('click', () => {
+                categorySection.classList.toggle('collapsed');
+                const stored = JSON.parse(localStorage.getItem('collapsedCategories') || '[]');
+                if (categorySection.classList.contains('collapsed')) {
+                    stored.push(categoryName);
+                } else {
+                    const idx = stored.indexOf(categoryName);
+                    if (idx !== -1) stored.splice(idx, 1);
+                }
+                localStorage.setItem('collapsedCategories', JSON.stringify(stored));
+            });
+
             categorySection.appendChild(categoryHeader);
 
             // Lessons directly under category (always visible)
@@ -302,7 +322,7 @@ class TrainingApp {
                 }
 
                 programItem.innerHTML = `
-                    <span class="directory-program-icon">${program.icon || '📚'}</span>
+                    <span class="directory-program-icon">${program.icon}</span>
                     <span class="directory-program-title">${program.title}</span>
                     ${progressIndicator}
                 `;
@@ -674,10 +694,7 @@ class TrainingApp {
     }
 
     renderPageContent(page) {
-        // Add module progress bar at the top
-        let html = this.renderModuleProgressBar();
-
-        html += `<h1>${page.title}</h1>`;
+        let html = `<h1>${page.title}</h1>`;
 
         // Get program directory for resolving relative paths
         const programDir = this.currentProgram.manifest.replace('/manifest.json', '');
@@ -807,7 +824,7 @@ class TrainingApp {
                         <span class="nav-direction">Finish Program</span>
                         <span class="nav-destination">Mark as Complete</span>
                     </div>
-                    <span class="nav-arrow">🎉</span>
+                    <span class="nav-arrow">&rarr;</span>
                 </button>
             `;
         }
@@ -960,7 +977,7 @@ class TrainingApp {
         this.contentArea.innerHTML = `
             <div class="completion-screen">
                 <div class="completion-content">
-                    <div class="completion-icon">🎉</div>
+                    <div class="completion-icon"></div>
                     <h1>Congratulations!</h1>
                     <p class="completion-message">You've completed <strong>${this.currentProgram.title}</strong>!</p>
                     <p class="completion-stats">All ${this.modules.length} modules completed</p>
