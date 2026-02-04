@@ -1,0 +1,16 @@
+{
+  "title": "Zoho Suite Overview",
+  "description": "Understand how Zoho apps work together - integrations, data flow, and building an effective tech stack",
+  "version": "1.0.0",
+  "prerequisites": [],
+  "modules": [
+    {
+      "id": "zoho-suite-overview",
+      "title": "Understanding the Zoho Ecosystem",
+      "file": "content/zoho-suite-overview.json",
+      "category": "Foundation",
+      "description": "Learn what Zoho One is, how software suites work, and how Zoho apps integrate",
+      "order": 1
+    }
+  ]
+}

@@ -578,14 +578,20 @@ body {
     left: 0;
     right: 0;
     background-color: var(--content-bg);
-    border-top: 1px solid var(--border-color);
-    padding: 1rem 2rem;
+    border-top: 3px solid var(--border-color);
+    padding: 0.5rem 2rem;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     gap: 1rem;
     align-items: center;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
     z-index: 50;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.utility-bar.completed {
+    border-top-color: var(--brand-green);
+    background-color: var(--brand-soft-green);
 }
 
 .utility-bar-left {
@@ -598,6 +604,33 @@ body {
 
 .utility-bar-right {
     justify-self: end;
+}
+
+/* Completion Indicator */
+.completion-indicator {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--brand-green);
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 8px rgba(0, 128, 0, 0.2);
+}
+
+.utility-bar.completed .completion-indicator {
+    display: flex;
+}
+
+.utility-completion-icon {
+    flex-shrink: 0;
+    stroke: white;
+}
+
+.utility-completion-text {
+    white-space: nowrap;
 }
 
 .utility-btn {
@@ -634,35 +667,6 @@ body {
     color: var(--primary-color);
 }
 
-.utility-btn.complete-btn {
-    background-color: var(--brand-green);
-    border-color: var(--brand-green);
-    color: white;
-    padding: 0.75rem 2rem;
-}
-
-.utility-btn.complete-btn:hover {
-    background-color: #15803d;
-    border-color: #15803d;
-}
-
-.utility-btn.complete-btn .complete-icon {
-    font-size: 1.125rem;
-}
-
-.utility-btn.complete-btn.completed {
-    background-color: #e2e8f0;
-    border-color: var(--border-color);
-    color: var(--brand-green);
-}
-
-.utility-btn.complete-btn.completed:hover {
-    background-color: #cbd5e1;
-}
-
-.utility-btn.complete-btn.completed .complete-icon::before {
-    content: '✓';
-}
 
 /* Hide utility bar on dashboard */
 .utility-bar.hidden {
@@ -1855,8 +1859,8 @@ body {
 
     /* Utility Bar - Mobile */
     .utility-bar {
-        padding: 0.75rem 1rem;
-        grid-template-columns: auto 1fr auto;
+        padding: 0.5rem 1rem;
+        grid-template-columns: 1fr auto 1fr;
         gap: 0.5rem;
     }
 
@@ -1873,12 +1877,19 @@ body {
         display: none;
     }
 
-    .utility-btn.complete-btn {
-        padding: 0.625rem 1rem;
+    /* Completion indicator - Mobile */
+    .completion-indicator {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.75rem;
     }
 
-    .utility-btn.complete-btn .complete-text {
-        font-size: 0.8125rem;
+    .utility-completion-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .utility-completion-text {
+        display: none;
     }
 
     /* Dashboard */

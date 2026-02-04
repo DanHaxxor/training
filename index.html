@@ -68,10 +68,12 @@
                     </button>
                 </div>
                 <div class="utility-bar-center">
-                    <button class="utility-btn complete-btn" id="utility-complete">
-                        <span class="complete-icon">○</span>
-                        <span class="complete-text">Mark Complete</span>
-                    </button>
+                    <div class="completion-indicator" id="completion-indicator" aria-live="polite">
+                        <svg class="utility-completion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span class="utility-completion-text">Complete</span>
+                    </div>
                 </div>
                 <div class="utility-bar-right">
                     <button class="utility-btn nav-btn" id="utility-next" aria-label="Next module">

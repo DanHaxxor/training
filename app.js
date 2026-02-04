@@ -24,7 +24,6 @@ class TrainingApp {
         this.utilityBar = document.getElementById('utility-bar');
         this.utilityPrevBtn = document.getElementById('utility-prev');
         this.utilityNextBtn = document.getElementById('utility-next');
-        this.utilityCompleteBtn = document.getElementById('utility-complete');
 
         this.init();
     }
@@ -142,8 +141,8 @@ class TrainingApp {
             <div class="dashboard">
                 <div class="welcome-banner">
                     <div class="welcome-content">
-                        <h1>Welcome</h1>
-                        <p>Build your skills with guided programs designed to help you master Zoho tools and best practices.</p>
+                        <h1>Welcome to the Team!</h1>
+                        <p>Congratulations on your new role! This training will help you become familiar with the products you'll be selling. With many apps to explore, focus on resourcefulness—knowing where to find information is more valuable than memorizing everything.</p>
                     </div>
                     <div class="welcome-graphic">
                         <img src="one-logo.png" alt="Zoho One" class="welcome-logo">
@@ -545,11 +544,6 @@ class TrainingApp {
         this.utilityNextBtn?.addEventListener('click', () => {
             this.navigateNext();
         });
-
-        // Complete button
-        this.utilityCompleteBtn?.addEventListener('click', () => {
-            this.toggleModuleComplete();
-        });
     }
 
     updateUtilityBar() {
@@ -579,22 +573,10 @@ class TrainingApp {
             }
         }
 
-        // Update complete button
-        if (this.utilityCompleteBtn) {
-            const currentModule = this.modules[this.currentPageIndex];
-            const isComplete = currentModule && this.isModuleComplete(this.currentProgram.id, currentModule.id);
-
-            this.utilityCompleteBtn.classList.toggle('completed', isComplete);
-            const iconSpan = this.utilityCompleteBtn.querySelector('.complete-icon');
-            const textSpan = this.utilityCompleteBtn.querySelector('.complete-text');
-
-            if (iconSpan) {
-                iconSpan.textContent = isComplete ? '✓' : '○';
-            }
-            if (textSpan) {
-                textSpan.textContent = isComplete ? 'Completed' : 'Mark Complete';
-            }
-        }
+        // Update utility bar completion styling
+        const currentModule = this.modules[this.currentPageIndex];
+        const isComplete = currentModule && this.isModuleComplete(this.currentProgram.id, currentModule.id);
+        this.utilityBar.classList.toggle('completed', isComplete);
     }
 
     async loadPage(index) {
@@ -781,6 +763,9 @@ class TrainingApp {
         const prevModule = hasPrevious ? this.modules[this.currentPageIndex - 1] : null;
         const nextModule = hasNext ? this.modules[this.currentPageIndex + 1] : null;
 
+        const currentModule = this.modules[this.currentPageIndex];
+        const isComplete = currentModule && this.isModuleComplete(this.currentProgram.id, currentModule.id);
+
         let html = '<div class="inline-nav">';
 
         // Previous button with destination title
@@ -816,17 +801,19 @@ class TrainingApp {
                     <span class="nav-arrow">→</span>
                 </button>
             `;
-        } else {
-            // Show finish action when on last module
+        } else if (!isComplete) {
+            // Show finish action only when on last module AND not yet complete
             html += `
                 <button class="inline-nav-btn finish-btn" onclick="window.trainingApp.toggleModuleComplete()">
                     <div class="nav-content">
-                        <span class="nav-direction">Finish Program</span>
-                        <span class="nav-destination">Mark as Complete</span>
+                        <span class="nav-destination">Mark Complete</span>
                     </div>
                     <span class="nav-arrow">&rarr;</span>
                 </button>
             `;
+        } else {
+            // Module is complete, show nothing (just spacer)
+            html += '<div class="nav-spacer"></div>';
         }
 
         html += '</div>';
