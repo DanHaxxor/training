@@ -3,10 +3,6 @@
   "sections": [
     {
       "type": "paragraph",
-      "content": "**Last Modified:** 12 Dec 2025"
-    },
-    {
-      "type": "paragraph",
       "content": "This lesson focuses on creating and testing workflow rules and actions within the CRM. You'll learn how automations can perform updates, send notifications, and trigger related tasks to streamline your sales processes."
     },
     {

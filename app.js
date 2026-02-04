@@ -8,9 +8,6 @@ class TrainingApp {
         this.contentCache = new Map(); // Cache loaded pages
         this.currentPageIndex = 0;
         this.contentArea = document.getElementById('content-area');
-        this.progressIndicator = document.querySelector('.progress-indicator');
-        this.currentPageSpan = document.getElementById('current-page');
-        this.totalPagesSpan = document.getElementById('total-pages');
         this.libraryTitle = document.getElementById('library-title');
         this.contentContainer = document.querySelector('.content');
         this.progress = this.loadProgress(); // Load progress tracking
@@ -37,7 +34,6 @@ class TrainingApp {
             await this.loadPrograms();
             await this.renderProgramDirectory();
             this.setupEventListeners();
-            this.setupQuickNav();
             this.setupSidebarToggle();
             this.setupUtilityBar();
 
@@ -93,22 +89,10 @@ class TrainingApp {
             mobileTitle.textContent = 'Training Library';
         }
 
-        // Hide breadcrumb on dashboard
-        this.renderBreadcrumb();
-
-        // Hide quick nav on dashboard
-        const quickNav = document.getElementById('quick-nav');
-        if (quickNav) {
-            quickNav.style.display = 'none';
-        }
-
         // Hide utility bar on dashboard
         if (this.utilityBar) {
             this.utilityBar.classList.add('hidden');
         }
-
-        // Update progress indicator
-        this.progressIndicator.innerHTML = 'Dashboard';
 
         // Show loading state
         this.contentArea.innerHTML = '<div class="loading">Loading dashboard...</div>';
@@ -350,41 +334,6 @@ class TrainingApp {
         }
     }
 
-    renderBreadcrumb() {
-        const breadcrumb = document.getElementById('breadcrumb');
-        if (!breadcrumb) return;
-
-        // Dashboard view - hide breadcrumb
-        if (!this.currentProgram) {
-            breadcrumb.innerHTML = '';
-            breadcrumb.style.display = 'none';
-            return;
-        }
-
-        breadcrumb.style.display = 'flex';
-        const currentModule = this.modules[this.currentPageIndex];
-        const category = this.currentProgram.category || 'Programs';
-
-        breadcrumb.innerHTML = `
-            <button class="breadcrumb-item breadcrumb-home" onclick="window.trainingApp.showDashboard()" title="Back to Dashboard">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                </svg>
-            </button>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-item breadcrumb-category">${category}</span>
-            <span class="breadcrumb-separator">/</span>
-            <button class="breadcrumb-item breadcrumb-program" onclick="window.trainingApp.loadPage(0)">
-                ${this.currentProgram.title}
-            </button>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-item breadcrumb-current" aria-current="page">
-                ${currentModule?.title || 'Loading...'}
-            </span>
-        `;
-    }
-
     async switchProgram(programId, pageIndex = 0) {
         const program = this.programs.programs.find(p => p.id === programId);
         if (!program) return;
@@ -422,13 +371,6 @@ class TrainingApp {
             this.manifest = await response.json();
             // Sort modules by order
             this.modules = this.manifest.modules.sort((a, b) => a.order - b.order);
-
-            // Restore progress indicator structure if needed (e.g., coming from dashboard)
-            this.progressIndicator.innerHTML = '<span id="current-page">1</span> / <span id="total-pages">1</span>';
-            this.currentPageSpan = document.getElementById('current-page');
-            this.totalPagesSpan = document.getElementById('total-pages');
-
-            this.totalPagesSpan.textContent = this.modules.length;
         } catch (error) {
             console.error('Error loading manifest:', error);
             throw error;
@@ -492,13 +434,6 @@ class TrainingApp {
                 if (helpPanel && !helpPanel.hidden) {
                     helpPanel.hidden = true;
                 }
-                // Close quick nav dropdown
-                const quickNavTrigger = document.getElementById('quick-nav-trigger');
-                const quickNavDropdown = document.getElementById('quick-nav-dropdown');
-                if (quickNavTrigger && quickNavDropdown) {
-                    quickNavTrigger.setAttribute('aria-expanded', 'false');
-                    quickNavDropdown.hidden = true;
-                }
             }
             // Show keyboard help with ?
             if (e.key === '?' && !e.ctrlKey && !e.metaKey) {
@@ -544,63 +479,6 @@ class TrainingApp {
             mobileMenuBtn.classList.remove('active');
             document.body.style.overflow = '';
         }
-    }
-
-    setupQuickNav() {
-        const trigger = document.getElementById('quick-nav-trigger');
-        const dropdown = document.getElementById('quick-nav-dropdown');
-
-        if (!trigger || !dropdown) return;
-
-        trigger.addEventListener('click', () => {
-            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-            trigger.setAttribute('aria-expanded', !isExpanded);
-            dropdown.hidden = isExpanded;
-
-            if (!isExpanded) {
-                this.populateQuickNavDropdown();
-            }
-        });
-
-        // Close on click outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.quick-nav')) {
-                trigger.setAttribute('aria-expanded', 'false');
-                dropdown.hidden = true;
-            }
-        });
-    }
-
-    populateQuickNavDropdown() {
-        const dropdown = document.getElementById('quick-nav-dropdown');
-        if (!dropdown || !this.modules || !this.currentProgram) return;
-
-        let html = '';
-        this.modules.forEach((module, index) => {
-            const isCurrent = index === this.currentPageIndex;
-
-            html += `
-                <button class="quick-nav-item ${isCurrent ? 'current' : ''}"
-                        onclick="window.trainingApp.jumpToModule(${index})">
-                    <span class="quick-nav-number">${index + 1}</span>
-                    <span class="quick-nav-title">${module.title}</span>
-                </button>
-            `;
-        });
-
-        dropdown.innerHTML = html;
-    }
-
-    jumpToModule(index) {
-        const trigger = document.getElementById('quick-nav-trigger');
-        const dropdown = document.getElementById('quick-nav-dropdown');
-
-        if (trigger && dropdown) {
-            trigger.setAttribute('aria-expanded', 'false');
-            dropdown.hidden = true;
-        }
-
-        this.loadPage(index);
     }
 
     toggleKeyboardHelp() {
@@ -718,18 +596,6 @@ class TrainingApp {
 
             // Setup quiz event listeners if quiz exists
             this.setupQuizListeners();
-
-            // Update progress indicator
-            this.currentPageSpan.textContent = index + 1;
-
-            // Update breadcrumb
-            this.renderBreadcrumb();
-
-            // Show quick nav
-            const quickNav = document.getElementById('quick-nav');
-            if (quickNav) {
-                quickNav.style.display = 'block';
-            }
 
             // Update utility bar state
             this.updateUtilityBar();
